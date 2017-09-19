@@ -1,0 +1,172 @@
+@import "main.scss", "_logo", "_top", "_latest_works", "_mob-menu";
+
+header {
+color: $white;
+position: absolute;
+z-index: 2;
+	.underline::after {
+		background-color: $white;
+	}
+}
+
+.start {
+	min-height: 320px;
+	width: 100%;
+	display: block;
+	position: relative;
+}
+
+/* Parallax background */
+#menorah {
+	overflow: hidden !important;
+}
+
+.layer {
+width: 100%;
+	img {
+	transform: scale(1.054);
+	width: 100%;
+	max-height: 100vh;
+	object-fit: cover;
+		@media (max-width:600px) {
+		min-height: 320px;
+		}
+	}
+}
+
+/* Text block */
+.tagline {
+display: table;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+	h1 {
+	font-family: 'CenturyGothicBold', sans-serif;
+	font-size: calcFluidSize(16, 75, 320, 1920);
+	text-align: center;
+	text-transform: uppercase;
+	line-height: 1.45;
+	color: $white;
+	@extend %v-align;
+	}
+}
+
+/* Scrolling mouse */
+.mouse {
+	border: 2px solid $white;
+	border-radius: 26px;
+	position: absolute;
+	left: calc(50% - 13px);
+	bottom: 10%;
+	width: 26px;
+	height: 42px;
+	backface-visibility: hidden;
+	cursor: pointer;
+	z-index: 2;
+		@media (max-width:899px) {display: none;}
+		&::after {
+		background-color: $white;
+		border-radius: 100%;
+		content: "";
+		position: absolute;
+		top: 5px;
+		left: 50%;
+		margin-left: -2px;
+		width: 4px;
+		height: 6px;
+		opacity: 1;
+		transform: translateY(0px) scaleY(1) scaleX(1) translateZ(0px);
+		animation: scroll 1.5s -1s cubic-bezier(0.680, -0.550, 0.265, 1.550) infinite;
+		}
+}
+
+@keyframes scroll {
+  0%, 20% {transform: translateY(0px) scaleY(1) scaleX(1) translateZ(0px);}
+  10% {transform: translateY(0px) scaleY(1.2) scaleX(1.2) translateZ(0px); opacity: 1;}
+  100% {transform: translateY(15px) scaleY(2) scaleX(0.5) translateZ(0px); opacity: 0.01;};
+}
+
+.content {
+	.descr {@extend %padd-marg;}
+}
+
+//Animation step
+$step: 10;
+
+.day {
+animation: fadeOutDay #{$step}s linear infinite;
+animation-direction: alternate;
+}
+
+.evening {
+animation: fadeOutEvening #{$step}s linear infinite;
+animation-direction: alternate;
+}
+
+.night {
+animation: fadeOutNight #{$step}s linear infinite;
+animation-direction: alternate;
+}
+
+.light {
+animation: fadeLight #{$step}s infinite steps(1);
+animation-direction: alternate;
+}
+
+.house-light1 {
+opacity: 0;
+animation: fadeHouseLight1 #{$step * 2}s infinite steps(1);
+animation-direction: normal;
+animation-delay: #{$step / 2.3}s;
+}
+
+.house-light2 {
+opacity: 0;
+animation: fadeHouseLight2 #{$step * 2}s infinite steps(1);
+animation-direction: normal;
+animation-delay: #{$step / 1.8}s;
+}
+
+.house-light3 {
+opacity: 0;
+animation: fadeHouseLight3 #{$step * 2}s infinite steps(1);
+animation-direction: normal;
+animation-delay: #{$step / 1.9}s;
+}
+
+@keyframes fadeOutDay {
+  0%, 20% {opacity: 1;}
+  40%, 60%, 80%, 100% {opacity: 0;}
+}
+
+@keyframes fadeOutEvening {
+  0%, 80%, 100% {opacity: 0;}
+  20%, 40%, 60% {opacity: 1;}
+}
+
+@keyframes fadeOutNight {
+  0%, 20%, 40% {opacity: 0;}
+  60%, 80%, 100% {opacity: 1;}
+}
+
+@keyframes fadeLight {
+  0%, 10%, 20%, 30%, 40%, 50%, 60%, 100% {opacity: 0;}
+  70%, 80%, 90% {opacity: 1;}
+}
+
+@keyframes fadeHouseLight1 {
+  0%, 25% {opacity: 1;}
+  50%, 75%, 100% {opacity: 0;}
+}
+
+@keyframes fadeHouseLight2 {
+  0%, 30%, 40%, 50%, 60%, 70%, 80%, 90%, 100% {opacity: 0;}
+  10%, 20% {opacity: 1;}
+}
+
+@keyframes fadeHouseLight3 {
+  0%, 10% {opacity: 1;}
+  20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%, 100% {opacity: 0;}
+}

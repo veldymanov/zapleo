@@ -1,0 +1,114 @@
+@media (max-width:900px) {
+	header {
+		nav {
+			ul {display: none;}
+		}
+		.sandwich {display: block;}
+	}
+}
+
+//Sandwich button
+$top: 8px;
+
+.sandwich {
+cursor: pointer;
+position: relative;
+width: 23px;
+height: 18px;
+filter: drop-shadow(0 0 1px $white);
+@extend %form_element;
+@extend %dispnone;
+	span {
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	background: $dark;
+	width: 100%;
+	height: 2px;
+	}
+	&.active {
+		.line1 {
+			top: $top;
+			transform: rotate(140deg);
+		}
+		.line2 {
+			top: $top;
+			transform: rotate(-140deg);
+		}
+		.line3 {
+			opacity: 0;
+			top: 0;
+			transform: rotate(180deg);
+		}
+	}
+}
+
+.line1 {
+	top: 0;
+	transition: transform .5s, top .2s;
+	//transition-delay: 0.2s, 0s;
+}
+
+.line2 {
+	top: $top;
+	transition: transform .5s, top .2s;
+	transition-delay: .2s, 0s;
+}
+
+.line3 {
+	top: $top * 2;
+	transition: all .5s;
+	transition-delay: .1s;
+}
+
+.mob-menu {
+display: none;
+position: fixed;
+left: 0;
+top: 0;
+bottom: 0;
+right: 0;
+z-index: 2;
+color: $dark;
+background-color: rgba(0,0,0,.5);
+	nav {
+	background: $white;
+    display: inline-block;
+	padding: 15px 0;
+	height: 100%;
+	overflow: auto;
+	text-transform: uppercase;
+	font-size: calcFluidSize(14, 19, 320, 900);
+	transform: translateX(-100%);
+	transition: transform .2s ease-in-out;
+	}
+	//Displayed navigation list
+	.displayed {
+	transform: translateX(0);
+	}
+	a {
+	display: block;
+	padding: 10px 30px;
+	}
+	//Search
+	.search {
+	padding: 10px 20px 10px 30px;
+		input {
+		font-size: calcFluidSize(14, 19, 320, 900);
+		-webkit-appearance: none;
+		&::-webkit-search-cancel-button {display: none;}
+		&:focus + button {filter: drop-shadow(0 2px 1px $dark);}
+		@extend %form_element;
+		}
+	}
+}
+
+.magn {
+	width: 18px;
+	height: 18px;
+	float: left;
+	margin-right: 10px;
+	background: url(../images/linea/magnifier.svg) no-repeat 0 0/cover;
+	@extend %pointer;
+	@extend %form_element;
+}

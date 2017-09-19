@@ -1,0 +1,16 @@
+{
+  "name": "Zapleo",
+  "short_name": "Zapleo",
+  "start_url": "main.php",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#9C27B0",
+  "background_color": "#555",
+  "icons": [
+    {
+      "src": "images/apple-touch-icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

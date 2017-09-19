@@ -1,0 +1,60 @@
+@import "main", "_top", "_latest_works", "_mob-menu";
+
+.content {
+	figcaption {
+    justify-content: space-around;
+	padding: 0 1.84vmin;
+		/* .showproj {
+		text-transform: uppercase;
+		font-size: calcFluidSize(12, 22, 320, 1920);
+		padding: 1em;
+		} */
+	}
+}
+
+.customer {
+	border-radius: 50%;
+	width: calcFluidSize(120, 268, 800, 1920);
+	height: calcFluidSize(120, 268, 800, 1920);
+	object-fit: cover;
+		@media (max-width:480px) {
+		width: 12em;
+		height: 12em;
+		}
+}
+
+.review {
+width: 100%;
+text-align: left;
+@extend %padd-marg;
+	p {
+	font-size: 0.88em;
+	line-height: calcFluidSize(14, 33, 320, 1920);
+	max-height: 7em;
+	overflow: auto;
+	@extend %padd-marg;
+		&::before {
+		    content: '';
+			display: inline-block;
+			background: url(../images/open-quote.svg) no-repeat center 0/cover;
+			width: calcFluidSize(18, 45, 320, 1920);
+			height: calcFluidSize(12, 30, 320, 1920);
+			margin-right: 3.6%;
+		}
+	}
+	h5 {
+	margin: 2vmin 0 0;
+	@extend %nowrap;
+	}
+}
+
+/* Animated blinking cursor for typed.js */
+.typed-cursor{
+	opacity: 1;
+	animation: blink 0.7s infinite;
+}
+@keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}

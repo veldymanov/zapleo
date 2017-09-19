@@ -1,0 +1,30 @@
+@import "main", "_mob-menu";
+
+.about {
+    padding: 11.4vmin 0 16.3vmin 6%;
+	@media (max-width:1100px) {
+	padding-right: 6%;
+	}
+}
+
+.top {
+padding-bottom: 7.5vmin;
+}
+
+.content {
+display: flex;
+	@media (max-width:1100px) {flex-wrap: wrap; justify-content: center;}
+	iframe {
+	border: none;
+	margin-right: 5.55%;
+	width: 42%;
+    height: 100%;
+		@media (max-width:1100px) {margin: 0; width: 100%;}
+	}
+	article {
+	background-color: #eee;
+	padding: 1.58em 1.12em;
+	font-size: calcFluidSize(16, 36, 320, 1920);
+	color: $darkgrey;
+	}
+}
