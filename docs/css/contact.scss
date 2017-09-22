@@ -1,4 +1,4 @@
-@import "main", "_logo", "_mob-menu", "_submit-effect";
+@import "main.scss", "logo", "mob-menu"; // "submit-effect";
 
 .start {
 	height: 70vh;
@@ -94,7 +94,7 @@ display: flex;
 		color: $orange;
 		margin-left: auto;
 		padding: 0.6em 1.8em;
-		@include submitEffect;
+//		@include submitEffect;
 		@extend %pointer;
 		@extend %form_element;
 		}

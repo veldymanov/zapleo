@@ -24,7 +24,7 @@ var $mobMenu = $('.mob-menu');
 		if ( (! el.is('a')) && (! el.is('input')) ) {
 			$(this).find('nav').removeClass('displayed').on('transitionend webkitTransitionEnd oTransitionEnd', function () {
  				$self.fadeOut(fadeSpeed);
-				$('.sandwich').removeClass('active'); 
+				$('.sandwich').removeClass('active');
 			});
 		}
 	});

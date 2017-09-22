@@ -51,19 +51,20 @@ z-index: -1;
 
 /* Icons */
 .conticon {
-display: inline-block;
-position: relative;
-height: 40px;
-width: 40px;
-background-image: url(../images/footer_icons.svg), url($blick);
-background-repeat: no-repeat;
-background-color: $darkgrey;
-background-position: center 0, 40px center;
-background-size: 50px; //130%;
-transition: all 0.5s ease;
-	&:hover {
-	background-position-x: center, -40px;
-	}
+	display: inline-block;
+	position: relative;
+	height: 40px;
+	width: 40px;
+	margin: 1px 0 0 0;
+	background-image: url(../images/footer_icons.svg), url($blick);
+	background-repeat: no-repeat;
+	background-color: $darkgrey;
+	background-position: center 0, 40px center;
+	background-size: 50px; //130%;
+	transition: all 0.5s ease;
+		&:hover {
+		background-position-x: center, -40px;
+		}
 }
 
 .smgroup {
@@ -143,13 +144,14 @@ background-size: 110%;
 		}
 	}
 	a {
-	display: inline-block;
-	width: 40px;
-	height: 40px;
-	transition: background-position .4s cubic-bezier(0.65, 0.05, 0.36, 1);
-		&:hover {
-		background-position-x: center, 0;
-		}
+		display: inline-block;
+		width: 40px;
+		height: 40px;
+		margin: 1px 0 0 0;
+		transition: background-position .4s cubic-bezier(0.65, 0.05, 0.36, 1);
+			&:hover {
+			background-position-x: center, 0;
+			}
 	}
 	/* Social icons sprite */
 	.fb { @include socIconsSprite(66.5%, 125%, #{$facebook}); }

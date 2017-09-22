@@ -1,4 +1,4 @@
-@import "main", "_mob-menu", "_details";
+@import "main.scss", "mob-menu", "details";
 
 %rounded {
 border-radius: 50%;
@@ -180,4 +180,4 @@ padding: 0 15px;
 	}
 }
 
-@import "_comments", "_submit-effect", "_comment-form";
+@import "comments", "comment-form"; // "submit-effect",

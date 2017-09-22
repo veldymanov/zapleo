@@ -1,9 +1,10 @@
 <!Doctype html>
 <html lang="en-US">
 	<head>
+		<link rel="preload" href="css/home.min.css" as="style" type='text/css'>
 		<link rel="preload" href="fonts/functionpro_book.ttf" as="font" crossorigin="anonymous">
 		<link rel="preload" href="fonts/functionpro_medium.ttf" as="font" crossorigin="anonymous">
-		<link rel="preload" href="css/home.css" as="style">
+		<link rel="preload" href="js/jquery.parallax.min.js" as="script">
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.z.png">
 		<link rel="icon" type="image/png" href="images/favicon-32x32.z.png" sizes="32x32">
@@ -12,7 +13,7 @@
 		<meta name="theme-color" content="#ffffff">
 		<link rel='manifest' href='manifest.json'>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
-		<link rel="stylesheet" href="css/home.css">
+		<link rel="stylesheet" href="css/home.min.css">
 		<title>Zapleo</title>
 	</head>
 	<body>
@@ -56,7 +57,7 @@
 					<li><a href="testimonials.php" class="underline">Testimonials</a></li>
 					<li><a href="contact.php" class="underline">Contact</a></li>
 				</ul>
-				<button class="sandwich">
+				<button class="sandwich" aria-label="Mobile menu">
 					<span class="line1"></span>
 					<span class="line2"></span>
 					<span class="line3"></span>
@@ -562,54 +563,51 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 		<script src="js/jquery.parallax.min.js"></script>
 		<!--<script src="https://cdn.jsdelivr.net/vivus/latest/vivus.min.js"></script>-->
-		<script>
-		$(window).load(function () {
-			//Parallax init
-			$('#menorah').parallax({
-				calibrateX: false,
-				calibrateY: false
-			});
-			//Calculating parallax height
-			function calcParallaxHeight() {
-				$('.start').height( $('#menorah img:first').height() );
-			}
-			calcParallaxHeight();
-			//Updating parallax height onresize
-			$(window).resize(calcParallaxHeight);
-			
-			//Scroll to <main>
-			$('.mouse').on('click', function(){
-				$('html, body').animate({scrollTop: $('main').offset().top + 15}, 600);
-			});
-			
-			//Logo animation
-			/* new Vivus('logo', {
-			type: 'oneByOne',
-			duration: 140,
-			delay: 0,
-			animTimingFunction: Vivus.EASE_OUT
-			}, 
-			function () {
-				var paths = $('#logo').find('path');
-				paths.css('transitionProperty','all !important');
-				paths.css({
-					fill: 'rgba(255,255,255,0.5)',
-					strokeWidth: '0'
+		<script async>
+			$(window).load(function () {
+				//Parallax init
+				$('#menorah').parallax({
+					calibrateX: false,
+					calibrateY: false
 				});
-			}); */
-		});
-		</script>
-		<script src="js/main.min.js"></script>
+				//Calculating parallax height
+				function calcParallaxHeight() {
+					$('.start').height( $('#menorah img:first').height() );
+				}
+				calcParallaxHeight();
+				//Updating parallax height onresize
+				$(window).resize(calcParallaxHeight);
 
-        <script type="text/javascript">
+				//Scroll to <main>
+				$('.mouse').on('click', function(){
+					$('html, body').animate({scrollTop: $('main').offset().top + 15}, 600);
+				});
+
+				//Logo animation
+				/* new Vivus('logo', {
+				type: 'oneByOne',
+				duration: 140,
+				delay: 0,
+				animTimingFunction: Vivus.EASE_OUT
+				},
+				function () {
+					var paths = $('#logo').find('path');
+					paths.css('transitionProperty','all !important');
+					paths.css({
+						fill: 'rgba(255,255,255,0.5)',
+						strokeWidth: '0'
+					});
+				}); */
+			});
+		</script>
+		<script async src="js/main.min.js"></script>
+
+        <script async>
             if ('serviceWorker' in navigator) {
                 //register service worker
-                navigator.serviceWorker.register('service-worker.js')
-                    .then( reg => {
-                        console.log('Registration succeeded. Scope is ' + reg.scope);
-                    }).catch( error => {
-                        console.log('Registration failed' + error);
-                    });
+				navigator.serviceWorker.register('service-worker.js')
+					.then( reg => console.log('Service Worker registration succeeded. Scope is ' + reg.scope) )
+					.catch( error => console.log('Registration failed' + error) )
             }
         </script>
 	</body>

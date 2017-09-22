@@ -59,7 +59,7 @@ justify-content: space-between;
 	color: $orange;
 	margin-left: auto;
 	padding: 0.6em 1.8em;
-	@include submitEffect;
+//	@include submitEffect;
 	@extend %pointer;
 	@extend %form_element;
 		@media (max-width: 680px) {

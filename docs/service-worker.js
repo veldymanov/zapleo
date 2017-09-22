@@ -8,7 +8,7 @@ const removeCache = false;
  *   1. Reload page to install new (changed) Service Worker.
  *   2. Close (reload is not enough) the page (pages) in Browser and start it again.
  **/
-const CACHE = 'zapleoCache-v5';
+const CACHE = 'zapleoCache-v6';
 
 /**
  * Fill relative URLs for Service Worker cache
@@ -22,36 +22,11 @@ self.addEventListener('install', event => {
         .then( cache => {
             cache.addAll([
 //                'main.php',
-//                'css/home.css',
+//                'css/home-old.css',
 //                'js/main.min.js',
                 'js/jquery.parallax.min.js',
                 'fonts/functionpro_book.ttf',
                 'fonts/functionpro_medium.ttf',
-//                'images/evening_1.png',
- //               'images/evening_2.png',
-//                'images/evening_3.png',
-//                'images/evening_4.png',
-//                'images/evening_5.png',
-//                'images/footer_icons.svg',
-//                'images/houses_lights_1.png',
- //               'images/houses_lights_2.png',
-//                'images/houses_lights_3.png',
- //               'images/morning_1.png',
-//                'images/morning_2.png',
-//                'images/morning_3.png',
-//                'images/morning_4.png',
- //               'images/morning_5.png',
- //               'images/night_1.png',
- //               'images/night_2.png',
-//                'images/night_3.png',
- //               'images/night_4.png',
- //               'images/night_4_light.png',
-//                'images/night_5.png',
-//                'images/night_5_light.png',
- //               'images/work1.png',
- //               'images/work2.png',
- //               'images/work3.png',
- //               'images/work4.png'
             ])
         })
     );
