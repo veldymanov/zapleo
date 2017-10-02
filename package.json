@@ -1,21 +1,19 @@
 {
-  "name": "zapleo_new",
-  "version": "0.0.0",
-  "description": "zapleo_new",
-  "repository": "https://bitbucket.org/veldymanov/zapleo_new",
-  "main": "main.php",
-  "directories": {
-    "doc": "docs"
-  },
+  "name": "template",
+  "version": "1.0.0",
+  "description": "template",
   "dependencies": {
     "jquery": "^3.2.1",
     "normalize.css": "^7.0.0"
   },
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
     "browser-sync": "^2.18.13",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
+    "gulp-babel": "^7.0.0",
     "gulp-clean-css": "^3.8.0",
     "gulp-concat": "^2.6.1",
     "gulp-htmlmin": "^3.0.0",

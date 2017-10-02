@@ -1,0 +1,183 @@
+@import "main.scss", "mob-menu", "details";
+
+%rounded {
+border-radius: 50%;
+}
+
+.postImg {
+	width: 100%;
+	height: auto;
+}
+
+header {
+	position: absolute;
+	top: 0;
+}
+
+/* Main content */
+.post {
+display: flex;
+padding-bottom: 0;
+	@media (max-width: 768px) {flex-wrap: wrap-reverse;}
+	article {
+	padding: 0 15px;
+		>p {
+		margin: 0 0 0.5em;
+		}
+	}
+	blockquote {
+	display: table;
+	position: relative;
+	font-size: calcFluidSize(16, 20, 320, 1920);
+	line-height: 1.5em;
+	padding: 0 1.1em;
+    margin: 0 0 1em;
+		&::before {
+		content: "";
+		display: inline-block;
+		position: absolute;
+		left: 0;
+		width: 3px;
+		height: 100%;
+		background: $orange;
+		}
+	}
+}
+
+.attachment {
+//Right
+	&.right{
+	float: right;
+	margin: 0 0 15px 15px;
+		@media (max-width: 580px) {margin-left: 0;}
+	}
+//Left
+	&.left{
+	float: left;
+	margin: 0 15px 15px 0;
+		@media (max-width: 580px) {margin-right: 0;}
+	}
+//Both
+	img {
+	max-width: 280px; //??
+		@media (max-width: 580px) {max-width: 100%;}
+	}
+	p {
+	font-size: 12px;
+	margin: -5px 0 0;
+    padding: 5px 10px;
+	background: $portfolio_bg;
+	}
+}
+
+/* Share */
+.share {
+display: table;
+padding-bottom: 2em;
+	h4 {
+	@extend %v-align;
+	}
+	a {
+	display: inline-block;
+	position: relative;
+	width: 35px;
+    height: 35px;
+	border-radius: 50%;
+	background: $portfolio_bg;
+	transition: .2s ease-in-out;
+		&:hover {
+		background: $portfolio_bg * 0.9;
+		}
+	}
+}
+
+.social-links {
+color: $dark;
+	* {
+	display: inline-block;
+	}
+	li {
+	margin-left: 10px;
+	}
+	.icon {
+	display: block;
+    font-size: 14px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+	}
+}
+
+/* Bottom bar */
+.bottom-bar {
+    padding: 2em 6%;
+}
+
+.post-controls {
+	a {
+	display: inline-flex;
+	align-items: center;
+		&:hover {
+			.post-title strong {color: $orange;}
+			.arrow svg {fill: $orange;}
+		}
+	}
+}
+
+.next-post {
+flex-direction: row-reverse;
+text-align: right;
+float: right;
+}
+
+.next {
+transform: scaleX(-1);
+}
+
+.post-title {
+margin: 0 20px;
+	em {
+	display: block;
+	font-size: 14px;
+	}
+	strong {
+	display: inline-block;
+    font-size: 19px;
+    color: $dark;
+    font-weight: 400;
+	max-width: calcFluidSize(200, 700, 320, 1920);
+	@extend %nowrap;
+	}
+}
+
+/* Aside */
+aside {
+flex: 1 0 160px;
+padding: 0 15px;
+	img {
+	@extend %rounded;
+	width: 100px;
+    height: 100px;
+    object-fit: cover;
+	@media (max-width: 480px) {width: 60px; height: 60px;}
+	}
+}
+
+.author {
+	font-size: 16px;
+	color: $dark;
+	margin-bottom: 0;
+}
+
+.role, .details {
+    font-size: 14px;
+}
+
+.category {
+	.underline {
+	color: inherit;
+	}
+}
+
+@import "comments", "comment-form"; // "submit-effect",

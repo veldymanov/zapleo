@@ -1,0 +1,66 @@
+.content {
+text-align: center;
+	figure {
+	position: relative;
+	background: #ececec;
+	padding: 1.67vmin 3.5vmin;
+	margin: 0 auto;
+	@extend %padd-marg;
+		//Show figcaption on hover
+		&:hover > figcaption {
+			opacity: 1;
+		}
+		img {
+		width: 100%;
+		height: auto;
+		}
+	}
+	//Figcaption grey block
+	figcaption {
+	opacity: 0;
+	transition: opacity 250ms ease-in-out;
+	position: absolute;
+	top: 0; left: 0;
+	right: 0; bottom: 0;
+	background-color: rgba(243, 243, 243, 0.9);
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+		//Figcaption content
+		h3 {
+		font-size: calcFluidSize(16, 34, 320, 1920);
+		@extend %padd-marg;
+		}
+		.link {
+		font-size: calcFluidSize(14, 20, 320, 1920);
+		color: $white;
+		display: inline-block;
+		max-width: 100%;
+		background: #fcb117;
+		padding: 1% 4.2%;
+		@extend %nowrap;
+		}
+		.descr {
+		max-width: 100%;
+		font-size: calcFluidSize(14, 18, 320, 1920);
+		@extend %nowrap;
+		}
+		h5 {
+		text-transform: uppercase;
+		font-size: calcFluidSize(14, 22, 320, 1920);
+		}
+	}
+	>ul {
+	column-count: 3;
+	column-gap: 9vmin;
+		li {
+		display: inline-block;
+		width: 100%;
+		margin-bottom: 3.7vmin;
+		}
+	@media (max-width:1400px) {column-gap: 4vmin;}
+	@media (max-width:800px) {column-count: 2;}
+	@media (max-width:480px) {column-count: auto;}
+	}
+}

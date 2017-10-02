@@ -1,0 +1,188 @@
+//Imports in the bottom of main.scss
+
+$blick: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGMAAABtCAYAAAC1Md/lAAADQ0lEQVR42u3dAUtaYRjFcUNRlCJZGEsWRRNHkSTFhrEoShpFURiNjY38/t/CvXfcQYxG3dNRH9hfeL7A+fHcV3sP3VLpP/tMJpNePuUSn7lCLKX5mWacZpSmTSrzwxjmEI/nLEMindlCtJ+A+DPZtvR5dM0Gopw/lsbPzF2adRKb/qE9LjBDHl3TgWik+VEQ4/eWkJ4f41iAyGaT9LwQb0WIL6TnhVhIcyNAPKRpkqAXY1vcio+k54WopfkuQHxLUyVBL8ahuBUd0vNCtESIS9LzY1yKGCuk54XoiBCHpOeFqOYHcFGI7KCvkaAX45O4FR9IzwvRzH+sFYXIfhQukKAX40LcilXS80JsihDHpOeFqKS5FyCyP6k3SNCLsS9uxS7peSEeNz2KzIi7bj/GUNwK6jlmiHcixBnpeSFe2vR4qo5DycCM0RO3ok96XoiGeGjfc2j7MWh6BIFYEyHOSc8L8ZqmxzIJejFoegSBqItNj680PfwYn8WteE96XgiaHoEO7Svx0KbpYcag6REEgqZHIIyBuBVd0vNC0PQIhEHTIwjElghxRHpeCJoegTBoegSBWBIP7RGHth+DpkcQiHUR4pT0vBCvaXoskqAXg6ZHEIhFselxR9PDj3EibsUG6XkhaHoEgcgujW5pesTA2BG34oD0vBA0PQJhHIlbsUV6XgiaHoEObZoeQTC64lYMSM8LQdMjEAZNjyAQb8RLo2sujfwYND2CQND0CAJRyX81K4d2nQS9GDQ9gkAsi4f2LYe2H+Nc3Io10vNC0PQIAlHO76dpegTA2BO3Yo/0vBA0PQJhnIpbwcumzBA0PYJA0PQIhLErbsU+6XkhaHoEwqDpEQRiVYS4ID3/oU3TIwgGTY8gEFVeuRYHg6ZHEIgV8dLoiksjP4b6yrUW6XkhaHoEOrRpegTBOBC3Yof0vBA0PQJh0PQIArEhQpyQnheCpkcgjL64FT3S80LQ9AiEQdMjCERbhBiSnheCpkcgDJoeQSDq+f+HVV65ViFBLwZNjyAQND0CYVyLh3aT9KazGTc0PWJ9rd1+YfODpseMUGrZO4ueweiQ1GxRWv9oDdL0mOOjq/vXo4umR4BH14BXrk3/8wvkvbYCyhXBlQAAAABJRU5ErkJggg==';
+
+@mixin socIconsSprite($b-pos-y, $b-size, $color) {
+background:url(../images/icons/footer_icons.z.svg) no-repeat center #{$b-pos-y}/#{$b-size}, -webkit-gradient(linear, left top, right top, color-stop(50%, $color), color-stop(50%, $orange)) no-repeat 100% 0/200%;
+background:url(../images/icons/footer_icons.z.svg) no-repeat center #{$b-pos-y}/#{$b-size}, -webkit-linear-gradient(left, $color 50%, $orange 50%) no-repeat 100% 0/200%;
+background:url(../images/icons/footer_icons.z.svg) no-repeat center #{$b-pos-y}/#{$b-size}, -moz-linear-gradient(left, $color 50%, $orange 50%) no-repeat 100% 0/200%;
+background: url(../images/icons/footer_icons.z.svg) no-repeat center #{$b-pos-y}/#{$b-size}, linear-gradient(to right, $color 50%, $orange 50%) no-repeat 100% 0/200%;
+}
+
+%inline-flex {
+display: inline-flex;
+}
+
+// Footer
+.footer {
+	color: transparent;
+	padding: 7.6vmin 14% 5.8vmin;
+	width: 100%;
+	background: #3c3a3a;
+	position: fixed;
+	bottom: 0;
+	z-index: -1;
+	@media (max-width:1100px) {padding: 7vmin 5% 5vmin;}
+	@media (max-width:480px) {padding-left: 0; padding-right: 0;}
+	>ul {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		overflow: hidden; //mobile, line bug removal
+		@media (max-width: 768px) {
+			justify-content: center;
+		}
+	}
+	p {
+		@extend %padd-marg;
+		text-align: center;
+		font-size: calcFluidSize(16, 26, 320, 1920);
+		@media (max-width: 768px) {margin-top: 0;}
+		span {
+			display: block;
+			transition: color .4s ease-in-out;
+			@media (max-width: 768px) {display: none;}
+		}
+		&:hover {
+			span {color: $portfolio_bg;}
+			.fb + span {color: $facebook;}
+			.l_in + span {color: $linkedIn;}
+			.inst + span {color: $instagram;}
+			.up + span {color: $upwork;}
+		}
+	}
+}
+
+/* Icons */
+.conticon {
+	display: inline-block;
+	position: relative;
+	height: 40px;
+	width: 40px;
+	background-image: url(../images/icons/footer_icons.z.svg), url($blick);
+	background-repeat: no-repeat;
+	background-color: $darkgrey;
+	background-position: center 0, 40px center;
+	background-size: 50px; //130%;
+	transform: translateZ(0); //mobile, line bug removal
+	transition: all 0.5s ease;
+	&:hover {
+		background-position-x: center, -40px;
+	}
+}
+
+.smgroup {
+	.conticon {
+		top: -.5px; //mobile, line bug removal
+	}
+	@media (max-width: 768px) {
+		margin: 0 45px 0 25px;
+	}
+	@media (max-width: 480px) {margin: 0 26px 0 23px;}
+	ul {
+		@extend %inline-flex;
+		@media (max-width: 768px) {flex-direction: column;}
+	}
+}
+
+.biggroup {
+	@media (max-width: 768px) {order: -1;}
+	ul {
+		&:hover {
+			&+p {
+				color: $portfolio_bg;
+			}
+		}
+		@media (max-width: 768px) {
+			columns: 30px auto;
+			width: 100px;
+		}
+		@media (max-width: 480px) {
+			width: 90px;
+		}
+	}
+	li {
+		display: inline-block;
+		&+li {
+			@media (min-width: 769px) {margin: 0 0 0 8px;}
+			&:nth-child(even) {
+				@media (max-width: 768px) {
+					margin: 14px 0 0 0;
+				}
+			}
+		}
+	}
+}
+
+/* Sprite tuning */
+.mail {
+	background-position-y: 11%;
+	background-size: 100.4%, 110%;
+	width: 51px;
+	@media (max-width:768px) {
+		bottom: -1px;
+		margin-top: 14px;
+	}
+}
+
+.phone {
+	background-position-y: 22%;
+}
+
+.whatsapp {
+	background-position-y: 33%;
+	bottom: -1px; //mobile, line bug removal
+}
+
+.viber {
+	background-position-y: 44.1%;
+	background-size: 129%;
+}
+
+.telegram {
+	background-position-y: 55%;
+	background-size: 110%;
+	bottom: -1px; //mobile, line bug removal
+	width: 46px;
+}
+/* End sprite */
+
+/* Social icons */
+.social {
+	ul {
+		@extend %inline-flex;
+		@media (max-width: 768px) {
+			display: block;
+			columns: auto 2;
+			li + li:nth-child(even) {
+				margin: 14px 0 0 0;
+			}
+		}
+	}
+	a {
+		display: inline-block;
+		width: 40px;
+		height: 40px;
+		transition: background-position .4s cubic-bezier(0.65, 0.05, 0.36, 1);
+		&:hover {
+			background-position-x: center, 0;
+		}
+	}
+	/* Social icons sprite */
+	.fb {
+		@include socIconsSprite(66.5%, 125%, #{$facebook});
+		transform: translateZ(0);//mobile, line bug removal
+	}
+	.l_in {
+		@include socIconsSprite(77.5%, 125%, #{$linkedIn});
+		transform: translateZ(0);//mobile, line bug removal
+	}
+	.inst {
+		@include socIconsSprite(88.66%, 125%, #{$instagram});
+		transform: translateZ(0);//mobile, line bug removal
+	}
+	.up {
+		@include socIconsSprite(99.6%, 125%, #{$upwork});
+		transform: translateZ(0);//mobile, line bug removal
+	}
+}
