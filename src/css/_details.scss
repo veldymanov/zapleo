@@ -11,14 +11,14 @@
 .date {
 	&::before {
 	@extend %linea;
-	background: url(../images/linea/calendar.svg) no-repeat 0 0/cover;
+	background: url(../images/linea/calendar.z.svg) no-repeat 0 0/cover;
 	}
-}
+} 
 
 .category {
 	&::before {
 	@extend %linea;
-	background: url(../images/linea/folder_multiple.svg) no-repeat 0 0/cover;
+	background: url(../images/linea/folder_multiple.z.svg) no-repeat 0 0/cover;
 	}
 	.underline {
 	color: $orange;
