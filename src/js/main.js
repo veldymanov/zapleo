@@ -29,3 +29,52 @@ var $mobMenu = $('.mob-menu');
 		}
 	});
 });
+
+//////////////////////////////////////////////////////////////
+//Images lazy loading
+//////////////////////////////////////////////////////////////
+// Get all of the images that are marked up to lazy load
+let imgParents = document.querySelectorAll('.js-lazy-load');
+const config = {
+    root: null,
+    rootMargin: '0px 0px 0px 0px',
+    threshold: [0.0]
+};
+
+// If we have support for intersection observer
+if (!('IntersectionObserver' in window)) {
+    console.log('IntersectionObserver is not supported');
+
+    imgParents.forEach(imgParent => loadImage(imgParent));
+}  else {
+    console.log('IntersectionObserver started');
+
+    // The observer for the images on the page
+    let observer = new IntersectionObserver(onIntersection, config);
+    imgParents.forEach(imgParent => observer.observe(imgParent));
+
+	function onIntersection(entries) {
+		// Loop through the entries
+		entries.forEach( entry => {
+			// Are we in viewport?
+			if(entry.intersectionRatio > 0.0) {
+				// Stop watching and load image
+				observer.unobserve(entry.target);
+				loadImage(entry.target);
+
+				//Show picture
+				//entry.target.querySelectorAll('picture')[0].classList.remove('hidden');
+			} else {
+				//Hide picture
+				//entry.target.querySelectorAll('picture')[0].classList.add('hidden');
+			}
+		});
+	}
+}
+
+function loadImage(target){
+    let lazySrc = target.querySelectorAll('.js-lazy-src')[0];
+    let lazyImg = target.querySelectorAll('.js-lazy-img')[0];
+    lazySrc.srcset = lazySrc.getAttribute('data-srcset');
+    lazyImg.src = lazyImg.getAttribute('data-src');
+}

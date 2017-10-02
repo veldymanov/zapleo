@@ -453,4 +453,4 @@ h1, h2 {
 
 .staff {
   width: calc( 0.19875 * 100vw + 96.4px);
-  height: calc( 0.19875 * 100vw + 96.4px); }
+  height: auto; }

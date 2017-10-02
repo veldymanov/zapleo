@@ -5,8 +5,8 @@ padding: 0 6% 7.5vmin;
 }
 
 .team {
-width: 100%;
-padding: 12.2vmin 0 6.2vmin;
+	width: 100%;
+	padding: 12.2vmin 0 6.2vmin;
 }
 
 .content {
@@ -40,6 +40,6 @@ margin: 0 52px;
 }
 
 .staff {
-width: calcFluidSize(160, 478, 320, 1920);
-height: calcFluidSize(160, 478, 320, 1920);
+	width: calcFluidSize(160, 478, 320, 1920);
+	height: auto;
 }

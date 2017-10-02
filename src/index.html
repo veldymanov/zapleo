@@ -19,7 +19,7 @@
 		</style>
 	</head>
 	<body>
-	<!-- Header -->
+		<!-- Header -->
 		<header>
 			<a href="index.html">
 				<!-- Logo -->
@@ -66,9 +66,9 @@
 				</button>
 			</nav>
 		</header>
-	<!-- Start section -->
+		<!-- Start section -->
 		<section class="start">
-		<!-- Parallax background -->
+			<!-- Parallax background -->
 			<ul id="menorah">
 				<li class="layer night" data-depth="0.05">
 					<picture>
@@ -169,7 +169,7 @@
 						<img src="images/morning_3_1600.z.png" alt="morning 3">
 					</picture>
 				</li>
-<!-- Windows light -->
+				<!-- Windows light -->
 				<li class="layer house-light1" data-depth="0.15">
 					<picture>
 						<source type="image/webp"
@@ -203,7 +203,7 @@
 						<img src="images/houses_lights_3_1600.z.png" alt="houses light 3">
 					</picture>
 				</li>
-<!-- Windows light -->
+				<!-- Windows light -->
 				<li class="layer night" data-depth="0.20">
 					<picture>
 						<source type="image/webp"
@@ -527,111 +527,60 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<script src="js/jquery.parallax.min.js"></script>
 	<!--<script src="https://cdn.jsdelivr.net/vivus/latest/vivus.min.js"></script>-->
-	<script>
-        $(window).load(function () {
-            //////////////////////////////////////////////////////////////
-            //Parallax images visible after all imgs are loaded
-            $('#menorah').css('visibility','visible');
-
-            //////////////////////////////////////////////////////////////
-            //Parallax init
-            //////////////////////////////////////////////////////////////
-            $('#menorah').parallax({
-                calibrateX: false,
-                calibrateY: false
-            });
-            //Calculating parallax height
-            function calcParallaxHeight() {
-                $('.start').height( $('#menorah img:first').height() );
-            }
-            calcParallaxHeight();
-            //Updating parallax height onresize
-            $(window).resize(calcParallaxHeight);
-
-            //Scroll to <main>
-            $('.mouse').on('click', function(){
-                $('html, body').animate({scrollTop: $('main').offset().top + 15}, 600);
-            });
-
-            //Logo animation
-            /* new Vivus('logo', {
-            type: 'oneByOne',
-            duration: 140,
-            delay: 0,
-            animTimingFunction: Vivus.EASE_OUT
-            },
-            function () {
-                var paths = $('#logo').find('path');
-                paths.css('transitionProperty','all !important');
-                paths.css({
-                    fill: 'rgba(255,255,255,0.5)',
-                    strokeWidth: '0'
-                });
-            }); */
-        });
-	</script>
-
 	<script src="js/main.js"></script>
+	<script type="text/javascript">
+		//////////////////////////////////////////////////////////////
+		//Parallax
+		//////////////////////////////////////////////////////////////
+		$(window).load(function () {
+		    //Parallax images visible after all imgs are loaded
+		    $('#menorah').css('visibility','visible');
 
-	<script>
-        //////////////////////////////////////////////////////////////
-        //Images lazy loading
-        //////////////////////////////////////////////////////////////
-		// Get all of the images that are marked up to lazy load
-        let imgParents = document.querySelectorAll('.js-lazy-load');
-        const config = {
-            root: null,
-            rootMargin: '0px 0px 0px 0px',
-            threshold: [0.0]
-        };
+		    ///////////////
+		    //Parallax init
+		    ///////////////
+		    $('#menorah').parallax({
+		        calibrateX: false,
+		        calibrateY: false
+		    });
+		    //Calculating parallax height
+		    function calcParallaxHeight() {
+		        $('.start').height( $('#menorah img:first').height() );
+		    }
+		    calcParallaxHeight();
+		    //Updating parallax height onresize
+		    $(window).resize(calcParallaxHeight);
 
-        // If we have support for intersection observer
-        if (!('IntersectionObserver' in window)) {
-            console.log('IntersectionObserver is not supported');
+		    //Scroll to <main>
+		    $('.mouse').on('click', function(){
+		        $('html, body').animate({scrollTop: $('main').offset().top + 15}, 600);
+		    });
 
-            imgParents.forEach(imgParent => loadImage(imgParent));
-		}  else {
-            console.log('IntersectionObserver started');
-
-            // The observer for the images on the page
-            let observer = new IntersectionObserver(onIntersection, config);
-            imgParents.forEach(imgParent => observer.observe(imgParent));
-
-			function onIntersection(entries) {
-				// Loop through the entries
-				entries.forEach( entry => {
-					// Are we in viewport?
-					if(entry.intersectionRatio > 0.0) {
-						// Stop watching and load image
-						observer.unobserve(entry.target);
-						loadImage(entry.target);
-
-						//Show picture
-						//entry.target.querySelectorAll('picture')[0].classList.remove('hidden');
-					} else {
-						//Hide picture
-						//entry.target.querySelectorAll('picture')[0].classList.add('hidden');
-					}
-				});
-			}
-        }
-
-        function loadImage(target){
-            let lazySrc = target.querySelectorAll('.js-lazy-src')[0];
-            let lazyImg = target.querySelectorAll('.js-lazy-img')[0];
-            lazySrc.srcset = lazySrc.getAttribute('data-srcset');
-            lazyImg.src = lazyImg.getAttribute('data-src');
-		}
+		    //Logo animation
+		    /* new Vivus('logo', {
+		    type: 'oneByOne',
+		    duration: 140,
+		    delay: 0,
+		    animTimingFunction: Vivus.EASE_OUT
+		    },
+		    function () {
+		        var paths = $('#logo').find('path');
+		        paths.css('transitionProperty','all !important');
+		        paths.css({
+		            fill: 'rgba(255,255,255,0.5)',
+		            strokeWidth: '0'
+		        });
+		    }); */
+		});
 
 
-        //////////////////////////////////////////////////////////////
-        //Service Worker
-        //////////////////////////////////////////////////////////////
+		//////////////////////////////////////////////////////////////
+		//register Service Worker
+		//////////////////////////////////////////////////////////////
 		if ('serviceWorker' in navigator) {
-            //register service worker
-            navigator.serviceWorker.register('service-worker.js')
-                .then( reg => console.log('Service Worker registration succeeded. Scope is ' + reg.scope) )
-        		.catch( error => console.log('Registration failed' + error) )
-        }
+		    navigator.serviceWorker.register('service-worker.js')
+		        .then( reg => console.log('Service Worker registration succeeded. Scope is ' + reg.scope) )
+				.catch( error => console.log('Registration failed' + error) )
+		}
 	</script>
 </html>
