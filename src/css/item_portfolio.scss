@@ -34,7 +34,7 @@ display: flex;
 		&::before {
 		    content: '';
 			display: inline-block;
-			background: url(../images/open-quote.svg) no-repeat center 0/cover;
+			background: url(../images/icons/open-quote.z.svg) no-repeat center 0/cover;
 			width: calcFluidSize(18, 45, 320, 1920);
 			height: calcFluidSize(12, 30, 320, 1920);
 			margin-right: 3.6%;

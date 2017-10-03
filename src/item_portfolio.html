@@ -2,21 +2,25 @@
 <html lang="en">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-		<link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32">
-		<link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16">
-		<link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#fcb117">
-		<meta name="theme-color" content="#ffffff">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+		<meta name="theme-color" content="#ffffff">
+		<link rel='manifest' href='manifest.json'>		
+		<link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.z.png">
+		<link rel="icon" type="image/png" href="images/icons/favicon-32x32.z.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="images/icons/favicon-16x16.z.png" sizes="16x16">
+		<link rel="mask-icon" href="images/icons/safari-pinned-tab.z.svg" color="#fcb117">
 		<link rel="stylesheet" href="css/item_portfolio.css">
 		<title>Zapleo - Portfolio</title>
+		<style>
+			/*<link rel="stylesheet" href="css/item_portfolio.css">*/
+		</style>
 	</head>
 	<body>
 		<!-- Start section -->
 		<section class="start">
 			<header>
 				<a href="index.html">
-					<img src="images/logo.svg" alt="Zapleo" class="logo">
+					<img src="images/icons/logo.z.svg" alt="Zapleo" class="logo">
 				</a>
 				<nav>
 					<ul>
@@ -67,12 +71,22 @@
 					<p>Lorem ipsum dolor sit amet, consecte adipiscing elit, sed do eiusmod tempo Lorem ipsum dolor sit amet, consecte adipiscing elit, sed do eiusmod.</p>
 					<h2>Used skills</h2>
 					<ul>
-						<li><img src="http://www.websutra.lk/images/main_slider/html5-css-javascript-logos.png" height="65" alt=""></li>
+						<li>
+							<picture>
+								<source type="image/webp" srcset="images/icons/html5-css3-js-logo-72x65.z.webp">
+								<img src="images/icons/html5-css3-js-logo-72x65.z.png" alt="HTML5, CSS3, JS logo">
+							</picture>
+						</li>
 						<li></li>
 						<li></li>
 					</ul>
 					<h2>Testimonial</h2>
-					<img class="customer" src="images/customer.png" alt="photo">
+					<picture class="js-lazy-load">
+											<source class="js-lazy-src" type="image/webp" 
+													data-srcset="images/customers/customer.z.webp">
+											<img class="customer js-lazy-img" 
+												data-src="images/customers/customer.z.png" alt="customer photo">
+					</picture>
 					<blockquote class="review">
 						<p>Lorem ipsum dolor sit amet, con adipiscing elit, sed do eiusmod tempo Lorem ipsum dolor sit amet, consecte adipiscing elit, sed do eiusmod.</p>
 						<footer><h5>name noname</h5></footer>
@@ -80,13 +94,62 @@
 				</aside>
 				<div class="mocaps">
 					<ul>
-						<li><img src="https://dev.zapleo.com/newzapleo/wp-content/uploads/2017/04/devices-catscalendar2017_0002s_0001s_0000_Layer-21.png" alt="">
-						<li><img src="https://dev.zapleo.com/newzapleo/wp-content/uploads/2017/04/devices-catscalendar2017_0002s_0000s_0000_Layer-22.png" alt="">
-						<li><img src="https://dev.zapleo.com/newzapleo/wp-content/uploads/2017/04/devices-catscalendar2017_0001s_0002s_0000_Layer-23.png" alt="">
-						<li><img src="https://dev.zapleo.com/newzapleo/wp-content/uploads/2017/04/devices-catscalendar2017_0001s_0001s_0000_Layer-24.png" alt="">
-						<li><img src="https://dev.zapleo.com/newzapleo/wp-content/uploads/2017/04/devices-catscalendar2017_0001s_0000s_0000_Layer-25.png" alt="">
-						<li><img src="https://dev.zapleo.com/newzapleo/wp-content/uploads/2017/04/devices-catscalendar2017_0000s_0001s_0000_Layer-26.png" alt="">
-						<li><img src="https://dev.zapleo.com/newzapleo/wp-content/uploads/2017/04/devices-catscalendar2017_0000s_0000s_0000_Layer-27.png" alt="">
+						<li>
+							<picture class="js-lazy-load">
+								<source class="js-lazy-src" type="image/webp" 
+									data-srcset="images/catscalendar-1-450x235.z.webp">
+								<img class="js-lazy-img" 
+									data-src="images/images/catscalendar-1-450x235.z.png" alt="Castcalendar">
+							</picture>
+						</li>
+						<li>
+							<picture class="js-lazy-load">
+								<source class="js-lazy-src" type="image/webp" 
+									data-srcset="images/catscalendar-1-450x235.z.webp">
+								<img class="js-lazy-img" 
+									data-src="images/images/catscalendar-1-450x235.z.png" alt="Castcalendar">
+							</picture>
+						</li>
+						<li>
+							<picture class="js-lazy-load">
+								<source class="js-lazy-src" type="image/webp" 
+									data-srcset="images/catscalendar-1-450x235.z.webp">
+								<img class="js-lazy-img" 
+									data-src="images/images/catscalendar-1-450x235.z.png" alt="Castcalendar">
+							</picture>
+						</li>
+						<li>
+							<picture class="js-lazy-load">
+								<source class="js-lazy-src" type="image/webp" 
+									data-srcset="images/catscalendar-1-450x235.z.webp">
+								<img class="js-lazy-img" 
+									data-src="images/images/catscalendar-1-450x235.z.png" alt="Castcalendar">
+							</picture>
+						</li>
+						<li>
+							<picture class="js-lazy-load">
+								<source class="js-lazy-src" type="image/webp" 
+									data-srcset="images/catscalendar-1-450x235.z.webp">
+								<img class="js-lazy-img" 
+									data-src="images/images/catscalendar-1-450x235.z.png" alt="Castcalendar">
+							</picture>
+						</li>
+						<li>
+							<picture class="js-lazy-load">
+								<source class="js-lazy-src" type="image/webp" 
+									data-srcset="images/catscalendar-1-450x235.z.webp">
+								<img class="js-lazy-img" 
+									data-src="images/images/catscalendar-1-450x235.z.png" alt="Castcalendar">
+							</picture>
+						</li>
+						<li>
+							<picture class="js-lazy-load">
+								<source class="js-lazy-src" type="image/webp" 
+									data-srcset="images/catscalendar-1-450x235.z.webp">
+								<img class="js-lazy-img" 
+									data-src="images/images/catscalendar-1-450x235.z.png" alt="Castcalendar">
+							</picture>
+						</li>
 					</ul>
 				</div>
 			</section>

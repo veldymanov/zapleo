@@ -423,7 +423,7 @@ h1, h2 {
   .review p::before {
     content: '';
     display: inline-block;
-    background: url(../images/open-quote.svg) no-repeat center 0/cover;
+    background: url(../images/icons/open-quote.z.svg) no-repeat center 0/cover;
     width: calc( 0.01688 * 100vw + 12.6px);
     height: calc( 0.01125 * 100vw + 8.4px);
     margin-right: 3.6%; }
