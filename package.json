@@ -1,7 +1,7 @@
 {
-  "name": "template",
+  "name": "zapleo_new",
   "version": "1.0.0",
-  "description": "template",
+  "description": "zapleo_new",
   "dependencies": {
     "jquery": "^3.2.1",
     "normalize.css": "^7.0.0"
