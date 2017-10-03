@@ -1,0 +1,27 @@
+%linea {
+&::before {
+	content:"";
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	margin: 0 10px -2px 0;
+	}
+}
+
+.date {
+	&::before {
+	@extend %linea;
+	background: url(../images/linea/calendar.z.svg) no-repeat 0 0/cover;
+	}
+} 
+
+.category {
+	&::before {
+	@extend %linea;
+	background: url(../images/linea/folder_multiple.z.svg) no-repeat 0 0/cover;
+	}
+	.underline {
+	color: $orange;
+		&::after {background-color: $orange;}
+	}
+}

@@ -1,0 +1,194 @@
+@import "vars";
+
+@font-face {
+	font-family: 'CenturyGothicBold';
+	src: url('../fonts/CenturyGothicBold.ttf') format('truetype'),
+		url('../fonts/CenturyGothicBold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "functionpro_book";
+	font-style: normal;
+	font-weight: normal;
+	src: url("../fonts/functionpro_book.ttf") format("truetype"),
+		url("../fonts/functionpro_book.woff") format("woff"),
+		url("../fonts/functionpro_book.woff2") format("woff2");
+	unicode-range: U+20-126, U+161-255, U+338-339, U+376, U+710, U+732, U+2019, U+201C-201E, U+8192-8202, U+8208-8212, U+8216-8218, U+8220-8222, U+8226, U+8230, U+8239, U+8249-8250, U+8287, U+8364, U+8482, U+9724, U+64257-64258, U+FFEB;
+}
+
+@font-face {
+	font-family: "functionpro_medium";
+	font-style: normal;
+	font-weight: normal;
+	src: url("../fonts/functionpro_medium.ttf") format("truetype"),
+		url("../fonts/functionpro_medium.woff") format("woff"),
+		url("../fonts/functionpro_medium.woff2") format("woff2");
+	unicode-range: U+20-126, U+161-255, U+338-339, U+376, U+710, U+732, U+2019, U+201C-201E, U+8192-8202, U+8208-8212, U+8216-8218, U+8220-8222, U+8226, U+8230, U+8239, U+8249-8250, U+8287, U+8364, U+8482, U+9724, U+64257-64258, U+FFEB;
+}
+
+%v-align {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+%padd-marg {
+	padding: 0;
+	margin: 0;
+}
+
+%nowrap {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+%form_element {
+	font-family: inherit;
+	border: none;
+	outline: none;
+	background: none;
+	padding: 0;
+}
+
+%pointer {
+	cursor: pointer;
+}
+
+%dispnone {
+	display: none;
+}
+
+@function calcFluidSize($f-min, $f-max, $v-min, $v-max, $units: px) {
+  $k: ($f-max - $f-min)/($v-max - $v-min);
+  $b: $f-min - $k * $v-min;
+  $b: $b + $units;
+  @return calc( #{$k} * 100vw + #{$b} );
+}
+
+@mixin textarea($lh:48px) {
+	height: $lh*6;
+	line-height: $lh;
+	background: linear-gradient(to left, $white 0, transparent 0) repeat-y local 0 0/100% 100%,
+				linear-gradient(to right, $white 0, transparent 0) repeat-y local 0 0/ 100% 100%,
+				linear-gradient($white ($lh - 1), $portfolio_bg ($lh - 1), $portfolio_bg $lh, $white $lh) repeat-y local 0 0/ 100% $lh;
+}
+
+* {
+	box-sizing: border-box;
+    &::selection {
+	background: $orange;
+    color: $white;
+	}
+	img::selection {
+	background: none;
+	}
+}
+
+body {
+	font-family: "functionpro_book", sans-serif;
+	font-size: calcFluidSize(15, 20, 320, 1920); /* Fluid font-size */
+	color: $lightgrey;
+	@extend %padd-marg;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+a {
+	text-decoration:none;
+	color: inherit;
+}
+
+ul {
+	list-style: none;
+	@extend %padd-marg;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	color:$dark;
+}
+
+.logo {
+	width: 18vmin;
+	max-width: 150px;
+	height: auto;
+	max-height: 91px;
+}
+
+.start {
+	display: block;
+	color: $darkgrey;
+	background: $white;
+}
+
+header {
+	width: 100%;
+	padding: 6.2vmin 6% 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	nav {
+		li {
+		display: inline-block;
+			@media (min-width:901px) {
+			&+li {margin-left: calcFluidSize(16, 40, 900, 1920);}
+			}
+		}
+	}
+}
+
+main {
+	background: $white;
+	box-shadow: 0 40px 30px 0px rgba(0,0,0,0.4);
+		section {
+		padding: 12.2vmin 6%;
+		}
+	@media (max-width:768px) {
+		box-shadow: 0 15px 20px 0px rgba(0,0,0,0.4);
+	}
+}
+
+h1, h2 {
+	font-family: 'functionpro_medium', sans-serif;
+	font-size: 1.4em;
+	font-weight: 500;
+}
+
+.showmore {
+	font-family: inherit;
+	font-size: calcFluidSize(12, 22, 320, 1920);
+	text-transform: uppercase;
+	color: $white;
+	border: none; outline: none;
+	display: block;
+	margin: 1.7vmin auto 0;
+    padding: 1.45% 2.98%;
+	background: $darkgrey;
+	cursor: pointer;
+}
+
+//Underlining menu items
+.underline {
+	display: inline-block;
+	&::after {
+		content: "";
+		display: block;
+		margin: 1px auto 0 0;
+		height: 1px;
+		width: 0;
+		background-color: $darkgrey;
+		transition: width .25s ease-in-out;
+	}
+	&:hover::after {width: 100%;}
+}
+
+.hidden {
+	display: none;
+}
+
+@import "_footer";
