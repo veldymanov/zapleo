@@ -1,16 +1,25 @@
 @import "main.scss", "top", "mob-menu";
 
 .top {
-padding: 0 6% 7.5vmin;
+	padding: 0 6% 7.5vmin;
 }
 
 .team {
 	width: 100%;
 	padding: 12.2vmin 0 6.2vmin;
+	button {
+	    background: #fcb117;
+	    padding: 2px 5px;
+	    margin: 7px;
+	    border-radius: 5px;
+	    display: inline-block;
+	    cursor: pointer;
+	    border: 1px solid #fcb117;
+	}
 }
 
 .content {
-margin: 0 52px;
+	margin: 0 52px;
 	ul {
 	display: flex;
     flex-wrap: wrap;
@@ -21,25 +30,69 @@ margin: 0 52px;
 		}
 	}
 	figure {
-	position: relative;
-	display: inline-block;
-	@extend %padd-marg;
-	&:hover > figcaption {
-		opacity: 1;
+		position: relative;
+		display: inline-block;
+		@extend %padd-marg;
+		&:hover > figcaption {
+			opacity: 1;
 		}
 	}
 	figcaption {
-    opacity: 0;
-    position: absolute;
-    top: 0; left: 0;
-    right: 0; bottom: 0;
-	margin: calcFluidSize(5, 15, 320, 1920);
-    background-color: rgba(243,243,243,0.9);
-    transition: opacity 250ms ease-in-out;
+	    opacity: 0;
+	    position: absolute;
+	    top: 0; left: 0;
+	    right: 0; bottom: 0;
+		margin: 0;//calcFluidSize(5, 15, 320, 1920);
+	    background-color: rgba(243,243,243,0.9);
+	    transition: opacity 250ms ease-in-out;
 	}
 }
 
 .staff {
 	width: calcFluidSize(160, 478, 320, 1920);
 	height: auto;
+}
+
+.blur {
+    filter: blur(2px);
+    background-color: rgba(0,0,0,0.5);
+}
+
+.wrap-popup {
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: none;
+    z-index: 9;
+    filter: blur(2px);
+}
+
+.popup-resume {
+	background-color: #fff;
+	bottom: 5%;
+	display: none;
+    filter: progid:none!important;
+    -webkit-filter: none!important;
+    filter: none!important;
+//	margin-right: 0;
+    width: 60%;
+ //   max-height: 500px;
+	overflow: hidden;
+    position: fixed;
+    right: 20%;
+    top: 5%;
+    z-index: 100;
+    @media (max-width:680px) {
+    	right: 10%;
+    //	top: 10px;
+    	width: 80%;
+    }
+}
+
+.popup-resume img {
+//    width: 100%;
+//    height: auto;
 }

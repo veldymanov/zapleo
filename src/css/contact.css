@@ -487,7 +487,8 @@ header {
     .contact form [type="submit"] {
       text-transform: capitalize;
       font-size: 0.88em;
-      color: #fcb117;
+      color: #fff;
+      background: #69696b;
       margin-left: auto;
       padding: 0.6em 1.8em; }
 

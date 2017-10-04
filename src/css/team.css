@@ -425,6 +425,14 @@ h1, h2 {
 .team {
   width: 100%;
   padding: 12.2vmin 0 6.2vmin; }
+  .team button {
+    background: #fcb117;
+    padding: 2px 5px;
+    margin: 7px;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #fcb117; }
 
 .content {
   margin: 0 52px; }
@@ -447,10 +455,43 @@ h1, h2 {
     left: 0;
     right: 0;
     bottom: 0;
-    margin: calc( 0.00625 * 100vw + 3px);
+    margin: 0;
     background-color: rgba(243, 243, 243, 0.9);
     transition: opacity 250ms ease-in-out; }
 
 .staff {
   width: calc( 0.19875 * 100vw + 96.4px);
   height: auto; }
+
+.blur {
+  filter: blur(2px);
+  background-color: rgba(0, 0, 0, 0.5); }
+
+.wrap-popup {
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: none;
+  z-index: 9;
+  filter: blur(2px); }
+
+.popup-resume {
+  background-color: #fff;
+  bottom: 5%;
+  display: none;
+  filter: progid:none !important;
+  -webkit-filter: none !important;
+  filter: none !important;
+  width: 60%;
+  overflow: hidden;
+  position: fixed;
+  right: 20%;
+  top: 5%;
+  z-index: 100; }
+  @media (max-width: 680px) {
+    .popup-resume {
+      right: 10%;
+      width: 80%; } }

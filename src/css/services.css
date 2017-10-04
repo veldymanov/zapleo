@@ -434,7 +434,7 @@ h1, h2 {
   /* Moving picture and showing the text */ }
   .content .tile {
     z-index: 1;
-    width: 50%;
+    width: 100%;
     filter: grayscale(100%);
     transition: all 0.8s cubic-bezier(0.65, 0.05, 0.36, 1); }
     @media (max-width: 1180px) {

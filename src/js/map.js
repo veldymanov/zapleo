@@ -1,9 +1,9 @@
 var map, 
-zapleoLat = 48.430981, zapleoLng = 35.065359; //Zapleo's coordinates
+zapleoLat = 48.473491, zapleoLng = 35.024612; //Zapleo's coordinates
 
 function initialize() {
 	var mapOptions = {
-		zoom: 17,
+		zoom: 17, 
 		scrollwheel: false,
 		disableDefaultUI: true,
 		center: new google.maps.LatLng(zapleoLat, zapleoLng),
@@ -27,10 +27,10 @@ function initialize() {
 	map = new google.maps.Map(document.getElementById('map'), mapOptions);
 	
 	var marker = new google.maps.Marker({
-	position: {lat: zapleoLat, lng: zapleoLng},
-	map: map,
-	animation: google.maps.Animation.DROP,
-	title: 'Zapleo Soft'
+		position: {lat: zapleoLat, lng: zapleoLng},
+		map: map,
+		animation: google.maps.Animation.DROP,
+		title: 'Zapleo Soft'
 	});
 }
 

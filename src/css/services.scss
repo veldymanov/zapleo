@@ -3,7 +3,7 @@
 .content {
 	li:nth-child(even) {
 		figure {
-		flex-direction: row-reverse;
+			flex-direction: row-reverse;
 			@media (max-width: 1180px) {flex-direction: column;}
 		}
 		.tile {
@@ -16,16 +16,16 @@
 		}
 	}
 	figure {
-	display: flex;
-	align-items: center;
-	@extend %padd-marg;
+		display: flex;
+		align-items: center;
+		@extend %padd-marg;
 		@media (max-width: 1180px) {flex-direction: column; margin-bottom: 4vmin;}
 		h1 {
-		text-transform: uppercase;
-		position: relative;
+			text-transform: uppercase;
+			position: relative;
 			@media (max-width: 1280px) {
-			display: inline-block;
-			margin: 0 0 0 10px;
+				display: inline-block;
+				margin: 0 0 0 10px;
 			}
 		}
 		>* {
@@ -34,23 +34,23 @@
 		}
 	}
 	figcaption {
-	@media (min-width: 1180px) {padding: 0 4% 0 4%;}
+		@media (min-width: 1180px) {padding: 0 4% 0 4%;}
 		p {
-		@media (max-width: 1280px) {margin: 1.5vmin 0;}
+			@media (max-width: 1280px) {margin: 1.5vmin 0;}
 		}
 	}
 }
 
 .content {
 	.tile {
-	z-index:1;
-	width: 50%;
-	filter: grayscale(100%);
-	transition: all .8s cubic-bezier(0.65, 0.05, 0.36, 1);
+		z-index:1;
+		width: 100%;
+		filter: grayscale(100%);
+		transition: all .8s cubic-bezier(0.65, 0.05, 0.36, 1);
 		@media (max-width: 1180px) {
-		margin-bottom: 4vmin;
-		width: 60%;
-		transform: initial !important;
+			margin-bottom: 4vmin;
+			width: 60%;
+			transform: initial !important;
 		}
 		@media (max-width: 600px) {display: none;}
 	}

@@ -8,7 +8,7 @@ const removeCache = false;
  *   1. Reload page to install new (changed) Service Worker.
  *   2. Close (reload is not enough) the page (pages) in Browser and start it again.
  **/
-const CACHE = 'zapleoCache-v6';
+const CACHE = 'zapleoCache-v7';
 
 /**
  * Fill relative URLs for Service Worker cache
@@ -27,6 +27,7 @@ self.addEventListener('install', event => {
                 'js/jquery.parallax.min.js',
                 'fonts/functionpro_book.ttf',
                 'fonts/functionpro_medium.ttf',
+                'manifest.json'
             ])
         })
     );
