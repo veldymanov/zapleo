@@ -1,1 +1,0 @@
-"use strict";function inWindow(i){var t=$(window).scrollTop(),o=$(window).height(),n=[];return $(i).each(function(){var i=$(this),s=i.offset();t<=s.top&&i.height()+s.top<t+o&&n.push(this)}),$(n)}var $tile=inWindow(".tile");$tile.addClass("showtext"),$(window).scroll(function(){inWindow(".tile").addClass("showtext")});
