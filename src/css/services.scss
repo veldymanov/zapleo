@@ -10,19 +10,22 @@
 			transform: translateX(-100%);
 		}
 	}
+
 	li:nth-child(odd) {
 		.tile {
 			transform: translateX(100%);
 		}
 	}
+
 	figure {
 		display: flex;
 		align-items: center;
 		@extend %padd-marg;
 		@media (max-width: 1180px) {flex-direction: column; margin-bottom: 4vmin;}
 		h1 {
-			text-transform: uppercase;
+			margin: 10px 0;
 			position: relative;
+			text-transform: uppercase;
 			@media (max-width: 1280px) {
 				display: inline-block;
 				margin: 0 0 0 10px;
@@ -33,20 +36,20 @@
 			@media (max-width: 600px) {flex-basis: initial;} //Fix for Safari
 		}
 	}
+
 	figcaption {
 		@media (min-width: 1180px) {padding: 0 4% 0 4%;}
 		p {
 			@media (max-width: 1280px) {margin: 1.5vmin 0;}
 		}
 	}
-}
 
-.content {
 	.tile {
-		z-index:1;
-		width: 100%;
+		display: block;
 		filter: grayscale(100%);
 		transition: all .8s cubic-bezier(0.65, 0.05, 0.36, 1);
+		width: 100%;	
+		z-index:1;
 		@media (max-width: 1180px) {
 			margin-bottom: 4vmin;
 			width: 60%;
@@ -54,6 +57,7 @@
 		}
 		@media (max-width: 600px) {display: none;}
 	}
+
 	/* Moving picture and showing the text */
 	.showtext {
 		transform: initial !important;

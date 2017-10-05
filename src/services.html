@@ -405,53 +405,49 @@
 			  margin-right: 10px;
 			  background: url(images/linea/magnifier.z.svg) no-repeat 0 0/cover; }
 
-			.content li:nth-child(even) figure {
-			  flex-direction: row-reverse; }
-			  @media (max-width: 1180px) {
-			    .content li:nth-child(even) figure {
-			      flex-direction: column; } }
-
-			.content li:nth-child(even) .tile {
-			  transform: translateX(-100%); }
-
-			.content li:nth-child(odd) .tile {
-			  transform: translateX(100%); }
-
-			.content figure {
-			  display: flex;
-			  align-items: center; }
-			  @media (max-width: 1180px) {
-			    .content figure {
-			      flex-direction: column;
-			      margin-bottom: 4vmin; } }
-			  .content figure h1 {
-			    text-transform: uppercase;
-			    position: relative; }
-			    @media (max-width: 1280px) {
-			      .content figure h1 {
-			        display: inline-block;
-			        margin: 0 0 0 10px; } }
-			  .content figure > * {
-			    flex-basis: 50%; }
-			    @media (max-width: 600px) {
-			      .content figure > * {
-			        flex-basis: initial; } }
-
-			@media (min-width: 1180px) {
-			  .content figcaption {
-			    padding: 0 4% 0 4%; } }
-
-			@media (max-width: 1280px) {
-			  .content figcaption p {
-			    margin: 1.5vmin 0; } }
-
 			.content {
 			  /* Moving picture and showing the text */ }
+			  .content li:nth-child(even) figure {
+			    flex-direction: row-reverse; }
+			    @media (max-width: 1180px) {
+			      .content li:nth-child(even) figure {
+			        flex-direction: column; } }
+			  .content li:nth-child(even) .tile {
+			    transform: translateX(-100%); }
+			  .content li:nth-child(odd) .tile {
+			    transform: translateX(100%); }
+			  .content figure {
+			    display: flex;
+			    align-items: center; }
+			    @media (max-width: 1180px) {
+			      .content figure {
+			        flex-direction: column;
+			        margin-bottom: 4vmin; } }
+			    .content figure h1 {
+			      margin: 10px 0;
+			      position: relative;
+			      text-transform: uppercase; }
+			      @media (max-width: 1280px) {
+			        .content figure h1 {
+			          display: inline-block;
+			          margin: 0 0 0 10px; } }
+			    .content figure > * {
+			      flex-basis: 50%; }
+			      @media (max-width: 600px) {
+			        .content figure > * {
+			          flex-basis: initial; } }
+			  @media (min-width: 1180px) {
+			    .content figcaption {
+			      padding: 0 4% 0 4%; } }
+			  @media (max-width: 1280px) {
+			    .content figcaption p {
+			      margin: 1.5vmin 0; } }
 			  .content .tile {
-			    z-index: 1;
-			    width: 100%;
+			    display: block;
 			    filter: grayscale(100%);
-			    transition: all 0.8s cubic-bezier(0.65, 0.05, 0.36, 1); }
+			    transition: all 0.8s cubic-bezier(0.65, 0.05, 0.36, 1);
+			    width: 100%;
+			    z-index: 1; }
 			    @media (max-width: 1180px) {
 			      .content .tile {
 			        margin-bottom: 4vmin;
@@ -528,7 +524,7 @@
 					<ul>
 						<li>
 							<figure>
-								<picture class="tile js-lazy-load">
+								<picture class="js-lazy-load">
 									<source class="js-lazy-src" type="image/webp" data-srcset="images/proto.z.webp">
 									<img class="tile js-lazy-img" data-src="images/proto.z.png" alt="proto image">
 								</picture>							
@@ -540,7 +536,7 @@
 							</figure>
 						<li>
 							<figure>
-								<picture class="tile js-lazy-load">
+								<picture class="js-lazy-load">
 									<source class="js-lazy-src" type="image/webp" data-srcset="images/ui-ux.z.webp">
 									<img class="tile js-lazy-img"  data-src="images/ui-ux.z.png" alt="">
 								</picture>	
@@ -552,11 +548,12 @@
 							</figure>
 						<li>
 							<figure>
-								<picture class="tile js-lazy-load">
+								<picture class="js-lazy-load">
 									<source class="js-lazy-src" type="image/webp" data-srcset="images/dev.z.webp">
 									<img class="tile js-lazy-img" data-src="images/dev.z.png" alt="design photo">
 								</picture>
 								<figcaption>
+									<img src="images/icons/dev_icon.z.svg" alt="">
 									<h1 class="proto">development</h1>
 									<p>Development of the whole project is divided into iterations that last 1-2 weeks. During that period a completed chunk of the project is done so that it can be seen. At the end of every iteration the client is shown the result; mistakes are discussed and fixed. It is followed by agreeing the next iteration.</p>
 								</figcaption>
