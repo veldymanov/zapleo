@@ -12,15 +12,15 @@ src/                      - Contains full application.
     css/                  - All scss and css files
     fonts/                - Application's fonts
     imgages/              - All images
-        blog/             - Blog's images
-            blog-post/    - 
+        blog/             - Blog page images
+            blog-post/    - Blog Post pages images
                 comments/ -
-        customers/        - Customer's photos
+        customers/        - Customers page photos
         icons/            - All icons
         img/              - for photos opt and '.webp' creation 
         linea/            -
-        team/             - Team's photos
-            resume/       - Team's resume
+        team/             - Team page photos
+            resume/       - Team's resumes
     js/                   - All js files
     about.html            - About page
     blog.html             - Blog page
