@@ -3113,12 +3113,16 @@
 			</header>
 			<picture>
 				<source type="image/webp"
-						srcset="images/blog/blog-post/blog-post-1-736x327.z.webp 750w,
-							images/blog/blog-post/blog-post-1-1440x639.z.webp 1440w">
+						srcset="images/blog/blog-post/blog-post-1-736x327.z.webp 736w,
+							images/blog/blog-post/blog-post-1-1440x639.z.webp 1440w"
+						sizes="(max-width: 750px) 736px,
+					    	1440px">
 				<source type="image/jpeg"
 						srcset="images/blog/blog-post/blog-post-1-736x327.z.jpg 750w,
-							images/blog/blog-post/blog-post-1-1440x639.z.jpg 1440w">
-				<img src="images/blog/blog-post/blog-post-1-1440x639.z.jpg" alt="blog post 1">
+							images/blog/blog-post/blog-post-1-1440x639.z.jpg 1440w"
+						sizes="(max-width: 750px) 736px,
+					    	1440px"	>
+				<img src="images/blog/blog-post/blog-post-1-1440x639.z.jpg" alt="blog post 1"/>
 			</picture>
 			<!-- Mobile menu -->
 			<div class="mob-menu">
@@ -3147,8 +3151,8 @@
 			<section class="post clearfix">
 				<aside>
 					<picture>
-						<source type="image/webp" srcset="images/blog/blog-post/blog-post-1-author-192x192.z.webp">
-						<img src="images/blog/blog-post/blog-post-1-author-192x192.z.jpg" alt="Author photo">
+						<source type="image/webp" srcset="images/blog/blog-post/comments/avatar-author.z.webp">
+						<img src="images/blog/blog-post/comments/avatar-author.z.jpg" alt="Author photo">
 					</picture>
 					<p class="author">John Ive</p>
 					<span class="role">Administrator</span>
@@ -3264,12 +3268,17 @@
 						<div class="comment-body">
 							<div class="commenter-image">
 								<a href="#" target="_blank">
-									<img alt="" src="https://secure.gravatar.com/avatar/27a7c819c8b83c0d36bbb9a8f714f665?s=96&amp;d=mm&amp;r=g" class="avatar">
+									<picture class="avatar js-lazy-load">
+										<source class="js-lazy-src" type="image/webp" 
+											data-srcset="images/blog/blog-post/comments/avatar-author.z.webp">
+										<img class="js-lazy-img" alt="Avatar" 
+											data-src="images/blog/blog-post/comments/avatar-author.z.jpg"/>
+									</picture>
 								</a>
 							</div>
 							<div class="commenter-details">
 								<p class="name">
-									John<a href="#" class="underline">reply</a>
+									John Ive<a href="#" class="underline">reply</a>
 								</p>
 								<p class="timestamp">
 									<span class="comment-date">Monday</span> at 
@@ -3284,7 +3293,12 @@
 						<div class="comment-body">
 							<div class="commenter-image">
 								<a href="#" target="_blank">
-									<img alt="" src="https://secure.gravatar.com/avatar/b48eb009c8ae5ddf2bfa17271959c073?s=96&d=mm&r=g" class="avatar">
+									<picture class="avatar js-lazy-load">
+										<source class="js-lazy-src" type="image/webp" 
+											data-srcset="images/blog/blog-post/comments/avatar-empty.z.webp">
+										<img class="js-lazy-img" alt="Avatar" 
+											data-src="images/blog/blog-post/comments/avatar-empty.z.jpg"/>
+									</picture>
 								</a>
 							</div>
 							<div class="commenter-details">
@@ -3304,7 +3318,12 @@
 								<div class="comment-body">
 									<div class="commenter-image">
 										<a href="#" target="_blank">
-											<img alt="" src="https://secure.gravatar.com/avatar/5b3e46e1cdc65a91ff4d679ec7cad4f2?s=96&d=mm&r=g" class="avatar">
+											<picture class="avatar js-lazy-load">
+												<source class="js-lazy-src" type="image/webp" 
+													data-srcset="images/blog/blog-post/comments/avatar-empty.z.webp">
+												<img class="js-lazy-img" alt="Avatar" 
+													data-src="images/blog/blog-post/comments/avatar-empty.z.jpg"/>
+											</picture>
 											<span class="connector"></span>
 										</a>
 									</div>
@@ -3325,7 +3344,12 @@
 										<div class="comment-body">
 											<div class="commenter-image">
 												<a href="#" target="_blank">
-													<img alt="" src="https://secure.gravatar.com/avatar/b48eb009c8ae5ddf2bfa17271959c073?s=96&d=mm&r=g" class="avatar">
+													<picture class="avatar js-lazy-load">
+														<source class="js-lazy-src" type="image/webp" 
+															data-srcset="images/blog/blog-post/comments/avatar-empty.z.webp">
+														<img class="js-lazy-img" alt="Avatar" 
+															data-src="images/blog/blog-post/comments/avatar-empty.z.jpg"/>
+													</picture>
 													<span class="connector"></span>
 												</a>
 											</div>
@@ -3346,7 +3370,12 @@
 												<div class="comment-body">
 													<div class="commenter-image">
 														<a href="#" target="_blank">
-															<img alt="" src="https://secure.gravatar.com/avatar/5b3e46e1cdc65a91ff4d679ec7cad4f2?s=96&d=mm&r=g" class="avatar">
+															<picture class="avatar js-lazy-load">
+																<source class="js-lazy-src" type="image/webp" 
+																	data-srcset="images/blog/blog-post/comments/avatar-empty.z.webp">
+																<img class="js-lazy-img" alt="Avatar" 
+																	data-src="images/blog/blog-post/comments/avatar-empty.z.jpg"/>
+															</picture>
 															<span class="connector"></span>
 														</a>
 													</div>
@@ -3371,7 +3400,12 @@
 										<div class="comment-body">
 											<div class="commenter-image">
 												<a href="#" target="_blank">
-													<img alt="" src="https://secure.gravatar.com/avatar/5b3e46e1cdc65a91ff4d679ec7cad4f2?s=96&d=mm&r=g" class="avatar">
+													<picture class="avatar js-lazy-load">
+														<source class="js-lazy-src" type="image/webp" 
+															data-srcset="images/blog/blog-post/comments/avatar-empty.z.webp">
+														<img class="js-lazy-img" alt="Avatar" 
+															data-src="images/blog/blog-post/comments/avatar-empty.z.jpg"/>
+													</picture>
 													<span class="connector"></span>
 												</a>
 											</div>
@@ -3396,7 +3430,12 @@
 								<div class="comment-body">
 									<div class="commenter-image">
 										<a href="#" target="_blank">
-											<img alt="" src="https://secure.gravatar.com/avatar/5b3e46e1cdc65a91ff4d679ec7cad4f2?s=96&d=mm&r=g" class="avatar">
+											<picture class="avatar js-lazy-load">
+												<source class="js-lazy-src" type="image/webp" 
+													data-srcset="images/blog/blog-post/comments/avatar-empty.z.webp">
+												<img class="js-lazy-img" alt="Avatar" 
+													data-src="images/blog/blog-post/comments/avatar-empty.z.jpg"/>
+											</picture>
 											<span class="connector"></span>
 										</a>
 									</div>
@@ -3419,7 +3458,12 @@
 						<div class="comment-body">
 							<div class="commenter-image">
 								<a href="#" target="_blank">
-									<img alt="" src="https://secure.gravatar.com/avatar/504c53d4684ca1286d395f6f8b002f26?s=96&d=mm&r=g" class="avatar">
+									<picture class="avatar js-lazy-load">
+										<source class="js-lazy-src" type="image/webp" 
+											data-srcset="images/blog/blog-post/comments/avatar-empty.z.webp">
+										<img class="js-lazy-img" alt="Avatar" 
+											data-src="images/blog/blog-post/comments/avatar-empty.z.jpg"/>
+									</picture>
 								</a>
 							</div>
 							<div class="commenter-details">
@@ -3439,7 +3483,12 @@
 								<div class="comment-body">
 									<div class="commenter-image">
 										<a href="#" target="_blank">
-											<img alt="" src="https://secure.gravatar.com/avatar/27a7c819c8b83c0d36bbb9a8f714f665?s=96&amp;d=mm&amp;r=g" class="avatar">
+											<picture class="avatar js-lazy-load">
+												<source class="js-lazy-src" type="image/webp" 
+													data-srcset="images/blog/blog-post/comments/avatar-author.z.webp">
+												<img class="js-lazy-img" alt="Avatar" 
+													data-src="images/blog/blog-post/comments/avatar-author.z.jpg"/>
+											</picture>
 											<span class="connector"></span>
 										</a>
 									</div>
@@ -3462,7 +3511,12 @@
 						<div class="comment-body">
 							<div class="commenter-image">
 								<a href="#" target="_blank">
-									<img alt="" src="https://secure.gravatar.com/avatar/5b3e46e1cdc65a91ff4d679ec7cad4f2?s=96&d=mm&r=g" class="avatar">
+									<picture class="avatar js-lazy-load">
+										<source class="js-lazy-src" type="image/webp" 
+											data-srcset="images/blog/blog-post/comments/avatar-empty.z.webp">
+										<img class="js-lazy-img" alt="Avatar" 
+											data-src="images/blog/blog-post/comments/avatar-empty.z.jpg"/>
+									</picture>
 								</a>
 							</div>
 							<div class="commenter-details">
