@@ -35,7 +35,8 @@ src/                      - Contains full application.
     manifest.md           -
     service-worker.js     -   
 .gitignore                - 
-gulpfile.js               - 
+gulpfile.js               -
+opt-status.xlsx           - Status of site optimization 
 package.json              - 
 README.md                 - Project's readme file
 ```
