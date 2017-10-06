@@ -1,4 +1,4 @@
-$(function(){
+$(document).ready(function(){ 
 	$('.content figure').hover(function () {
 		Typed.new('.content figure .review>p>span', {
 			stringsElement: $('#typed-strings'),
