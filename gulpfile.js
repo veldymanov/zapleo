@@ -31,12 +31,6 @@ gulp.task('html', function() {
 ////////////////////////////////////////////////////
 // CSS Tasks
 ////////////////////////////////////////////////////
-//copy normalize.css
-gulp.task('normalize.css', function() {
-    gulp.src(['node_modules/normalize.css/normalize.css' ])
-        .pipe(gulp.dest('src/external_libraries/normalize_css'));
-});
-
 //run sass
 gulp.task('sass', () =>
     gulp.src('src/**/*.scss')
