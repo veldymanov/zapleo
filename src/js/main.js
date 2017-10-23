@@ -73,8 +73,8 @@ if (!('IntersectionObserver' in window)) {
 }
 
 function loadImage(target){
-    let lazySrc = target.querySelectorAll('.js-lazy-src')[0];
-    let lazyImg = target.querySelectorAll('.js-lazy-img')[0];
-    lazySrc.srcset = lazySrc.getAttribute('data-srcset');
-    lazyImg.src = lazyImg.getAttribute('data-src');
+    let lazySrcs = target.querySelectorAll('.js-lazy-src');
+    let lazyImgs = target.querySelectorAll('.js-lazy-img');
+    lazySrcs.forEach(lazySrc => lazySrc.srcset = lazySrc.getAttribute('data-srcset'));
+    lazyImgs.forEach(lazyImg => lazyImg.src = lazyImg.getAttribute('data-src'));
 }
