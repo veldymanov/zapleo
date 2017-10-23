@@ -1,5 +1,7 @@
 $(document).ready(function () {	
-    $(".content figure").on('mouseover', function () {
+    $(".content figure").on('mouseenter', function (event) {
+		event.preventDefault();
+
         Typed.new(".content figure .review>p>span", {
             stringsElement: $(this).find(".typed-strings"),
             startDelay: 300,
