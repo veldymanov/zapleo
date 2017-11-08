@@ -45,42 +45,7 @@ $(window).load(function () {
     }); */
 
 
-    ///////////////////////////
-	//Filter
-	///////////////////////////
-	function filterHeight(){
-		var totalHeight = 0;
-		var totalWidth = 0;
-		
-		var elsWidth = [];
-		var elWidth;
-		var elsHeight = [];
-		var koef;
 
-		$(".js-custom-items .custom-item").each(function(){
-			elsWidth.push(this.offsetWidth);
-			elsHeight.push(this.offsetHeight);
-		})
-
-		elWidth = elsWidth[0];
-
-		$(".js-custom-items").each(function(){
-			this.style.height = 'auto';
-			totalHeight += this.offsetHeight;
-			totalWidth += this.offsetWidth;
-			koef = Math.floor(totalWidth / (elWidth * 1) );
-
-			this.style.height = Math.ceil(totalHeight / koef) + 'px';
-		});
-		console.log(elsWidth);
-		console.log(elsHeight);
-	}
-
-	setTimeout(function(){filterHeight()},1000);
-
-	window.addEventListener('resize', function(){
-		filterHeight();
-	})
 
     $(".product-filter .custom-categories a").on("click", function (event) {
     	event.preventDefault();

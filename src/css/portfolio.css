@@ -398,6 +398,7 @@ h1, h2 {
       text-transform: uppercase;
       font-size: calc( 0.005 * 100vw + 12.4px); }
   .content > ul {
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;

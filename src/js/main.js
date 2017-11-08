@@ -8,10 +8,10 @@ $(document).ready(function () {
 		$('main').css('marginBottom', $fHeight);
 	}	
 
-//Mobile menu
-var fadeSpeed = 350;
-var $mobMenu = $('.mob-menu');
-//Showing menu
+	//Mobile menu
+	var fadeSpeed = 350;
+	var $mobMenu = $('.mob-menu');
+	//Showing menu
 	$('.sandwich').on('click', function() {
 		$(this).addClass('active');
 		$mobMenu.fadeIn(fadeSpeed, function () {
@@ -29,6 +29,12 @@ var $mobMenu = $('.mob-menu');
 			});
 		}
 	});
+
+	//calculate filter height
+	filterHeight();
+	window.addEventListener('resize', function(){
+		filterHeight();
+	})
 });
 
 
@@ -64,6 +70,13 @@ if (!('IntersectionObserver' in window)) {
 				observer.unobserve(entry.target);
 				loadImage(entry.target);
 
+				//recalculate filter container height
+				if (document.querySelector('.js-custom-items')) {
+					entry.target.querySelector('.js-lazy-img').addEventListener('load', function(){
+						filterHeight();
+					})
+				}
+
 				//Show picture
 				//entry.target.querySelectorAll('picture')[0].classList.remove('hidden');
 			} else {
@@ -74,9 +87,59 @@ if (!('IntersectionObserver' in window)) {
 	}
 }
 
+
+///////////////////////////
+//Load image 
+///////////////////////////
 function loadImage(target){
     let lazySrcs = target.querySelectorAll('.js-lazy-src');
     let lazyImgs = target.querySelectorAll('.js-lazy-img');
     lazySrcs.forEach(lazySrc => lazySrc.srcset = lazySrc.getAttribute('data-srcset'));
     lazyImgs.forEach(lazyImg => lazyImg.src = lazyImg.getAttribute('data-src'));
+}
+
+///////////////////////////
+//Filter conteiner height 
+///////////////////////////
+function filterHeight(){
+	let totalHeight = 0,
+		averageHeight = 0,
+		totalWidth = 0;
+	
+	let elsWidth = [],
+		elsHeight = [];
+
+	//all filter's elements heights and widths
+	$(".js-custom-items .custom-item").each(function(){
+		let style = window.getComputedStyle(this);
+    	let marginTop = parseInt(style.getPropertyValue('margin-top'), 10);
+    	let marginBottom = parseInt(style.getPropertyValue('margin-bottom'), 10);
+    	let marginRight = parseInt(style.getPropertyValue('margin-right'), 10);
+    	let marginLeft = parseInt(style.getPropertyValue('margin-left'), 10);
+
+		elsWidth.push(this.offsetWidth  + marginRight + marginLeft);
+		elsHeight.push(this.offsetHeight + marginTop + marginBottom);
+	})
+
+	$(".js-custom-items").each(function(){
+		//make full height
+		this.style.height = 'auto';
+
+		//get full height (and width)
+		totalHeight += this.offsetHeight;
+		totalWidth += this.offsetWidth;
+
+		//Max array element
+		let maxElHeight = Math.max(...elsHeight);
+		//Choose max between averageHeight and max element height
+		averageHeight = Math.max(Math.ceil(totalHeight / Math.floor( totalWidth / elsWidth[0] )), maxElHeight);
+
+		this.style.height = averageHeight + 'px'; 
+
+		//increase height to fit all elements horizontally (flexbox)
+		while(this.scrollWidth > this.offsetWidth){
+			averageHeight += 20;
+			this.style.height = averageHeight + 'px';
+		}
+	});
 }

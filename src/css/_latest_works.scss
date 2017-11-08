@@ -52,17 +52,14 @@ text-align: center;
 		}
 	}
 	>ul {
+		align-items: center;
 		display: flex;
-	//	flex: 1 1 auto;
 		flex-wrap: wrap;
 		flex-direction: column;
 		height: auto;
-	//	justify-content: space-around;
 		li {
-			
 			width: 30%;
 			margin-bottom: 10px;
-	//		max-width: 350px;
 			@media (max-width:800px) {
 				width: 45%;
 			}
