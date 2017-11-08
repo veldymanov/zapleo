@@ -45,10 +45,9 @@ $(window).load(function () {
     }); */
 
 
-
-
     $(".product-filter .custom-categories a").on("click", function (event) {
     	event.preventDefault();
+
 
     	$(".product-filter .custom-categories a").removeClass("active");
     	$(this).addClass("active");
@@ -58,9 +57,13 @@ $(window).load(function () {
         $(".custom-item").fadeOut(0).css({"margin-top": "20px"});
 
         $(".custom-item").each(function () {
-            ("*" == term) && $(".custom-item").fadeIn(0).animate({"margin-top": "0"}, 100); 
-            $(this).hasClass(term) && $(this).fadeIn(0).animate({"margin-top": "0"}, 100);
+            ("*" == term) && $(".custom-item").fadeIn(0).animate({"margin-top": "0"}, 150); 
+            $(this).hasClass(term) && $(this).fadeIn(0).animate({"margin-top": "0"}, 150);
         })
+
+        //recalculate fiter height (from main.js)
+        filterHeight();
+
     })  
 });
 
