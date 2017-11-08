@@ -1,11 +1,12 @@
 $(document).ready(function () {
 //Calculating <main> margin for footer
-	function calcMarginBottom () {
-	var $fHeight = $('main+footer').outerHeight();
-	$('main').css('marginBottom', $fHeight);
-	}
 	calcMarginBottom();
 	$(window).resize(calcMarginBottom);
+
+	function calcMarginBottom () {
+		var $fHeight = $('main+footer').outerHeight();
+		$('main').css('marginBottom', $fHeight);
+	}	
 
 //Mobile menu
 var fadeSpeed = 350;
@@ -29,6 +30,7 @@ var $mobMenu = $('.mob-menu');
 		}
 	});
 });
+
 
 //////////////////////////////////////////////////////////////
 //Images lazy loading

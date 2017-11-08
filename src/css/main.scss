@@ -184,7 +184,14 @@ h1, h2 {
 		background-color: $darkgrey;
 		transition: width .25s ease-in-out;
 	}
+	&:hover {
+		cursor: pointer;
+	}
 	&:hover::after {width: 100%;}
+}
+
+.active.underline::after {
+	width: 100%;
 }
 
 .hidden {

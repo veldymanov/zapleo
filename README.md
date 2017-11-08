@@ -42,16 +42,16 @@ README.md                 - Project's readme file
 ```
 
 ## Gulp
-### 1 Prepare system
-#### 1.1 Install Git. Use Git Bash.
-#### 1.2 Install Node.js and NPM
+###  Prepare system
+#### Install Git. Use Git Bash.
+#### Install Node.js and NPM
 ```
     //check node version
     node -v
     //check npm version
     npm -v 
 ```
-#### 1.3 Install global NPM packages 
+#### Install global NPM packages 
 ```
     npm install gulp-cli -g
         //check gulp version
@@ -66,33 +66,43 @@ README.md                 - Project's readme file
         npm-check --version	 
 ```
 
-### 2 Run The Project
-#### 2.1 Clone repository:
+### Run The Project
+#### Clone repository:
 ```
     git clone https://veldymanov@bitbucket.org/veldymanov/zapleo_new.git
 ```
-#### 2.2 Inside "../zapleo_new/" install npm packages
+#### Inside "../zapleo_new/" install npm packages
 ````
     npm install
 ````
-#### 2.3 Check packages versions:
+#### Check packages versions:
 ```
     npm-check -u
 ```
-#### 2.4 Run the project (inside "../zapleo_new/")
+#### Run the project (inside "../zapleo_new/")
 ````
     gulp
 ````
-#### 2.5 Save changes
+#### Save changes
 ````
     git status
     git add .
     git commit -m "write comments!!!!"
     git push
 ````
-#### 2.6 Create 'docs/' directory - application (with only minified files)
+#### Create 'docs/' directory - application (with only minified files)
 ````
     gulp build
      //run browser-sync for build
      gulp build:server
+````
+
+### Move css inline
+````
+    
+````
+
+### Filezilla
+````
+	/domains/zapleo.com/public_html/dev/zapleo_new
 ````

@@ -133,8 +133,13 @@ h1, h2 {
     width: 0;
     background-color: #69696b;
     transition: width .25s ease-in-out; }
+  .underline:hover {
+    cursor: pointer; }
   .underline:hover::after {
     width: 100%; }
+
+.active.underline::after {
+  width: 100%; }
 
 .hidden {
   display: none; }
