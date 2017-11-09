@@ -37,9 +37,8 @@ $(document).ready(function () {
 	})
 
 	//Set filter
-    $(".js-product-filter .js-data-term").on("click", function (event) {
+    $(".js-product-filter .js-data-term").on("click touchend", function (event) {
     	event.preventDefault();
-
 
     	$(".js-product-filter .js-data-term").removeClass("active");
     	$(this).addClass("active");
@@ -156,7 +155,7 @@ function filterHeight(){
 	//Max array element
 	let maxElHeight = Math.max(...elsHeight);
 	//Choose max between averageHeight and max element height
-	averageHeight = Math.max(Math.ceil(totalHeight / Math.floor( totalWidth / elsWidth[0] )), maxElHeight);
+	averageHeight = Math.max(Math.ceil(totalHeight / Math.floor( totalWidth / Math.max(...elsWidth) )), maxElHeight);
 
 	filterContainer.style.height = averageHeight + 'px'; 
 
@@ -166,7 +165,8 @@ function filterHeight(){
 		averageHeight += 20;
 		filterContainer.style.height = averageHeight + 'px';
 
-		if ( limit > 20 ) {break}
+		if ( limit > 300 ) {break}
 		limit++;
 	}
+	console.log(limit);
 }
