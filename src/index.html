@@ -364,36 +364,39 @@
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 					</article>
 					<nav>
-						<ul class=product-filter>
+						<ul class="product-filter js-product-filter">
                             <li class="custom-categories">
-                                <a class="underline active" data-term="*">All</a>
+                                <a class="underline active js-data-term" data-term="*">All</a>
                             </li>
                             <li class="custom-categories">
-                                <a class="underline" data-term="Blog">Blog</a>
+                                <a class="underline js-data-term" data-term="Blog">Blog</a>
                             </li>
                             <li class="custom-categories">
-                                <a class="underline" data-term="CMS">CMS</a>
+                                <a class="underline js-data-term" data-term="CMS">CMS</a>
                             </li>
                             <li class="custom-categories">
-                                <a class="underline" data-term="E-commerce">E-commerce</a>
+                                <a class="underline js-data-term" data-term="E-commerce">E-commerce</a>
                             </li>
                             <li class="custom-categories">
-                                <a class="underline" data-term="Framework">Framework</a>
+                                <a class="underline js-data-term" data-term="Framework">Framework</a>
                             </li>
                             <li class="custom-categories">
-                                <a class="underline" data-term="Landing">Landing</a>
+                                <a class="underline js-data-term" data-term="Landing">Landing</a>
                             </li>
 						</ul>
 					</nav>
 				</div>
 				<div class="content">
+					<!--Only one one ".js-custom-items" per page! -->
 					<ul class="js-custom-items">
-						<li class="custom-item CMS">
+						<li class="custom-item js-custom-item CMS">
 							<a href="item_portfolio.html">
 								<figure class="js-lazy-load">
 									<picture>
-										<source class="js-lazy-src" type="image/webp" data-srcset="images/work1.z.webp">
-										<img class="js-lazy-img" data-src="images/work1.z.png" alt="work 1">
+										<source class="js-lazy-src" type="image/webp" 
+												data-srcset="images/catscalendar-1_0440.z.webp">
+										<img class="js-lazy-img" 
+												data-src="images/catscalendar-1_0440.z.png" alt="catscalendar-1">
 									</picture>
 									<figcaption>
 										<h3>Sigal Avitan</h3>
@@ -403,12 +406,14 @@
 								</figure>
 							</a>
 						</li>
-						<li class="custom-item Blog">
+						<li class="custom-item js-custom-item Blog">
 							<a href="item_portfolio.html">
 								<figure class="js-lazy-load">
 									<picture>
-										<source class="js-lazy-src" type="image/webp" data-srcset="images/work4.z.webp">
-										<img class="js-lazy-img" data-src="images/work4.z.png" alt="work 4">
+										<source class="js-lazy-src" type="image/webp" 
+												data-srcset="images/catscalendar-1-x2_0440.z.webp">
+										<img class="js-lazy-img" 
+												data-src="images/catscalendar-1-x2_0440.z.png" alt="catscalendar-1-x2">
 									</picture>
 									<figcaption>
 										<h3>Sigal Avitan</h3>
@@ -418,12 +423,14 @@
 								</figure>
 							</a>
 						</li>
-						<li class="custom-item E-commerce">
+						<li class="custom-item js-custom-item E-commerce">
 							<a href="item_portfolio.html">
 								<figure class="js-lazy-load">
 									<picture>
-										<source class="js-lazy-src" type="image/webp" data-srcset="images/work3.z.webp">
-										<img class="js-lazy-img" data-src="images/work3.z.png" alt="work 3">
+										<source class="js-lazy-src" type="image/webp" 
+												data-srcset="images/gurskaya-1_0440.z.webp">
+										<img class="js-lazy-img" 
+												data-src="images/gurskaya-1_0440.z.png" alt="gurskaya-1">
 									</picture>
 									<figcaption>
 										<h3>Sigal Avitan</h3>
@@ -433,12 +440,48 @@
 								</figure>
 							</a>
 						</li>
-						<li class="custom-item Framework">
+						<li class="custom-item js-custom-item CMS">
 							<a href="item_portfolio.html">
 								<figure class="js-lazy-load">
 									<picture>
-										<source class="js-lazy-src" type="image/webp" data-srcset="images/work2.z.webp">
-										<img class="js-lazy-img" data-src="images/work2.z.png" alt="work 2">
+										<source class="js-lazy-src" type="image/webp" 
+												data-srcset="images/catscalendar-1_0440.z.webp">
+										<img class="js-lazy-img" 
+												data-src="images/catscalendar-1_0440.z.png" alt="catscalendar-1">
+									</picture>
+									<figcaption>
+										<h3>Sigal Avitan</h3>
+										<p class="link">http://sigalavitan.co.il</p>
+										<p class="descr">Sigal Avitan's landing page</p>
+									</figcaption>
+								</figure>
+							</a>
+						</li>						
+						<li class="custom-item js-custom-item Landing">
+							<a href="item_portfolio.html">
+								<figure class="js-lazy-load">
+									<picture>
+										<source class="js-lazy-src" type="image/webp" 
+												data-srcset="images/gurskaya-1-x2_440.z.webp">
+										<img class="js-lazy-img" 
+												data-src="images/gurskaya-1-x2_440.z.png" alt="gurskaya-1-x2_440">
+									</picture>
+									<figcaption>
+										<h3>Sigal Avitan</h3>
+										<p class="link">http://demo.massivedynamic.co</p>
+										<p class="descr">Sigal Avitan's landing page</p>
+									</figcaption>
+								</figure>
+							</a>
+						</li>						
+						<li class="custom-item js-custom-item Framework">
+							<a href="item_portfolio.html">
+								<figure class="js-lazy-load">
+									<picture>
+										<source class="js-lazy-src" type="image/webp" 
+												data-srcset="images/catscalendar-1_0440.z.webp">
+										<img class="js-lazy-img" 
+												data-src="images/catscalendar-1_0440.z.png" alt="catscalendar-1">
 									</picture>
 									<figcaption>
 										<h3>Sigal Avitan</h3>
@@ -448,12 +491,14 @@
 								</figure>
 							</a>
 						</li>
-						<li class="custom-item Landing">
+						<li class="custom-item js-custom-item Landing">
 							<a href="item_portfolio.html">
 								<figure class="js-lazy-load">
 									<picture>
-										<source class="js-lazy-src" type="image/webp" data-srcset="images/work1.z.webp">
-										<img class="js-lazy-img" data-src="images/work1.z.png" alt="work 1">
+										<source class="js-lazy-src" type="image/webp" 
+												data-srcset="images/catscalendar-1-x2_0440.z.webp">
+										<img class="js-lazy-img" 
+												data-src="images/catscalendar-1-x2_0440.z.png" alt="catscalendar-1-x2">
 									</picture>
 									<figcaption>
 										<h3>Sigal Avitan</h3>
@@ -463,12 +508,14 @@
 								</figure>
 							</a>
 						</li>
-						<li class="custom-item Blog">
+						<li class="custom-item js-custom-item Blog">
 							<a href="item_portfolio.html">
 								<figure class="js-lazy-load">
 									<picture>
-										<source class="js-lazy-src" type="image/webp" data-srcset="images/work4.z.webp">
-										<img class="js-lazy-img" data-src="images/work4.z.png" alt="work 4">
+										<source class="js-lazy-src" type="image/webp" 
+												data-srcset="images/gurskaya-1_0440.z.webp">
+										<img class="js-lazy-img" 
+												data-src="images/gurskaya-1_0440.z.png" alt="gurskaya-1">
 									</picture>
 									<figcaption>
 										<h3>Sigal Avitan</h3>
@@ -478,12 +525,14 @@
 								</figure>
 							</a>
 						</li>
-						<li class="custom-item CMS">
+						<li class="custom-item js-custom-item CMS">
 							<a href="item_portfolio.html">
 								<figure class="js-lazy-load">
 									<picture>
-										<source class="js-lazy-src" type="image/webp" data-srcset="images/work3.z.webp">
-										<img class="js-lazy-img" data-src="images/work3.z.png" alt="work 3">
+										<source class="js-lazy-src" type="image/webp" 
+												data-srcset="images/gurskaya-1-x2_440.z.webp">
+										<img class="js-lazy-img" 
+												data-src="images/gurskaya-1-x2_440.z.png" alt="gurskaya-1-x2_440">
 									</picture>
 									<figcaption>
 										<h3>Sigal Avitan</h3>
@@ -493,12 +542,14 @@
 								</figure>
 							</a> 
 						</li>
-						<li class="custom-item E-commerce">
+						<li class="custom-item js-custom-item E-commerce">
 							<a href="item_portfolio.html">
 								<figure class="js-lazy-load">
 									<picture>
-										<source class="js-lazy-src" type="image/webp" data-srcset="images/work2.z.webp">
-										<img class="js-lazy-img" data-src="images/work2.z.png" alt="work 2">
+										<source class="js-lazy-src" type="image/webp" 
+												data-srcset="images/catscalendar-1-x2_0440.z.webp">
+										<img class="js-lazy-img" 
+												data-src="images/catscalendar-1-x2_0440.z.png" alt="catscalendar-1-x2">
 									</picture>
 									<figcaption>
 										<h3>Sigal Avitan</h3>

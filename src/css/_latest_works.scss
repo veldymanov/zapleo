@@ -60,18 +60,18 @@ text-align: center;
 		li {
 			width: 30%;
 			margin-bottom: 10px;
-			@media (max-width:800px) {
+			@media (max-width:1150px) {
 				width: 45%;
+			}			
+			@media (max-width:736px) {
+				width: 70%;
+			}
+			@media (max-width:650px) {
+				width: 90%;
 			}
 			@media (max-width:480px) {
 				width: 100%;
 			}			
-		}
-		@media (min-width:1400px) {
-			
-		}
-		@media (max-width:800px) {
-			
 		}
 		@media (max-width:480px) {
 				

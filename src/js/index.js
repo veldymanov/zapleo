@@ -42,29 +42,7 @@ $(window).load(function () {
             fill: 'rgba(255,255,255,0.5)',
             strokeWidth: '0'
         });
-    }); */
-
-
-    $(".product-filter .custom-categories a").on("click", function (event) {
-    	event.preventDefault();
-
-
-    	$(".product-filter .custom-categories a").removeClass("active");
-    	$(this).addClass("active");
-
-        var term = $(this).attr("data-term");
-
-        $(".custom-item").fadeOut(0).css({"margin-top": "20px"});
-
-        $(".custom-item").each(function () {
-            ("*" == term) && $(".custom-item").fadeIn(0).animate({"margin-top": "0"}, 150); 
-            $(this).hasClass(term) && $(this).fadeIn(0).animate({"margin-top": "0"}, 150);
-        })
-
-        //recalculate fiter height (from main.js)
-        filterHeight();
-
-    })  
+    }); */ 
 });
 
 

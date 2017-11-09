@@ -90,6 +90,7 @@ body {
 	font-family: "functionpro_book", sans-serif;
 	font-size: calcFluidSize(15, 20, 320, 1920); /* Fluid font-size */
 	color: $lightgrey;
+	min-width: 320px;
 	@extend %padd-marg;
 }
 

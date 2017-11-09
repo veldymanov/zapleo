@@ -30,66 +30,88 @@ $(document).ready(function () {
 		}
 	});
 
-	//calculate filter height
+	//calculate filter container height
 	filterHeight();
 	window.addEventListener('resize', function(){
 		filterHeight();
 	})
+
+	//Set filter
+    $(".js-product-filter .js-data-term").on("click", function (event) {
+    	event.preventDefault();
+
+
+    	$(".js-product-filter .js-data-term").removeClass("active");
+    	$(this).addClass("active");
+
+        var term = $(this).attr("data-term");
+
+        $(".js-custom-item").fadeOut(0).css({"margin-top": "20px"});
+
+        $(".js-custom-item").each(function () {
+            ("*" == term) && $(".js-custom-item").fadeIn(0).animate({"margin-top": "0"}, 150); 
+            $(this).hasClass(term) && $(this).fadeIn(0).animate({"margin-top": "0"}, 150);
+        })
+
+        //recalculate fiter container height (from main.js)
+        filterHeight();
+
+    })
+
+	//////////////////////
+	//Images lazy loading
+	//////////////////////
+	// Get all of the images that are marked up to lazy load
+	let imgParents = document.querySelectorAll('.js-lazy-load');
+	const config = {
+	    root: null,
+	    rootMargin: '0px 0px 0px 0px',
+	    threshold: [0.0]
+	};
+
+	// If we have support for intersection observer
+	if (!('IntersectionObserver' in window)) {
+	    console.log('IntersectionObserver is not supported');
+
+	    imgParents.forEach(imgParent => loadImage(imgParent));
+	}  else {
+	    console.log('IntersectionObserver started');
+
+	    // The observer for the images on the page
+	    let observer = new IntersectionObserver(onIntersection, config);
+	    imgParents.forEach(imgParent => observer.observe(imgParent));
+
+		function onIntersection(entries) {
+			// Loop through the entries
+			entries.forEach( entry => {
+				// Are we in viewport?
+				if(entry.intersectionRatio > 0.0) {
+					// Stop watching and load image
+					observer.unobserve(entry.target);
+					loadImage(entry.target);
+
+					//recalculate filter container height
+					if (document.querySelector('.js-custom-items')) {
+						entry.target.querySelector('.js-lazy-img').addEventListener('load', function(){
+							filterHeight();
+						})
+					}
+
+					//Show picture
+					//entry.target.querySelectorAll('picture')[0].classList.remove('hidden');
+				} else {
+					//Hide picture
+					//entry.target.querySelectorAll('picture')[0].classList.add('hidden');
+				}
+			});
+		}
+	}
+
 });
 
 
-//////////////////////////////////////////////////////////////
-//Images lazy loading
-//////////////////////////////////////////////////////////////
-// Get all of the images that are marked up to lazy load
-let imgParents = document.querySelectorAll('.js-lazy-load');
-const config = {
-    root: null,
-    rootMargin: '0px 0px 0px 0px',
-    threshold: [0.0]
-};
-
-// If we have support for intersection observer
-if (!('IntersectionObserver' in window)) {
-    console.log('IntersectionObserver is not supported');
-
-    imgParents.forEach(imgParent => loadImage(imgParent));
-}  else {
-    console.log('IntersectionObserver started');
-
-    // The observer for the images on the page
-    let observer = new IntersectionObserver(onIntersection, config);
-    imgParents.forEach(imgParent => observer.observe(imgParent));
-
-	function onIntersection(entries) {
-		// Loop through the entries
-		entries.forEach( entry => {
-			// Are we in viewport?
-			if(entry.intersectionRatio > 0.0) {
-				// Stop watching and load image
-				observer.unobserve(entry.target);
-				loadImage(entry.target);
-
-				//recalculate filter container height
-				if (document.querySelector('.js-custom-items')) {
-					entry.target.querySelector('.js-lazy-img').addEventListener('load', function(){
-						filterHeight();
-					})
-				}
-
-				//Show picture
-				//entry.target.querySelectorAll('picture')[0].classList.remove('hidden');
-			} else {
-				//Hide picture
-				//entry.target.querySelectorAll('picture')[0].classList.add('hidden');
-			}
-		});
-	}
-}
-
-
 ///////////////////////////
-//Load image 
+//Load image function
 ///////////////////////////
 function loadImage(target){
     let lazySrcs = target.querySelectorAll('.js-lazy-src');
@@ -98,9 +120,9 @@ function loadImage(target){
     lazyImgs.forEach(lazyImg => lazyImg.src = lazyImg.getAttribute('data-src'));
 }
 
-///////////////////////////
-//Filter conteiner height 
-///////////////////////////
+//////////////////////////////////
+//Filter conteiner height function
+//////////////////////////////////
 function filterHeight(){
 	let totalHeight = 0,
 		averageHeight = 0,
@@ -110,36 +132,41 @@ function filterHeight(){
 		elsHeight = [];
 
 	//all filter's elements heights and widths
-	$(".js-custom-items .custom-item").each(function(){
-		let style = window.getComputedStyle(this);
+	//Can be only one ".js-custom-items" per page
+	let filterElements = document.querySelectorAll(".js-custom-items .js-custom-item");
+	for (var item of filterElements) {
+		let style = window.getComputedStyle(item);
     	let marginTop = parseInt(style.getPropertyValue('margin-top'), 10);
     	let marginBottom = parseInt(style.getPropertyValue('margin-bottom'), 10);
     	let marginRight = parseInt(style.getPropertyValue('margin-right'), 10);
     	let marginLeft = parseInt(style.getPropertyValue('margin-left'), 10);
 
-		elsWidth.push(this.offsetWidth  + marginRight + marginLeft);
-		elsHeight.push(this.offsetHeight + marginTop + marginBottom);
-	})
+		elsWidth.push(item.offsetWidth  + marginRight + marginLeft);
+		elsHeight.push(item.offsetHeight + marginTop + marginBottom);
+	}
 
-	$(".js-custom-items").each(function(){
-		//make full height
-		this.style.height = 'auto';
+	let filterContainer = document.querySelector(".js-custom-items");
+	//make full height
+	filterContainer.style.height = 'auto';
 
-		//get full height (and width)
-		totalHeight += this.offsetHeight;
-		totalWidth += this.offsetWidth;
+	//get full height (and width)
+	totalHeight += filterContainer.offsetHeight;
+	totalWidth += filterContainer.offsetWidth;
 
-		//Max array element
-		let maxElHeight = Math.max(...elsHeight);
-		//Choose max between averageHeight and max element height
-		averageHeight = Math.max(Math.ceil(totalHeight / Math.floor( totalWidth / elsWidth[0] )), maxElHeight);
+	//Max array element
+	let maxElHeight = Math.max(...elsHeight);
+	//Choose max between averageHeight and max element height
+	averageHeight = Math.max(Math.ceil(totalHeight / Math.floor( totalWidth / elsWidth[0] )), maxElHeight);
 
-		this.style.height = averageHeight + 'px'; 
+	filterContainer.style.height = averageHeight + 'px'; 
 
-		//increase height to fit all elements horizontally (flexbox)
-		while(this.scrollWidth > this.offsetWidth){
-			averageHeight += 20;
-			this.style.height = averageHeight + 'px';
-		}
-	});
+	//increase height to fit all elements horizontally (flexbox)
+	let limit = 0;
+	while(filterContainer.scrollWidth > filterContainer.offsetWidth){
+		averageHeight += 20;
+		filterContainer.style.height = averageHeight + 'px';
+
+		if ( limit > 20 ) {break}
+		limit++;
+	}
 }

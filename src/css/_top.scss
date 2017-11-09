@@ -8,22 +8,29 @@
 		h1, h2 {
 		@extend %padd-marg;
 		}
-		@media (max-width:720px) {flex-grow:1;}
+		@media (max-width:736px) {flex-grow:1;}
 	}
 	nav {
 		ul {
-		display: inline-flex;
-		justify-content: flex-end;
-		flex-wrap: wrap;
-		width: 100%;
-		margin-top: 2.66em;
+			display: inline-flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			width: 100%;
 			li {
-				&+li {
 				margin-left: 40px;
-				}
-			@media (max-width:720px) {line-height: 1.4;}
+				margin-top: 10px;
+				@media (max-width:736px) {margin-left: 5px;}
 			}
-		@media (max-width:720px) {margin-top: 10px;}
+			li:first-child {
+				margin-left: 0px;
+			}
+			@media (max-width:736px) {
+				justify-content: space-around;
+				margin-top: 10px;
+			}
+		}
+		@media (max-width:736px) {
+			flex-basis: 100%;
 		}
 	}
 	.underline {
