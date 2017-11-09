@@ -404,26 +404,26 @@ h1, h2 {
     .content figcaption h5 {
       text-transform: uppercase;
       font-size: calc( 0.005 * 100vw + 12.4px); }
-  .content > ul {
+  .content .custom-items {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     height: auto; }
-    .content > ul li {
-      width: 30%;
-      margin-bottom: 10px; }
+    .content .custom-items .custom-item {
+      margin-bottom: 10px;
+      width: 30%; }
       @media (max-width: 1150px) {
-        .content > ul li {
+        .content .custom-items .custom-item {
           width: 45%; } }
       @media (max-width: 736px) {
-        .content > ul li {
+        .content .custom-items .custom-item {
           width: 70%; } }
       @media (max-width: 650px) {
-        .content > ul li {
+        .content .custom-items .custom-item {
           width: 90%; } }
       @media (max-width: 480px) {
-        .content > ul li {
+        .content .custom-items .custom-item {
           width: 100%; } }
 
 @media (max-width: 900px) {
