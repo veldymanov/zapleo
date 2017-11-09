@@ -105,4 +105,10 @@ README.md                 - Project's readme file
 ### Filezilla
 ````
 	/domains/zapleo.com/public_html/dev/zapleo_new
+    url: zapleo.com/dev/zapleo_new/
+````
+
+### URL
+````
+    http://dev.zapleo.com/zapleo_new/
 ````
