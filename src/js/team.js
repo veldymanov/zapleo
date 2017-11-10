@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
             this.closest('li').querySelector('.js-wrap-popup').style.display = "block";
             this.closest('li').querySelector('.js-popup-resume').style.display = "block";
             //stop scroll propagation
-            document.querySelector("body").style.cssText = "overflow-y: hidden; position: fixed";
+            document.querySelector("body").style.cssText = "overflow-y: hidden; position: fixed;";
         })
     }
 
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
             this.closest('li').querySelector('.js-popup-resume').style.display = "none";
             this.closest('li').querySelector('.js-wrap-popup').style.display = "none";           
             
-            document.querySelector("body").style.cssText = "overflow-y: auto; position: inherit";
+            document.querySelector("body").style.cssText = "overflow-y: auto; position: inherit;";
         })
     }
 })
