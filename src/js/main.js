@@ -80,14 +80,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		document.querySelector('main').style.marginBottom = fHeight + 'px'; 
 	}	
 
+	///////////////////////
 	//Mobile menu
+	////////////////////////
 	let fadeSpeed = 350;
 	let mobMenu = document.querySelector(".mob-menu");
 	let sandwichBtn = document.querySelector('.sandwich');
+	let body = document.querySelector('body');
 
 	//Showing menu
 	sandwichBtn.addEventListener('click', function(){
 		this.classList.add("active");
+		body.style.overflow='hidden';
 
 		setTimeout(function(){
 			mobMenu.style.display = "block";
@@ -102,7 +106,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		if ( !mobMenu.querySelector('nav').contains(e.target) ) {
 
 			mobMenu.querySelector('nav').classList.remove('displayed');
-			
+			body.style.overflow='auto';
+
 			setTimeout(function(){			
 				mobMenu.style.display = "none";
 				sandwichBtn.classList.remove('active');
@@ -114,11 +119,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	//Set filter (Only one one ".js-custom-items" per page!!!!)
 	////////////////////////////////////////////////////////////
 	if (document.querySelector('.js-custom-items')) {
-		//calculate filter container height
-		filterHeight();
-		window.addEventListener('resize', function(){
+		//calculate filter container height for 'flex-direction: column'
+		if( document.querySelector('.js-column') ){
 			filterHeight();
-		})
+			window.addEventListener('resize', function(){
+				filterHeight();
+			})
+		}
 
 		//Set filtering and animation
 		let animationTime = "150ms";
@@ -166,8 +173,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			    		}		    		   		
 			    	}
 
-			        //recalculate fiter container height
-			        filterHeight();
+			        //recalculate filter container height for 'flex-direction: column'
+					if( document.querySelector('.js-column') ){
+			        	filterHeight();
+			        }
 			    }, false);
 			}
 		}
@@ -201,16 +210,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			entries.forEach( entry => {
 				// Are we in viewport?
 				if(entry.intersectionRatio > 0.0) {
-					//recalculate filter container height
-//					if (document.querySelector('.js-custom-items')) { filterHeight();}	
-
 					// Stop watching and load image
 					observer.unobserve(entry.target);
 					loadImage(entry.target);
 
-					//recalculate filter container height
-					if (document.querySelector('.js-custom-items')) {
-						filterHeight();
+			        //recalculate filter container height for 'flex-direction: column'
+					if( document.querySelector('.js-column') ){
+			        	filterHeight();
 						entry.target.querySelector('.js-lazy-img').addEventListener('load', function(){
 							filterHeight();
 						})

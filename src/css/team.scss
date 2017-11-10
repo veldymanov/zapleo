@@ -20,13 +20,14 @@
 
 .content {
 	margin: 0 52px;
+	
 	ul {
-	display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+		display: flex;
+	    flex-wrap: wrap;
+	    justify-content: space-around;
 		li {
-		text-align: center;
-		margin-bottom: 6vmin;
+			text-align: center;
+			margin-bottom: 6vmin;	
 		}
 	}
 	figure {
@@ -35,14 +36,14 @@
 		@extend %padd-marg;
 		&:hover > figcaption {
 			opacity: 1;
-		}
+		}	
 	}
 	figcaption {
 	    opacity: 0;
 	    position: absolute;
 	    top: 0; left: 0;
 	    right: 0; bottom: 0;
-		margin: 0;//calcFluidSize(5, 15, 320, 1920);
+		margin: 0;
 	    background-color: rgba(243,243,243,0.9);
 	    transition: opacity 250ms ease-in-out;
 	}
@@ -51,6 +52,9 @@
 .staff {
 	width: calcFluidSize(160, 478, 320, 1920);
 	height: auto;
+    @media (max-width:550px) {
+    	width: 100%;
+    }
 }
 
 .blur {
@@ -77,9 +81,7 @@
     filter: progid:none!important;
     -webkit-filter: none!important;
     filter: none!important;
-//	margin-right: 0;
     width: 60%;
- //   max-height: 500px;
 	overflow: hidden;
     position: fixed;
     right: 20%;
@@ -87,12 +89,6 @@
     z-index: 100;
     @media (max-width:680px) {
     	right: 10%;
-    //	top: 10px;
     	width: 80%;
     }
-}
-
-.popup-resume img {
-//    width: 100%;
-//    height: auto;
 }

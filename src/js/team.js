@@ -1,17 +1,21 @@
-$(document).ready(function() {
-    $(".resume-open-pop-up").click(function(event) {
-        $(this).closest('li').find('.wrap-popup').show();
-        $(this).closest('li').find('.popup-resume').show();
+document.addEventListener("DOMContentLoaded", function() {
+    let resumes = document.querySelectorAll('.js-resume-open-pop-up');
+    for(let resume of resumes){
+        resume.addEventListener('click', function(){
+            this.closest('li').querySelector('.js-wrap-popup').style.display = "block";
+            this.closest('li').querySelector('.js-popup-resume').style.display = "block";
+            //stop scroll propagation
+            document.querySelector("body").style.overflow = 'hidden';
+        })
+    }
 
-        //stop scroll propagation
-        $(document).find(".js-body").css('overflow','hidden');
-    });
-    $(document).click(function(event) {
-        if ($(event.target).closest('.resume-open-pop-up').length == 0) {
-            $('.popup-resume').hide();
-            $('.wrap-popup').hide();
-
-            $(parent.document).find(".js-body").css('overflow','auto');
-        }
-    });
+    let popups = document.querySelectorAll('.wrap-popup');
+    for(let popup of popups){
+        popup.addEventListener('click', function(){
+            this.closest('li').querySelector('.js-popup-resume').style.display = "none";
+            this.closest('li').querySelector('.js-wrap-popup').style.display = "none";           
+            
+            document.querySelector("body").style.overflow = 'auto';
+        })        
+    }
 })

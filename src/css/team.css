@@ -89,13 +89,9 @@ header {
         margin-left: calc( 0.02353 * 100vw + -5.17647px); } }
 
 main {
-  background: #fff;
-  box-shadow: 0 40px 30px 0px rgba(0, 0, 0, 0.4); }
+  background: #fff; }
   main section {
     padding: 12.2vmin 6%; }
-  @media (max-width: 768px) {
-    main {
-      box-shadow: 0 15px 20px 0px rgba(0, 0, 0, 0.4); } }
 
 h1, h2 {
   font-family: 'functionpro_medium', sans-serif;
@@ -467,6 +463,9 @@ h1, h2 {
 .staff {
   width: calc( 0.19875 * 100vw + 96.4px);
   height: auto; }
+  @media (max-width: 550px) {
+    .staff {
+      width: 100%; } }
 
 .blur {
   filter: blur(2px);

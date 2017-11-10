@@ -89,13 +89,9 @@ header {
         margin-left: calc( 0.02353 * 100vw + -5.17647px); } }
 
 main {
-  background: #fff;
-  box-shadow: 0 40px 30px 0px rgba(0, 0, 0, 0.4); }
+  background: #fff; }
   main section {
     padding: 12.2vmin 6%; }
-  @media (max-width: 768px) {
-    main {
-      box-shadow: 0 15px 20px 0px rgba(0, 0, 0, 0.4); } }
 
 h1, h2 {
   font-family: 'functionpro_medium', sans-serif;
@@ -401,16 +397,19 @@ h1, h2 {
     .content {
       flex-wrap: wrap;
       justify-content: space-around; } }
-  .content img {
+  .content picture {
+    flex-basis: 90%;
     border: none;
-    display: block;
-    height: auto;
-    width: 100%; }
+    display: block; }
     @media (max-width: 1100px) {
-      .content img {
-        height: auto;
-        margin: 0;
-        width: auto; } }
+      .content picture {
+        margin: 0; } }
+    .content picture img {
+      display: block;
+      margin: 0;
+      height: 100%;
+      padding: 0;
+      width: 100%; }
   .content article {
     background-color: #eee;
     padding: 1.58em 1.12em;
