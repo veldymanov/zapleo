@@ -22,7 +22,7 @@
   display: table-cell;
   vertical-align: middle; }
 
-body, ul, .footer p, .name {
+html, body, ul, .footer p, .name {
   padding: 0;
   margin: 0; }
 
@@ -52,10 +52,11 @@ body, ul, .footer p, .name {
   * img::selection {
     background: none; }
 
-body {
+html, body {
   font-family: "functionpro_book", sans-serif;
   font-size: calc( 0.00313 * 100vw + 14px);
   /* Fluid font-size */
+  height: 100%;
   color: #8a8a8a;
   min-width: 320px; }
 

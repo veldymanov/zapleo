@@ -18,7 +18,7 @@
   src: url("../fonts/functionpro_medium.ttf") format("truetype"), url("../fonts/functionpro_medium.woff") format("woff"), url("../fonts/functionpro_medium.woff2") format("woff2");
   unicode-range: U+20-126, U+161-255, U+338-339, U+376, U+710, U+732, U+2019, U+201C-201E, U+8192-8202, U+8208-8212, U+8216-8218, U+8220-8222, U+8226, U+8230, U+8239, U+8249-8250, U+8287, U+8364, U+8482, U+9724, U+64257-64258, U+FFEB; }
 
-body, ul, .footer p, .content figure {
+html, body, ul, .footer p, .content figure {
   padding: 0;
   margin: 0; }
 
@@ -43,10 +43,11 @@ body, ul, .footer p, .content figure {
   * img::selection {
     background: none; }
 
-body {
+html, body {
   font-family: "functionpro_book", sans-serif;
   font-size: calc( 0.00313 * 100vw + 14px);
   /* Fluid font-size */
+  height: 100%;
   color: #8a8a8a;
   min-width: 320px; }
 
