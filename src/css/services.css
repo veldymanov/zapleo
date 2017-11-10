@@ -22,7 +22,7 @@ body, ul, .footer p, .content figure {
   padding: 0;
   margin: 0; }
 
-.sandwich, .mob-menu .search input, .magn {
+.sandwich, .magn {
   font-family: inherit;
   border: none;
   outline: none;
@@ -373,21 +373,14 @@ h1, h2 {
     text-transform: uppercase;
     font-size: calc( 0.00862 * 100vw + 11.24138px);
     transform: translateX(-100%);
-    transition: transform .2s ease-in-out; }
+    transition: transform .25s ease-in-out; }
   .mob-menu .displayed {
     transform: translateX(0); }
   .mob-menu a {
     display: block;
     padding: 10px 30px; }
-  .mob-menu .search {
-    padding: 10px 20px 10px 30px; }
-    .mob-menu .search input {
-      font-size: calc( 0.00862 * 100vw + 11.24138px);
-      -webkit-appearance: none; }
-      .mob-menu .search input::-webkit-search-cancel-button {
-        display: none; }
-      .mob-menu .search input:focus + button {
-        filter: drop-shadow(0 2px 1px #373737); }
+  .mob-menu a:hover {
+    background-color: rgba(0, 0, 0, 0.2); }
 
 .magn {
   width: 18px;

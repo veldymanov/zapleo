@@ -9,7 +9,7 @@ function loadImage(target){
 }
 
 //////////////////////////////////
-//Filter conteiner height function
+//Filter container height function
 //////////////////////////////////
 function filterHeight(){
 	let totalHeight = 0,
@@ -81,27 +81,34 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	}	
 
 	//Mobile menu
-	var fadeSpeed = 350;
-	var $mobMenu = $('.mob-menu');
+	let fadeSpeed = 350;
+	let mobMenu = document.querySelector(".mob-menu");
+	let sandwichBtn = document.querySelector('.sandwich');
+
 	//Showing menu
-	$('.sandwich').on('click', function(){
-		$(this).addClass('active');
-		$mobMenu.fadeIn(fadeSpeed, function () {
-			$(this).find('nav').off('transitionend webkitTransitionEnd oTransitionEnd').addClass('displayed');
-		});
+	sandwichBtn.addEventListener('click', function(){
+		this.classList.add("active");
+
+		setTimeout(function(){
+			mobMenu.style.display = "block";
+
+			setTimeout(function(){
+				mobMenu.querySelector('nav').classList.add('displayed');
+			}, 250);			
+		}, 500);			 		
 	});
 
-	$mobMenu.on('click', function(e){
-		var el = $(e.target);
-		var $self = $(this);
-		if ( (! el.is('a')) && (! el.is('input')) ) {
-			$(this).find('nav').removeClass('displayed').on('transitionend webkitTransitionEnd oTransitionEnd', function () {
- 				$self.fadeOut(fadeSpeed);
-				$('.sandwich').removeClass('active');
-			});
+	mobMenu.addEventListener('click', function(e){
+		if ( !mobMenu.querySelector('nav').contains(e.target) ) {
+
+			mobMenu.querySelector('nav').classList.remove('displayed');
+			
+			setTimeout(function(){			
+				mobMenu.style.display = "none";
+				sandwichBtn.classList.remove('active');
+			}, 250);
 		}
 	});
-
 	
 	////////////////////////////////////////////////////////////
 	//Set filter (Only one one ".js-custom-items" per page!!!!)
@@ -114,6 +121,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		})
 
 		//Set filtering and animation
+		let animationTime = "150ms";
 		let customItems = document.querySelectorAll(".js-custom-item");
 	    let dataTerms = document.querySelectorAll(".js-product-filter .js-data-term");
 		//Set multiple event listener
@@ -129,8 +137,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			    	}
 			    	item.classList.add("active");
 
-			        let term = item.getAttribute("data-term");
-
 			        //remove all (displayed) items
 			    	for (let i of customItems) {
 			    		i.style.display = "none";
@@ -139,6 +145,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			    	}
 
 			    	//show filtered items with animation
+			        let term = item.getAttribute("data-term");			    	
 			    	for (let i of customItems) {
 			    		if (  term === "*" ){
 			    			i.style.display =  "block";
@@ -146,16 +153,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 				    		setTimeout(function(){
 				    			i.style.top = "0px";
-				    			i.style.transitionDuration = "150ms";
+				    			i.style.transitionDuration = animationTime;
 				    		}, 0);
-
 			    		} else if (i.classList.contains(term)) {
 			    			i.style.display =  "block";
 			    			i.style.transition = "top 0s"; 
 
 				    		setTimeout(function(){
 				    			i.style.top = "0px";
-				    			i.style.transitionDuration = "150ms";
+				    			i.style.transitionDuration = animationTime;
 				    		}, 0); 		    			
 			    		}		    		   		
 			    	}
@@ -195,12 +201,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			entries.forEach( entry => {
 				// Are we in viewport?
 				if(entry.intersectionRatio > 0.0) {
+					//recalculate filter container height
+//					if (document.querySelector('.js-custom-items')) { filterHeight();}	
+
 					// Stop watching and load image
 					observer.unobserve(entry.target);
 					loadImage(entry.target);
 
 					//recalculate filter container height
 					if (document.querySelector('.js-custom-items')) {
+						filterHeight();
 						entry.target.querySelector('.js-lazy-img').addEventListener('load', function(){
 							filterHeight();
 						})
