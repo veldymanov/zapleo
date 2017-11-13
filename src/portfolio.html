@@ -67,137 +67,288 @@
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 					</article>
 					<nav>
-						<ul>
-							<li><a href="" class="underline">All</a></li>
-							<li><a href="" class="underline">Digital Art</a></li>
-							<li><a href="" class="underline">Furniture</a></li>
-							<li><a href="" class="underline">Photography</a></li>
-							<li><a href="" class="underline">Print</a></li>
+						<ul class="product-filter js-product-filter js-column">
+                            <li class="custom-categories">
+                                <a class="underline active js-data-term" data-term="*">All</a>
+                            </li>
+                            <li class="custom-categories">
+                                <a class="underline js-data-term" data-term="Blog">Blog</a>
+                            </li>
+                            <li class="custom-categories">
+                                <a class="underline js-data-term" data-term="CMS">CMS</a>
+                            </li>
+                            <li class="custom-categories">
+                                <a class="underline js-data-term" data-term="E-commerce">E-commerce</a>
+                            </li>
+                            <li class="custom-categories">
+                                <a class="underline js-data-term" data-term="Framework">Framework</a>
+                            </li>
+                            <li class="custom-categories">
+                                <a class="underline js-data-term" data-term="Landing">Landing</a>
+                            </li>
 						</ul>
 					</nav>
 				</div>
 				<div class="content">
-					<ul>
-						<li>
+					<!--Only one one ".js-custom-items" per page! -->
+					<ul class="custom-items js-custom-items">
+						<li class="custom-item js-custom-item CMS">
 							<a href="item_portfolio.html">
 								<figure>
 									<picture class="js-lazy-load">
-										<source class="js-lazy-src" type="image/webp" data-srcset="images/work1.z.webp">
-										<img class="js-lazy-img" data-src="images/work1.z.png" alt="work 1">
+										<source class="js-lazy-src" type="image/webp" 
+												data-srcset="images/portfolio/tracksoundsgood/main_500.z.webp">
+										<img class="js-lazy-img" alt="trackgodsound main"
+												data-src="images/portfolio/tracksoundsgood/main_500.z.png" />
 									</picture>
 									<figcaption>
-										<h3>Sigal Avitan</h3>	
-										<p class="link">http://sigalavitan.co.il</p>
-										<p class="descr">Sigal Avitan's landing page</p>
+										<h3>Tracksoundsgood</h3>
+										<p class="link">https://trackgodsound.com/</p>
+										<p class="descr">Sound site</p>
 									</figcaption>
 								</figure>
 							</a>
 						</li>
-						<li>
+						<li class="custom-item js-custom-item CMS">
 							<a href="item_portfolio.html">
 								<figure>
 									<picture class="js-lazy-load">
-										<source class="js-lazy-src" type="image/webp" data-srcset="images/work4.z.webp">
-										<img class="js-lazy-img" data-src="images/work4.z.png" alt="work 4">
+										<source class="js-lazy-src" type="image/webp" 
+												data-srcset="images/portfolio/solefit/main_big_500.z.webp">
+										<img class="js-lazy-img" alt="solefit main_big"
+												data-src="images/portfolio/solefit/main_big_500.z.png" />
 									</picture>
 									<figcaption>
-										<h3>Sigal Avitan</h3>
-										<p class="link">http://example.com</p>
-										<p class="descr">Sigal Avitan's landing page</p>
+										<h3>Solefit</h3>
+										<p class="link">https://www.solefit.ca/</p>
+										<p class="descr">Awesome site</p>
 									</figcaption>
 								</figure>
 							</a>
 						</li>
-						<li>
+						<li class="custom-item js-custom-item Landing">
 							<a href="item_portfolio.html">
 								<figure>
 									<picture class="js-lazy-load">
-										<source class="js-lazy-src" type="image/webp" data-srcset="images/work3.z.webp">
-										<img class="js-lazy-img" data-src="images/work3.z.png" alt="work 3">
+										<source class="js-lazy-src" type="image/webp" 
+												data-srcset="images/portfolio/sigal/main_500.z.webp">
+										<img class="js-lazy-img" alt="sigal main"
+												data-src="images/portfolio/sigal/main_500.z.png" />
 									</picture>
 									<figcaption>
-										<h3>Sigal Avitan</h3>
-										<p class="link">http://zapleo.com</p>
-										<p class="descr">Sigal Avitan's landing page</p>
+										<h3>Sigal</h3>
+										<p class="link">http://www.sigalavitan.co.il/</p>
+										<p class="descr">Blog</p>
 									</figcaption>
 								</figure>
 							</a>
 						</li>
-						<li>
+						<li class="custom-item js-custom-item">
 							<a href="item_portfolio.html">
 								<figure>
 									<picture class="js-lazy-load">
-										<source class="js-lazy-src" type="image/webp" data-srcset="images/work2.z.webp">
-										<img class="js-lazy-img" data-src="images/work2.z.png" alt="work 2">
+										<source class="js-lazy-src" type="image/webp" 
+												data-srcset="images/portfolio/servers/main_big_500.z.webp">
+										<img class="js-lazy-img" alt="servers main_big"
+												data-src="images/portfolio/servers/main_big_500.z.png" />
 									</picture>
 									<figcaption>
-										<h3>Sigal Avitan</h3>
-										<p class="link">http://google.com</p>
-										<p class="descr">Sigal Avitan's landing page</p>
+										<h3>Server</h3>
+										<p class="link">www.server.com</p>
+										<p class="descr">server</p>
 									</figcaption>
 								</figure>
 							</a>
 						</li>
-						<li>
+						<li class="custom-item js-custom-item CMS">
 							<a href="item_portfolio.html">
 								<figure>
 									<picture class="js-lazy-load">
-										<source class="js-lazy-src" type="image/webp" data-srcset="images/work1.z.webp">
-										<img class="js-lazy-img" data-src="images/work1.z.png" alt="work 1">
+										<source class="js-lazy-src" type="image/webp" 
+												data-srcset="images/portfolio/papagreen/main_500.z.webp">
+										<img class="js-lazy-img" alt="papagreen main"
+												data-src="images/portfolio/papagreen/main_500.z.png" />
 									</picture>
 									<figcaption>
-										<h3>Sigal Avitan</h3>
-										<p class="link">http://sigalavitan.co.il</p>
-										<p class="descr">Sigal Avitan's landing page</p>
+										<h3>PapaGREEN</h3>
+										<p class="link">http://papagreen.com.ua/</p>
+										<p class="descr">greeen site</p>
 									</figcaption>
 								</figure>
 							</a>
 						</li>
-						<li>
+						<li class="custom-item js-custom-item Blog CMS Landing">
 							<a href="item_portfolio.html">
 								<figure>
 									<picture class="js-lazy-load">
-										<source class="js-lazy-src" type="image/webp" data-srcset="images/work4.z.webp">
-										<img class="js-lazy-img" data-src="images/work4.z.png" alt="work 4">
+										<source class="js-lazy-src" type="image/webp" 
+												data-srcset="images/portfolio/ny-ads/main_big_500.z.webp">
+										<img class="js-lazy-img" alt="ny-ads main_big"
+												data-src="images/portfolio/ny-ads/main_big_500.z.png" />
 									</picture>
 									<figcaption>
-										<h3>Sigal Avitan</h3>
-										<p class="link">http://demo.massivedynamic.co</p>
-										<p class="descr">Sigal Avitan's landing page</p>
+										<h3>Nyads</h3>
+										<p class="link">http://nyads.nyc/</p>
+										<p class="descr">cooooooooool</p>
 									</figcaption>
 								</figure>
 							</a>
 						</li>
-						<li>
+						<li class="custom-item js-custom-item CMS E-commerce">
 							<a href="item_portfolio.html">
 								<figure>
 									<picture class="js-lazy-load">
-										<source class="js-lazy-src" type="image/webp" data-srcset="images/work3.z.webp">
-										<img class="js-lazy-img" data-src="images/work3.z.png" alt="work 3">
+										<source class="js-lazy-src" type="image/webp" 
+												data-srcset="images/portfolio/nichebox/main_500.z.webp">
+										<img class="js-lazy-img" alt="nichebox main"
+												data-src="images/portfolio/nichebox/main_500.z.png" />
 									</picture>
 									<figcaption>
-										<h3>Sigal Avitan</h3>
-										<p class="link">http://sigalavitan.co.il</p>
-										<p class="descr">Sigal Avitan's landing page</p>
+										<h3>Nichebox</h3>
+										<p class="link">http://nichebox.fr/</p>
+										<p class="descr">Shop for niche parfumery</p>
 									</figcaption>
 								</figure>
 							</a>
 						</li>
-						<li>
+						<li class="custom-item js-custom-item Blog CMS">
 							<a href="item_portfolio.html">
 								<figure>
 									<picture class="js-lazy-load">
-										<source class="js-lazy-src" type="image/webp" data-srcset="images/work2.z.webp">
-										<img class="js-lazy-img" data-src="images/work2.z.png" alt="work 2">
+										<source class="js-lazy-src" type="image/webp" 
+												data-srcset="images/portfolio/ls/main_big_500.z.webp">
+										<img class="js-lazy-img" alt="ls main_big"
+												data-src="images/portfolio/ls/main_big_500.z.png" />
 									</picture>
 									<figcaption>
-										<h3>Sigal Avitan</h3>
-										<p class="link">http://elementqueries.com/</p>
-										<p class="descr">Sigal Avitan's landing page</p>
+										<h3>Lstearthomes</h3>
+										<p class="link">http://lstewarthomes.com/</p>
+										<p class="descr">Hotels</p>
 									</figcaption>
 								</figure>
 							</a>
 						</li>
+						<li class="custom-item js-custom-item Framework">
+							<a href="item_portfolio.html">
+								<figure>
+									<picture class="js-lazy-load">
+										<source class="js-lazy-src" type="image/webp" 
+												data-srcset="images/portfolio/implan/main_500.z.webp">
+										<img class="js-lazy-img" alt="implan main"
+												data-src="images/portfolio/implan/main_500.z.png" />
+									</picture>
+									<figcaption>
+										<h3>Implan</h3>
+										<p class="link">http://new.im.biz.ua/</p>
+										<p class="descr">
+											Interactive scheduler IMplan is a program to achieve the maximum results in commercial, social and household lifehoods, thanks to work of related system modules and his personal desire
+										</p>
+									</figcaption>
+								</figure>
+							</a>
+						</li>
+						<li class="custom-item js-custom-item Blog CMS">
+							<a href="item_portfolio.html">
+								<figure>
+									<picture class="js-lazy-load">
+										<source class="js-lazy-src" type="image/webp" 
+												data-srcset="images/portfolio/gurskaya/main_big_500.z.webp">
+										<img class="js-lazy-img" alt="gurskaya main_big"
+												data-src="images/portfolio/gurskaya/main_big_500.z.png" />
+									</picture>
+									<figcaption>
+										<h3>Gurskaya</h3>
+										<p class="link">http://gurskaya.club/blog/</p>
+										<p class="descr">Blog for Gurskaya</p>
+									</figcaption>
+								</figure>
+							</a>
+						</li>
+						<li class="custom-item js-custom-item Blog E-commerce">
+							<a href="item_portfolio.html">
+								<figure>
+									<picture class="js-lazy-load">
+										<source class="js-lazy-src" type="image/webp" 
+												data-srcset="images/portfolio/glasses/main_500.z.webp">
+										<img class="js-lazy-img" alt="glasses main"
+												data-src="images/portfolio/glasses/main_500.z.png" />
+									</picture>
+									<figcaption>
+										<h3>Luxeoptix</h3>
+										<p class="link">https://www.luxeoptix.com/</p>
+										<p class="descr">Site for sunglasses shop</p>
+									</figcaption>
+								</figure>
+							</a>
+						</li>
+						<li class="custom-item js-custom-item Framework">
+							<a href="item_portfolio.html">
+								<figure>
+									<picture class="js-lazy-load">
+										<source class="js-lazy-src" type="image/webp" 
+												data-srcset="images/portfolio/e-conomics/main_big_500.z.webp">
+										<img class="js-lazy-img" alt="e-conomics main_big"
+												data-src="images/portfolio/e-conomics/main_big_500.z.png" />
+									</picture>
+									<figcaption>
+										<h3>Economics dashboard</h3>
+										<p class="link">http://app.e-conomic-dashboard.rainbowriders.dk/</p>
+										<p class="descr">A site for viewing the economy.</p>
+									</figcaption>
+								</figure>
+							</a>
+						</li>
+						<li class="custom-item js-custom-item CMS">
+							<a href="item_portfolio.html">
+								<figure>
+									<picture class="js-lazy-load">
+										<source class="js-lazy-src" type="image/webp" 
+												data-srcset="images/portfolio/boat-samui/main_500.z.webp">
+										<img class="js-lazy-img" alt="boat-samui main"
+												data-src="images/portfolio/boat-samui/main_500.z.png" />
+									</picture>
+									<figcaption>
+										<h3>Boat samui</h3>
+										<p class="link">http://boat-samui.com/</p>
+										<p class="descr">Ship Rental Service Website</p>
+									</figcaption>
+								</figure>
+							</a>
+						</li>
+						<li class="custom-item js-custom-item Framework">
+							<a href="item_portfolio.html">
+								<figure>
+									<picture class="js-lazy-load">
+										<source class="js-lazy-src" type="image/webp" 
+												data-srcset="images/portfolio/vantium/main_big_500.z.webp">
+										<img class="js-lazy-img" alt="vantium main_big"
+												data-src="images/portfolio/vantium/main_big_500.z.png" />
+									</picture>
+									<figcaption>
+										<h3>Vantiumschools</h3>
+										<p class="link">http://vantiumschools.com/</p>
+										<p class="descr">Really very nice site.</p>
+									</figcaption>
+								</figure>
+							</a>
+						</li>
+						<li class="custom-item js-custom-item Landing">
+							<a href="item_portfolio.html">
+								<figure>
+									<picture class="js-lazy-load">
+										<source class="js-lazy-src" type="image/webp" 
+												data-srcset="images/portfolio/calendar/main_500.z.webp">
+										<img class="js-lazy-img" alt="calendar main"
+												data-src="images/portfolio/calendar/main_500.z.png" />
+									</picture>
+									<figcaption>
+										<h3>CatsCalendar</h3>
+										<p class="link">http://dev.zapleo.com/landing/catscalendar2017/</p>
+										<p class="descr">Wall Calendars shop</p>
+									</figcaption>
+								</figure>
+							</a>
+						</li>																								
 					</ul>
 				</div>
 				<!--button class="showmore" type="button">показать ещё</button-->
@@ -261,7 +412,7 @@
 				</li>
 			</ul>
 		</footer>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script-->
 		<script src="js/main.js"></script>
 	</body>
 </html>

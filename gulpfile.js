@@ -65,7 +65,8 @@ gulp.task('scripts', function () {
 ////////////////////////////////////////////////////
 //pctures minimize to '*.opt.{png,jpg,gif,svg}' and '*.z.{png,jpg,gif,svg}'
 gulp.task('pic:min', () =>
-    gulp.src(['src/*/img/**/*.{png,jpg,gif,svg}',
+    gulp.src([
+        'src/*/img/**/*.{png,jpg,gif,svg}',
         '!src/*/img/**/*.opt.{png,jpg,gif,svg}',
         '!src/*/img/**/*.z.{png,jpg,gif,svg}'
     ])
@@ -91,7 +92,10 @@ gulp.task('pic:webp', ['pic:min'], () =>
 
 //remove '*.opt.{png,jpg,gif,svg}'
 gulp.task('pic:remove', ['pic:webp'], function () {
-    del.sync(['src/*/img/**/*.opt.{png,jpg,gif,svg}']);
+    del.sync([
+        'src/*/img/**/*.{png,jpg,gif,svg}',
+        '!src/*/img/**/*.z.{png,jpg,gif,svg}'
+    ]);
 });
 
 gulp.task('pic', ['pic:remove']);
