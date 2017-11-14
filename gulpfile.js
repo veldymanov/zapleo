@@ -45,20 +45,16 @@ gulp.task('css', () =>
         .pipe(reload({stream: true}))
 );
 
+
 ////////////////////////////////////////////////////
 // Script Tasks
 ////////////////////////////////////////////////////
-//copy jquery
-gulp.task('jquery', function() {
-    gulp.src(['node_modules/jquery/dist/jquery.js' ])
-        .pipe(gulp.dest('src/external_libraries/jquery/'));
-});
-
 //update browser-sync
 gulp.task('scripts', function () {
     gulp.src(['src/**/*.js'])
         .pipe(reload({stream: true}));
 });
+
 
 ////////////////////////////////////////////////////
 // Picture tasks
@@ -85,7 +81,6 @@ gulp.task('pic:webp', ['pic:min'], () =>
         .pipe(rename(function(opt) {
             opt.basename = opt.basename.replace(/.opt/, '.z');
         }))
-//        .pipe(gulp.dest('src/'))
         .pipe(webp())
         .pipe(gulp.dest('src/'))
 );
@@ -114,14 +109,14 @@ gulp.task('build:copy', ['build:cleanfolder'], function () {
         .pipe(gulp.dest('docs/'));
 });
 
-//task to remove unwanted build files
-//list all files and directories here that you don't want to include
-gulp.task('build:remove', ['build:copy'], function () {
-    del.sync('docs/**/*.scss');
+/*
+gulp.task('css:inline', ['build:copy'], function() {
+
 });
+*/
 
 //minify html
-gulp.task('html:minify', ['build:remove'], function() {
+gulp.task('html:minify', ['build:copy'], function() {
     return gulp.src(['docs/**/*.html'])
         .pipe(plumber())
         .pipe(htmlmin({
@@ -142,16 +137,9 @@ gulp.task('html:minify', ['build:remove'], function() {
         .pipe(gulp.dest('docs/'));
 });
 
-//minify css
-gulp.task('css:minify', ['html:minify'], () =>
-gulp.src(['docs/**/*.css'])
-    .pipe(plumber())
-    .pipe(cleanCSS())
-    .pipe(gulp.dest('docs/'))
-);
 
 //minify scripts
-gulp.task('scripts:minify', ['css:minify'], function () {
+gulp.task('scripts:minify', ['html:minify'], function () {
     gulp.src(['docs/**/*.js'])
         .pipe(plumber())
         .pipe(babel({
@@ -161,7 +149,13 @@ gulp.task('scripts:minify', ['css:minify'], function () {
         .pipe(gulp.dest('docs/'));
 });
 
-gulp.task('build', ['scripts:minify']);
+//task to remove unwanted build files
+//list all files and directories here that you don't want to include
+gulp.task('build:remove', ['scripts:minify'], function () {
+    del.sync('docs/**/*.scss');
+});
+
+gulp.task('build', ['build:remove']);
 
 ////////////////////////////////////////////////////
 // Browser-Sync Tasks

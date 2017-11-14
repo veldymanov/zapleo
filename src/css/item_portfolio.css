@@ -427,27 +427,25 @@ h1, h2 {
 .review h5 {
   margin: 2vmin 0 0; }
 
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .skills li {
+    margin-right: 3px; }
+
 @media (min-width: 901px) {
   .mocaps {
     max-width: 75%; } }
 
-@media (max-width: 900px) {
-  .mocaps {
-    text-align: center;
-    margin-top: 4vmin; } }
-
 .mocaps ul {
-  columns: auto 2; }
-  @media (max-width: 540px) {
-    .mocaps ul {
-      column-count: auto; } }
+  display: flex;
+  flex-wrap: wrap; }
 
 .mocaps li {
-  display: inline-block;
-  vertical-align: top;
-  background: #ececec;
-  padding: 2vmin;
-  margin-bottom: 1em; }
+  flex-basis: 50%; }
+  @media (max-width: 750px) {
+    .mocaps li {
+      flex-basis: 100%; } }
   .mocaps li img {
-    max-height: 44vmin;
-    max-width: 100%; }
+    width: 100%; }
