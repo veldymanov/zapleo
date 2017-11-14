@@ -3,9 +3,9 @@
 .item {
 width: 100%;
 display: flex;
-	@media (max-width: 900px) {flex-wrap: wrap;}
+	@media (max-width: 930px) {flex-wrap: wrap;}
 	aside {
-	@media (min-width: 900px) {width: 426px; margin-right: 5%;}
+	@media (min-width: 930px) {width: 426px; margin-right: 5%;}
 		h1 {margin-top: 0;}
 		h2 {
 		font-size: 1.2em;
@@ -49,22 +49,20 @@ display: flex;
 .skills {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: center;
 	li {
-		margin-right: 3px;
+		margin-right: 5px;
 	}
 }
 
 .mocaps {
-@media (min-width: 901px) {max-width: 75%;}
+@media (min-width: 930px) {max-width: 75%;}
 //@media (max-width: 900px) {text-align: center; margin-top: 4vmin;}
 	ul {
 		display: flex;
 		flex-wrap: wrap;
 	}
 	li {
-//		flex-basis: 30%;
-//		margin-right: 1%;
 		flex-basis: 50%;
 		@media (max-width: 750px) {
 			flex-basis: 100%;

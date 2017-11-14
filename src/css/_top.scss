@@ -1,16 +1,20 @@
 .top {
 	display: flex;
+	justify-content: flex-end;
 	flex-wrap: wrap;
-	justify-content: space-between;
 	padding-bottom: 7.5vmin;
 	article {
-	flex: 0 1 50%;
+		flex-basis: 100%;
+		margin-right: 40%;
 		h1, h2 {
-		@extend %padd-marg;
+			@extend %padd-marg;
 		}
-		@media (max-width:736px) {flex-grow:1;}
+		@media (max-width: 736px) {
+			margin-right: 0;
+		}
 	}
 	nav {
+
 		ul {
 			display: inline-flex;
 			justify-content: center;
@@ -19,7 +23,9 @@
 			li {
 				margin-left: 40px;
 				margin-top: 10px;
-				@media (max-width:736px) {margin-left: 5px;}
+				@media (max-width:736px) {
+					margin-left: 5px;
+				}
 			}
 			li:first-child {
 				margin-left: 0px;

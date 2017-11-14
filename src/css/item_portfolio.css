@@ -389,10 +389,10 @@ h1, h2 {
 .item {
   width: 100%;
   display: flex; }
-  @media (max-width: 900px) {
+  @media (max-width: 930px) {
     .item {
       flex-wrap: wrap; } }
-  @media (min-width: 900px) {
+  @media (min-width: 930px) {
     .item aside {
       width: 426px;
       margin-right: 5%; } }
@@ -430,11 +430,11 @@ h1, h2 {
 .skills {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; }
+  justify-content: center; }
   .skills li {
-    margin-right: 3px; }
+    margin-right: 5px; }
 
-@media (min-width: 901px) {
+@media (min-width: 930px) {
   .mocaps {
     max-width: 75%; } }
 

@@ -333,14 +333,15 @@ h1, h2 {
 
 .top {
   display: flex;
+  justify-content: flex-end;
   flex-wrap: wrap;
-  justify-content: space-between;
   padding-bottom: 7.5vmin; }
   .top article {
-    flex: 0 1 50%; }
+    flex-basis: 100%;
+    margin-right: 40%; }
     @media (max-width: 736px) {
       .top article {
-        flex-grow: 1; } }
+        margin-right: 0; } }
   .top nav ul {
     display: inline-flex;
     justify-content: center;
