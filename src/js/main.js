@@ -70,7 +70,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	})
 
 	function calcMarginBottom () {
-	//	var $fHeight = $('main+footer').outerHeight();
 		let item = document.querySelector('main+footer');
 		let style = window.getComputedStyle(item);
     	let marginTop = parseInt(style.getPropertyValue('margin-top'), 10);
@@ -85,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	////////////////////////
 	let fadeSpeed = 350;
 	let mobMenu = document.querySelector(".mob-menu");
-	let sandwichBtn = document.querySelector('.sandwich');
+	let sandwichBtn = document.querySelector('.sandwich'); 
 	let body = document.querySelector('body');
 
 	//Showing menu
@@ -125,6 +124,32 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			window.addEventListener('resize', function(){
 				filterHeight();
 			})
+		}
+
+		//prevent link by click on touch devices
+		let pictures = document.querySelectorAll(".js-custom-item picture");
+		for (let picture of pictures) {
+			picture.addEventListener('touchstart', function(event){
+			//	event.preventDefault();
+
+				let figures = document.querySelectorAll(".js-custom-item figure");
+				for (let figure of figures) {
+					figure.classList.remove("hovered");
+				}
+
+				this.closest('figure').classList.add("hovered");
+			});
+/*			
+			picture.addEventListener('touchmove', function(event){
+				return true;
+			});
+			picture.addEventListener('touchend', function(event){
+			//	event.preventDefault();
+
+			//	this.closest('figure').classList.remove("hovered");
+				
+			});
+*/
 		}
 
 		let customItems = document.querySelectorAll(".js-custom-item");

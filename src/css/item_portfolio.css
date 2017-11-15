@@ -47,7 +47,7 @@ html, body {
   font-family: "functionpro_book", sans-serif;
   font-size: calc( 0.00313 * 100vw + 14px);
   /* Fluid font-size */
-  height: 100%;
+  height: auto;
   color: #8a8a8a;
   min-width: 320px; }
 
@@ -392,10 +392,6 @@ h1, h2 {
   @media (max-width: 930px) {
     .item {
       flex-wrap: wrap; } }
-  @media (min-width: 930px) {
-    .item aside {
-      width: 426px;
-      margin-right: 5%; } }
   .item aside h1 {
     margin-top: 0; }
   .item aside h2 {
@@ -406,6 +402,15 @@ h1, h2 {
     text-transform: uppercase; }
   .item aside p {
     line-height: 1.5; }
+    .item aside p a {
+      color: #387894;
+      display: block; }
+    .item aside p a:hover {
+      text-decoration: underline; }
+  @media (min-width: 930px) {
+    .item aside {
+      margin-right: 5%;
+      width: 426px; } }
 
 .customer {
   display: block;
@@ -432,7 +437,16 @@ h1, h2 {
   flex-wrap: wrap;
   justify-content: center; }
   .skills li {
-    margin-right: 5px; }
+    background-color: #eee;
+    border-radius: 50%;
+    font-size: 10px;
+    font-weight: bold;
+    height: 50px;
+    line-height: 50px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    text-align: center;
+    width: 50px; }
 
 @media (min-width: 930px) {
   .mocaps {

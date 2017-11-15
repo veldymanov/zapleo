@@ -1,32 +1,32 @@
 .content {
 	text-align: center;
 	figure {
-	position: relative;
-	background: #ececec;
-	padding: 1.67vmin 3.5vmin;
-	margin: 0 auto;
-	@extend %padd-marg;
-		//Show figcaption on hover
+		position: relative;
+		background: #ececec;
+		padding: 1.67vmin 3.5vmin;
+		margin: 0 auto;
+		@extend %padd-marg;
+		//Show figcaption on hover and on focus
 		&:hover > figcaption {
-			opacity: 1;
+			opacity: 1;			
 		}
 		img {
-		width: 100%;
-		height: auto;
+			width: 100%;
+			height: auto;
 		}
 	}
 	//Figcaption grey block
 	figcaption {
-		opacity: 0;
-		transition: opacity 250ms ease-in-out;
-		position: absolute;
-		top: 0; left: 0;
-		right: 0; bottom: 0;
+		align-items: center;
 		background-color: rgba(243, 243, 243, 0.9);
 		display: inline-flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
+		flex-direction: column;	
+		justify-content: center;		
+		opacity: 0;		
+		position: absolute;
+		right: 0; bottom: 0;
+		top: 0; left: 0;
+		transition: opacity 250ms ease-in-out;				
 		//Figcaption content
 		h3 {
 			font-size: calcFluidSize(16, 34, 320, 1920);
@@ -56,10 +56,27 @@
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: column;
-		height: auto;
+		height: auto;		
 		.custom-item {
 			margin-bottom: 10px;
 			width: 30%;
+			figure {
+				picture {
+					display: block;
+					z-index: 1;
+				}
+				figcaption {
+					z-index: -1;
+				}
+				&:hover > figcaption {
+			//		z-index: 2;
+				}
+				&.hovered > figcaption {
+					opacity: 1;
+					z-index: 2;
+				} 
+
+			}
 			@media (max-width:1150px) {
 				width: 45%;
 			}			
@@ -75,18 +92,4 @@
 		}
 		@media (max-width:480px) {}
 	}	
-	/*
-	>ul {
-	column-count: 3;
-	column-gap: 9vmin;
-		li {
-		display: inline-block;
-		width: 100%;
-		margin-bottom: 3.7vmin;
-		}
-	@media (max-width:1400px) {column-gap: 4vmin;}
-	@media (max-width:800px) {column-count: 2;}
-	@media (max-width:480px) {column-count: auto;}
-	}
-	*/
 }

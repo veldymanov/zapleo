@@ -48,40 +48,63 @@ header {
 	}
 	//Contact form
 	form {
-		display: inline-flex;
+		display: flex;
 		align-items: flex-start;
 		flex-wrap: wrap;
 		justify-content: space-between;
-		//Text inputs
-		input:not([type="submit"]) {
-			width: 100%;
-			font-size: 1em;
-			line-height: 2em;
-			border-bottom: 1px solid $portfolio_bg;
-			@extend %form_element;
-		}
+		height: 100%;
+		div.inputs {
+			display: flex;
+			flex-basis: 100%;
+			flex-wrap: wrap;
+			margin-bottom: 1.8em;
+			label {
+				box-sizing: content-box;
+				flex-basis: 47%;
+				@media (max-width: 900px) {flex-basis: 60%;}	
+				&::after {
+					bottom: 0;
+					top: auto;
+					width: 48px;
+				}
+			}
+			label:first-child {
+				margin-right: 6%;
+			}
+		}		
 		label {
-			flex-basis: 47%;
+			flex-basis: 100%;
+			height: 100%;
 			position: relative;
-			@media (max-width: 900px) {flex-basis: 60%;}
 			&::after {
 				content: "";
 				display: block;
 				position: absolute;
-				bottom: 0;
+				top: 37px;
 				left: 0;
-				width: 48px;
+				width: 80px;
 				height: 1px;
 				background: $orange;
 				transition: width .25s ease-in-out;
 			}
+		}
+		//Text inputs		
+		input:not([type="submit"]) {
+			border-bottom: 1px solid $portfolio_bg;
+			border-radius: 0;
+			display: block;
+			font-size: 1em;
+			height: 100%;
+			padding: 0.5em 0;
+			width: 100%;		
+			@extend %form_element;
 		}
 		//Textarea
 		textarea {
 			resize: vertical;
 			min-height: 38px * 3;
 			font-size: 1em;
-			margin: 1.8em 0 3em;
+			margin: 0 0 3em;
 			width: 100%;
 			@extend %form_element;
 			@include textarea;
@@ -97,6 +120,9 @@ header {
 			padding: 0.6em 1.8em;
 			@extend %pointer;
 			@extend %form_element;
+		}
+		[type="submit"]:hover {
+			background: $orange;
 		}
 	}
 }

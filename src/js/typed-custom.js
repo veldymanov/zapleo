@@ -8,5 +8,7 @@ $(document).ready(function () {
             backSpeed: 0,
             backDelay: 500
         })
+
+    //    return true;
     });
 });

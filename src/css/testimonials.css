@@ -52,7 +52,7 @@ html, body {
   font-family: "functionpro_book", sans-serif;
   font-size: calc( 0.00313 * 100vw + 14px);
   /* Fluid font-size */
-  height: 100%;
+  height: auto;
   color: #8a8a8a;
   min-width: 320px; }
 
@@ -349,21 +349,7 @@ h1, h2 {
     background: #fcb117; }
 
 .content {
-  text-align: center;
-  /*
-	>ul {
-	column-count: 3;
-	column-gap: 9vmin;
-		li {
-		display: inline-block;
-		width: 100%;
-		margin-bottom: 3.7vmin;
-		}
-	@media (max-width:1400px) {column-gap: 4vmin;}
-	@media (max-width:800px) {column-count: 2;}
-	@media (max-width:480px) {column-count: auto;}
-	}
-	*/ }
+  text-align: center; }
   .content figure {
     position: relative;
     background: #ececec;
@@ -375,18 +361,18 @@ h1, h2 {
       width: 100%;
       height: auto; }
   .content figcaption {
-    opacity: 0;
-    transition: opacity 250ms ease-in-out;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    align-items: center;
     background-color: rgba(243, 243, 243, 0.9);
     display: inline-flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    transition: opacity 250ms ease-in-out; }
     .content figcaption h3 {
       font-size: calc( 0.01125 * 100vw + 12.4px); }
     .content figcaption .link {
@@ -411,6 +397,14 @@ h1, h2 {
     .content .custom-items .custom-item {
       margin-bottom: 10px;
       width: 30%; }
+      .content .custom-items .custom-item figure picture {
+        display: block;
+        z-index: 1; }
+      .content .custom-items .custom-item figure figcaption {
+        z-index: -1; }
+      .content .custom-items .custom-item figure.hovered > figcaption {
+        opacity: 1;
+        z-index: 2; }
       @media (max-width: 1150px) {
         .content .custom-items .custom-item {
           width: 45%; } }

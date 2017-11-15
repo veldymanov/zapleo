@@ -34,7 +34,7 @@ html, body {
   font-family: "functionpro_book", sans-serif;
   font-size: calc( 0.00313 * 100vw + 14px);
   /* Fluid font-size */
-  height: 100%;
+  height: auto;
   color: #8a8a8a;
   min-width: 320px; }
 

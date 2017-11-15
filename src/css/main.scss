@@ -78,18 +78,18 @@
 * {
 	box-sizing: border-box;
     &::selection {
-	background: $orange;
-    color: $white;
+		background: $orange;
+	    color: $white;
 	}
 	img::selection {
-	background: none;
+		background: none;
 	}
 }
 
 html, body {
 	font-family: "functionpro_book", sans-serif;
 	font-size: calcFluidSize(15, 20, 320, 1920); /* Fluid font-size */
-	height:100%;
+	height:auto;
 	color: $lightgrey;
 	min-width: 320px;
 	@extend %padd-marg;
