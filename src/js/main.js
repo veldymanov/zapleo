@@ -127,10 +127,27 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			})
 		}
 
-		//Set filtering and animation
-		let animationTime = "150ms";
 		let customItems = document.querySelectorAll(".js-custom-item");
 	    let dataTerms = document.querySelectorAll(".js-product-filter .js-data-term");
+
+	    //Hide empty menu items
+		for (let item of dataTerms) {
+			let term = item.getAttribute("data-term");
+			let emptyMenu = true;
+
+			for (let i of customItems) {
+				if (i.classList.contains(term)) {
+					emptyMenu = false;
+				}
+			}
+
+			if (!(term === "*") && emptyMenu) {
+				item.closest('li').style.display = 'none';
+			}
+		}	    
+
+		//Set filtering and animation
+		let animationTime = "150ms";	    
 		//Set multiple event listener
 		for (let item of dataTerms) {
 			let eventList = ["click", "touchend"];
