@@ -406,9 +406,9 @@ h1, h2 {
   width: 100%;
   color: #fff; }
   .start #map {
-    width: 100%;
+    border: none;
     height: 100%;
-    border: none; }
+    width: 100%; }
 
 header {
   position: absolute;
@@ -491,14 +491,9 @@ header {
       font-size: 1em;
       margin: 0 0 3em;
       width: 100%;
-      height: 288px;
-      line-height: 48px;
-      background: linear-gradient(to left, #fff 0, transparent 0) repeat-y local 0 0/100% 100%, linear-gradient(to right, #fff 0, transparent 0) repeat-y local 0 0/100% 100%, linear-gradient(#fff 47px, #ececec 47px, #ececec 48px, #fff 48px) repeat-y local 0 0/100% 48px; }
-      @media (max-width: 1400px) {
-        .contact form textarea {
-          height: 228px;
-          line-height: 38px;
-          background: linear-gradient(to left, #fff 0, transparent 0) repeat-y local 0 0/100% 100%, linear-gradient(to right, #fff 0, transparent 0) repeat-y local 0 0/100% 100%, linear-gradient(#fff 37px, #ececec 37px, #ececec 38px, #fff 38px) repeat-y local 0 0/100% 38px; } }
+      height: 228px;
+      line-height: 38px;
+      background: linear-gradient(to left, #fff 0, transparent 0) repeat-y local 0 0/100% 100%, linear-gradient(to right, #fff 0, transparent 0) repeat-y local 0 0/100% 100%, linear-gradient(#fff 37px, #ececec 37px, #ececec 38px, #fff 38px) repeat-y local 0 0/100% 38px; }
     .contact form [type="submit"] {
       text-transform: capitalize;
       font-size: 0.88em;

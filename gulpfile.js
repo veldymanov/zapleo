@@ -5,7 +5,9 @@ var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     autoprefixer = require('gulp-autoprefixer'),
     rename = require('gulp-rename'),
+    gutil = require('gulp-util'),
 
+    critical = require('critical').stream,
     htmlmin = require('gulp-htmlmin'),
     sass = require('gulp-sass'),
     cleanCSS = require('gulp-clean-css'),
@@ -109,14 +111,21 @@ gulp.task('build:copy', ['build:cleanfolder'], function () {
         .pipe(gulp.dest('docs/'));
 });
 
-/*
-gulp.task('css:inline', ['build:copy'], function() {
 
+// Generate & Inline Critical-path CSS
+gulp.task('critical', ['build:copy'], function () {
+    return gulp.src('docs/*.html')
+        .pipe(critical({
+            base: 'docs/', 
+            inline: true, 
+            minify: true
+        }))
+        .on('error', function(err) { gutil.log(gutil.colors.red(err.message)); })
+        .pipe(gulp.dest('docs/'));
 });
-*/
 
 //minify html
-gulp.task('html:minify', ['build:copy'], function() {
+gulp.task('html:minify', ['critical'], function() {
     return gulp.src(['docs/**/*.html'])
         .pipe(plumber())
         .pipe(htmlmin({
@@ -152,7 +161,7 @@ gulp.task('scripts:minify', ['html:minify'], function () {
 //task to remove unwanted build files
 //list all files and directories here that you don't want to include
 gulp.task('build:remove', ['scripts:minify'], function () {
-    del.sync('docs/**/*.scss');
+    del.sync(['docs/**/*.scss']);
 });
 
 gulp.task('build', ['build:remove']);
