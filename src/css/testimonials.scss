@@ -24,15 +24,16 @@
 }
 
 .review {
-width: 100%;
-text-align: left;
-@extend %padd-marg;
-	p {
-	font-size: 0.88em;
-	line-height: calcFluidSize(14, 33, 320, 1920);
-	max-height: 7em;
-	overflow: auto;
+	heigth: 100%;
+	text-align: left;
+	width: 100%;
 	@extend %padd-marg;
+	p {
+		font-size: 0.88em;
+		line-height: calcFluidSize(14, 33, 320, 1920);
+	//	max-height: 7em;
+	//	overflow: auto;
+		@extend %padd-marg;
 		&::before {
 		    content: '';
 			display: inline-block; 
@@ -43,8 +44,8 @@ text-align: left;
 		}
 	}
 	h5 {
-	margin: 2vmin 0 0;
-	@extend %nowrap;
+		margin: 2vmin 0 0;
+		@extend %nowrap;
 	}
 }
 

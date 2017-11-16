@@ -126,31 +126,37 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			})
 		}
 
-		//prevent link by click on touch devices
-		let pictures = document.querySelectorAll(".js-custom-item picture");
-		for (let picture of pictures) {
-			picture.addEventListener('touchstart', function(event){
-			//	event.preventDefault();
+		//Touch events
+		try {
+			//Touch device check
+			document.createEvent('TouchEvent');
 
-				let figures = document.querySelectorAll(".js-custom-item figure");
-				for (let figure of figures) {
-					figure.classList.remove("hovered");
-				}
-
-				this.closest('figure').classList.add("hovered");
-			});
-/*			
-			picture.addEventListener('touchmove', function(event){
-				return true;
-			});
-			picture.addEventListener('touchend', function(event){
-			//	event.preventDefault();
-
-			//	this.closest('figure').classList.remove("hovered");
+			//Stop 'hover' by touch
+			let figures = document.querySelectorAll(".js-custom-item figure");
+			for (let figure of figures) {
+				figure.addEventListener('mouseenter', function(event){
+					this.querySelector('figcaption').style.zIndex = "-1";
+				});
+			}
 				
-			});
-*/
-		}
+			//Run touch events listeners
+			let pictures = document.querySelectorAll(".js-custom-item picture");
+			for (let picture of pictures) {
+				picture.addEventListener('click', function(event){
+					event.preventDefault();
+
+					let figures = document.querySelectorAll(".js-custom-item figure");
+					for (let figure of figures) {
+						figure.classList.remove("hovered");
+					}
+
+					this.closest('figure').classList.add("hovered");
+				});
+			}	
+		} catch (e) {
+			// Then we aren't on a device that supports touch
+		} 
+
 
 		let customItems = document.querySelectorAll(".js-custom-item");
 	    let dataTerms = document.querySelectorAll(".js-product-filter .js-data-term");
