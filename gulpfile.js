@@ -146,9 +146,16 @@ gulp.task('html:minify', ['critical'], function() {
         .pipe(gulp.dest('docs/'));
 });
 
+//minify css
+gulp.task('css:minify', ['html:minify'], function () {
+    gulp.src(['docs/**/*.css'])
+        .pipe(plumber())
+        .pipe(cleanCSS())
+        .pipe(gulp.dest('docs/'));
+});
 
 //minify scripts
-gulp.task('scripts:minify', ['html:minify'], function () {
+gulp.task('scripts:minify', ['css:minify'], function () {
     gulp.src(['docs/**/*.js'])
         .pipe(plumber())
         .pipe(babel({
