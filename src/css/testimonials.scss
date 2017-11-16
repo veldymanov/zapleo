@@ -30,7 +30,7 @@
 	@extend %padd-marg;
 	p {
 		font-size: 0.88em;
-		line-height: calcFluidSize(14, 33, 320, 1920);
+	//	line-height: calcFluidSize(14, 33, 320, 1920);
 	//	max-height: 7em;
 	//	overflow: auto;
 		@extend %padd-marg;
