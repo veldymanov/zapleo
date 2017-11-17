@@ -17,8 +17,8 @@ src/                      - Contains full application.
                 comments/ -
         customers/        - Customers page photos
         icons/            - All icons
-        img/              - for photos opt and '.webp' creation 
         linea/            -
+        parallax/         -
         team/             - Team page photos
             resume/       - Team's resumes
     js/                   - All js files
@@ -28,12 +28,12 @@ src/                      - Contains full application.
     contact.html          - Contact page    
     index.html            - Main page
     item_portfolio.html   - Item Portfolio page
+    manifest.md           -
     portfolio.html        - Portfolio page
+    service-worker.js     - 
     services.html         - Services page
     team.html             - Team page
-    testimonials.html     - Testimonial page
-    manifest.md           -
-    service-worker.js     -   
+    testimonials.html     - Testimonial page    
 .gitignore                - 
 gulpfile.js               -
 opt-status.xlsx           - Status of site optimization 
@@ -75,7 +75,7 @@ README.md                 - Project's readme file
 ````
     npm install
 ````
-#### Check packages versions:
+#### Check packages versions (works in Windows cmd):
 ```
     npm-check -u
 ```
@@ -90,16 +90,20 @@ README.md                 - Project's readme file
     git commit -m "write comments!!!!"
     git push
 ````
-#### Create 'docs/' directory - application (with only minified files)
+#### Pictures (.jpg, .png, .gif, .svg) optimizing, and creating .webp (from .jpg, .png)
+````
+    All pictures inside 'src/images/' directory will be optimized.
+    Optimized pictures will get ".z" (*.z.{png, jpg, gif, svg, webp}) suffix, which shows that picture is optimized.
+    Original pictures will be deleted. 
+
+    To start optimization run (inside "../zapleo_new/"):
+        gulp pic
+````
+#### Create production version of the app (in 'docs/' directory):
 ````
     gulp build
      //run browser-sync for build
      gulp build:server
-````
-
-### Move css inline
-````
-    
 ````
 
 ### Filezilla
