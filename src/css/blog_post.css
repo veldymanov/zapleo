@@ -56,7 +56,7 @@ html, body {
   font-family: "functionpro_book", sans-serif;
   font-size: calc( 0.00313 * 100vw + 14px);
   /* Fluid font-size */
-  height: auto;
+  height: 100%;
   color: #8a8a8a;
   min-width: 320px; }
 
@@ -324,15 +324,16 @@ h1, h2 {
 
 .sandwich {
   cursor: pointer;
+  filter: drop-shadow(0 0 1px #000);
+  height: 18px;
   position: relative;
   width: 23px;
-  height: 18px;
-  filter: drop-shadow(0 0 1px #fff); }
+  z-index: 6; }
   .sandwich span {
     display: inline-block;
     position: absolute;
     left: 0;
-    background: #373737;
+    background: #fff;
     width: 100%;
     height: 2px; }
   .sandwich.active .line1 {
