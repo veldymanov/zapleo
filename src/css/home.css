@@ -550,7 +550,7 @@ header {
   .layer img {
     transform: scale(1.054);
     width: 100%;
-    max-height: calc(100vh + 2px);
+    max-height: calc(100vh + 3px);
     object-fit: cover; }
     @media (max-width: 600px) {
       .layer img {

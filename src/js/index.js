@@ -20,9 +20,9 @@ $(window).load(function () {
     //Calculating parallax height
     function calcParallaxHeight() {
         //Cut 'bugs' on mobile
-        $('#menorah').height($('#menorah img:first').height() - 2);
-        
-        $('.start').height( $('#menorah img:first').height() - 2);
+        $('#menorah').height($('#menorah img:first').height() - 3);
+        //set section height
+        $('.start').height( $('#menorah img:first').height() - 3);
     }
     calcParallaxHeight();
     //Updating parallax height onresize
