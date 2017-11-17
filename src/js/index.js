@@ -8,12 +8,12 @@ $(window).load(function () {
     	$('#menorah').css('visibility','visible');
     }, 0);
 
-    ///////////////
+    //////////////////
     //Parallax init
-    ///////////////
+    //////////////////
     $('#menorah').parallax({
-        calibrateX: true,
-        calibrateY: true,
+    //    calibrateX: true,
+    //    calibrateY: true,
         limitX: 38,
         limitY: 45
     });
