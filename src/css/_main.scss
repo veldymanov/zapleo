@@ -89,7 +89,7 @@
 html, body {
 	font-family: "functionpro_book", sans-serif;
 	font-size: calcFluidSize(15, 20, 320, 1920); /* Fluid font-size */
-	height: 100%;
+	height: auto;
 	color: $lightgrey;
 	min-width: 320px;
 	@extend %padd-marg;
@@ -196,4 +196,12 @@ h1, h2 {
 	display: none;
 }
 
-@import "_footer";
+.noscroll {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+@import "footer";

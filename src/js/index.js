@@ -12,12 +12,17 @@ $(window).load(function () {
     //Parallax init
     ///////////////
     $('#menorah').parallax({
-        calibrateX: false,
-        calibrateY: false
+        calibrateX: true,
+        calibrateY: true,
+        limitX: 38,
+        limitY: 45
     });
     //Calculating parallax height
     function calcParallaxHeight() {
-        $('.start').height( $('#menorah img:first').height() );
+        //Cut 'bugs' on mobile
+        $('#menorah').height($('#menorah img:first').height() - 2);
+        
+        $('.start').height( $('#menorah img:first').height() - 2);
     }
     calcParallaxHeight();
     //Updating parallax height onresize
@@ -27,22 +32,6 @@ $(window).load(function () {
     $('.mouse').on('click', function(){
         $('html, body').animate({scrollTop: $('main').offset().top + 15}, 600);
     });
-
-    //Logo animation
-    /* new Vivus('logo', {
-    type: 'oneByOne',
-    duration: 140,
-    delay: 0,
-    animTimingFunction: Vivus.EASE_OUT
-    },
-    function () {
-        var paths = $('#logo').find('path');
-        paths.css('transitionProperty','all !important');
-        paths.css({
-            fill: 'rgba(255,255,255,0.5)',
-            strokeWidth: '0'
-        });
-    }); */ 
 });
 
 

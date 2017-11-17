@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 	function hideMobileMenu(){
 			mobMenu.querySelector('nav').classList.remove('displayed');
-			body.style.overflow='auto';
+			body.classList.remove("noscroll");
 
 			setTimeout(function(){			
 				mobMenu.style.display = "none";
@@ -103,8 +103,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		} else {
 			//show mobile menu		
 			this.classList.add("active");
-			//stop scrollinf
-			body.style.overflow='hidden';
+			//stop scroll
+			body.classList.add("noscroll");
 
 			setTimeout(function(){
 				mobMenu.style.display = "block";
