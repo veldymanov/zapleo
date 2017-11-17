@@ -3,42 +3,43 @@
 ## Directory structure
 
 ```
-docs/                     - Application for deployment ('app/' with only minified files).
+docs/                     - Production app
                             'docs/' folder name has chosen for hosting in GitHub Pages when needed.
                                 To create the 'docs/' run 'gulp build'
                                 To start browser-sync run 'gulp build:server'                          
 node_modules/             - NPM modules. Created after 'npm install'
-src/                      - Contains full application.
+src/                      - Development app
     css/                  - All scss and css files
-    fonts/                - Application's fonts
-    imgages/              - All images
-        blog/             - Blog page images
-            blog-post/    - Blog Post pages images
+    fonts/                - 
+    imgages/              - 
+        blog/             - 
+            blog-post/    - 
                 comments/ -
-        customers/        - Customers page photos
-        icons/            - All icons
+        customers/        - 
+        icons/            - 
         linea/            -
         parallax/         -
-        team/             - Team page photos
-            resume/       - Team's resumes
-    js/                   - All js files
-    about.html            - About page
-    blog.html             - Blog page
-    blob_post.html        - Blog Post page
-    contact.html          - Contact page    
-    index.html            - Main page
-    item_portfolio.html   - Item Portfolio page
+        team/             - 
+            resume/       - 
+    js/                   - 
+    about.html            - 
+    blog.html             - 
+    blob_post.html        - 
+    contact.html          - 
+    favicon.ico           -    
+    index.html            -
+    item_portfolio.html   - 
     manifest.md           -
-    portfolio.html        - Portfolio page
+    portfolio.html        - 
     service-worker.js     - 
-    services.html         - Services page
-    team.html             - Team page
-    testimonials.html     - Testimonial page    
+    services.html         - 
+    team.html             - 
+    testimonials.html     - 
 .gitignore                - 
 gulpfile.js               -
 opt-status.xlsx           - Status of site optimization 
 package.json              - 
-README.md                 - Project's readme file
+README.md                 - 
 ```
 
 ## Gulp
