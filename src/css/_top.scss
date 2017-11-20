@@ -14,7 +14,6 @@
 		}
 	}
 	nav {
-
 		ul {
 			display: inline-flex;
 			justify-content: center;
@@ -41,6 +40,5 @@
 	}
 	.underline {
 		&:hover {color: $orange;}
-		&::after {background: $orange;}
 	}
 }

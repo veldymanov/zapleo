@@ -126,6 +126,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	//Set filter (Only one one ".js-custom-items" per page!!!!)
 	////////////////////////////////////////////////////////////
 	if (document.querySelector('.js-custom-items')) {
+		let figures = document.querySelectorAll(".js-custom-item figure");
+		let pictures = document.querySelectorAll(".js-custom-item picture");
+		let customItems = document.querySelectorAll(".js-custom-item");
+	    let dataTerms = document.querySelectorAll(".js-product-filter .js-data-term");		
+
 		//calculate filter container height for 'flex-direction: column'
 		if( document.querySelector('.js-column') ){
 			filterHeight();
@@ -140,34 +145,24 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			document.createEvent('TouchEvent');
 
 			//Stop 'hover' by touch
-			let figures = document.querySelectorAll(".js-custom-item figure");
-			for (let figure of figures) {
-				figure.addEventListener('mouseenter', function(event){
-					this.querySelector('figcaption').style.zIndex = "-1";
-				});
-			}
+	    	document.querySelectorAll('.underline').forEach( item => {
+				item.addEventListener('mouseenter', () => item.style.color = 'rgb(138, 138, 138)');			
+			})
+			figures.forEach( figure => {
+				figure.addEventListener('mouseenter', () => figure.querySelector('figcaption').style.zIndex = "-1");
+			})
 				
-			//Run touch events listeners
-			let pictures = document.querySelectorAll(".js-custom-item picture");
-			for (let picture of pictures) {
-				picture.addEventListener('click', function(event){
+			//Run touch events listeners			
+			pictures.forEach( picture => {
+				picture.addEventListener('click', event => {
 					event.preventDefault();
-
-					let figures = document.querySelectorAll(".js-custom-item figure");
-					for (let figure of figures) {
-						figure.classList.remove("hovered");
-					}
-
-					this.closest('figure').classList.add("hovered");
+					figures.forEach( figure => figure.classList.remove("hovered") );
+					picture.closest('figure').classList.add("hovered");
 				});
-			}	
+			})	
 		} catch (e) {
 			// Then we aren't on a device that supports touch
 		} 
-
-
-		let customItems = document.querySelectorAll(".js-custom-item");
-	    let dataTerms = document.querySelectorAll(".js-product-filter .js-data-term");
 
 	    //Hide empty menu items
 		dataTerms.forEach( item => {
@@ -284,5 +279,4 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			});
 		}
 	}
-
 });

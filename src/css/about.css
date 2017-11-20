@@ -117,17 +117,17 @@ h1, h2 {
   .underline::after {
     content: "";
     display: block;
-    margin: 1px auto 0 0;
     height: 1px;
-    width: 0;
-    background-color: #69696b;
-    transition: width .25s ease-in-out; }
+    margin: 1px auto 0 0;
+    transition: width .25s ease-in-out;
+    width: 0; }
   .underline:hover {
     cursor: pointer; }
   .underline:hover::after {
     width: 100%; }
 
 .active.underline::after {
+  background: #fcb117;
   width: 100%; }
 
 .hidden {
