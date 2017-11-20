@@ -170,46 +170,44 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	    let dataTerms = document.querySelectorAll(".js-product-filter .js-data-term");
 
 	    //Hide empty menu items
-		for (let item of dataTerms) {
+		dataTerms.forEach( item => {
 			let term = item.getAttribute("data-term");
 			let emptyMenu = true;
 
-			for (let i of customItems) {
+			customItems.forEach( i => {
 				if (i.classList.contains(term)) {
 					emptyMenu = false;
 				}
-			}
+			})
 
-			if (!(term === "*") && emptyMenu) {
+			if ( !(term === "*") && emptyMenu ) {
 				item.closest('li').style.display = 'none';
 			}
-		}	    
+		})	    
 
 		//Set filtering and animation
 		let animationTime = "150ms";	    
 		//Set multiple event listener
-		for (let item of dataTerms) {
+		dataTerms.forEach( item => {
 			let eventList = ["click", "touchend"];
-			for(let event of eventList) {
+			eventList.forEach( event => {
 			    item.addEventListener(event, function(e){
 			    	e.preventDefault();
 
 			    	//make only this active
-			    	for (let i of dataTerms) {
-			    		i.classList.remove("active");
-			    	}
+			    	dataTerms.forEach( i =>	i.classList.remove("active") )
 			    	item.classList.add("active");
 
 			        //remove all (displayed) items
-			    	for (let i of customItems) {
+			    	customItems.forEach( i => {
 			    		i.style.display = "none";
 			    		i.style.position = "relative";
 			    		i.style.top = "20px";
-			    	}
+			    	})
 
 			    	//show filtered items with animation
 			        let term = item.getAttribute("data-term");			    	
-			    	for (let i of customItems) {
+			    	customItems.forEach( i => {
 			    		if (  term === "*" ){
 			    			i.style.display =  "block";
 			    			i.style.transition = "top 0s"; 
@@ -218,7 +216,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 				    			i.style.top = "0px";
 				    			i.style.transitionDuration = animationTime;
 				    		}, 0);
-			    		} else if (i.classList.contains(term)) {
+			    		} else if ( i.classList.contains(term) ) {
 			    			i.style.display =  "block";
 			    			i.style.transition = "top 0s"; 
 
@@ -227,15 +225,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
 				    			i.style.transitionDuration = animationTime;
 				    		}, 0); 		    			
 			    		}		    		   		
-			    	}
+			    	})
 
 			        //recalculate filter container height for 'flex-direction: column'
 					if( document.querySelector('.js-column') ){
 			        	filterHeight();
 			        }
 			    }, false);
-			}
-		}
+			})
+		})
 	}
 
 	/////////////////////////////////////
