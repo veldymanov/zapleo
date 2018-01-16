@@ -163,33 +163,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			// we only need to know once that a human touched the screen
 			window.removeEventListener('touchstart', onFirstTouch);
 		});
-/*
-		try {
-			//Touch device check
-			let ent = document.createEvent('TouchEvent');
-			alert('touchscreen');
 
-			//Stop 'hover' by touch
-	    document.querySelectorAll('.underline').forEach( item => {
-				item.addEventListener('mouseenter', () => item.style.color = 'rgb(138, 138, 138)');			
-			})
-			figures.forEach( figure => {
-				figure.addEventListener('mouseenter', () => figure.querySelector('figcaption').style.zIndex = "-1");
-			})
-				
-			//Run touch events listeners			
-			pictures.forEach( picture => {
-				picture.addEventListener('click', event => {
-					event.preventDefault();
-					figures.forEach( figure => figure.classList.remove("hovered") );
-					picture.closest('figure').classList.add("hovered");
-				});
-			})	
-		} catch (e) {
-			// Then we aren't on a device that supports touch
-			alert('nottouchscreen');
-		} 
-*/
 	  // Hide empty menu items
 		dataTerms.forEach( item => {
 			let term = item.getAttribute("data-term");
