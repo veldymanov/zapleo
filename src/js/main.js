@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		let figures = document.querySelectorAll(".js-custom-item figure");
 		let pictures = document.querySelectorAll(".js-custom-item picture");
 		let customItems = document.querySelectorAll(".js-custom-item");
-	    let dataTerms = document.querySelectorAll(".js-product-filter .js-data-term");		
+	  let dataTerms = document.querySelectorAll(".js-product-filter .js-data-term");		
 
 		//calculate filter container height for 'flex-direction: column'
 		if( document.querySelector('.js-column') ){
@@ -139,13 +139,38 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			})
 		}
 
-		//Touch events
-		try {
-			//Touch device check
-			document.createEvent('TouchEvent');
+		//Touch device feutures
+		window.addEventListener('touchstart', function onFirstTouch(e) {
+      e.preventDefault();
 
 			//Stop 'hover' by touch
-	    	document.querySelectorAll('.underline').forEach( item => {
+	    document.querySelectorAll('.underline').forEach( item => {
+				item.addEventListener('mouseenter', () => item.style.color = 'rgb(138, 138, 138)');			
+			})
+			figures.forEach( figure => {
+				figure.addEventListener('mouseenter', () => figure.querySelector('figcaption').style.zIndex = "-1");
+			})
+				
+			//Run touch events listeners			
+			pictures.forEach( picture => {
+				picture.addEventListener('click', event => {
+					event.preventDefault();
+					figures.forEach( figure => figure.classList.remove("hovered") );
+					picture.closest('figure').classList.add("hovered");
+				});
+			})
+
+			// we only need to know once that a human touched the screen
+			window.removeEventListener('touchstart', onFirstTouch);
+		});
+/*
+		try {
+			//Touch device check
+			let ent = document.createEvent('TouchEvent');
+			alert('touchscreen');
+
+			//Stop 'hover' by touch
+	    document.querySelectorAll('.underline').forEach( item => {
 				item.addEventListener('mouseenter', () => item.style.color = 'rgb(138, 138, 138)');			
 			})
 			figures.forEach( figure => {
@@ -162,9 +187,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			})	
 		} catch (e) {
 			// Then we aren't on a device that supports touch
+			alert('nottouchscreen');
 		} 
-
-	    //Hide empty menu items
+*/
+	  // Hide empty menu items
 		dataTerms.forEach( item => {
 			let term = item.getAttribute("data-term");
 			let emptyMenu = true;
