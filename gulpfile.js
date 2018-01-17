@@ -166,7 +166,7 @@ gulp.task('html:minify', ['inline'], () =>
 );
 
 //task to remove unwanted build files
-gulp.task('build:remove', ['html:minify'], () =>
+gulp.task('build:remove', ['inline'], () =>
   del.sync(['docs/css/**', 'docs/js/**'])
 );
 

@@ -1,1 +1,605 @@
-<!Doctype html><html lang=en-US><head><meta http-equiv=Content-Type content="text/html; charset=UTF-8"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1"><meta name=theme-color content=#ffffff><link rel=manifest href=manifest.json><link rel=preload href=fonts/functionpro_book.ttf as=font crossorigin=anonymous><link rel=preload href=fonts/functionpro_medium.ttf as=font crossorigin=anonymous><link rel=apple-touch-icon sizes=180x180 href=images/icons/apple-touch-icon.z.png><link rel=icon href=favicon.ico type=image/x-icon><link rel=mask-icon href=images/icons/safari-pinned-tab.z.svg color=#fcb117><style>@font-face{font-family:CenturyGothicBold;src:url(fonts/CenturyGothicBold.ttf) format("truetype"),url(fonts/CenturyGothicBold.woff) format("woff");font-weight:700;font-style:normal}@font-face{font-family:functionpro_book;font-style:normal;font-weight:400;src:url(fonts/functionpro_book.ttf) format("truetype"),url(fonts/functionpro_book.woff) format("woff"),url(fonts/functionpro_book.woff2) format("woff2");unicode-range:U+20-126,U+161-255,U+338-339,U+376,U+710,U+732,U+2019,U+201C-201E,U+8192-8202,U+8208-8212,U+8216-8218,U+8220-8222,U+8226,U+8230,U+8239,U+8249-8250,U+8287,U+8364,U+8482,U+9724,U+64257-64258,U+FFEB}@font-face{font-family:functionpro_medium;font-style:normal;font-weight:400;src:url(fonts/functionpro_medium.ttf) format("truetype"),url(fonts/functionpro_medium.woff) format("woff"),url(fonts/functionpro_medium.woff2) format("woff2");unicode-range:U+20-126,U+161-255,U+338-339,U+376,U+710,U+732,U+2019,U+201C-201E,U+8192-8202,U+8208-8212,U+8216-8218,U+8220-8222,U+8226,U+8230,U+8239,U+8249-8250,U+8287,U+8364,U+8482,U+9724,U+64257-64258,U+FFEB}.tagline h1{display:table-cell;vertical-align:middle}.content .descr,.content figcaption h3,.content figure,.footer p,.top article h1,.top article h2,body,html,ul{padding:0;margin:0}.content figcaption .descr,.content figcaption .link{white-space:nowrap;text-overflow:ellipsis;overflow:hidden}.magn,.sandwich{font-family:inherit;border:none;outline:0;background:0 0;padding:0}.magn{cursor:pointer}.sandwich{display:none}*{box-sizing:border-box}::selection{background:#fcb117;color:#fff}* img::selection{background:0 0}body,html{font-family:functionpro_book,sans-serif;font-size:calc(.00313 * 100vw + 14px);height:auto;color:#8a8a8a;min-width:320px}.clearfix::after{content:"";display:table;clear:both}a{text-decoration:none;color:inherit}ul{list-style:none}h1,h2,h3,h4,h5,h6{color:#373737}.logo{width:18vmin;max-width:150px;height:auto;max-height:91px}.start{display:block;color:#69696b;background:#fff}header{width:100%;padding:6.2vmin 6% 0;display:flex;justify-content:space-between;align-items:center}header nav li{display:inline-block}@media (min-width:901px){header nav li+li{margin-left:calc(.02353 * 100vw + -5.17647px)}}main{background:#fff}main section{padding:12.2vmin 6%}h1,h2{font-family:functionpro_medium,sans-serif;font-size:1.4em;font-weight:500}.showmore{font-family:inherit;font-size:calc(.00625 * 100vw + 10px);text-transform:uppercase;color:#fff;border:none;outline:0;display:block;margin:1.7vmin auto 0;padding:1.45% 2.98%;background:#69696b;cursor:pointer}.underline{display:inline-block}.underline::after{content:"";display:block;height:1px;margin:1px auto 0 0;transition:width .25s ease-in-out;width:0}.underline:hover{cursor:pointer}.underline:hover::after{width:100%}.active.underline::after{background:#fcb117;width:100%}.hidden{display:none}.noscroll{overflow:hidden;position:fixed;top:0;left:0;width:100%}.smgroup ul,.social ul{display:inline-flex}.footer{color:transparent;padding:7.6vmin 14% 5.8vmin;width:100%;background:#3c3a3a;position:fixed;bottom:0;z-index:-1}@media (max-width:1100px){.footer{padding:7vmin 5% 5vmin}}@media (max-width:480px){.footer{padding-left:0;padding-right:0}}.footer>ul{display:flex;justify-content:space-between;flex-wrap:wrap;overflow:hidden}@media (max-width:768px){.footer>ul{justify-content:center}}.footer p{text-align:center;font-size:calc(.00625 * 100vw + 14px)}@media (max-width:768px){.footer p{margin-top:0}}.footer p span{display:block;transition:color .4s ease-in-out}@media (max-width:768px){.footer p span{display:none}}.footer p:hover span{color:#ececec}.footer p:hover .fb+span{color:#3b5998}.footer p:hover .l_in+span{color:#0077b5}.footer p:hover .inst+span{color:#ce2a51}.footer p:hover .up+span{color:#37a000}.conticon{display:inline-block;position:relative;height:40px;width:40px;background-image:url(images/icons/footer_icons.z.svg),url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGMAAABtCAYAAAC1Md/lAAADQ0lEQVR42u3dAUtaYRjFcUNRlCJZGEsWRRNHkSTFhrEoShpFURiNjY38/t/CvXfcQYxG3dNRH9hfeL7A+fHcV3sP3VLpP/tMJpNePuUSn7lCLKX5mWacZpSmTSrzwxjmEI/nLEMindlCtJ+A+DPZtvR5dM0Gopw/lsbPzF2adRKb/qE9LjBDHl3TgWik+VEQ4/eWkJ4f41iAyGaT9LwQb0WIL6TnhVhIcyNAPKRpkqAXY1vcio+k54WopfkuQHxLUyVBL8ahuBUd0vNCtESIS9LzY1yKGCuk54XoiBCHpOeFqOYHcFGI7KCvkaAX45O4FR9IzwvRzH+sFYXIfhQukKAX40LcilXS80JsihDHpOeFqKS5FyCyP6k3SNCLsS9uxS7peSEeNz2KzIi7bj/GUNwK6jlmiHcixBnpeSFe2vR4qo5DycCM0RO3ok96XoiGeGjfc2j7MWh6BIFYEyHOSc8L8ZqmxzIJejFoegSBqItNj680PfwYn8WteE96XgiaHoEO7Svx0KbpYcag6REEgqZHIIyBuBVd0vNC0PQIhEHTIwjElghxRHpeCJoegTBoegSBWBIP7RGHth+DpkcQiHUR4pT0vBCvaXoskqAXg6ZHEIhFselxR9PDj3EibsUG6XkhaHoEgcgujW5pesTA2BG34oD0vBA0PQJhHIlbsUV6XgiaHoEObZoeQTC64lYMSM8LQdMjEAZNjyAQb8RLo2sujfwYND2CQND0CAJRyX81K4d2nQS9GDQ9gkAsi4f2LYe2H+Nc3Io10vNC0PQIAlHO76dpegTA2BO3Yo/0vBA0PQJhnIpbwcumzBA0PYJA0PQIhLErbsU+6XkhaHoEwqDpEQRiVYS4ID3/oU3TIwgGTY8gEFVeuRYHg6ZHEIgV8dLoiksjP4b6yrUW6XkhaHoEOrRpegTBOBC3Yof0vBA0PQJh0PQIArEhQpyQnheCpkcgjL64FT3S80LQ9AiEQdMjCERbhBiSnheCpkcgDJoeQSDq+f+HVV65ViFBLwZNjyAQND0CYVyLh3aT9KazGTc0PWJ9rd1+YfODpseMUGrZO4ueweiQ1GxRWv9oDdL0mOOjq/vXo4umR4BH14BXrk3/8wvkvbYCyhXBlQAAAABJRU5ErkJggg==);background-repeat:no-repeat;background-color:#69696b;background-position:center 0,40px center;background-size:50px;transform:translateZ(0);transition:all .5s ease}.conticon:hover{background-position-x:center,-40px}.smgroup .conticon{top:-.5px}@media (max-width:768px){.smgroup{margin:0 45px 0 25px}}@media (max-width:480px){.smgroup{margin:0 26px 0 23px}}@media (max-width:768px){.smgroup ul{flex-direction:column}}@media (max-width:768px){.biggroup{order:-1}}.biggroup ul:hover+p{color:#ececec}@media (max-width:768px){.biggroup ul{columns:30px auto;width:100px}}@media (max-width:480px){.biggroup ul{width:90px}}.biggroup li{display:inline-block}@media (min-width:769px){.biggroup li+li{margin:0 0 0 8px}}@media (max-width:768px){.biggroup li+li:nth-child(even){margin:14px 0 0 0}}.mail{background-position-y:11%;background-size:100.4%,110%;width:51px}@media (max-width:768px){.mail{bottom:-1px;margin-top:14px}}.phone{background-position-y:22%}.whatsapp{background-position-y:33%;bottom:-1px}.viber{background-position-y:44.1%;background-size:129%}.telegram{background-position-y:55%;background-size:110%;bottom:-1px;width:46px}@media (max-width:768px){.social ul{display:block;columns:auto 2}.social ul li+li:nth-child(even){margin:14px 0 0 0}}.social a{display:inline-block;width:40px;height:40px;transition:background-position .4s cubic-bezier(.65,.05,.36,1)}.social a:hover{background-position-x:center,0}.social .fb{background:url(images/icons/footer_icons.z.svg) no-repeat center 66.5%/125%,-webkit-gradient(linear,left top,right top,color-stop(50%,#3b5998),color-stop(50%,#fcb117)) no-repeat 100% 0/200%;background:url(images/icons/footer_icons.z.svg) no-repeat center 66.5%/125%,-webkit-linear-gradient(left,#3b5998 50%,#fcb117 50%) no-repeat 100% 0/200%;background:url(images/icons/footer_icons.z.svg) no-repeat center 66.5%/125%,-moz-linear-gradient(left,#3b5998 50%,#fcb117 50%) no-repeat 100% 0/200%;background:url(images/icons/footer_icons.z.svg) no-repeat center 66.5%/125%,linear-gradient(to right,#3b5998 50%,#fcb117 50%) no-repeat 100% 0/200%;transform:translateZ(0)}.social .l_in{background:url(images/icons/footer_icons.z.svg) no-repeat center 77.5%/125%,-webkit-gradient(linear,left top,right top,color-stop(50%,#0077b5),color-stop(50%,#fcb117)) no-repeat 100% 0/200%;background:url(images/icons/footer_icons.z.svg) no-repeat center 77.5%/125%,-webkit-linear-gradient(left,#0077b5 50%,#fcb117 50%) no-repeat 100% 0/200%;background:url(images/icons/footer_icons.z.svg) no-repeat center 77.5%/125%,-moz-linear-gradient(left,#0077b5 50%,#fcb117 50%) no-repeat 100% 0/200%;background:url(images/icons/footer_icons.z.svg) no-repeat center 77.5%/125%,linear-gradient(to right,#0077b5 50%,#fcb117 50%) no-repeat 100% 0/200%;transform:translateZ(0)}.social .inst{background:url(images/icons/footer_icons.z.svg) no-repeat center 88.66%/125%,-webkit-gradient(linear,left top,right top,color-stop(50%,#ce2a51),color-stop(50%,#fcb117)) no-repeat 100% 0/200%;background:url(images/icons/footer_icons.z.svg) no-repeat center 88.66%/125%,-webkit-linear-gradient(left,#ce2a51 50%,#fcb117 50%) no-repeat 100% 0/200%;background:url(images/icons/footer_icons.z.svg) no-repeat center 88.66%/125%,-moz-linear-gradient(left,#ce2a51 50%,#fcb117 50%) no-repeat 100% 0/200%;background:url(images/icons/footer_icons.z.svg) no-repeat center 88.66%/125%,linear-gradient(to right,#ce2a51 50%,#fcb117 50%) no-repeat 100% 0/200%;transform:translateZ(0)}.social .up{background:url(images/icons/footer_icons.z.svg) no-repeat center 99.6%/125%,-webkit-gradient(linear,left top,right top,color-stop(50%,#37a000),color-stop(50%,#fcb117)) no-repeat 100% 0/200%;background:url(images/icons/footer_icons.z.svg) no-repeat center 99.6%/125%,-webkit-linear-gradient(left,#37a000 50%,#fcb117 50%) no-repeat 100% 0/200%;background:url(images/icons/footer_icons.z.svg) no-repeat center 99.6%/125%,-moz-linear-gradient(left,#37a000 50%,#fcb117 50%) no-repeat 100% 0/200%;background:url(images/icons/footer_icons.z.svg) no-repeat center 99.6%/125%,linear-gradient(to right,#37a000 50%,#fcb117 50%) no-repeat 100% 0/200%;transform:translateZ(0)}#logo{width:18vmin;max-width:150px;height:auto;max-height:91px}#logo path{fill:rgba(255,255,255,.5);stroke-width:27;transition:fill .4s ease}#logo:hover #bottom_grey,#logo:hover path[id^=letter]{fill:#616267}#logo:hover #top_orange{fill:#fcb117}.top{display:flex;justify-content:flex-end;flex-wrap:wrap;padding-bottom:7.5vmin}.top article{flex-basis:100%;margin-right:40%}@media (max-width:736px){.top article{margin-right:0}}.top nav ul{display:inline-flex;justify-content:center;flex-wrap:wrap;width:100%}.top nav ul li{margin-left:40px;margin-top:10px}@media (max-width:736px){.top nav ul li{margin-left:5px}}.top nav ul li:first-child{margin-left:0}@media (max-width:736px){.top nav ul{justify-content:space-around;margin-top:10px}}@media (max-width:736px){.top nav{flex-basis:100%}}.top .underline:hover{color:#fcb117}.content{text-align:center}.content figure{position:relative;background:#ececec;padding:1.67vmin 3.5vmin;margin:0 auto}.content figure:hover>figcaption{opacity:1}.content figure img{width:100%;height:auto}.content figcaption{align-items:center;background-color:rgba(243,243,243,.9);display:inline-flex;flex-direction:column;justify-content:center;height:100%;opacity:0;position:absolute;right:0;bottom:0;top:0;left:0;transition:opacity 250ms ease-in-out}.content figcaption h3{font-size:calc(.01125 * 100vw + 12.4px)}.content figcaption .link{font-size:calc(.00375 * 100vw + 12.8px);color:#fff;display:inline-block;max-width:100%;background:#fcb117;padding:1% 4.2%}.content figcaption .descr{max-width:100%;font-size:calc(.0025 * 100vw + 13.2px)}.content figcaption h5{text-transform:uppercase;font-size:calc(.005 * 100vw + 12.4px)}.content .custom-items{align-items:center;display:flex;flex-wrap:wrap;flex-direction:column;height:auto}.content .custom-items .custom-item{margin-bottom:10px;width:30%}.content .custom-items .custom-item figure picture{display:block;z-index:1}.content .custom-items .custom-item figure figcaption{z-index:-1}.content .custom-items .custom-item figure:hover>figcaption{z-index:1}.content .custom-items .custom-item figure.hovered>figcaption{opacity:1;z-index:1!important}@media (max-width:1150px){.content .custom-items .custom-item{width:45%}}@media (max-width:736px){.content .custom-items .custom-item{width:70%}}@media (max-width:650px){.content .custom-items .custom-item{width:90%}}@media (max-width:480px){.content .custom-items .custom-item{width:100%}}@media (max-width:900px){header nav ul{display:none}header .sandwich{display:block}}.sandwich{cursor:pointer;filter:drop-shadow(0 0 1px #000);height:18px;position:relative;width:23px;z-index:6}.sandwich span{display:inline-block;position:absolute;left:0;background:#fff;width:100%;height:2px}.sandwich.active .line1{top:8px;transform:rotate(140deg)}.sandwich.active .line2{top:8px;transform:rotate(-140deg)}.sandwich.active .line3{opacity:0;top:0;transform:rotate(180deg)}.line1{top:0;transition:transform .5s,top .2s}.line2{top:8px;transition:transform .5s,top .2s;transition-delay:.2s,0s}.line3{top:16px;transition:all .5s;transition-delay:.1s}.mob-menu{display:none;position:fixed;left:0;top:0;bottom:0;right:0;z-index:5;color:#373737;background-color:rgba(0,0,0,.5)}.mob-menu nav{background:#fff;display:inline-block;padding:15px 0;height:100%;overflow:auto;text-transform:uppercase;font-size:calc(.00862 * 100vw + 11.24138px);transform:translateX(-100%);transition:transform .25s ease-in-out}.mob-menu .displayed{transform:translateX(0)}.mob-menu a{display:block;padding:10px 30px}.mob-menu a:hover{background-color:rgba(0,0,0,.2)}.magn{width:18px;height:18px;float:left;margin-right:10px;background:url(images/linea/magnifier.z.svg) no-repeat 0 0/cover}header{color:#fff;position:absolute;z-index:2}header .underline::after{background-color:#fff}.start{min-height:320px;width:100%;display:block;position:relative}#menorah{overflow:hidden!important;visibility:hidden}.layer{width:100%}.layer img{transform:scale(1.054);width:100%;max-height:calc(100vh + 3px);object-fit:cover}@media (max-width:600px){.layer img{min-height:320px}}.tagline{display:table;position:absolute;top:0;left:0;width:100%;height:100%}.tagline h1{font-family:CenturyGothicBold,sans-serif;font-size:calc(.03687 * 100vw + 4.2px);text-align:center;text-transform:uppercase;line-height:1.45;color:#fff}.mouse{border:2px solid #fff;border-radius:26px;position:absolute;left:calc(50% - 13px);bottom:10%;width:26px;height:42px;backface-visibility:hidden;cursor:pointer;z-index:2}@media (max-width:899px){.mouse{display:none}}.mouse::after{background-color:#fff;border-radius:100%;content:"";position:absolute;top:5px;left:50%;margin-left:-2px;width:4px;height:6px;opacity:1;transform:translateY(0) scaleY(1) scaleX(1) translateZ(0);animation:scroll 1.5s -1s cubic-bezier(.68,-.55,.265,1.55) infinite}@keyframes scroll{0%,20%{transform:translateY(0) scaleY(1) scaleX(1) translateZ(0)}10%{transform:translateY(0) scaleY(1.2) scaleX(1.2) translateZ(0);opacity:1}100%{transform:translateY(15px) scaleY(2) scaleX(.5) translateZ(0);opacity:.01}}.day{animation:fadeOutDay 10s linear infinite;animation-direction:alternate}.evening{animation:fadeOutEvening 10s linear infinite;animation-direction:alternate}.night{animation:fadeOutNight 10s linear infinite;animation-direction:alternate}.light{animation:fadeLight 10s infinite steps(1);animation-direction:alternate}.house-light1{opacity:0;animation:fadeHouseLight1 20s infinite steps(1);animation-direction:normal;animation-delay:4.34783s}.house-light2{opacity:0;animation:fadeHouseLight2 20s infinite steps(1);animation-direction:normal;animation-delay:5.55556s}.house-light3{opacity:0;animation:fadeHouseLight3 20s infinite steps(1);animation-direction:normal;animation-delay:5.26316s}@keyframes fadeOutDay{0%,20%{opacity:1}100%,40%,60%,80%{opacity:0}}@keyframes fadeOutEvening{0%,100%,80%{opacity:0}20%,40%,60%{opacity:1}}@keyframes fadeOutNight{0%,20%,40%{opacity:0}100%,60%,80%{opacity:1}}@keyframes fadeLight{0%,10%,100%,20%,30%,40%,50%,60%{opacity:0}70%,80%,90%{opacity:1}}@keyframes fadeHouseLight1{0%,25%{opacity:1}100%,50%,75%{opacity:0}}@keyframes fadeHouseLight2{0%,100%,30%,40%,50%,60%,70%,80%,90%{opacity:0}10%,20%{opacity:1}}@keyframes fadeHouseLight3{0%,10%{opacity:1}100%,20%,30%,40%,50%,60%,70%,80%,90%{opacity:0}}</style><title>Zapleo</title></head><body><header><a href=index.html><svg viewBox="0 0 495.98666 300.88" height=300.88 width=495.98666 xml:space=preserve id=logo version=1.1><g transform=matrix(1.3333333,0,0,-1.3333333,0,300.88) id=g10><g transform=scale(0.1) id=g12><g class=bigZ><path id=top_orange d="M 36.0703,2256.56 H 2108.71 c 0,0 8.96,-71.78 -67.3,-139.07 C 1965.14,2050.19 36.0703,305.059 36.0703,305.059 L 1399.88,1920.09 H 431.684 c 0,0 -158.848,-12.57 -209.539,-38.41 -45,-22.95 -90.286,-56.35 -100.84,-100.67 -22.4222,-94.2 -22.4222,-224.3 -22.4222,-224.3 H 36.0703 v 699.85"/><path id=bottom_grey d="M 2072.97,0 H 0.328125 c 0,0 -8.976565,71.7695 67.292975,139.07 C 143.883,206.352 2072.97,1951.5 2072.97,1951.5 L 709.145,336.461 h 913.615 c 0,0 204.14,-11.223 303.93,62.008 28.85,21.179 53.67,46.101 61.04,77.062 22.43,94.207 22.43,224.309 22.43,224.309 h 62.81 V 0"/><path id=bottom_grey_blick fill=#8a8c8e data-ignore=true d="M 1428.37,1333.9 121.305,80.75 H 54.0195 c 0,0 0.0782,14.9414 38.9532,46.352 C 131.859,158.5 1428.37,1333.9 1428.37,1333.9"/><path id=bottom_grey_blick_2 fill=#8a8c8e data-ignore=true d="m 2029.53,517.422 c 0,0 17.95,-47.863 -17.94,-125.621 -14.97,-32.403 -46.94,-57.981 -78.3,-78.09 -66.02,-42.301 -193.88,-41.539 -193.88,-41.539 H 665.719 v 41.859 H 1678.83 c 0,0 99.44,4.278 159.28,15.699 199.64,38.129 191.42,187.692 191.42,187.692"/></g><g><path id=letter_a d="m 2271.13,149.898 c 47.01,-1.468 88.43,2.653 134.72,1.891 -21.93,52.07 -44.37,103.641 -68.32,153.699 -21.55,-52.449 -44.96,-103.027 -66.4,-155.59 z m 66.4,227.704 c 6.97,0 13.93,0 20.88,0 51.8,-104.672 94.78,-223.192 146.11,-326.3715 7.3,-14.6797 18.32,-27.1992 20.87,-43.64066 -22.21,1.17969 -49.22,-2.41796 -68.31,1.89063 0.88,46.17973 -23.8,82.17973 -41.74,115.74953 -47.44,4.43 -103.1,0.641 -153.7,1.899 -14.46,-38.3087 -41.16,-73.5899 -41.74,-119.53916 -17.08,0 -34.16,0 -51.23,0 59.74,119.87116 113.06,246.17216 168.86,370.01216"/><path id=letter_p d="m 2715.14,195.441 c 34.23,45.219 20.69,141.641 -26.57,155.59 -17.03,5.028 -44.79,1.867 -64.51,-3.801 0,-59.449 0,-118.898 0,-178.371 39.76,-4.097 70.17,-1.039 91.08,26.582 z M 2625.95,148 c -4.33,-44.871 -1.35,-98.7305 5.71,-138.51953 -16.59,-4.28906 -41.02,-0.73047 -60.73,-1.89063 8.91,102.01916 8.91,260.39816 0,362.42216 41.08,-7.5 76.55,6.297 119.54,1.886 66.64,-6.816 99.43,-58.308 94.88,-117.628 -5.16,-67.239 -66.59,-120.391 -159.4,-106.27"/><path id=letter_l d="m 2908.68,368.102 c -14.5,-99.34 -4.72,-222.973 -7.59,-333.9536 46.7,-3.6289 96.64,5.8008 136.62,15.1719 -0.96,-16.1094 -4.14,-30.0117 -7.59,-43.62889 -57.02,4.32809 -122,0.69922 -182.16,1.89843 8.92,102.01916 8.92,260.39816 0,362.42216 19.71,-1.172 44.13,2.386 60.72,-1.91"/><path id=letter_e d="m 3274.9,337.75 c -33.64,8.891 -83.06,9.441 -123.33,5.68 0,-44.258 0,-88.532 0,-132.821 33.63,-1.918 76.86,2.782 111.95,5.7 -1.62,-13.571 -5.22,-25.137 -7.6,-37.95 -32.53,4.77 -67.5,7.141 -102.46,9.493 -4.4,-47.461 -0.65,-103.0903 -1.89,-153.7036 46.69,-3.6289 96.63,5.8008 136.62,15.1719 -0.97,-16.1094 -4.15,-30.0117 -7.6,-43.62889 -57.01,4.32809 -122,0.69922 -182.16,1.89843 8.92,102.01916 8.92,260.39816 0,362.42216 61.44,1.187 128.31,-3.09 184.06,3.789 8.58,-8.391 -7.46,-23.84 -7.59,-36.051"/><path id=letter_o d="m 3402.03,231.48 c -8.12,-87.179 22.57,-163.6714 74,-191.6402 60.59,-32.94136 130.11,-9.5703 159.39,30.3594 36.08,49.1988 39.91,147.8208 5.7,212.5198 -20.6,38.941 -66.29,72.09 -127.14,66.422 -68.02,-6.352 -105.62,-49.653 -111.95,-117.661 z M 3553.83,0 c -9.49,0 -18.98,0 -28.46,0 -75.68,6.30078 -127.12,42.3516 -155.6,92.9805 -30.46,54.1605 -32.21,140.5705 1.9,197.3285 81.31,135.32 332.28,102.589 347.24,-79.7 C 3729.43,82.5313 3656.11,17.3789 3553.83,0"/></g></g></g></svg></a><nav><ul><li><a href=index.html class="underline active">Home</a></li><li><a href=about.html class=underline>About</a></li><li><a href=team.html class=underline>Team</a></li><li><a href=blog.html class=underline>Blog</a></li><li><a href=portfolio.html class=underline>Portfolio</a></li><li><a href=services.html class=underline>Services</a></li><li><a href=testimonials.html class=underline>Testimonials</a></li><li><a href=contact.html class=underline>Contact</a></li></ul><button class=sandwich aria-label="Mobile menu"><span class=line1></span> <span class=line2></span> <span class=line3></span></button></nav></header><section class=start><ul id=menorah><li class="layer night" data-depth=0.05><picture><source type=image/webp srcset="images/parallax/night_1_0736.z.webp 736w, images/parallax/night_1_1600.z.webp 1600w" sizes="(max-width: 750px) 736px, 100vw"><source type=image/jpeg srcset="images/parallax/night_1_0736.z.png 736w, images/parallax/night_1_1600.z.png 1600w" sizes="(max-width: 750px) 736px, 100vw"><img src=images/parallax/night_1_1600.z.png alt="night 1"></picture></li><li class="layer evening" data-depth=0.05><picture><source type=image/webp srcset="images/parallax/evening_1_0736.z.webp 736w, images/parallax/evening_1_1600.z.webp 1600w" sizes="(max-width: 750px) 736px, 100vw"><source type=image/jpeg srcset="images/parallax/evening_1_0736.z.png 736w, images/parallax/evening_1_1600.z.png 1600w" sizes="(max-width: 750px) 736px, 100vw"><img src=images/parallax/evening_1_1600.z.png alt="evening 1"></picture></li><li class="layer day" data-depth=0.05><picture><source type=image/webp srcset="images/parallax/morning_1_0736.z.webp 736w, images/parallax/morning_1_1600.z.webp 1600w" sizes="(max-width: 750px) 736px, 100vw"><source type=image/jpeg srcset="images/parallax/morning_1_0736.z.png 736w, images/parallax/morning_1_1600.z.png 1600w" sizes="(max-width: 750px) 736px, 100vw"><img src=images/parallax/morning_1_1600.z.png alt="morning 1"></picture></li><li class="layer night" data-depth=0.10><picture><source type=image/webp srcset="images/parallax/night_2_1600.z.webp 1600w, images/parallax/night_2_0736.z.webp 736w" sizes="(max-width: 750px) 736px, 100vw"><source type=image/jpeg srcset="images/parallax/night_2_1600.z.png 1600w, images/parallax/night_2_0736.z.png 736w" sizes="(max-width: 750px) 736px, 100vw"><img src=images/parallax/night_2_1600.z.png alt="night 2"></picture></li><li class="layer evening" data-depth=0.10><picture><source type=image/webp srcset="images/parallax/evening_2_1600.z.webp 1600w, images/parallax/evening_2_0736.z.webp 736w" sizes="(max-width: 750px) 736px, 100vw"><source type=image/jpeg srcset="images/parallax/evening_2_1600.z.png 1600w, images/parallax/evening_2_0736.z.png 736w" sizes="(max-width: 750px) 736px, 100vw"><img src=images/parallax/evening_2_1600.z.png alt="evening 2"></picture></li><li class="layer day" data-depth=0.10><picture><source type=image/webp srcset="images/parallax/morning_2_1600.z.webp 1600w, images/parallax/morning_2_0736.z.webp 736w" sizes="(max-width: 750px) 736px, 100vw"><source type=image/jpeg srcset="images/parallax/morning_2_1600.z.png 1600w, images/parallax/morning_2_0736.z.png 736w" sizes="(max-width: 750px) 736px, 100vw"><img src=images/parallax/morning_2_1600.z.png alt="morning 2"></picture></li><li class="layer night" data-depth=0.15><picture><source type=image/webp srcset="images/parallax/night_3_1600.z.webp 1600w, images/parallax/night_3_0736.z.webp 736w" sizes="(max-width: 750px) 736px, 100vw"><source type=image/jpeg srcset="images/parallax/night_3_1600.z.png 1600w, images/parallax/night_3_0736.z.png 736w" sizes="(max-width: 750px) 736px, 100vw"><img src=images/parallax/night_3_1600.z.png alt="night 3"></picture></li><li class="layer evening" data-depth=0.15><picture><source type=image/webp srcset="images/parallax/evening_3_1600.z.webp 1600w, images/parallax/evening_3_0736.z.webp 736w" sizes="(max-width: 750px) 736px, 100vw"><source type=image/jpeg srcset="images/parallax/evening_3_1600.z.png 1600w, images/parallax/evening_3_0736.z.png 736w" sizes="(max-width: 750px) 736px, 100vw"><img src=images/parallax/evening_3_1600.z.png alt="evening 3"></picture></li><li class="layer day" data-depth=0.15><picture><source type=image/webp srcset="images/parallax/morning_3_1600.z.webp 1600w, images/parallax/morning_3_0736.z.webp 736w" sizes="(max-width: 750px) 736px, 100vw"><source type=image/jpeg srcset="images/parallax/morning_3_1600.z.png 1600w, images/parallax/morning_3_0736.z.png 736w" sizes="(max-width: 750px) 736px, 100vw"><img src=images/parallax/morning_3_1600.z.png alt="morning 3"></picture></li><li class="layer house-light1" data-depth=0.15><picture><source type=image/webp srcset="images/parallax/houses_lights_1_1600.z.webp 1600w, images/parallax/houses_lights_1_0736.z.webp 736w" sizes="(max-width: 750px) 736px, 100vw"><source type=image/jpeg srcset="images/parallax/houses_lights_1_1600.z.png 1600w, images/parallax/houses_lights_1_0736.z.png 736w" sizes="(max-width: 750px) 736px, 100vw"><img src=images/parallax/houses_lights_1_1600.z.png alt="houses light 1"></picture></li><li class="layer house-light2" data-depth=0.15><picture><source type=image/webp srcset="images/parallax/houses_lights_2_1600.z.webp 1600w, images/parallax/houses_lights_2_0736.z.webp 736w" sizes="(max-width: 750px) 736px, 100vw"><source type=image/jpeg srcset="images/parallax/houses_lights_2_1600.z.png 1600w, images/parallax/houses_lights_2_0736.z.png 736w" sizes="(max-width: 750px) 736px, 100vw"><img src=images/parallax/houses_lights_2_1600.z.png alt="houses light 2"></picture></li><li class="layer house-light3" data-depth=0.15><picture><source type=image/webp srcset="images/parallax/houses_lights_3_1600.z.webp 1600w, images/parallax/houses_lights_3_0736.z.webp 736w" sizes="(max-width: 750px) 736px, 100vw"><source type=image/jpeg srcset="images/parallax/houses_lights_3_1600.z.png 1600w, images/parallax/houses_lights_3_0736.z.png 736w" sizes="(max-width: 750px) 736px, 100vw"><img src=images/parallax/houses_lights_3_1600.z.png alt="houses light 3"></picture></li><li class="layer night" data-depth=0.20><picture><source type=image/webp srcset="images/parallax/night_4_1600.z.webp 1600w, images/parallax/night_4_0736.z.webp 736w" sizes="(max-width: 750px) 736px, 100vw"><source type=image/jpeg srcset="images/parallax/night_4_1600.z.png 1600w, images/parallax/night_4_0736.z.png 736w" sizes="(max-width: 750px) 736px, 100vw"><img src=images/parallax/night_4_1600.z.png alt="night 4"></picture></li><li class="layer light" data-depth=0.20><picture><source type=image/webp srcset="images/parallax/night_4_light_1600.z.webp 1600w, images/parallax/night_4_light_0736.z.webp 736w" sizes="(max-width: 750px) 736px, 100vw"><source type=image/jpeg srcset="images/parallax/night_4_light_1600.z.png 1600w, images/parallax/night_4_light_0736.z.png 736w" sizes="(max-width: 750px) 736px, 100vw"><img src=images/parallax/night_4_light_1600.z.png alt="night 4 light"></picture></li><li class="layer evening" data-depth=0.20><picture><source type=image/webp srcset="images/parallax/evening_4_1600.z.webp 1600w, images/parallax/evening_4_0736.z.webp 736w" sizes="(max-width: 750px) 736px, 100vw"><source type=image/jpeg srcset="images/parallax/evening_4_1600.z.png 1600w, images/parallax/evening_4_0736.z.png 736w" sizes="(max-width: 750px) 736px, 100vw"><img src=images/parallax/evening_4_1600.z.png alt="evening 4"></picture></li><li class="layer day" data-depth=0.20><picture><source type=image/webp srcset="images/parallax/morning_4_1600.z.webp 1600w, images/parallax/morning_4_0736.z.webp 736w" sizes="(max-width: 750px) 736px, 100vw"><source type=image/jpeg srcset="images/parallax/morning_4_1600.z.png 1600w, images/parallax/morning_4_0736.z.png 736w" sizes="(max-width: 750px) 736px, 100vw"><img src=images/parallax/morning_4_1600.z.png alt="morning 4"></picture></li><li class="layer night" data-depth=0.25><picture><source type=image/webp srcset="images/parallax/night_5_1600.z.webp 1600w, images/parallax/night_5_0736.z.webp 736w" sizes="(max-width: 750px) 736px, 100vw"><source type=image/jpeg srcset="images/parallax/night_5_1600.z.png 1600w, images/parallax/night_5_0736.z.png 736w" sizes="(max-width: 750px) 736px, 100vw"><img src=images/parallax/night_5_1600.z.png alt="night 5"></picture></li><li class="layer light" data-depth=0.25><picture><source type=image/webp srcset="images/parallax/night_5_light_1600.z.webp 1600w, images/parallax/night_5_light_0736.z.webp 736w" sizes="(max-width: 750px) 736px, 100vw"><source type=image/jpeg srcset="images/parallax/night_5_light_1600.z.png 1600w, images/parallax/night_5_light_0736.z.png 736w" sizes="(max-width: 750px) 736px, 100vw"><img src=images/parallax/night_5_light_1600.z.png alt="night 5 light"></picture></li><li class="layer evening" data-depth=0.25><picture><source type=image/webp srcset="images/parallax/evening_5_1600.z.webp 1600w, images/parallax/evening_5_0736.z.webp 736w" sizes="(max-width: 750px) 736px, 100vw"><source type=image/jpeg srcset="images/parallax/evening_5_1600.z.png 1600w, images/parallax/evening_5_0736.z.png 736w" sizes="(max-width: 750px) 736px, 100vw"><img src=images/parallax/evening_5_1600.z.png alt="evening 5"></picture></li><li class="layer day" data-depth=0.25><picture><source type=image/webp srcset="images/parallax/morning_5_1600.z.webp 1600w, images/parallax/morning_5_0736.z.webp 736w" sizes="(max-width: 750px) 736px, 100vw"><source type=image/jpeg srcset="images/parallax/morning_5_1600.z.png 1600w, images/parallax/morning_5_0736.z.png 736w" sizes="(max-width: 750px) 736px, 100vw"><img src=images/parallax/morning_5_1600.z.png alt="morning 5"></picture></li></ul><div class=tagline><div class=mouse></div></div><div class=mob-menu><nav><ul><li><a href=index.html>Home</a></li><li><a href=about.html>About</a></li><li><a href=team.html>Team</a></li><li><a href=blog.html>Blog</a></li><li><a href=portfolio.html>Portfolio</a></li><li><a href=services.html>Services</a></li><li><a href=testimonials.html>Testimonials</a></li><li><a href=contact.html>Contact</a></li></ul></nav></div></section><main><section class=works><div class=top><article><h2>Latest Works</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></article><nav><ul class="product-filter js-product-filter js-column"><li class=custom-categories><a class="underline active js-data-term" data-term=*>All</a></li><li class=custom-categories><a class="underline js-data-term" data-term=Blog>Blog</a></li><li class=custom-categories><a class="underline js-data-term" data-term=CMS>CMS</a></li><li class=custom-categories><a class="underline js-data-term" data-term=E-commerce>E-commerce</a></li><li class=custom-categories><a class="underline js-data-term" data-term=Framework>Framework</a></li><li class=custom-categories><a class="underline js-data-term" data-term=Landing>Landing</a></li></ul></nav></div><div class=content><ul class="custom-items js-custom-items"><li class="custom-item js-custom-item CMS"><a href=item_portfolio.html><figure><picture class=js-lazy-load><source class=js-lazy-src type=image/webp data-srcset=images/portfolio/tracksoundsgood/main_500.z.webp><img class=js-lazy-img alt="trackgodsound main" data-src=images/portfolio/tracksoundsgood/main_500.z.png></picture><figcaption><h3>Tracksoundsgood</h3><p class=link>https://trackgodsound.com/</p><p class=descr>Sound site</p></figcaption></figure></a></li><li class="custom-item js-custom-item CMS"><a href=item_portfolio.html><figure><picture class=js-lazy-load><source class=js-lazy-src type=image/webp data-srcset=images/portfolio/solefit/main_big_500.z.webp><img class=js-lazy-img alt="solefit main_big" data-src=images/portfolio/solefit/main_big_500.z.png></picture><figcaption><h3>Solefit</h3><p class=link>https://www.solefit.ca/</p><p class=descr>Awesome site</p></figcaption></figure></a></li><li class="custom-item js-custom-item Landing"><a href=item_portfolio.html><figure><picture class=js-lazy-load><source class=js-lazy-src type=image/webp data-srcset=images/portfolio/sigal/main_500.z.webp><img class=js-lazy-img alt="sigal main" data-src=images/portfolio/sigal/main_500.z.png></picture><figcaption><h3>Sigal</h3><p class=link>http://www.sigalavitan.co.il/</p><p class=descr>Blog</p></figcaption></figure></a></li><li class="custom-item js-custom-item"><a href=item_portfolio.html><figure><picture class=js-lazy-load><source class=js-lazy-src type=image/webp data-srcset=images/portfolio/servers/main_big_500.z.webp><img class=js-lazy-img alt="servers main_big" data-src=images/portfolio/servers/main_big_500.z.png></picture><figcaption><h3>Server</h3><p class=link>www.server.com</p><p class=descr>server</p></figcaption></figure></a></li><li class="custom-item js-custom-item CMS"><a href=item_portfolio.html><figure><picture class=js-lazy-load><source class=js-lazy-src type=image/webp data-srcset=images/portfolio/papagreen/main_500.z.webp><img class=js-lazy-img alt="papagreen main" data-src=images/portfolio/papagreen/main_500.z.png></picture><figcaption><h3>PapaGREEN</h3><p class=link>http://papagreen.com.ua/</p><p class=descr>greeen site</p></figcaption></figure></a></li><li class="custom-item js-custom-item Blog CMS Landing"><a href=item_portfolio.html><figure><picture class=js-lazy-load><source class=js-lazy-src type=image/webp data-srcset=images/portfolio/ny-ads/main_big_500.z.webp><img class=js-lazy-img alt="ny-ads main_big" data-src=images/portfolio/ny-ads/main_big_500.z.png></picture><figcaption><h3>Nyads</h3><p class=link>http://nyads.nyc/</p><p class=descr>cooooooooool</p></figcaption></figure></a></li><li class="custom-item js-custom-item CMS E-commerce"><a href=item_portfolio.html><figure><picture class=js-lazy-load><source class=js-lazy-src type=image/webp data-srcset=images/portfolio/nichebox/main_500.z.webp><img class=js-lazy-img alt="nichebox main" data-src=images/portfolio/nichebox/main_500.z.png></picture><figcaption><h3>Nichebox</h3><p class=link>http://nichebox.fr/</p><p class=descr>Shop for niche parfumery</p></figcaption></figure></a></li><li class="custom-item js-custom-item Blog CMS"><a href=item_portfolio.html><figure><picture class=js-lazy-load><source class=js-lazy-src type=image/webp data-srcset=images/portfolio/ls/main_big_500.z.webp><img class=js-lazy-img alt="ls main_big" data-src=images/portfolio/ls/main_big_500.z.png></picture><figcaption><h3>Lstearthomes</h3><p class=link>http://lstewarthomes.com/</p><p class=descr>Hotels</p></figcaption></figure></a></li><li class="custom-item js-custom-item Framework"><a href=item_portfolio.html><figure><picture class=js-lazy-load><source class=js-lazy-src type=image/webp data-srcset=images/portfolio/implan/main_500.z.webp><img class=js-lazy-img alt="implan main" data-src=images/portfolio/implan/main_500.z.png></picture><figcaption><h3>Implan</h3><p class=link>http://new.im.biz.ua/</p><p class=descr>Interactive scheduler IMplan is a program to achieve the maximum results in commercial, social and household lifehoods, thanks to work of related system modules and his personal desire</p></figcaption></figure></a></li><li class="custom-item js-custom-item Blog CMS"><a href=item_portfolio.html><figure><picture class=js-lazy-load><source class=js-lazy-src type=image/webp data-srcset=images/portfolio/gurskaya/main_big_500.z.webp><img class=js-lazy-img alt="gurskaya main_big" data-src=images/portfolio/gurskaya/main_big_500.z.png></picture><figcaption><h3>Gurskaya</h3><p class=link>http://gurskaya.club/blog/</p><p class=descr>Blog for Gurskaya</p></figcaption></figure></a></li><li class="custom-item js-custom-item Blog E-commerce"><a href=item_portfolio.html><figure><picture class=js-lazy-load><source class=js-lazy-src type=image/webp data-srcset=images/portfolio/glasses/main_500.z.webp><img class=js-lazy-img alt="glasses main" data-src=images/portfolio/glasses/main_500.z.png></picture><figcaption><h3>Luxeoptix</h3><p class=link>https://www.luxeoptix.com/</p><p class=descr>Site for sunglasses shop</p></figcaption></figure></a></li><li class="custom-item js-custom-item Framework"><a href=item_portfolio.html><figure><picture class=js-lazy-load><source class=js-lazy-src type=image/webp data-srcset=images/portfolio/e-conomics/main_big_500.z.webp><img class=js-lazy-img alt="e-conomics main_big" data-src=images/portfolio/e-conomics/main_big_500.z.png></picture><figcaption><h3>Economics dashboard</h3><p class=link>http://app.e-conomic-dashboard.rainbowriders.dk/</p><p class=descr>A site for viewing the economy.</p></figcaption></figure></a></li><li class="custom-item js-custom-item CMS"><a href=item_portfolio.html><figure><picture class=js-lazy-load><source class=js-lazy-src type=image/webp data-srcset=images/portfolio/boat-samui/main_500.z.webp><img class=js-lazy-img alt="boat-samui main" data-src=images/portfolio/boat-samui/main_500.z.png></picture><figcaption><h3>Boat samui</h3><p class=link>http://boat-samui.com/</p><p class=descr>Ship Rental Service Website</p></figcaption></figure></a></li><li class="custom-item js-custom-item Framework"><a href=item_portfolio.html><figure><picture class=js-lazy-load><source class=js-lazy-src type=image/webp data-srcset=images/portfolio/vantium/main_big_500.z.webp><img class=js-lazy-img alt="vantium main_big" data-src=images/portfolio/vantium/main_big_500.z.png></picture><figcaption><h3>Vantiumschools</h3><p class=link>http://vantiumschools.com/</p><p class=descr>Really very nice site.</p></figcaption></figure></a></li><li class="custom-item js-custom-item Landing"><a href=item_portfolio.html><figure><picture class=js-lazy-load><source class=js-lazy-src type=image/webp data-srcset=images/portfolio/calendar/main_500.z.webp><img class=js-lazy-img alt="calendar main" data-src=images/portfolio/calendar/main_500.z.png></picture><figcaption><h3>CatsCalendar</h3><p class=link>http://dev.zapleo.com/landing/catscalendar2017/</p><p class=descr>Wall Calendars shop</p></figcaption></figure></a></li></ul></div></section></main><footer class=footer><ul><li class=smgroup><ul><li><p><a class=conticon href=skype:zapleosoft?chat></a> <span>zapleosoft</span></p></li><li><p><a class="mail conticon" href="mailto:dima@zapleo.com?subject=Hi, Zapleo team!"></a> <span>dima@zapleo.com</span></p></li></ul></li><li class=biggroup><ul><li><a class="phone conticon" href=tel:+380994811889></a></li><li><a class="whatsapp conticon" href="whatsapp://send?text=Hi,%20Zapleo%20team!"></a></li><li><a class="viber conticon" href="viber://add?number=%2B380994811889"></a></li><li><a class="telegram conticon" href="tg://resolve?domain=zapleosoft"></a></li></ul><p><span>+38(099)4811889</span></p></li><li class=social><ul><li><p><a class=fb target=_blank href=https://www.facebook.com/Zapleo-Soft-1095321843875350></a> <span>Facebook</span></p></li><li><p><a class=l_in target=_blank href=https://www.linkedin.com/company/zapleo></a> <span>LinkedIn</span></p></li><li><p><a class=inst target=_blank href=https://www.instagram.com/zapleosoft/ ></a> <span>Instagram</span></p></li><li><p><a class=up target=_blank href=https://www.upwork.com/o/companies/~019f95d8c9c6685b97></a> <span>Upwork</span></p></li></ul></li></ul></footer></body><script src=https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js></script><script>"use strict";!function(t,i,e,s){function o(i,e){this.element=i,this.$context=t(i).data("api",this),this.$layers=this.$context.find(".layer");var s={calibrateX:this.$context.data("calibrate-x")||null,calibrateY:this.$context.data("calibrate-y")||null,invertX:this.$context.data("invert-x")||null,invertY:this.$context.data("invert-y")||null,limitX:parseFloat(this.$context.data("limit-x"))||null,limitY:parseFloat(this.$context.data("limit-y"))||null,scalarX:parseFloat(this.$context.data("scalar-x"))||null,scalarY:parseFloat(this.$context.data("scalar-y"))||null,frictionX:parseFloat(this.$context.data("friction-x"))||null,frictionY:parseFloat(this.$context.data("friction-y"))||null,originX:parseFloat(this.$context.data("origin-x"))||null,originY:parseFloat(this.$context.data("origin-y"))||null,pointerEvents:this.$context.data("pointer-events")||!0,precision:parseFloat(this.$context.data("precision"))||1};for(var o in s)null===s[o]&&delete s[o];t.extend(this,r,e,s),this.calibrationTimer=null,this.calibrationFlag=!0,this.enabled=!1,this.depthsX=[],this.depthsY=[],this.raf=null,this.bounds=null,this.ex=0,this.ey=0,this.ew=0,this.eh=0,this.ecx=0,this.ecy=0,this.erx=0,this.ery=0,this.cx=0,this.cy=0,this.ix=0,this.iy=0,this.mx=0,this.my=0,this.vx=0,this.vy=0,this.onMouseMove=this.onMouseMove.bind(this),this.onDeviceOrientation=this.onDeviceOrientation.bind(this),this.onOrientationTimer=this.onOrientationTimer.bind(this),this.onCalibrationTimer=this.onCalibrationTimer.bind(this),this.onAnimationFrame=this.onAnimationFrame.bind(this),this.onWindowResize=this.onWindowResize.bind(this),this.initialise()}var n="parallax",r={relativeInput:!1,clipRelativeInput:!1,calibrationThreshold:100,calibrationDelay:500,supportDelay:500,calibrateX:!1,calibrateY:!0,invertX:!0,invertY:!0,limitX:!1,limitY:!1,scalarX:10,scalarY:10,frictionX:.1,frictionY:.1,originX:.5,originY:.5,pointerEvents:!0,precision:1};o.prototype.transformSupport=function(t){for(var o=e.createElement("div"),n=!1,r=null,a=!1,h=null,l=null,p=0,c=this.vendors.length;c>p;p++)if(null!==this.vendors[p]?(h=this.vendors[p][0]+"transform",l=this.vendors[p][1]+"Transform"):(h="transform",l="transform"),o.style[l]!==s){n=!0;break}switch(t){case"2D":a=n;break;case"3D":if(n){var m=e.body||e.createElement("body"),u=e.documentElement,y=u.style.overflow,d=!1;e.body||(d=!0,u.style.overflow="hidden",u.appendChild(m),m.style.overflow="hidden",m.style.background=""),m.appendChild(o),o.style[l]="translate3d(1px,1px,1px)",a=(r=i.getComputedStyle(o).getPropertyValue(h))!==s&&r.length>0&&"none"!==r,u.style.overflow=y,m.removeChild(o),d&&(m.removeAttribute("style"),m.parentNode.removeChild(m))}}return a},o.prototype.ww=null,o.prototype.wh=null,o.prototype.wcx=null,o.prototype.wcy=null,o.prototype.wrx=null,o.prototype.wry=null,o.prototype.portrait=null,o.prototype.desktop=!navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|BB10|mobi|tablet|opera mini|nexus 7)/i),o.prototype.vendors=[null,["-webkit-","webkit"],["-moz-","Moz"],["-o-","O"],["-ms-","ms"]],o.prototype.motionSupport=!!i.DeviceMotionEvent,o.prototype.orientationSupport=!!i.DeviceOrientationEvent,o.prototype.orientationStatus=0,o.prototype.transform2DSupport=o.prototype.transformSupport("2D"),o.prototype.transform3DSupport=o.prototype.transformSupport("3D"),o.prototype.propertyCache={},o.prototype.initialise=function(){"static"===this.$context.css("position")&&this.$context.css({position:"relative"}),this.pointerEvents||this.$context.css({pointerEvents:"none"}),this.accelerate(this.$context),this.updateLayers(),this.updateDimensions(),this.enable(),this.queueCalibration(this.calibrationDelay)},o.prototype.updateLayers=function(){this.$layers=this.$context.find(".layer"),this.depthsX=[],this.depthsY=[],this.$layers.css({position:"absolute",display:"block",left:0,top:0}),this.$layers.first().css({position:"relative"}),this.accelerate(this.$layers),this.$layers.each(t.proxy(function(i,e){var s=t(e).data("depth")||0;this.depthsX.push(t(e).data("depth-x")||s),this.depthsY.push(t(e).data("depth-y")||s)},this))},o.prototype.updateDimensions=function(){this.ww=i.innerWidth,this.wh=i.innerHeight,this.wcx=this.ww*this.originX,this.wcy=this.wh*this.originY,this.wrx=Math.max(this.wcx,this.ww-this.wcx),this.wry=Math.max(this.wcy,this.wh-this.wcy)},o.prototype.updateBounds=function(){this.bounds=this.element.getBoundingClientRect(),this.ex=this.bounds.left,this.ey=this.bounds.top,this.ew=this.bounds.width,this.eh=this.bounds.height,this.ecx=this.ew*this.originX,this.ecy=this.eh*this.originY,this.erx=Math.max(this.ecx,this.ew-this.ecx),this.ery=Math.max(this.ecy,this.eh-this.ecy)},o.prototype.queueCalibration=function(t){clearTimeout(this.calibrationTimer),this.calibrationTimer=setTimeout(this.onCalibrationTimer,t)},o.prototype.enable=function(){this.enabled||(this.enabled=!0,this.orientationSupport?(this.portrait=null,i.addEventListener("deviceorientation",this.onDeviceOrientation),setTimeout(this.onOrientationTimer,this.supportDelay)):(this.cx=0,this.cy=0,this.portrait=!1,i.addEventListener("mousemove",this.onMouseMove)),i.addEventListener("resize",this.onWindowResize),this.raf=requestAnimationFrame(this.onAnimationFrame))},o.prototype.disable=function(){this.enabled&&(this.enabled=!1,this.orientationSupport?i.removeEventListener("deviceorientation",this.onDeviceOrientation):i.removeEventListener("mousemove",this.onMouseMove),i.removeEventListener("resize",this.onWindowResize),cancelAnimationFrame(this.raf))},o.prototype.calibrate=function(t,i){this.calibrateX=t===s?this.calibrateX:t,this.calibrateY=i===s?this.calibrateY:i},o.prototype.invert=function(t,i){this.invertX=t===s?this.invertX:t,this.invertY=i===s?this.invertY:i},o.prototype.friction=function(t,i){this.frictionX=t===s?this.frictionX:t,this.frictionY=i===s?this.frictionY:i},o.prototype.scalar=function(t,i){this.scalarX=t===s?this.scalarX:t,this.scalarY=i===s?this.scalarY:i},o.prototype.limit=function(t,i){this.limitX=t===s?this.limitX:t,this.limitY=i===s?this.limitY:i},o.prototype.origin=function(t,i){this.originX=t===s?this.originX:t,this.originY=i===s?this.originY:i},o.prototype.clamp=function(t,i,e){return t=Math.max(t,i),Math.min(t,e)},o.prototype.css=function(i,e,o){var n=this.propertyCache[e];if(!n)for(var r=0,a=this.vendors.length;a>r;r++)if(n=null!==this.vendors[r]?t.camelCase(this.vendors[r][1]+"-"+e):e,i.style[n]!==s){this.propertyCache[e]=n;break}i.style[n]=o},o.prototype.accelerate=function(t){for(var i=0,e=t.length;e>i;i++){var s=t[i];this.css(s,"transform","translate3d(0,0,0)"),this.css(s,"transform-style","preserve-3d"),this.css(s,"backface-visibility","hidden")}},o.prototype.setPosition=function(t,i,e){i+="px",e+="px",this.transform3DSupport?this.css(t,"transform","translate3d("+i+","+e+",0)"):this.transform2DSupport?this.css(t,"transform","translate("+i+","+e+")"):(t.style.left=i,t.style.top=e)},o.prototype.onOrientationTimer=function(t){this.orientationSupport&&0===this.orientationStatus&&(this.disable(),this.orientationSupport=!1,this.enable())},o.prototype.onCalibrationTimer=function(t){this.calibrationFlag=!0},o.prototype.onWindowResize=function(t){this.updateDimensions()},o.prototype.onAnimationFrame=function(){this.updateBounds();var t=this.ix-this.cx,i=this.iy-this.cy;(Math.abs(t)>this.calibrationThreshold||Math.abs(i)>this.calibrationThreshold)&&this.queueCalibration(0),this.portrait?(this.mx=this.calibrateX?i:this.iy,this.my=this.calibrateY?t:this.ix):(this.mx=this.calibrateX?t:this.ix,this.my=this.calibrateY?i:this.iy),this.mx*=this.ew*(this.scalarX/100),this.my*=this.eh*(this.scalarY/100),isNaN(parseFloat(this.limitX))||(this.mx=this.clamp(this.mx,-this.limitX,this.limitX)),isNaN(parseFloat(this.limitY))||(this.my=this.clamp(this.my,-this.limitY,this.limitY)),this.vx+=(this.mx-this.vx)*this.frictionX,this.vy+=(this.my-this.vy)*this.frictionY;for(var e=0,s=this.$layers.length;s>e;e++){var o=this.depthsX[e],n=this.depthsY[e],r=this.$layers[e],a=this.vx*(o*(this.invertX?-1:1)),h=this.vy*(n*(this.invertY?-1:1));this.setPosition(r,a,h)}this.raf=requestAnimationFrame(this.onAnimationFrame)},o.prototype.onDeviceOrientation=function(t){if(!this.desktop&&null!==t.beta&&null!==t.gamma){this.orientationStatus=1;var e=(t.beta||0)/30,s=(t.gamma||0)/30,o=i.innerHeight>i.innerWidth;this.portrait!==o&&(this.portrait=o,this.calibrationFlag=!0),this.calibrationFlag&&(this.calibrationFlag=!1,this.cx=e,this.cy=s),this.ix=e,this.iy=s}},o.prototype.onMouseMove=function(t){var i=t.clientX,e=t.clientY;!this.orientationSupport&&this.relativeInput?(this.clipRelativeInput&&(i=Math.max(i,this.ex),i=Math.min(i,this.ex+this.ew),e=Math.max(e,this.ey),e=Math.min(e,this.ey+this.eh)),this.ix=(i-this.ex-this.ecx)/this.erx,this.iy=(e-this.ey-this.ecy)/this.ery):(this.ix=(i-this.wcx)/this.wrx,this.iy=(e-this.wcy)/this.wry)};var a={enable:o.prototype.enable,disable:o.prototype.disable,updateLayers:o.prototype.updateLayers,calibrate:o.prototype.calibrate,friction:o.prototype.friction,invert:o.prototype.invert,scalar:o.prototype.scalar,limit:o.prototype.limit,origin:o.prototype.origin};t.fn[n]=function(i){var e=arguments;return this.each(function(){var s=t(this),r=s.data(n);r||(r=new o(this,i),s.data(n,r)),a[i]&&r[i].apply(r,Array.prototype.slice.call(e,1))})}}(window.jQuery||window.Zepto,window,document),function(){for(var t=0,i=["ms","moz","webkit","o"],e=0;e<i.length&&!window.requestAnimationFrame;++e)window.requestAnimationFrame=window[i[e]+"RequestAnimationFrame"],window.cancelAnimationFrame=window[i[e]+"CancelAnimationFrame"]||window[i[e]+"CancelRequestAnimationFrame"];window.requestAnimationFrame||(window.requestAnimationFrame=function(i,e){var s=(new Date).getTime(),o=Math.max(0,16-(s-t)),n=window.setTimeout(function(){i(s+o)},o);return t=s+o,n}),window.cancelAnimationFrame||(window.cancelAnimationFrame=function(t){clearTimeout(t)})}()</script><script>"use strict";function loadImage(t){var e=t.querySelectorAll(".js-lazy-src"),o=t.querySelectorAll(".js-lazy-img");e.forEach(function(t){return t.srcset=t.getAttribute("data-srcset")}),o.forEach(function(t){return t.src=t.getAttribute("data-src")})}function filterHeight(){var t=0,e=0,o=0,r=[],n=[],i=document.querySelectorAll(".js-custom-items .js-custom-item"),s=!0,c=!1,a=void 0;try{for(var l,u=i[Symbol.iterator]();!(s=(l=u.next()).done);s=!0){var d=l.value,f=window.getComputedStyle(d),m=parseInt(f.getPropertyValue("margin-top"),10),y=parseInt(f.getPropertyValue("margin-bottom"),10),h=parseInt(f.getPropertyValue("margin-right"),10),p=parseInt(f.getPropertyValue("margin-left"),10);r.push(d.offsetWidth+h+p),n.push(d.offsetHeight+m+y)}}catch(t){c=!0,a=t}finally{try{!s&&u.return&&u.return()}finally{if(c)throw a}}var v=document.querySelector(".js-custom-items");v.style.height="auto",t+=v.offsetHeight,o+=v.offsetWidth;var g=Math.max.apply(Math,n);e=Math.max(Math.ceil(t/Math.floor(o/Math.max.apply(Math,r))),g),v.style.height=e+"px";for(var E=0;v.scrollWidth>v.offsetWidth&&(e+=20,v.style.height=e+"px",!(E>300));)E++;console.log(E)}document.addEventListener("DOMContentLoaded",function(t){function e(){var t=document.querySelector("main+footer"),e=window.getComputedStyle(t),o=parseInt(e.getPropertyValue("margin-top"),10),r=parseInt(e.getPropertyValue("margin-bottom"),10),n=t.offsetHeight+o+r;document.querySelector("main").style.marginBottom=n+"px"}function o(){r.querySelector("nav").classList.remove("displayed"),i.classList.remove("noscroll"),setTimeout(function(){r.style.display="none",n.classList.remove("active")},250)}e(),window.addEventListener("resize",function(){e()});var r=document.querySelector(".mob-menu"),n=document.querySelector(".sandwich"),i=document.querySelector("body");if(n.addEventListener("click",function(){this.classList.contains("active")?o():(this.classList.add("active"),i.classList.add("noscroll"),setTimeout(function(){r.style.display="block",setTimeout(function(){r.querySelector("nav").classList.add("displayed")},250)},500))}),r.addEventListener("click",function(t){r.querySelector("nav").contains(t.target)||o()}),document.querySelector(".js-custom-items")){var s=document.querySelectorAll(".js-custom-item figure"),c=document.querySelectorAll(".js-custom-item picture"),a=document.querySelectorAll(".js-custom-item"),l=document.querySelectorAll(".js-product-filter .js-data-term");document.querySelector(".js-column")&&(filterHeight(),window.addEventListener("resize",function(){filterHeight()})),window.addEventListener("touchstart",function t(e){e.preventDefault(),document.querySelectorAll(".underline").forEach(function(t){t.addEventListener("mouseenter",function(){return t.style.color="rgb(138, 138, 138)"})}),s.forEach(function(t){t.addEventListener("mouseenter",function(){return t.querySelector("figcaption").style.zIndex="-1"})}),c.forEach(function(t){t.addEventListener("click",function(e){e.preventDefault(),s.forEach(function(t){return t.classList.remove("hovered")}),t.closest("figure").classList.add("hovered")})}),window.removeEventListener("touchstart",t)}),l.forEach(function(t){var e=t.getAttribute("data-term"),o=!0;a.forEach(function(t){t.classList.contains(e)&&(o=!1)}),"*"!==e&&o&&(t.closest("li").style.display="none")}),l.forEach(function(t){["click","touchend"].forEach(function(e){t.addEventListener(e,function(e){e.preventDefault(),l.forEach(function(t){return t.classList.remove("active")}),t.classList.add("active"),a.forEach(function(t){t.style.display="none",t.style.position="relative",t.style.top="20px"});var o=t.getAttribute("data-term");a.forEach(function(t){"*"===o?(t.style.display="block",t.style.transition="top 0s",setTimeout(function(){t.style.top="0px",t.style.transitionDuration="150ms"},0)):t.classList.contains(o)&&(t.style.display="block",t.style.transition="top 0s",setTimeout(function(){t.style.top="0px",t.style.transitionDuration="150ms"},0))}),document.querySelector(".js-column")&&filterHeight()},!1)})})}var u=document.querySelectorAll(".js-lazy-load");if("IntersectionObserver"in window){console.log("IntersectionObserver started");var d=new IntersectionObserver(function(t){t.forEach(function(t){t.intersectionRatio>0&&(d.unobserve(t.target),loadImage(t.target),document.querySelector(".js-column")&&(filterHeight(),t.target.querySelector(".js-lazy-img").addEventListener("load",function(){filterHeight()})))})},{root:null,rootMargin:"0px 0px 0px 0px",threshold:[0]});u.forEach(function(t){return d.observe(t)})}else console.log("IntersectionObserver is not supported"),u.forEach(function(t){return loadImage(t)})})</script><script>"use strict";$(window).load(function(){function i(){$("#menorah").height($("#menorah img:first").height()-3),$(".start").height($("#menorah img:first").height()-3)}setTimeout(function(){$("#menorah").css("visibility","visible")},0),$("#menorah").parallax({limitX:38,limitY:45}),i(),$(window).resize(i),$(".mouse").on("click",function(){$("html, body").animate({scrollTop:$("main").offset().top+15},600)})}),"serviceWorker"in navigator&&navigator.serviceWorker.register("service-worker.js").then(function(i){return console.log("Service Worker registration succeeded. Scope is "+i.scope)}).catch(function(i){return console.log("Registration failed"+i)})</script></html>
+<!Doctype html>
+<html lang="en-US">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+		<meta name="theme-color" content="#ffffff">
+		<link rel="manifest" href="manifest.json">
+		<link rel="preload" href="fonts/functionpro_book.ttf" as="font" crossorigin="anonymous">
+		<link rel="preload" href="fonts/functionpro_medium.ttf" as="font" crossorigin="anonymous">
+		<link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.z.png">
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link rel="mask-icon" href="images/icons/safari-pinned-tab.z.svg" color="#fcb117">		
+		<style>
+@font-face{font-family:CenturyGothicBold;src:url(fonts/CenturyGothicBold.ttf) format("truetype"),url(fonts/CenturyGothicBold.woff) format("woff");font-weight:700;font-style:normal}@font-face{font-family:functionpro_book;font-style:normal;font-weight:400;src:url(fonts/functionpro_book.ttf) format("truetype"),url(fonts/functionpro_book.woff) format("woff"),url(fonts/functionpro_book.woff2) format("woff2");unicode-range:U+20-126,U+161-255,U+338-339,U+376,U+710,U+732,U+2019,U+201C-201E,U+8192-8202,U+8208-8212,U+8216-8218,U+8220-8222,U+8226,U+8230,U+8239,U+8249-8250,U+8287,U+8364,U+8482,U+9724,U+64257-64258,U+FFEB}@font-face{font-family:functionpro_medium;font-style:normal;font-weight:400;src:url(fonts/functionpro_medium.ttf) format("truetype"),url(fonts/functionpro_medium.woff) format("woff"),url(fonts/functionpro_medium.woff2) format("woff2");unicode-range:U+20-126,U+161-255,U+338-339,U+376,U+710,U+732,U+2019,U+201C-201E,U+8192-8202,U+8208-8212,U+8216-8218,U+8220-8222,U+8226,U+8230,U+8239,U+8249-8250,U+8287,U+8364,U+8482,U+9724,U+64257-64258,U+FFEB}.tagline h1{display:table-cell;vertical-align:middle}.content .descr,.content figcaption h3,.content figure,.footer p,.top article h1,.top article h2,body,html,ul{padding:0;margin:0}.content figcaption .descr,.content figcaption .link{white-space:nowrap;text-overflow:ellipsis;overflow:hidden}.magn,.sandwich{font-family:inherit;border:none;outline:0;background:0 0;padding:0}.magn{cursor:pointer}.sandwich{display:none}*{box-sizing:border-box}::selection{background:#fcb117;color:#fff}* img::selection{background:0 0}body,html{font-family:functionpro_book,sans-serif;font-size:calc(.00313 * 100vw + 14px);height:auto;color:#8a8a8a;min-width:320px}.clearfix::after{content:"";display:table;clear:both}a{text-decoration:none;color:inherit}ul{list-style:none}h1,h2,h3,h4,h5,h6{color:#373737}.logo{width:18vmin;max-width:150px;height:auto;max-height:91px}.start{display:block;color:#69696b;background:#fff}header{width:100%;padding:6.2vmin 6% 0;display:flex;justify-content:space-between;align-items:center}header nav li{display:inline-block}@media (min-width:901px){header nav li+li{margin-left:calc(.02353 * 100vw + -5.17647px)}}main{background:#fff}main section{padding:12.2vmin 6%}h1,h2{font-family:functionpro_medium,sans-serif;font-size:1.4em;font-weight:500}.showmore{font-family:inherit;font-size:calc(.00625 * 100vw + 10px);text-transform:uppercase;color:#fff;border:none;outline:0;display:block;margin:1.7vmin auto 0;padding:1.45% 2.98%;background:#69696b;cursor:pointer}.underline{display:inline-block}.underline::after{content:"";display:block;height:1px;margin:1px auto 0 0;transition:width .25s ease-in-out;width:0}.underline:hover{cursor:pointer}.underline:hover::after{width:100%}.active.underline::after{background:#fcb117;width:100%}.hidden{display:none}.noscroll{overflow:hidden;position:fixed;top:0;left:0;width:100%}.smgroup ul,.social ul{display:inline-flex}.footer{color:transparent;padding:7.6vmin 14% 5.8vmin;width:100%;background:#3c3a3a;position:fixed;bottom:0;z-index:-1}@media (max-width:1100px){.footer{padding:7vmin 5% 5vmin}}@media (max-width:480px){.footer{padding-left:0;padding-right:0}}.footer>ul{display:flex;justify-content:space-between;flex-wrap:wrap;overflow:hidden}@media (max-width:768px){.footer>ul{justify-content:center}}.footer p{text-align:center;font-size:calc(.00625 * 100vw + 14px)}@media (max-width:768px){.footer p{margin-top:0}}.footer p span{display:block;transition:color .4s ease-in-out}@media (max-width:768px){.footer p span{display:none}}.footer p:hover span{color:#ececec}.footer p:hover .fb+span{color:#3b5998}.footer p:hover .l_in+span{color:#0077b5}.footer p:hover .inst+span{color:#ce2a51}.footer p:hover .up+span{color:#37a000}.conticon{display:inline-block;position:relative;height:40px;width:40px;background-image:url(images/icons/footer_icons.z.svg),url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGMAAABtCAYAAAC1Md/lAAADQ0lEQVR42u3dAUtaYRjFcUNRlCJZGEsWRRNHkSTFhrEoShpFURiNjY38/t/CvXfcQYxG3dNRH9hfeL7A+fHcV3sP3VLpP/tMJpNePuUSn7lCLKX5mWacZpSmTSrzwxjmEI/nLEMindlCtJ+A+DPZtvR5dM0Gopw/lsbPzF2adRKb/qE9LjBDHl3TgWik+VEQ4/eWkJ4f41iAyGaT9LwQb0WIL6TnhVhIcyNAPKRpkqAXY1vcio+k54WopfkuQHxLUyVBL8ahuBUd0vNCtESIS9LzY1yKGCuk54XoiBCHpOeFqOYHcFGI7KCvkaAX45O4FR9IzwvRzH+sFYXIfhQukKAX40LcilXS80JsihDHpOeFqKS5FyCyP6k3SNCLsS9uxS7peSEeNz2KzIi7bj/GUNwK6jlmiHcixBnpeSFe2vR4qo5DycCM0RO3ok96XoiGeGjfc2j7MWh6BIFYEyHOSc8L8ZqmxzIJejFoegSBqItNj680PfwYn8WteE96XgiaHoEO7Svx0KbpYcag6REEgqZHIIyBuBVd0vNC0PQIhEHTIwjElghxRHpeCJoegTBoegSBWBIP7RGHth+DpkcQiHUR4pT0vBCvaXoskqAXg6ZHEIhFselxR9PDj3EibsUG6XkhaHoEgcgujW5pesTA2BG34oD0vBA0PQJhHIlbsUV6XgiaHoEObZoeQTC64lYMSM8LQdMjEAZNjyAQb8RLo2sujfwYND2CQND0CAJRyX81K4d2nQS9GDQ9gkAsi4f2LYe2H+Nc3Io10vNC0PQIAlHO76dpegTA2BO3Yo/0vBA0PQJhnIpbwcumzBA0PYJA0PQIhLErbsU+6XkhaHoEwqDpEQRiVYS4ID3/oU3TIwgGTY8gEFVeuRYHg6ZHEIgV8dLoiksjP4b6yrUW6XkhaHoEOrRpegTBOBC3Yof0vBA0PQJh0PQIArEhQpyQnheCpkcgjL64FT3S80LQ9AiEQdMjCERbhBiSnheCpkcgDJoeQSDq+f+HVV65ViFBLwZNjyAQND0CYVyLh3aT9KazGTc0PWJ9rd1+YfODpseMUGrZO4ueweiQ1GxRWv9oDdL0mOOjq/vXo4umR4BH14BXrk3/8wvkvbYCyhXBlQAAAABJRU5ErkJggg==);background-repeat:no-repeat;background-color:#69696b;background-position:center 0,40px center;background-size:50px;transform:translateZ(0);transition:all .5s ease}.conticon:hover{background-position-x:center,-40px}.smgroup .conticon{top:-.5px}@media (max-width:768px){.smgroup{margin:0 45px 0 25px}}@media (max-width:480px){.smgroup{margin:0 26px 0 23px}}@media (max-width:768px){.smgroup ul{flex-direction:column}}@media (max-width:768px){.biggroup{order:-1}}.biggroup ul:hover+p{color:#ececec}@media (max-width:768px){.biggroup ul{columns:30px auto;width:100px}}@media (max-width:480px){.biggroup ul{width:90px}}.biggroup li{display:inline-block}@media (min-width:769px){.biggroup li+li{margin:0 0 0 8px}}@media (max-width:768px){.biggroup li+li:nth-child(even){margin:14px 0 0 0}}.mail{background-position-y:11%;background-size:100.4%,110%;width:51px}@media (max-width:768px){.mail{bottom:-1px;margin-top:14px}}.phone{background-position-y:22%}.whatsapp{background-position-y:33%;bottom:-1px}.viber{background-position-y:44.1%;background-size:129%}.telegram{background-position-y:55%;background-size:110%;bottom:-1px;width:46px}@media (max-width:768px){.social ul{display:block;columns:auto 2}.social ul li+li:nth-child(even){margin:14px 0 0 0}}.social a{display:inline-block;width:40px;height:40px;transition:background-position .4s cubic-bezier(.65,.05,.36,1)}.social a:hover{background-position-x:center,0}.social .fb{background:url(images/icons/footer_icons.z.svg) no-repeat center 66.5%/125%,-webkit-gradient(linear,left top,right top,color-stop(50%,#3b5998),color-stop(50%,#fcb117)) no-repeat 100% 0/200%;background:url(images/icons/footer_icons.z.svg) no-repeat center 66.5%/125%,-webkit-linear-gradient(left,#3b5998 50%,#fcb117 50%) no-repeat 100% 0/200%;background:url(images/icons/footer_icons.z.svg) no-repeat center 66.5%/125%,-moz-linear-gradient(left,#3b5998 50%,#fcb117 50%) no-repeat 100% 0/200%;background:url(images/icons/footer_icons.z.svg) no-repeat center 66.5%/125%,linear-gradient(to right,#3b5998 50%,#fcb117 50%) no-repeat 100% 0/200%;transform:translateZ(0)}.social .l_in{background:url(images/icons/footer_icons.z.svg) no-repeat center 77.5%/125%,-webkit-gradient(linear,left top,right top,color-stop(50%,#0077b5),color-stop(50%,#fcb117)) no-repeat 100% 0/200%;background:url(images/icons/footer_icons.z.svg) no-repeat center 77.5%/125%,-webkit-linear-gradient(left,#0077b5 50%,#fcb117 50%) no-repeat 100% 0/200%;background:url(images/icons/footer_icons.z.svg) no-repeat center 77.5%/125%,-moz-linear-gradient(left,#0077b5 50%,#fcb117 50%) no-repeat 100% 0/200%;background:url(images/icons/footer_icons.z.svg) no-repeat center 77.5%/125%,linear-gradient(to right,#0077b5 50%,#fcb117 50%) no-repeat 100% 0/200%;transform:translateZ(0)}.social .inst{background:url(images/icons/footer_icons.z.svg) no-repeat center 88.66%/125%,-webkit-gradient(linear,left top,right top,color-stop(50%,#ce2a51),color-stop(50%,#fcb117)) no-repeat 100% 0/200%;background:url(images/icons/footer_icons.z.svg) no-repeat center 88.66%/125%,-webkit-linear-gradient(left,#ce2a51 50%,#fcb117 50%) no-repeat 100% 0/200%;background:url(images/icons/footer_icons.z.svg) no-repeat center 88.66%/125%,-moz-linear-gradient(left,#ce2a51 50%,#fcb117 50%) no-repeat 100% 0/200%;background:url(images/icons/footer_icons.z.svg) no-repeat center 88.66%/125%,linear-gradient(to right,#ce2a51 50%,#fcb117 50%) no-repeat 100% 0/200%;transform:translateZ(0)}.social .up{background:url(images/icons/footer_icons.z.svg) no-repeat center 99.6%/125%,-webkit-gradient(linear,left top,right top,color-stop(50%,#37a000),color-stop(50%,#fcb117)) no-repeat 100% 0/200%;background:url(images/icons/footer_icons.z.svg) no-repeat center 99.6%/125%,-webkit-linear-gradient(left,#37a000 50%,#fcb117 50%) no-repeat 100% 0/200%;background:url(images/icons/footer_icons.z.svg) no-repeat center 99.6%/125%,-moz-linear-gradient(left,#37a000 50%,#fcb117 50%) no-repeat 100% 0/200%;background:url(images/icons/footer_icons.z.svg) no-repeat center 99.6%/125%,linear-gradient(to right,#37a000 50%,#fcb117 50%) no-repeat 100% 0/200%;transform:translateZ(0)}#logo{width:18vmin;max-width:150px;height:auto;max-height:91px}#logo path{fill:rgba(255,255,255,.5);stroke-width:27;transition:fill .4s ease}#logo:hover #bottom_grey,#logo:hover path[id^=letter]{fill:#616267}#logo:hover #top_orange{fill:#fcb117}.top{display:flex;justify-content:flex-end;flex-wrap:wrap;padding-bottom:7.5vmin}.top article{flex-basis:100%;margin-right:40%}@media (max-width:736px){.top article{margin-right:0}}.top nav ul{display:inline-flex;justify-content:center;flex-wrap:wrap;width:100%}.top nav ul li{margin-left:40px;margin-top:10px}@media (max-width:736px){.top nav ul li{margin-left:5px}}.top nav ul li:first-child{margin-left:0}@media (max-width:736px){.top nav ul{justify-content:space-around;margin-top:10px}}@media (max-width:736px){.top nav{flex-basis:100%}}.top .underline:hover{color:#fcb117}.content{text-align:center}.content figure{position:relative;background:#ececec;padding:1.67vmin 3.5vmin;margin:0 auto}.content figure:hover>figcaption{opacity:1}.content figure img{width:100%;height:auto}.content figcaption{align-items:center;background-color:rgba(243,243,243,.9);display:inline-flex;flex-direction:column;justify-content:center;height:100%;opacity:0;position:absolute;right:0;bottom:0;top:0;left:0;transition:opacity 250ms ease-in-out}.content figcaption h3{font-size:calc(.01125 * 100vw + 12.4px)}.content figcaption .link{font-size:calc(.00375 * 100vw + 12.8px);color:#fff;display:inline-block;max-width:100%;background:#fcb117;padding:1% 4.2%}.content figcaption .descr{max-width:100%;font-size:calc(.0025 * 100vw + 13.2px)}.content figcaption h5{text-transform:uppercase;font-size:calc(.005 * 100vw + 12.4px)}.content .custom-items{align-items:center;display:flex;flex-wrap:wrap;flex-direction:column;height:auto}.content .custom-items .custom-item{margin-bottom:10px;width:30%}.content .custom-items .custom-item figure picture{display:block;z-index:1}.content .custom-items .custom-item figure figcaption{z-index:-1}.content .custom-items .custom-item figure:hover>figcaption{z-index:1}.content .custom-items .custom-item figure.hovered>figcaption{opacity:1;z-index:1!important}@media (max-width:1150px){.content .custom-items .custom-item{width:45%}}@media (max-width:736px){.content .custom-items .custom-item{width:70%}}@media (max-width:650px){.content .custom-items .custom-item{width:90%}}@media (max-width:480px){.content .custom-items .custom-item{width:100%}}@media (max-width:900px){header nav ul{display:none}header .sandwich{display:block}}.sandwich{cursor:pointer;filter:drop-shadow(0 0 1px #000);height:18px;position:relative;width:23px;z-index:6}.sandwich span{display:inline-block;position:absolute;left:0;background:#fff;width:100%;height:2px}.sandwich.active .line1{top:8px;transform:rotate(140deg)}.sandwich.active .line2{top:8px;transform:rotate(-140deg)}.sandwich.active .line3{opacity:0;top:0;transform:rotate(180deg)}.line1{top:0;transition:transform .5s,top .2s}.line2{top:8px;transition:transform .5s,top .2s;transition-delay:.2s,0s}.line3{top:16px;transition:all .5s;transition-delay:.1s}.mob-menu{display:none;position:fixed;left:0;top:0;bottom:0;right:0;z-index:5;color:#373737;background-color:rgba(0,0,0,.5)}.mob-menu nav{background:#fff;display:inline-block;padding:15px 0;height:100%;overflow:auto;text-transform:uppercase;font-size:calc(.00862 * 100vw + 11.24138px);transform:translateX(-100%);transition:transform .25s ease-in-out}.mob-menu .displayed{transform:translateX(0)}.mob-menu a{display:block;padding:10px 30px}.mob-menu a:hover{background-color:rgba(0,0,0,.2)}.magn{width:18px;height:18px;float:left;margin-right:10px;background:url(images/linea/magnifier.z.svg) no-repeat 0 0/cover}header{color:#fff;position:absolute;z-index:2}header .underline::after{background-color:#fff}.start{min-height:320px;width:100%;display:block;position:relative}#menorah{overflow:hidden!important;visibility:hidden}.layer{width:100%}.layer img{transform:scale(1.054);width:100%;max-height:calc(100vh + 3px);object-fit:cover}@media (max-width:600px){.layer img{min-height:320px}}.tagline{display:table;position:absolute;top:0;left:0;width:100%;height:100%}.tagline h1{font-family:CenturyGothicBold,sans-serif;font-size:calc(.03687 * 100vw + 4.2px);text-align:center;text-transform:uppercase;line-height:1.45;color:#fff}.mouse{border:2px solid #fff;border-radius:26px;position:absolute;left:calc(50% - 13px);bottom:10%;width:26px;height:42px;backface-visibility:hidden;cursor:pointer;z-index:2}@media (max-width:899px){.mouse{display:none}}.mouse::after{background-color:#fff;border-radius:100%;content:"";position:absolute;top:5px;left:50%;margin-left:-2px;width:4px;height:6px;opacity:1;transform:translateY(0) scaleY(1) scaleX(1) translateZ(0);animation:scroll 1.5s -1s cubic-bezier(.68,-.55,.265,1.55) infinite}@keyframes scroll{0%,20%{transform:translateY(0) scaleY(1) scaleX(1) translateZ(0)}10%{transform:translateY(0) scaleY(1.2) scaleX(1.2) translateZ(0);opacity:1}100%{transform:translateY(15px) scaleY(2) scaleX(.5) translateZ(0);opacity:.01}}.day{animation:fadeOutDay 10s linear infinite;animation-direction:alternate}.evening{animation:fadeOutEvening 10s linear infinite;animation-direction:alternate}.night{animation:fadeOutNight 10s linear infinite;animation-direction:alternate}.light{animation:fadeLight 10s infinite steps(1);animation-direction:alternate}.house-light1{opacity:0;animation:fadeHouseLight1 20s infinite steps(1);animation-direction:normal;animation-delay:4.34783s}.house-light2{opacity:0;animation:fadeHouseLight2 20s infinite steps(1);animation-direction:normal;animation-delay:5.55556s}.house-light3{opacity:0;animation:fadeHouseLight3 20s infinite steps(1);animation-direction:normal;animation-delay:5.26316s}@keyframes fadeOutDay{0%,20%{opacity:1}100%,40%,60%,80%{opacity:0}}@keyframes fadeOutEvening{0%,100%,80%{opacity:0}20%,40%,60%{opacity:1}}@keyframes fadeOutNight{0%,20%,40%{opacity:0}100%,60%,80%{opacity:1}}@keyframes fadeLight{0%,10%,100%,20%,30%,40%,50%,60%{opacity:0}70%,80%,90%{opacity:1}}@keyframes fadeHouseLight1{0%,25%{opacity:1}100%,50%,75%{opacity:0}}@keyframes fadeHouseLight2{0%,100%,30%,40%,50%,60%,70%,80%,90%{opacity:0}10%,20%{opacity:1}}@keyframes fadeHouseLight3{0%,10%{opacity:1}100%,20%,30%,40%,50%,60%,70%,80%,90%{opacity:0}}
+</style>
+		<title>Zapleo</title>
+	</head>
+	<body>
+		<!-- Header -->
+		<header>
+			<a href="index.html">
+				<!-- Logo -->
+				<svg viewBox="0 0 495.98666 300.88" height="300.88" width="495.98666" xml:space="preserve" id="logo" version="1.1">
+					<g transform="matrix(1.3333333,0,0,-1.3333333,0,300.88)" id="g10">
+						<g transform="scale(0.1)" id="g12">
+							<g class="bigZ">
+								<path id="top_orange" d="M 36.0703,2256.56 H 2108.71 c 0,0 8.96,-71.78 -67.3,-139.07 C 1965.14,2050.19 36.0703,305.059 36.0703,305.059 L 1399.88,1920.09 H 431.684 c 0,0 -158.848,-12.57 -209.539,-38.41 -45,-22.95 -90.286,-56.35 -100.84,-100.67 -22.4222,-94.2 -22.4222,-224.3 -22.4222,-224.3 H 36.0703 v 699.85"/>
+								
+								<path id="bottom_grey" d="M 2072.97,0 H 0.328125 c 0,0 -8.976565,71.7695 67.292975,139.07 C 143.883,206.352 2072.97,1951.5 2072.97,1951.5 L 709.145,336.461 h 913.615 c 0,0 204.14,-11.223 303.93,62.008 28.85,21.179 53.67,46.101 61.04,77.062 22.43,94.207 22.43,224.309 22.43,224.309 h 62.81 V 0"/>
+								<path id="bottom_grey_blick" fill="#8a8c8e" data-ignore="true" d="M 1428.37,1333.9 121.305,80.75 H 54.0195 c 0,0 0.0782,14.9414 38.9532,46.352 C 131.859,158.5 1428.37,1333.9 1428.37,1333.9"/>
+								<path id="bottom_grey_blick_2" fill="#8a8c8e" data-ignore="true" d="m 2029.53,517.422 c 0,0 17.95,-47.863 -17.94,-125.621 -14.97,-32.403 -46.94,-57.981 -78.3,-78.09 -66.02,-42.301 -193.88,-41.539 -193.88,-41.539 H 665.719 v 41.859 H 1678.83 c 0,0 99.44,4.278 159.28,15.699 199.64,38.129 191.42,187.692 191.42,187.692"/>
+							</g>
+							<g>
+								<path id="letter_a" d="m 2271.13,149.898 c 47.01,-1.468 88.43,2.653 134.72,1.891 -21.93,52.07 -44.37,103.641 -68.32,153.699 -21.55,-52.449 -44.96,-103.027 -66.4,-155.59 z m 66.4,227.704 c 6.97,0 13.93,0 20.88,0 51.8,-104.672 94.78,-223.192 146.11,-326.3715 7.3,-14.6797 18.32,-27.1992 20.87,-43.64066 -22.21,1.17969 -49.22,-2.41796 -68.31,1.89063 0.88,46.17973 -23.8,82.17973 -41.74,115.74953 -47.44,4.43 -103.1,0.641 -153.7,1.899 -14.46,-38.3087 -41.16,-73.5899 -41.74,-119.53916 -17.08,0 -34.16,0 -51.23,0 59.74,119.87116 113.06,246.17216 168.86,370.01216"/>
+								<path id="letter_p" d="m 2715.14,195.441 c 34.23,45.219 20.69,141.641 -26.57,155.59 -17.03,5.028 -44.79,1.867 -64.51,-3.801 0,-59.449 0,-118.898 0,-178.371 39.76,-4.097 70.17,-1.039 91.08,26.582 z M 2625.95,148 c -4.33,-44.871 -1.35,-98.7305 5.71,-138.51953 -16.59,-4.28906 -41.02,-0.73047 -60.73,-1.89063 8.91,102.01916 8.91,260.39816 0,362.42216 41.08,-7.5 76.55,6.297 119.54,1.886 66.64,-6.816 99.43,-58.308 94.88,-117.628 -5.16,-67.239 -66.59,-120.391 -159.4,-106.27"/>
+								<path id="letter_l" d="m 2908.68,368.102 c -14.5,-99.34 -4.72,-222.973 -7.59,-333.9536 46.7,-3.6289 96.64,5.8008 136.62,15.1719 -0.96,-16.1094 -4.14,-30.0117 -7.59,-43.62889 -57.02,4.32809 -122,0.69922 -182.16,1.89843 8.92,102.01916 8.92,260.39816 0,362.42216 19.71,-1.172 44.13,2.386 60.72,-1.91"/>
+								<path id="letter_e" d="m 3274.9,337.75 c -33.64,8.891 -83.06,9.441 -123.33,5.68 0,-44.258 0,-88.532 0,-132.821 33.63,-1.918 76.86,2.782 111.95,5.7 -1.62,-13.571 -5.22,-25.137 -7.6,-37.95 -32.53,4.77 -67.5,7.141 -102.46,9.493 -4.4,-47.461 -0.65,-103.0903 -1.89,-153.7036 46.69,-3.6289 96.63,5.8008 136.62,15.1719 -0.97,-16.1094 -4.15,-30.0117 -7.6,-43.62889 -57.01,4.32809 -122,0.69922 -182.16,1.89843 8.92,102.01916 8.92,260.39816 0,362.42216 61.44,1.187 128.31,-3.09 184.06,3.789 8.58,-8.391 -7.46,-23.84 -7.59,-36.051"/>
+								<path id="letter_o" d="m 3402.03,231.48 c -8.12,-87.179 22.57,-163.6714 74,-191.6402 60.59,-32.94136 130.11,-9.5703 159.39,30.3594 36.08,49.1988 39.91,147.8208 5.7,212.5198 -20.6,38.941 -66.29,72.09 -127.14,66.422 -68.02,-6.352 -105.62,-49.653 -111.95,-117.661 z M 3553.83,0 c -9.49,0 -18.98,0 -28.46,0 -75.68,6.30078 -127.12,42.3516 -155.6,92.9805 -30.46,54.1605 -32.21,140.5705 1.9,197.3285 81.31,135.32 332.28,102.589 347.24,-79.7 C 3729.43,82.5313 3656.11,17.3789 3553.83,0"/>
+							</g>
+						</g>
+					</g>
+				</svg>
+			</a>
+			<nav>
+				<ul>
+					<li><a href="index.html" class="underline active">Home</a></li>
+					<li><a href="about.html" class="underline">About</a></li>
+					<li><a href="team.html" class="underline">Team</a></li>
+					<li><a href="blog.html" class="underline">Blog</a></li>
+					<li><a href="portfolio.html" class="underline">Portfolio</a></li>
+					<li><a href="services.html" class="underline">Services</a></li>
+					<li><a href="testimonials.html" class="underline">Testimonials</a></li>
+					<li><a href="contact.html" class="underline">Contact</a></li>
+				</ul>
+				<button class="sandwich" aria-label="Mobile menu">
+					<span class="line1"></span>
+					<span class="line2"></span>
+					<span class="line3"></span>
+				</button>
+			</nav>
+		</header>
+		<!-- Start section -->
+		<section class="start">
+			<!-- Parallax background -->
+			<ul id="menorah">
+				<li class="layer night" data-depth="0.05">
+					<picture>
+						<source type="image/webp" srcset="images/parallax/night_1_0736.z.webp 736w,
+										images/parallax/night_1_1600.z.webp 1600w" sizes="(max-width: 750px) 736px, 100vw">
+						<source type="image/jpeg" srcset="images/parallax/night_1_0736.z.png 736w,
+										images/parallax/night_1_1600.z.png 1600w" sizes="(max-width: 750px) 736px, 100vw">
+						<img src="images/parallax/night_1_1600.z.png" alt="night 1">
+					</picture>
+				</li>
+				<li class="layer evening" data-depth="0.05">
+					<picture>
+						<source type="image/webp" srcset="images/parallax/evening_1_0736.z.webp 736w,
+										images/parallax/evening_1_1600.z.webp 1600w" sizes="(max-width: 750px) 736px, 100vw">
+						<source type="image/jpeg" srcset="images/parallax/evening_1_0736.z.png 736w,
+										images/parallax/evening_1_1600.z.png 1600w" sizes="(max-width: 750px) 736px, 100vw">
+						<img src="images/parallax/evening_1_1600.z.png" alt="evening 1">
+					</picture>
+				</li>
+				<li class="layer day" data-depth="0.05">
+					<picture>
+						<source type="image/webp" srcset="images/parallax/morning_1_0736.z.webp 736w,
+										images/parallax/morning_1_1600.z.webp 1600w" sizes="(max-width: 750px) 736px, 100vw">
+						<source type="image/jpeg" srcset="images/parallax/morning_1_0736.z.png 736w,
+										images/parallax/morning_1_1600.z.png 1600w" sizes="(max-width: 750px) 736px, 100vw">
+						<img src="images/parallax/morning_1_1600.z.png" alt="morning 1">
+					</picture>
+				</li>
+				<li class="layer night" data-depth="0.10">
+					<picture>
+						<source type="image/webp" srcset="images/parallax/night_2_1600.z.webp 1600w,
+										images/parallax/night_2_0736.z.webp 736w" sizes="(max-width: 750px) 736px, 100vw">
+						<source type="image/jpeg" srcset="images/parallax/night_2_1600.z.png 1600w,
+										images/parallax/night_2_0736.z.png 736w" sizes="(max-width: 750px) 736px, 100vw">
+						<img src="images/parallax/night_2_1600.z.png" alt="night 2">
+					</picture>
+				</li>
+				<li class="layer evening" data-depth="0.10">
+					<picture>
+						<source type="image/webp" srcset="images/parallax/evening_2_1600.z.webp 1600w,
+										images/parallax/evening_2_0736.z.webp 736w" sizes="(max-width: 750px) 736px, 100vw">
+						<source type="image/jpeg" srcset="images/parallax/evening_2_1600.z.png 1600w,
+										images/parallax/evening_2_0736.z.png 736w" sizes="(max-width: 750px) 736px, 100vw">
+						<img src="images/parallax/evening_2_1600.z.png" alt="evening 2">
+					</picture>
+				</li>
+				<li class="layer day" data-depth="0.10">
+					<picture>
+						<source type="image/webp" srcset="images/parallax/morning_2_1600.z.webp 1600w,
+										images/parallax/morning_2_0736.z.webp 736w" sizes="(max-width: 750px) 736px, 100vw">
+						<source type="image/jpeg" srcset="images/parallax/morning_2_1600.z.png 1600w,
+										images/parallax/morning_2_0736.z.png 736w" sizes="(max-width: 750px) 736px, 100vw">
+						<img src="images/parallax/morning_2_1600.z.png" alt="morning 2">
+					</picture>
+				</li>
+				<li class="layer night" data-depth="0.15">
+					<picture>
+						<source type="image/webp" srcset="images/parallax/night_3_1600.z.webp 1600w,
+										images/parallax/night_3_0736.z.webp 736w" sizes="(max-width: 750px) 736px, 100vw">
+						<source type="image/jpeg" srcset="images/parallax/night_3_1600.z.png 1600w,
+										images/parallax/night_3_0736.z.png 736w" sizes="(max-width: 750px) 736px, 100vw">
+						<img src="images/parallax/night_3_1600.z.png" alt="night 3">
+					</picture>
+				</li>
+				<li class="layer evening" data-depth="0.15">
+					<picture>
+						<source type="image/webp" srcset="images/parallax/evening_3_1600.z.webp 1600w,
+										images/parallax/evening_3_0736.z.webp 736w" sizes="(max-width: 750px) 736px, 100vw">
+						<source type="image/jpeg" srcset="images/parallax/evening_3_1600.z.png 1600w,
+										images/parallax/evening_3_0736.z.png 736w" sizes="(max-width: 750px) 736px, 100vw">
+						<img src="images/parallax/evening_3_1600.z.png" alt="evening 3">
+					</picture>
+				</li>
+				<li class="layer day" data-depth="0.15">
+					<picture>
+						<source type="image/webp" srcset="images/parallax/morning_3_1600.z.webp 1600w,
+										images/parallax/morning_3_0736.z.webp 736w" sizes="(max-width: 750px) 736px, 100vw">
+						<source type="image/jpeg" srcset="images/parallax/morning_3_1600.z.png 1600w,
+										images/parallax/morning_3_0736.z.png 736w" sizes="(max-width: 750px) 736px, 100vw">
+						<img src="images/parallax/morning_3_1600.z.png" alt="morning 3">
+					</picture>
+				</li>
+				<!-- Windows light -->
+				<li class="layer house-light1" data-depth="0.15">
+					<picture>
+						<source type="image/webp" srcset="images/parallax/houses_lights_1_1600.z.webp 1600w,
+										images/parallax/houses_lights_1_0736.z.webp 736w" sizes="(max-width: 750px) 736px, 100vw">
+						<source type="image/jpeg" srcset="images/parallax/houses_lights_1_1600.z.png 1600w,
+										images/parallax/houses_lights_1_0736.z.png 736w" sizes="(max-width: 750px) 736px, 100vw">
+						<img src="images/parallax/houses_lights_1_1600.z.png" alt="houses light 1">
+					</picture>
+				</li>
+				<li class="layer house-light2" data-depth="0.15">
+					<picture>
+						<source type="image/webp" srcset="images/parallax/houses_lights_2_1600.z.webp 1600w,
+										images/parallax/houses_lights_2_0736.z.webp 736w" sizes="(max-width: 750px) 736px, 100vw">
+						<source type="image/jpeg" srcset="images/parallax/houses_lights_2_1600.z.png 1600w,
+										images/parallax/houses_lights_2_0736.z.png 736w" sizes="(max-width: 750px) 736px, 100vw">
+						<img src="images/parallax/houses_lights_2_1600.z.png" alt="houses light 2">
+					</picture>
+				</li>
+				<li class="layer house-light3" data-depth="0.15">
+					<picture>
+						<source type="image/webp" srcset="images/parallax/houses_lights_3_1600.z.webp 1600w,
+										images/parallax/houses_lights_3_0736.z.webp 736w" sizes="(max-width: 750px) 736px, 100vw">
+						<source type="image/jpeg" srcset="images/parallax/houses_lights_3_1600.z.png 1600w,
+										images/parallax/houses_lights_3_0736.z.png 736w" sizes="(max-width: 750px) 736px, 100vw">
+						<img src="images/parallax/houses_lights_3_1600.z.png" alt="houses light 3">
+					</picture>
+				</li>
+				<!-- Windows light -->
+				<li class="layer night" data-depth="0.20">
+					<picture>
+						<source type="image/webp" srcset="images/parallax/night_4_1600.z.webp 1600w,
+										images/parallax/night_4_0736.z.webp 736w" sizes="(max-width: 750px) 736px, 100vw">
+						<source type="image/jpeg" srcset="images/parallax/night_4_1600.z.png 1600w,
+										images/parallax/night_4_0736.z.png 736w" sizes="(max-width: 750px) 736px, 100vw">
+						<img src="images/parallax/night_4_1600.z.png" alt="night 4">
+					</picture>
+				</li>
+				<li class="layer light" data-depth="0.20">
+					<picture>
+						<source type="image/webp" srcset="images/parallax/night_4_light_1600.z.webp 1600w,
+										images/parallax/night_4_light_0736.z.webp 736w" sizes="(max-width: 750px) 736px, 100vw">
+						<source type="image/jpeg" srcset="images/parallax/night_4_light_1600.z.png 1600w,
+										images/parallax/night_4_light_0736.z.png 736w" sizes="(max-width: 750px) 736px, 100vw">
+						<img src="images/parallax/night_4_light_1600.z.png" alt="night 4 light">
+					</picture>
+				</li>
+				<li class="layer evening" data-depth="0.20">
+					<picture>
+						<source type="image/webp" srcset="images/parallax/evening_4_1600.z.webp 1600w,
+										images/parallax/evening_4_0736.z.webp 736w" sizes="(max-width: 750px) 736px, 100vw">
+						<source type="image/jpeg" srcset="images/parallax/evening_4_1600.z.png 1600w,
+										images/parallax/evening_4_0736.z.png 736w" sizes="(max-width: 750px) 736px, 100vw">
+						<img src="images/parallax/evening_4_1600.z.png" alt="evening 4">
+					</picture>
+				</li>
+				<li class="layer day" data-depth="0.20">
+					<picture>
+						<source type="image/webp" srcset="images/parallax/morning_4_1600.z.webp 1600w,
+										images/parallax/morning_4_0736.z.webp 736w" sizes="(max-width: 750px) 736px, 100vw">
+						<source type="image/jpeg" srcset="images/parallax/morning_4_1600.z.png 1600w,
+										images/parallax/morning_4_0736.z.png 736w" sizes="(max-width: 750px) 736px, 100vw">
+						<img src="images/parallax/morning_4_1600.z.png" alt="morning 4">
+					</picture>
+				</li>
+				<li class="layer night" data-depth="0.25">
+					<picture>
+						<source type="image/webp" srcset="images/parallax/night_5_1600.z.webp 1600w,
+										images/parallax/night_5_0736.z.webp 736w" sizes="(max-width: 750px) 736px, 100vw">
+						<source type="image/jpeg" srcset="images/parallax/night_5_1600.z.png 1600w,
+										images/parallax/night_5_0736.z.png 736w" sizes="(max-width: 750px) 736px, 100vw">
+						<img src="images/parallax/night_5_1600.z.png" alt="night 5">
+					</picture>
+				</li>
+				<li class="layer light" data-depth="0.25">
+					<picture>
+						<source type="image/webp" srcset="images/parallax/night_5_light_1600.z.webp 1600w,
+										images/parallax/night_5_light_0736.z.webp 736w" sizes="(max-width: 750px) 736px, 100vw">
+						<source type="image/jpeg" srcset="images/parallax/night_5_light_1600.z.png 1600w,
+										images/parallax/night_5_light_0736.z.png 736w" sizes="(max-width: 750px) 736px, 100vw">
+						<img src="images/parallax/night_5_light_1600.z.png" alt="night 5 light">
+					</picture>
+				</li>
+				<li class="layer evening" data-depth="0.25">
+					<picture>
+						<source type="image/webp" srcset="images/parallax/evening_5_1600.z.webp 1600w,
+										images/parallax/evening_5_0736.z.webp 736w" sizes="(max-width: 750px) 736px, 100vw">
+						<source type="image/jpeg" srcset="images/parallax/evening_5_1600.z.png 1600w,
+										images/parallax/evening_5_0736.z.png 736w" sizes="(max-width: 750px) 736px, 100vw">
+						<img src="images/parallax/evening_5_1600.z.png" alt="evening 5">
+					</picture>
+				</li>
+				<li class="layer day" data-depth="0.25">
+					<picture>
+						<source type="image/webp" srcset="images/parallax/morning_5_1600.z.webp 1600w,
+										images/parallax/morning_5_0736.z.webp 736w" sizes="(max-width: 750px) 736px, 100vw">
+						<source type="image/jpeg" srcset="images/parallax/morning_5_1600.z.png 1600w,
+										images/parallax/morning_5_0736.z.png 736w" sizes="(max-width: 750px) 736px, 100vw">
+						<img src="images/parallax/morning_5_1600.z.png" alt="morning 5">
+					</picture>
+				</li>
+			</ul>
+			<div class="tagline">
+				<!--<h1>Professional creation of sites<br>and mobile apps of any complexity</h1>-->
+				<div class="mouse"></div>
+			</div>
+			<!-- Mobile menu -->
+			<div class="mob-menu">
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="team.html">Team</a></li>
+						<li><a href="blog.html">Blog</a></li>
+						<li><a href="portfolio.html">Portfolio</a></li>
+						<li><a href="services.html">Services</a></li>
+						<li><a href="testimonials.html">Testimonials</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</section>
+		<main>
+			<!-- Latest works section -->
+			<section class="works">
+				<div class="top">
+					<article>
+						<h2>Latest Works</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</article>
+					<nav>
+						<ul class="product-filter js-product-filter js-column">
+              <li class="custom-categories">
+                <a class="underline active js-data-term" data-term="*">All</a>
+              </li>
+              <li class="custom-categories">
+                <a class="underline js-data-term" data-term="Blog">Blog</a>
+              </li>
+              <li class="custom-categories">
+                <a class="underline js-data-term" data-term="CMS">CMS</a>
+              </li>
+              <li class="custom-categories">
+                <a class="underline js-data-term" data-term="E-commerce">E-commerce</a>
+              </li>
+              <li class="custom-categories">
+                <a class="underline js-data-term" data-term="Framework">Framework</a>
+              </li>
+              <li class="custom-categories">
+                <a class="underline js-data-term" data-term="Landing">Landing</a>
+              </li>
+						</ul>
+					</nav>
+				</div>
+				<div class="content">
+					<!--Only one one ".js-custom-items" per page! -->
+					<ul class="custom-items js-custom-items">
+						<li class="custom-item js-custom-item CMS">
+							<a href="item_portfolio.html">
+								<figure>
+									<picture class="js-lazy-load">
+										<source class="js-lazy-src" type="image/webp" data-srcset="images/portfolio/tracksoundsgood/main_500.z.webp">
+										<img class="js-lazy-img" alt="trackgodsound main" data-src="images/portfolio/tracksoundsgood/main_500.z.png">
+									</picture>
+									<figcaption>
+										<h3>Tracksoundsgood</h3>
+										<p class="link">https://trackgodsound.com/</p>
+										<p class="descr">Sound site</p>
+									</figcaption>
+								</figure>
+							</a>
+						</li>
+						<li class="custom-item js-custom-item CMS">
+							<a href="item_portfolio.html">
+								<figure>
+									<picture class="js-lazy-load">
+										<source class="js-lazy-src" type="image/webp" data-srcset="images/portfolio/solefit/main_big_500.z.webp">
+										<img class="js-lazy-img" alt="solefit main_big" data-src="images/portfolio/solefit/main_big_500.z.png">
+									</picture>
+									<figcaption>
+										<h3>Solefit</h3>
+										<p class="link">https://www.solefit.ca/</p>
+										<p class="descr">Awesome site</p>
+									</figcaption>
+								</figure>
+							</a>
+						</li>
+						<li class="custom-item js-custom-item Landing">
+							<a href="item_portfolio.html">
+								<figure>
+									<picture class="js-lazy-load">
+										<source class="js-lazy-src" type="image/webp" data-srcset="images/portfolio/sigal/main_500.z.webp">
+										<img class="js-lazy-img" alt="sigal main" data-src="images/portfolio/sigal/main_500.z.png">
+									</picture>
+									<figcaption>
+										<h3>Sigal</h3>
+										<p class="link">http://www.sigalavitan.co.il/</p>
+										<p class="descr">Blog</p>
+									</figcaption>
+								</figure>
+							</a>
+						</li>
+						<li class="custom-item js-custom-item">
+							<a href="item_portfolio.html">
+								<figure>
+									<picture class="js-lazy-load">
+										<source class="js-lazy-src" type="image/webp" data-srcset="images/portfolio/servers/main_big_500.z.webp">
+										<img class="js-lazy-img" alt="servers main_big" data-src="images/portfolio/servers/main_big_500.z.png">
+									</picture>
+									<figcaption>
+										<h3>Server</h3>
+										<p class="link">www.server.com</p>
+										<p class="descr">server</p>
+									</figcaption>
+								</figure>
+							</a>
+						</li>
+						<li class="custom-item js-custom-item CMS">
+							<a href="item_portfolio.html">
+								<figure>
+									<picture class="js-lazy-load">
+										<source class="js-lazy-src" type="image/webp" data-srcset="images/portfolio/papagreen/main_500.z.webp">
+										<img class="js-lazy-img" alt="papagreen main" data-src="images/portfolio/papagreen/main_500.z.png">
+									</picture>
+									<figcaption>
+										<h3>PapaGREEN</h3>
+										<p class="link">http://papagreen.com.ua/</p>
+										<p class="descr">greeen site</p>
+									</figcaption>
+								</figure>
+							</a>
+						</li>
+						<li class="custom-item js-custom-item Blog CMS Landing">
+							<a href="item_portfolio.html">
+								<figure>
+									<picture class="js-lazy-load">
+										<source class="js-lazy-src" type="image/webp" data-srcset="images/portfolio/ny-ads/main_big_500.z.webp">
+										<img class="js-lazy-img" alt="ny-ads main_big" data-src="images/portfolio/ny-ads/main_big_500.z.png">
+									</picture>
+									<figcaption>
+										<h3>Nyads</h3>
+										<p class="link">http://nyads.nyc/</p>
+										<p class="descr">cooooooooool</p>
+									</figcaption>
+								</figure>
+							</a>
+						</li>
+						<li class="custom-item js-custom-item CMS E-commerce">
+							<a href="item_portfolio.html">
+								<figure>
+									<picture class="js-lazy-load">
+										<source class="js-lazy-src" type="image/webp" data-srcset="images/portfolio/nichebox/main_500.z.webp">
+										<img class="js-lazy-img" alt="nichebox main" data-src="images/portfolio/nichebox/main_500.z.png">
+									</picture>
+									<figcaption>
+										<h3>Nichebox</h3>
+										<p class="link">http://nichebox.fr/</p>
+										<p class="descr">Shop for niche parfumery</p>
+									</figcaption>
+								</figure>
+							</a>
+						</li>
+						<li class="custom-item js-custom-item Blog CMS">
+							<a href="item_portfolio.html">
+								<figure>
+									<picture class="js-lazy-load">
+										<source class="js-lazy-src" type="image/webp" data-srcset="images/portfolio/ls/main_big_500.z.webp">
+										<img class="js-lazy-img" alt="ls main_big" data-src="images/portfolio/ls/main_big_500.z.png">
+									</picture>
+									<figcaption>
+										<h3>Lstearthomes</h3>
+										<p class="link">http://lstewarthomes.com/</p>
+										<p class="descr">Hotels</p>
+									</figcaption>
+								</figure>
+							</a>
+						</li>
+						<li class="custom-item js-custom-item Framework">
+							<a href="item_portfolio.html">
+								<figure>
+									<picture class="js-lazy-load">
+										<source class="js-lazy-src" type="image/webp" data-srcset="images/portfolio/implan/main_500.z.webp">
+										<img class="js-lazy-img" alt="implan main" data-src="images/portfolio/implan/main_500.z.png">
+									</picture>
+									<figcaption>
+										<h3>Implan</h3>
+										<p class="link">http://new.im.biz.ua/</p>
+										<p class="descr">
+											Interactive scheduler IMplan is a program to achieve the maximum results in commercial, social and household lifehoods, thanks to work of related system modules and his personal desire
+										</p>
+									</figcaption>
+								</figure>
+							</a>
+						</li>
+						<li class="custom-item js-custom-item Blog CMS">
+							<a href="item_portfolio.html">
+								<figure>
+									<picture class="js-lazy-load">
+										<source class="js-lazy-src" type="image/webp" data-srcset="images/portfolio/gurskaya/main_big_500.z.webp">
+										<img class="js-lazy-img" alt="gurskaya main_big" data-src="images/portfolio/gurskaya/main_big_500.z.png">
+									</picture>
+									<figcaption>
+										<h3>Gurskaya</h3>
+										<p class="link">http://gurskaya.club/blog/</p>
+										<p class="descr">Blog for Gurskaya</p>
+									</figcaption>
+								</figure>
+							</a>
+						</li>
+						<li class="custom-item js-custom-item Blog E-commerce">
+							<a href="item_portfolio.html">
+								<figure>
+									<picture class="js-lazy-load">
+										<source class="js-lazy-src" type="image/webp" data-srcset="images/portfolio/glasses/main_500.z.webp">
+										<img class="js-lazy-img" alt="glasses main" data-src="images/portfolio/glasses/main_500.z.png">
+									</picture>
+									<figcaption>
+										<h3>Luxeoptix</h3>
+										<p class="link">https://www.luxeoptix.com/</p>
+										<p class="descr">Site for sunglasses shop</p>
+									</figcaption>
+								</figure>
+							</a>
+						</li>
+						<li class="custom-item js-custom-item Framework">
+							<a href="item_portfolio.html">
+								<figure>
+									<picture class="js-lazy-load">
+										<source class="js-lazy-src" type="image/webp" data-srcset="images/portfolio/e-conomics/main_big_500.z.webp">
+										<img class="js-lazy-img" alt="e-conomics main_big" data-src="images/portfolio/e-conomics/main_big_500.z.png">
+									</picture>
+									<figcaption>
+										<h3>Economics dashboard</h3>
+										<p class="link">http://app.e-conomic-dashboard.rainbowriders.dk/</p>
+										<p class="descr">A site for viewing the economy.</p>
+									</figcaption>
+								</figure>
+							</a>
+						</li>
+						<li class="custom-item js-custom-item CMS">
+							<a href="item_portfolio.html">
+								<figure>
+									<picture class="js-lazy-load">
+										<source class="js-lazy-src" type="image/webp" data-srcset="images/portfolio/boat-samui/main_500.z.webp">
+										<img class="js-lazy-img" alt="boat-samui main" data-src="images/portfolio/boat-samui/main_500.z.png">
+									</picture>
+									<figcaption>
+										<h3>Boat samui</h3>
+										<p class="link">http://boat-samui.com/</p>
+										<p class="descr">Ship Rental Service Website</p>
+									</figcaption>
+								</figure>
+							</a>
+						</li>
+						<li class="custom-item js-custom-item Framework">
+							<a href="item_portfolio.html">
+								<figure>
+									<picture class="js-lazy-load">
+										<source class="js-lazy-src" type="image/webp" data-srcset="images/portfolio/vantium/main_big_500.z.webp">
+										<img class="js-lazy-img" alt="vantium main_big" data-src="images/portfolio/vantium/main_big_500.z.png">
+									</picture>
+									<figcaption>
+										<h3>Vantiumschools</h3>
+										<p class="link">http://vantiumschools.com/</p>
+										<p class="descr">Really very nice site.</p>
+									</figcaption>
+								</figure>
+							</a>
+						</li>
+						<li class="custom-item js-custom-item Landing">
+							<a href="item_portfolio.html">
+								<figure>
+									<picture class="js-lazy-load">
+										<source class="js-lazy-src" type="image/webp" data-srcset="images/portfolio/calendar/main_500.z.webp">
+										<img class="js-lazy-img" alt="calendar main" data-src="images/portfolio/calendar/main_500.z.png">
+									</picture>
+									<figcaption>
+										<h3>CatsCalendar</h3>
+										<p class="link">http://dev.zapleo.com/landing/catscalendar2017/</p>
+										<p class="descr">Wall Calendars shop</p>
+									</figcaption>
+								</figure>
+							</a>
+						</li>																								
+					</ul>
+				</div>
+				<!--button class="showmore" type="button">показать ещё</button-->
+			</section>
+		</main>
+		<!-- Footer -->
+	<footer class="footer">
+			<ul>
+				<li class="smgroup">
+					<ul>
+						<li>
+							<p>
+								<a class="conticon" href="skype:zapleosoft?chat"></a>
+								<span>zapleosoft</span>
+							</p>
+						</li>
+						<li>
+							<p>
+								<a class="mail conticon" href="mailto:dima@zapleo.com?subject=Hi, Zapleo team!"></a>
+								<span>dima@zapleo.com</span>
+							</p>
+						</li>
+					</ul>
+				</li>
+				<li class="biggroup">
+					<ul>
+						<li>
+							<a class="phone conticon" href="tel:+380994811889"></a>
+						</li><li>
+							<a class="whatsapp conticon" href="whatsapp://send?text=Hi,%20Zapleo%20team!"></a>
+						</li><li>
+							<a class="viber conticon" href="viber://add?number=%2B380994811889"></a>
+						</li><li>
+							<a class="telegram conticon" href="tg://resolve?domain=zapleosoft"></a>
+					</li></ul>
+					<p><span>+38(099)4811889</span></p>
+				</li>
+				<li class="social">
+					<ul>
+						<li>
+							<p>
+								<a class="fb" target="_blank" href="https://www.facebook.com/Zapleo-Soft-1095321843875350"></a>
+								<span>Facebook</span>
+							</p>
+						</li><li>
+							<p>
+								<a class="l_in" target="_blank" href="https://www.linkedin.com/company/zapleo"></a>
+								<span>LinkedIn</span>
+							</p>
+						</li><li>
+							<p>
+								<a class="inst" target="_blank" href="https://www.instagram.com/zapleosoft/"></a>
+								<span>Instagram</span>
+							</p>
+						</li><li>
+							<p>
+								<a class="up" target="_blank" href="https://www.upwork.com/o/companies/~019f95d8c9c6685b97"></a>
+								<span>Upwork</span>
+							</p>
+					</li></ul>
+				</li>
+			</ul>
+		</footer>
+	</body>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script>
+"use strict";!function(t,i,e,s){function o(i,e){this.element=i,this.$context=t(i).data("api",this),this.$layers=this.$context.find(".layer");var s={calibrateX:this.$context.data("calibrate-x")||null,calibrateY:this.$context.data("calibrate-y")||null,invertX:this.$context.data("invert-x")||null,invertY:this.$context.data("invert-y")||null,limitX:parseFloat(this.$context.data("limit-x"))||null,limitY:parseFloat(this.$context.data("limit-y"))||null,scalarX:parseFloat(this.$context.data("scalar-x"))||null,scalarY:parseFloat(this.$context.data("scalar-y"))||null,frictionX:parseFloat(this.$context.data("friction-x"))||null,frictionY:parseFloat(this.$context.data("friction-y"))||null,originX:parseFloat(this.$context.data("origin-x"))||null,originY:parseFloat(this.$context.data("origin-y"))||null,pointerEvents:this.$context.data("pointer-events")||!0,precision:parseFloat(this.$context.data("precision"))||1};for(var o in s)null===s[o]&&delete s[o];t.extend(this,r,e,s),this.calibrationTimer=null,this.calibrationFlag=!0,this.enabled=!1,this.depthsX=[],this.depthsY=[],this.raf=null,this.bounds=null,this.ex=0,this.ey=0,this.ew=0,this.eh=0,this.ecx=0,this.ecy=0,this.erx=0,this.ery=0,this.cx=0,this.cy=0,this.ix=0,this.iy=0,this.mx=0,this.my=0,this.vx=0,this.vy=0,this.onMouseMove=this.onMouseMove.bind(this),this.onDeviceOrientation=this.onDeviceOrientation.bind(this),this.onOrientationTimer=this.onOrientationTimer.bind(this),this.onCalibrationTimer=this.onCalibrationTimer.bind(this),this.onAnimationFrame=this.onAnimationFrame.bind(this),this.onWindowResize=this.onWindowResize.bind(this),this.initialise()}var n="parallax",r={relativeInput:!1,clipRelativeInput:!1,calibrationThreshold:100,calibrationDelay:500,supportDelay:500,calibrateX:!1,calibrateY:!0,invertX:!0,invertY:!0,limitX:!1,limitY:!1,scalarX:10,scalarY:10,frictionX:.1,frictionY:.1,originX:.5,originY:.5,pointerEvents:!0,precision:1};o.prototype.transformSupport=function(t){for(var o=e.createElement("div"),n=!1,r=null,a=!1,h=null,l=null,p=0,c=this.vendors.length;c>p;p++)if(null!==this.vendors[p]?(h=this.vendors[p][0]+"transform",l=this.vendors[p][1]+"Transform"):(h="transform",l="transform"),o.style[l]!==s){n=!0;break}switch(t){case"2D":a=n;break;case"3D":if(n){var m=e.body||e.createElement("body"),u=e.documentElement,y=u.style.overflow,d=!1;e.body||(d=!0,u.style.overflow="hidden",u.appendChild(m),m.style.overflow="hidden",m.style.background=""),m.appendChild(o),o.style[l]="translate3d(1px,1px,1px)",a=(r=i.getComputedStyle(o).getPropertyValue(h))!==s&&r.length>0&&"none"!==r,u.style.overflow=y,m.removeChild(o),d&&(m.removeAttribute("style"),m.parentNode.removeChild(m))}}return a},o.prototype.ww=null,o.prototype.wh=null,o.prototype.wcx=null,o.prototype.wcy=null,o.prototype.wrx=null,o.prototype.wry=null,o.prototype.portrait=null,o.prototype.desktop=!navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|BB10|mobi|tablet|opera mini|nexus 7)/i),o.prototype.vendors=[null,["-webkit-","webkit"],["-moz-","Moz"],["-o-","O"],["-ms-","ms"]],o.prototype.motionSupport=!!i.DeviceMotionEvent,o.prototype.orientationSupport=!!i.DeviceOrientationEvent,o.prototype.orientationStatus=0,o.prototype.transform2DSupport=o.prototype.transformSupport("2D"),o.prototype.transform3DSupport=o.prototype.transformSupport("3D"),o.prototype.propertyCache={},o.prototype.initialise=function(){"static"===this.$context.css("position")&&this.$context.css({position:"relative"}),this.pointerEvents||this.$context.css({pointerEvents:"none"}),this.accelerate(this.$context),this.updateLayers(),this.updateDimensions(),this.enable(),this.queueCalibration(this.calibrationDelay)},o.prototype.updateLayers=function(){this.$layers=this.$context.find(".layer"),this.depthsX=[],this.depthsY=[],this.$layers.css({position:"absolute",display:"block",left:0,top:0}),this.$layers.first().css({position:"relative"}),this.accelerate(this.$layers),this.$layers.each(t.proxy(function(i,e){var s=t(e).data("depth")||0;this.depthsX.push(t(e).data("depth-x")||s),this.depthsY.push(t(e).data("depth-y")||s)},this))},o.prototype.updateDimensions=function(){this.ww=i.innerWidth,this.wh=i.innerHeight,this.wcx=this.ww*this.originX,this.wcy=this.wh*this.originY,this.wrx=Math.max(this.wcx,this.ww-this.wcx),this.wry=Math.max(this.wcy,this.wh-this.wcy)},o.prototype.updateBounds=function(){this.bounds=this.element.getBoundingClientRect(),this.ex=this.bounds.left,this.ey=this.bounds.top,this.ew=this.bounds.width,this.eh=this.bounds.height,this.ecx=this.ew*this.originX,this.ecy=this.eh*this.originY,this.erx=Math.max(this.ecx,this.ew-this.ecx),this.ery=Math.max(this.ecy,this.eh-this.ecy)},o.prototype.queueCalibration=function(t){clearTimeout(this.calibrationTimer),this.calibrationTimer=setTimeout(this.onCalibrationTimer,t)},o.prototype.enable=function(){this.enabled||(this.enabled=!0,this.orientationSupport?(this.portrait=null,i.addEventListener("deviceorientation",this.onDeviceOrientation),setTimeout(this.onOrientationTimer,this.supportDelay)):(this.cx=0,this.cy=0,this.portrait=!1,i.addEventListener("mousemove",this.onMouseMove)),i.addEventListener("resize",this.onWindowResize),this.raf=requestAnimationFrame(this.onAnimationFrame))},o.prototype.disable=function(){this.enabled&&(this.enabled=!1,this.orientationSupport?i.removeEventListener("deviceorientation",this.onDeviceOrientation):i.removeEventListener("mousemove",this.onMouseMove),i.removeEventListener("resize",this.onWindowResize),cancelAnimationFrame(this.raf))},o.prototype.calibrate=function(t,i){this.calibrateX=t===s?this.calibrateX:t,this.calibrateY=i===s?this.calibrateY:i},o.prototype.invert=function(t,i){this.invertX=t===s?this.invertX:t,this.invertY=i===s?this.invertY:i},o.prototype.friction=function(t,i){this.frictionX=t===s?this.frictionX:t,this.frictionY=i===s?this.frictionY:i},o.prototype.scalar=function(t,i){this.scalarX=t===s?this.scalarX:t,this.scalarY=i===s?this.scalarY:i},o.prototype.limit=function(t,i){this.limitX=t===s?this.limitX:t,this.limitY=i===s?this.limitY:i},o.prototype.origin=function(t,i){this.originX=t===s?this.originX:t,this.originY=i===s?this.originY:i},o.prototype.clamp=function(t,i,e){return t=Math.max(t,i),t=Math.min(t,e)},o.prototype.css=function(i,e,o){var n=this.propertyCache[e];if(!n)for(var r=0,a=this.vendors.length;a>r;r++)if(n=null!==this.vendors[r]?t.camelCase(this.vendors[r][1]+"-"+e):e,i.style[n]!==s){this.propertyCache[e]=n;break}i.style[n]=o},o.prototype.accelerate=function(t){for(var i=0,e=t.length;e>i;i++){var s=t[i];this.css(s,"transform","translate3d(0,0,0)"),this.css(s,"transform-style","preserve-3d"),this.css(s,"backface-visibility","hidden")}},o.prototype.setPosition=function(t,i,e){i+="px",e+="px",this.transform3DSupport?this.css(t,"transform","translate3d("+i+","+e+",0)"):this.transform2DSupport?this.css(t,"transform","translate("+i+","+e+")"):(t.style.left=i,t.style.top=e)},o.prototype.onOrientationTimer=function(t){this.orientationSupport&&0===this.orientationStatus&&(this.disable(),this.orientationSupport=!1,this.enable())},o.prototype.onCalibrationTimer=function(t){this.calibrationFlag=!0},o.prototype.onWindowResize=function(t){this.updateDimensions()},o.prototype.onAnimationFrame=function(){this.updateBounds();var t=this.ix-this.cx,i=this.iy-this.cy;(Math.abs(t)>this.calibrationThreshold||Math.abs(i)>this.calibrationThreshold)&&this.queueCalibration(0),this.portrait?(this.mx=this.calibrateX?i:this.iy,this.my=this.calibrateY?t:this.ix):(this.mx=this.calibrateX?t:this.ix,this.my=this.calibrateY?i:this.iy),this.mx*=this.ew*(this.scalarX/100),this.my*=this.eh*(this.scalarY/100),isNaN(parseFloat(this.limitX))||(this.mx=this.clamp(this.mx,-this.limitX,this.limitX)),isNaN(parseFloat(this.limitY))||(this.my=this.clamp(this.my,-this.limitY,this.limitY)),this.vx+=(this.mx-this.vx)*this.frictionX,this.vy+=(this.my-this.vy)*this.frictionY;for(var e=0,s=this.$layers.length;s>e;e++){var o=this.depthsX[e],n=this.depthsY[e],r=this.$layers[e],a=this.vx*(o*(this.invertX?-1:1)),h=this.vy*(n*(this.invertY?-1:1));this.setPosition(r,a,h)}this.raf=requestAnimationFrame(this.onAnimationFrame)},o.prototype.onDeviceOrientation=function(t){if(!this.desktop&&null!==t.beta&&null!==t.gamma){this.orientationStatus=1;var e=(t.beta||0)/30,s=(t.gamma||0)/30,o=i.innerHeight>i.innerWidth;this.portrait!==o&&(this.portrait=o,this.calibrationFlag=!0),this.calibrationFlag&&(this.calibrationFlag=!1,this.cx=e,this.cy=s),this.ix=e,this.iy=s}},o.prototype.onMouseMove=function(t){var i=t.clientX,e=t.clientY;!this.orientationSupport&&this.relativeInput?(this.clipRelativeInput&&(i=Math.max(i,this.ex),i=Math.min(i,this.ex+this.ew),e=Math.max(e,this.ey),e=Math.min(e,this.ey+this.eh)),this.ix=(i-this.ex-this.ecx)/this.erx,this.iy=(e-this.ey-this.ecy)/this.ery):(this.ix=(i-this.wcx)/this.wrx,this.iy=(e-this.wcy)/this.wry)};var a={enable:o.prototype.enable,disable:o.prototype.disable,updateLayers:o.prototype.updateLayers,calibrate:o.prototype.calibrate,friction:o.prototype.friction,invert:o.prototype.invert,scalar:o.prototype.scalar,limit:o.prototype.limit,origin:o.prototype.origin};t.fn[n]=function(i){var e=arguments;return this.each(function(){var s=t(this),r=s.data(n);r||(r=new o(this,i),s.data(n,r)),a[i]&&r[i].apply(r,Array.prototype.slice.call(e,1))})}}(window.jQuery||window.Zepto,window,document),function(){for(var t=0,i=["ms","moz","webkit","o"],e=0;e<i.length&&!window.requestAnimationFrame;++e)window.requestAnimationFrame=window[i[e]+"RequestAnimationFrame"],window.cancelAnimationFrame=window[i[e]+"CancelAnimationFrame"]||window[i[e]+"CancelRequestAnimationFrame"];window.requestAnimationFrame||(window.requestAnimationFrame=function(i,e){var s=(new Date).getTime(),o=Math.max(0,16-(s-t)),n=window.setTimeout(function(){i(s+o)},o);return t=s+o,n}),window.cancelAnimationFrame||(window.cancelAnimationFrame=function(t){clearTimeout(t)})}();
+</script>
+	<script>
+"use strict";function loadImage(t){var e=t.querySelectorAll(".js-lazy-src"),o=t.querySelectorAll(".js-lazy-img");e.forEach(function(t){return t.srcset=t.getAttribute("data-srcset")}),o.forEach(function(t){return t.src=t.getAttribute("data-src")})}function filterHeight(){var t=0,e=0,o=0,r=[],n=[],i=document.querySelectorAll(".js-custom-items .js-custom-item"),s=!0,c=!1,a=void 0;try{for(var l,u=i[Symbol.iterator]();!(s=(l=u.next()).done);s=!0){var d=l.value,f=window.getComputedStyle(d),m=parseInt(f.getPropertyValue("margin-top"),10),y=parseInt(f.getPropertyValue("margin-bottom"),10),h=parseInt(f.getPropertyValue("margin-right"),10),p=parseInt(f.getPropertyValue("margin-left"),10);r.push(d.offsetWidth+h+p),n.push(d.offsetHeight+m+y)}}catch(t){c=!0,a=t}finally{try{!s&&u.return&&u.return()}finally{if(c)throw a}}var v=document.querySelector(".js-custom-items");v.style.height="auto",t+=v.offsetHeight,o+=v.offsetWidth;var g=Math.max.apply(Math,n);e=Math.max(Math.ceil(t/Math.floor(o/Math.max.apply(Math,r))),g),v.style.height=e+"px";for(var E=0;v.scrollWidth>v.offsetWidth&&(e+=20,v.style.height=e+"px",!(E>300));)E++;console.log(E)}document.addEventListener("DOMContentLoaded",function(t){function e(){var t=document.querySelector("main+footer"),e=window.getComputedStyle(t),o=parseInt(e.getPropertyValue("margin-top"),10),r=parseInt(e.getPropertyValue("margin-bottom"),10),n=t.offsetHeight+o+r;document.querySelector("main").style.marginBottom=n+"px"}function o(){r.querySelector("nav").classList.remove("displayed"),i.classList.remove("noscroll"),setTimeout(function(){r.style.display="none",n.classList.remove("active")},250)}e(),window.addEventListener("resize",function(){e()});var r=document.querySelector(".mob-menu"),n=document.querySelector(".sandwich"),i=document.querySelector("body");if(n.addEventListener("click",function(){this.classList.contains("active")?o():(this.classList.add("active"),i.classList.add("noscroll"),setTimeout(function(){r.style.display="block",setTimeout(function(){r.querySelector("nav").classList.add("displayed")},250)},500))}),r.addEventListener("click",function(t){r.querySelector("nav").contains(t.target)||o()}),document.querySelector(".js-custom-items")){var s=document.querySelectorAll(".js-custom-item figure"),c=document.querySelectorAll(".js-custom-item picture"),a=document.querySelectorAll(".js-custom-item"),l=document.querySelectorAll(".js-product-filter .js-data-term");document.querySelector(".js-column")&&(filterHeight(),window.addEventListener("resize",function(){filterHeight()})),window.addEventListener("touchstart",function t(e){e.preventDefault(),document.querySelectorAll(".underline").forEach(function(t){t.addEventListener("mouseenter",function(){return t.style.color="rgb(138, 138, 138)"})}),s.forEach(function(t){t.addEventListener("mouseenter",function(){return t.querySelector("figcaption").style.zIndex="-1"})}),c.forEach(function(t){t.addEventListener("click",function(e){e.preventDefault(),s.forEach(function(t){return t.classList.remove("hovered")}),t.closest("figure").classList.add("hovered")})}),window.removeEventListener("touchstart",t)}),l.forEach(function(t){var e=t.getAttribute("data-term"),o=!0;a.forEach(function(t){t.classList.contains(e)&&(o=!1)}),"*"!==e&&o&&(t.closest("li").style.display="none")});l.forEach(function(t){["click","touchend"].forEach(function(e){t.addEventListener(e,function(e){e.preventDefault(),l.forEach(function(t){return t.classList.remove("active")}),t.classList.add("active"),a.forEach(function(t){t.style.display="none",t.style.position="relative",t.style.top="20px"});var o=t.getAttribute("data-term");a.forEach(function(t){"*"===o?(t.style.display="block",t.style.transition="top 0s",setTimeout(function(){t.style.top="0px",t.style.transitionDuration="150ms"},0)):t.classList.contains(o)&&(t.style.display="block",t.style.transition="top 0s",setTimeout(function(){t.style.top="0px",t.style.transitionDuration="150ms"},0))}),document.querySelector(".js-column")&&filterHeight()},!1)})})}var u=document.querySelectorAll(".js-lazy-load"),d={root:null,rootMargin:"0px 0px 0px 0px",threshold:[0]};if("IntersectionObserver"in window){console.log("IntersectionObserver started");var f=new IntersectionObserver(function(t){t.forEach(function(t){t.intersectionRatio>0&&(f.unobserve(t.target),loadImage(t.target),document.querySelector(".js-column")&&(filterHeight(),t.target.querySelector(".js-lazy-img").addEventListener("load",function(){filterHeight()})))})},d);u.forEach(function(t){return f.observe(t)})}else console.log("IntersectionObserver is not supported"),u.forEach(function(t){return loadImage(t)})});
+</script>
+	<script>
+"use strict";$(window).load(function(){function i(){$("#menorah").height($("#menorah img:first").height()-3),$(".start").height($("#menorah img:first").height()-3)}setTimeout(function(){$("#menorah").css("visibility","visible")},0),$("#menorah").parallax({limitX:38,limitY:45}),i(),$(window).resize(i),$(".mouse").on("click",function(){$("html, body").animate({scrollTop:$("main").offset().top+15},600)})}),"serviceWorker"in navigator&&navigator.serviceWorker.register("service-worker.js").then(function(i){return console.log("Service Worker registration succeeded. Scope is "+i.scope)}).catch(function(i){return console.log("Registration failed"+i)});
+</script>
+</html>
