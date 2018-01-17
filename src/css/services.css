@@ -442,7 +442,7 @@ h1, h2 {
         margin-bottom: 4vmin;
         width: 60%;
         transform: initial !important; } }
-    @media (max-width: 600px) {
+    @media (max-width: 2600px) {
       .content .tile {
         display: none; } }
   .content .showtext {
