@@ -1,24 +1,24 @@
 ////////////////////////////////////////////////////
 // Required
 ////////////////////////////////////////////////////
-let gulp = require('gulp'),
-    plumber = require('gulp-plumber'),
-    autoprefixer = require('gulp-autoprefixer'),
-    rename = require('gulp-rename'),
-    gutil = require('gulp-util'),
+const gulp = require('gulp'),
+      plumber = require('gulp-plumber'),
+      autoprefixer = require('gulp-autoprefixer'),
+      rename = require('gulp-rename'),
+      gutil = require('gulp-util'),
 
-    critical = require('critical').stream,
-    htmlmin = require('gulp-htmlmin'),
-    sass = require('gulp-sass'),
-    cleanCSS = require('gulp-clean-css'),
-    babel = require('gulp-babel'),
-    uglify = require('gulp-uglify'),
-    webp = require('gulp-webp'),
-    imagemin = require('gulp-imagemin'),
+      critical = require('critical').stream,
+      htmlmin = require('gulp-htmlmin'),
+      sass = require('gulp-sass'),
+      cleanCSS = require('gulp-clean-css'),
+      babel = require('gulp-babel'),
+      uglify = require('gulp-uglify'),
+      webp = require('gulp-webp'),
+      imagemin = require('gulp-imagemin'),
 
-    browserSync = require('browser-sync'),
-    reload = browserSync.reload,
-    del = require('del');
+      browserSync = require('browser-sync'),
+      reload = browserSync.reload,
+      del = require('del');
 
 
 ////////////////////////////////////////////////////
@@ -111,13 +111,14 @@ gulp.task('build:copy', ['build:cleanfolder'], function () {
         .pipe(gulp.dest('docs/'));
 });
 
-// Generate & Inline Critical-path CSS
+// Generate & Inline Critical-path CSS (skipped)
 gulp.task('critical', ['build:copy'], function () {
     return gulp.src('docs/*.html')
         .pipe(critical({
             base: 'docs/', 
             inline: true, 
-            minify: true
+            minify: true,
+            height: 1100
         }))
         .on('error', function(err) { gutil.log(gutil.colors.red(err.message)); })
         .pipe(gulp.dest('docs/'));
@@ -126,23 +127,23 @@ gulp.task('critical', ['build:copy'], function () {
 //minify html (skipped)
 gulp.task('html:minify', ['critical'], function() {
     return gulp.src(['docs/**/*.html'])
-        .pipe(plumber())
-        .pipe(htmlmin({
-            collapseBooleanAttributes: true,
-            collapseWhitespace: true,
-            decodeEntities: true,
-            html5: true,
-            minifyCSS: true,
-            minifyJS: true,
-            processConditionalComments: true,
-            minifyURLs: true,
-            removeAttributeQuotes: true,
-            removeComments: true,
-            removeEmptyAttributes: true,
-            removeRedundantAttributes: true,
-            removeScriptTypeAttributes: true
-        }))
-        .pipe(gulp.dest('docs/'));
+      .pipe(plumber())
+      .pipe(htmlmin({
+          collapseBooleanAttributes: true,
+          collapseWhitespace: true,
+          decodeEntities: true,
+          html5: true,
+          minifyCSS: true,
+          minifyJS: true,
+          processConditionalComments: true,
+          minifyURLs: true,
+          removeAttributeQuotes: true,
+          removeComments: true,
+          removeEmptyAttributes: true,
+          removeRedundantAttributes: true,
+          removeScriptTypeAttributes: true
+      }))
+      .pipe(gulp.dest('docs/'));
 });
 
 //minify css
