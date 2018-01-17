@@ -8,6 +8,7 @@ const gulp = require('gulp'),
       gutil = require('gulp-util'),
 
       critical = require('critical').stream,
+      inline = require('gulp-inline'),
       htmlmin = require('gulp-htmlmin'),
       sass = require('gulp-sass'),
       cleanCSS = require('gulp-clean-css'),
@@ -111,7 +112,21 @@ gulp.task('build:copy', ['build:cleanfolder'], function () {
         .pipe(gulp.dest('docs/'));
 });
 
+// inline
+gulp.task('inline', ['build:copy'], function () {
+  return gulp.src('docs/*.html')
+      .pipe(inline({
+        base: 'docs/',
+  //      js: uglify,
+        css: [cleanCSS],
+        disabledTypes: ['svg', 'img', 'js'], // Only inline css files 
+  //      ignore: ['./css/do-not-inline-me.css']
+      }))
+      .pipe(gulp.dest('docs/'));
+});
+
 // Generate & Inline Critical-path CSS (skipped)
+/*
 gulp.task('critical', ['build:copy'], function () {
     return gulp.src('docs/*.html')
         .pipe(critical({
@@ -122,6 +137,7 @@ gulp.task('critical', ['build:copy'], function () {
         .on('error', function(err) { gutil.log(gutil.colors.red(err.message)); })
         .pipe(gulp.dest('docs/'));
 });
+*/
 
 //minify html (skipped)
 gulp.task('html:minify', ['critical'], function() {
@@ -146,7 +162,7 @@ gulp.task('html:minify', ['critical'], function() {
 });
 
 //minify css
-gulp.task('css:minify', ['critical'], function () {
+gulp.task('css:minify', ['inline'], function () {
     gulp.src(['docs/**/*.css'])
         .pipe(plumber())
         .pipe(cleanCSS())
