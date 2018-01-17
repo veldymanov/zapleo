@@ -111,7 +111,7 @@ gulp.task('build:copy', ['build:cleanfolder'], () => gulp.src('src/**/*/').pipe(
 gulp.task('url:adjust', ['build:copy'], () =>
   gulp.src('docs/css/*.css')
   .pipe(urlAdjuster({
-    replace:  ['../','/'],
+    replace:  ['../',''],
   }))
   .pipe(gulp.dest('docs/css/'))
 );
