@@ -130,14 +130,14 @@ gulp.task('scripts:minify', ['url:adjust'], () =>
     .pipe(gulp.dest('docs/'))
 );
 
-// inline
+// inline css, js, svg
 gulp.task('inline', ['scripts:minify'], () =>
   gulp.src('docs/*.html')
     .pipe(inline({
-      base: 'docs/css',
+      base: 'docs',
     //  js: uglify,
       css: [cleanCSS],
-      disabledTypes: ['img'], // Only inline css files 
+      disabledTypes: ['img'], // Only inline css, js, svg files 
     //  ignore: ['./css/do-not-inline-me.css']
     }))
     .pipe(gulp.dest('docs/'))
@@ -166,8 +166,9 @@ gulp.task('html:minify', ['inline'], () =>
 );
 
 //task to remove unwanted build files
-gulp.task('build:remove', ['inline'], () =>
-  del.sync(['docs/css/**', 'docs/js/**'])
+gulp.task('build:remove', ['html:minify'], () =>
+  del.sync([
+    'docs/css/**', 'docs/js/**'])
 );
 
 gulp.task('build', ['build:remove']);
