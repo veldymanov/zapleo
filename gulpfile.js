@@ -116,7 +116,7 @@ gulp.task('build:copy', ['build:cleanfolder'], function () {
 gulp.task('inline', ['build:copy'], function () {
   return gulp.src('docs/*.html')
       .pipe(inline({
-        base: 'docs/',
+        base: 'docs/css',
   //      js: uglify,
         css: [cleanCSS],
         disabledTypes: ['svg', 'img', 'js'], // Only inline css files 
