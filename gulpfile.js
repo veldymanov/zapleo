@@ -144,7 +144,7 @@ gulp.task('inline', ['scripts:minify'], () =>
 );
 
 //minify html (skipped)
-gulp.task('html:minify', ['critical'], () =>
+gulp.task('html:minify', ['inline'], () =>
   gulp.src(['docs/**/*.html'])
     .pipe(plumber())
     .pipe(htmlmin({
@@ -166,8 +166,8 @@ gulp.task('html:minify', ['critical'], () =>
 );
 
 //task to remove unwanted build files
-gulp.task('build:remove', ['inline'], () =>
-  del.sync(['docs/css/**'])
+gulp.task('build:remove', ['html:minify'], () =>
+  del.sync(['docs/css/**', 'docs/js/**'])
 );
 
 gulp.task('build', ['build:remove']);
