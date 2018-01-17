@@ -8,6 +8,7 @@ const gulp = require('gulp'),
       gutil = require('gulp-util'),
 
       critical = require('critical').stream,
+      urlAdjuster = require('gulp-css-url-adjuster');
       inline = require('gulp-inline'),
       htmlmin = require('gulp-htmlmin'),
       sass = require('gulp-sass'),
@@ -112,17 +113,26 @@ gulp.task('build:copy', ['build:cleanfolder'], function () {
         .pipe(gulp.dest('docs/'));
 });
 
+// adjust urls in css
+gulp.task('url:adjust', ['build:copy'], function () {
+  return gulp.src('docs/css/*.css').
+    pipe(urlAdjuster({
+      replace:  ['../',''],
+    }))
+    .pipe(gulp.dest('docs/css/'));
+  });
+
 // inline
-gulp.task('inline', ['build:copy'], function () {
+gulp.task('inline', ['url:adjust'], function () {
   return gulp.src('docs/*.html')
-      .pipe(inline({
-        base: 'docs/css',
-  //      js: uglify,
-        css: [cleanCSS],
-        disabledTypes: ['svg', 'img', 'js'], // Only inline css files 
-  //      ignore: ['./css/do-not-inline-me.css']
-      }))
-      .pipe(gulp.dest('docs/'));
+    .pipe(inline({
+      base: 'docs/css',
+  //    js: uglify,
+      css: [cleanCSS],
+      disabledTypes: ['svg', 'img', 'js'], // Only inline css files 
+  //    ignore: ['./css/do-not-inline-me.css']
+    }))
+    .pipe(gulp.dest('docs/'));
 });
 
 // Generate & Inline Critical-path CSS (skipped)

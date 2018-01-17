@@ -14,6 +14,7 @@
     "gulp-babel": "^7.0.0",
     "gulp-clean-css": "^3.9.2",
     "gulp-concat": "^2.6.1",
+    "gulp-css-url-adjuster": "^0.2.3",
     "gulp-htmlmin": "^4.0.0",
     "gulp-imagemin": "^4.1.0",
     "gulp-inline": "^0.1.3",
