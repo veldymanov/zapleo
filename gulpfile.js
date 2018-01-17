@@ -119,14 +119,25 @@ gulp.task('url:adjust', ['build:copy'], () =>
   .pipe(gulp.dest('docs/css/'))
 );
 
+//minify scripts
+gulp.task('scripts:minify', ['url:adjust'], () =>
+  gulp.src(['docs/**/*.js'])
+    .pipe(plumber())
+    .pipe(babel({
+        presets: ['env']
+    }))
+    .pipe(uglify())
+    .pipe(gulp.dest('docs/'))
+);
+
 // inline
-gulp.task('inline', ['url:adjust'], () =>
+gulp.task('inline', ['scripts:minify'], () =>
   gulp.src('docs/*.html')
     .pipe(inline({
       base: 'docs/css',
     //  js: uglify,
       css: [cleanCSS],
-      disabledTypes: ['svg', 'img', 'js'], // Only inline css files 
+      disabledTypes: ['svg', 'img'], // Only inline css files 
     //  ignore: ['./css/do-not-inline-me.css']
     }))
     .pipe(gulp.dest('docs/'))
@@ -154,19 +165,8 @@ gulp.task('html:minify', ['critical'], () =>
     .pipe(gulp.dest('docs/'))
 );
 
-//minify scripts
-gulp.task('scripts:minify', ['inline'], () =>
-  gulp.src(['docs/**/*.js'])
-    .pipe(plumber())
-    .pipe(babel({
-        presets: ['env']
-    }))
-    .pipe(uglify())
-    .pipe(gulp.dest('docs/'))
-);
-
 //task to remove unwanted build files
-gulp.task('build:remove', ['scripts:minify'], () =>
+gulp.task('build:remove', ['inline'], () =>
   del.sync(['docs/css/**'])
 );
 
