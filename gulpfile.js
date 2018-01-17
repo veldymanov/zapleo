@@ -105,9 +105,12 @@ gulp.task('build:cleanfolder', () =>
 );
 
 //task to create build directory for all files
-gulp.task('build:copy', ['build:cleanfolder'], () => gulp.src('src/**/*/').pipe(gulp.dest('docs/')) );
+gulp.task('build:copy', ['build:cleanfolder'], () => 
+  gulp.src('src/**/*/')
+    .pipe(gulp.dest('docs/'))
+);
 
-// make urls in css absolute
+// change urls in css files
 gulp.task('url:adjust', ['build:copy'], () =>
   gulp.src('docs/css/*.css')
   .pipe(urlAdjuster({
