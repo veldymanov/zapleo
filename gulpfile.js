@@ -118,8 +118,7 @@ gulp.task('critical', ['build:copy'], function () {
             base: 'docs/', 
             inline: true, 
             minify: true,
-            height: 1200,
-            width: 1600
+            height: 1100
         }))
         .on('error', function(err) { gutil.log(gutil.colors.red(err.message)); })
         .pipe(gulp.dest('docs/'));
