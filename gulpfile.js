@@ -111,14 +111,15 @@ gulp.task('build:copy', ['build:cleanfolder'], function () {
         .pipe(gulp.dest('docs/'));
 });
 
-
 // Generate & Inline Critical-path CSS
 gulp.task('critical', ['build:copy'], function () {
     return gulp.src('docs/*.html')
         .pipe(critical({
             base: 'docs/', 
             inline: true, 
-            minify: true
+            minify: true,
+            height: 1000,
+            width: 1600
         }))
         .on('error', function(err) { gutil.log(gutil.colors.red(err.message)); })
         .pipe(gulp.dest('docs/'));
