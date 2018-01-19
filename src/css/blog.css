@@ -35,6 +35,18 @@ html, body, ul, .footer p, .top article h1, .top article h2, .content figure {
 .sandwich {
   display: none; }
 
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 6px; }
+
+::-webkit-scrollbar-track {
+  background-color: rgba(206, 206, 206, 0.6);
+  border-radius: 8px; }
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(150, 150, 150, 0.8);
+  border-radius: 8px; }
+
 * {
   box-sizing: border-box; }
   *::selection {
@@ -44,11 +56,11 @@ html, body, ul, .footer p, .top article h1, .top article h2, .content figure {
     background: none; }
 
 html, body {
+  color: #8a8a8a;
   font-family: "functionpro_book", sans-serif;
   font-size: calc( 0.00313 * 100vw + 14px);
   /* Fluid font-size */
   height: auto;
-  color: #8a8a8a;
   min-width: 320px; }
 
 .clearfix::after {

@@ -75,6 +75,20 @@
 				linear-gradient($white ($lh - 1), $portfolio_bg ($lh - 1), $portfolio_bg $lh, $white $lh) repeat-y local 0 0/ 100% $lh;
 }
 
+// scroll bar
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background-color: rgba(206, 206, 206, .6);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(150,150,150, 0.8);
+  border-radius: 8px;
+}
+
 * {
 	box-sizing: border-box;
     &::selection {
@@ -87,11 +101,11 @@
 }
 
 html, body {
+  color: $lightgrey;
 	font-family: "functionpro_book", sans-serif;
 	font-size: calcFluidSize(15, 20, 320, 1920); /* Fluid font-size */
 	height: auto;
-	color: $lightgrey;
-	min-width: 320px;
+  min-width: 320px;
 	@extend %padd-marg;
 }
 
@@ -171,16 +185,16 @@ h1, h2 {
 }
 
 //Underlining menu items
-.underline { 
+.underline {
 	display: inline-block;
 	&::after {
 //		background-color: $darkgrey;
 		content: "";
 		display: block;
 		height: 1px;
-		margin: 1px auto 0 0;	
-		transition: width .25s ease-in-out;	
-		width: 0;				
+		margin: 1px auto 0 0;
+		transition: width .25s ease-in-out;
+		width: 0;
 	}
 	&:hover {
 		cursor: pointer;

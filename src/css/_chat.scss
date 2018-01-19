@@ -3,55 +3,203 @@
   font-size: 16px;
   position: fixed;
   right: 10px;
-  z-index: 9999; 
-
-  .rolled-up {
-    background: #0d8bcd;
-    border-radius: 4px 4px 0 0;
-    color: #fff;
-    padding: 10px 30px 10px 20px;
-    &.opened {
-      visibility: hidden;
-    }
-    p{
-      margin: 0;
-    }
+  z-index: 9999;
+  ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 3px;
   }
-
-  .expanded {
-
-    &.opened {
-      visibility: visible;
-    }
+  ::-webkit-scrollbar-track {
+    background-color: rgba(206, 206, 206, .6);
+    border-radius: 8px;
   }
-
-  .open-close-btn {
-    cursor: pointer;
-    height: 25px;
-    position: absolute;
-    right: 0;
-    top: 3px;
-    width: 25px;
-
-    svg.arrow { 
-      height: 15px;
-      left: 5px;
-      transform: rotate(90deg);
-      position: relative;
-      top: 8px;
-      width: auto;   
-      path {
-        fill: transparent;
-        stroke: white;
-        stroke-width: 35;    		
-      }
-      &.opened {
-        transform: rotate(-90deg);
-        path {
-          stroke: rgba(67, 67, 67, .7);
-        }
-      }		 
-    }    
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(150,150,150, 0.8);
+    border-radius: 8px;
   }
 }
- 
+
+/******************
+* closed messenger
+*******************/
+.rolled-up {
+  background: #0d8bcd;
+  border-radius: 4px 4px 0 0;
+  color: #fff;
+  display: none;
+  padding: 10px 30px 10px 20px;
+
+  &.opened {
+    display: block;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+/******************
+* open messenger
+******************/
+.expanded {
+  background: #fff;
+  border-radius: 4px 4px 0 0;
+  display: block;
+  height: 400px;
+  overflow: hidden;
+  width: 350px;
+  .chat-caption {
+    background-color: lightgreen;
+    margin: 0;
+    padding: 10px;
+  }
+  .chat {
+    height: 290px;
+    list-style: none;
+    padding: 10px;
+    overflow-y: auto;
+    .chat-item { // only flex
+      display: flex;
+      flex-wrap: wrap;
+      .chat-box {
+        flex-grow: 1;
+      }
+      &.zapleo {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+  &.opened {
+    display: none;
+  }
+}
+
+// chat item (without flex)
+.chat-item {
+  margin-bottom: 10px;
+  .chat-item-photo {
+    border-radius: 50%;
+    height: 30px;
+    overflow: hidden;
+    width: 30px;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .chat-box {
+    margin-left: 10px;
+    position: relative;
+    .chat-user-name {
+      margin: 0 0 5px 0;
+    }
+    .chat-text-box {
+      background-color: #eee;
+      border-radius: 4px;
+      .text-msg {
+        margin: 0;
+        overflow-wrap: break-word;
+        padding: 3px;
+        white-space: pre-line;
+      }
+      svg {
+        bottom: 0;
+        height: auto;
+        left: -16px;
+        position: absolute;
+        width: 25px;
+        path {
+          fill: #eee;
+        }
+      }
+    }
+  }
+}
+
+// reverse for 'zapleo'
+.chat-item.zapleo {
+  .chat-box {
+    margin: 0 10px 0 0;
+    .chat-user-name {
+      text-align: right;
+    }
+    .chat-text-box {
+      svg {
+        left: auto;
+        right: -16px;
+        transform: scale(1, -1) rotate(180deg);
+      }
+    }
+  }
+}
+
+/******************
+* input messege
+******************/
+.message-form {
+  bottom: 0;
+  padding: 10px;
+  position: absolute;
+  width: 100%;
+  .message-textarea {
+    border-radius: 3px;
+    padding: 5px 23px 5px 5px;
+    resize: none;
+    width: 100%;
+  }
+  .send-msg-btn {
+    background-color: transparent;
+    border: none;
+    bottom: 15px;
+    cursor: pointer;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 13px;
+    width: 20px;
+    &:focus {
+      outline: 0;
+    }
+    .send-msg-btn-svg {
+      path {
+        fill: #aaa;
+      }
+      &:hover { // .active
+        path {
+          fill: blue;
+        }
+      }
+    }
+  }
+}
+
+/********************
+* open/close button
+********************/
+.open-close-btn {
+  cursor: pointer;
+  height: 25px;
+  position: absolute;
+  right: 0;
+  top: 3px;
+  width: 25px;
+  svg.arrow {
+    height: 15px;
+    left: 5px;
+    transform: rotate(90deg);
+    position: relative;
+    top: 8px;
+    width: auto;
+    path {
+      fill: transparent;
+      stroke: white;
+      stroke-width: 35;
+    }
+    &.opened {
+      transform: rotate(-90deg);
+      path {
+      //  stroke: white;
+      }
+    }
+  }
+}
