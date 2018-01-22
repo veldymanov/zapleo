@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
   elems.rolledUp = document.querySelector('.js-rolled-up');
   elems.expanded = document.querySelector('.js-expanded');
   elems.chatCaption = document.querySelector('.js-chat-caption');
+  elems.openCloseBtn = document.querySelector('.js-open-close-btn');
   elems.arrow = document.querySelector('.js-arrow');
   // authentification
   elems.auth = document.querySelector('#js-auth');
@@ -33,6 +34,13 @@ document.addEventListener('DOMContentLoaded', function() {
     elems.rolledUp.classList.remove('opened');
     elems.expanded.classList.remove('opened');
     elems.arrow.classList.remove('opened');
+    setFocus();
+  })
+
+  elems.openCloseBtn.addEventListener('click', function() {
+    elems.rolledUp.classList.toggle('opened');
+    elems.expanded.classList.toggle('opened');
+    elems.arrow.classList.toggle('opened');
     setFocus();
   })
 
