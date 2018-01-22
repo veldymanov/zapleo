@@ -25,7 +25,7 @@ const gulp = require('gulp'),
 // HTML Task
 ////////////////////////////////////////////////////
 //update browser-sync
-gulp.task('html', () => 
+gulp.task('html', () =>
   gulp.src(['src/**/*.html'])
     .pipe(reload({stream: true}))
 );
@@ -100,12 +100,12 @@ gulp.task('pic', ['pic:remove']);
 // Build Task (production version)
 ////////////////////////////////////////////////////
 //clear out all files and folders from build folder
-gulp.task('build:cleanfolder', () => 
+gulp.task('build:cleanfolder', () =>
   del.sync('docs/**')
 );
 
 //task to create build directory for all files
-gulp.task('build:copy', ['build:cleanfolder'], () => 
+gulp.task('build:copy', ['build:cleanfolder'], () =>
   gulp.src('src/**/*/')
     .pipe(gulp.dest('docs/'))
 );
@@ -121,7 +121,7 @@ gulp.task('url:adjust', ['build:copy'], () =>
 
 //minify scripts
 gulp.task('scripts:minify', ['url:adjust'], () =>
-  gulp.src(['docs/**/*.js'])
+  gulp.src(['docs/**/*.js', '!docs/**/chat.js'])
     .pipe(plumber())
     .pipe(babel({
         presets: ['env']
@@ -137,7 +137,7 @@ gulp.task('inline', ['scripts:minify'], () =>
       base: 'docs',
     //  js: uglify,
       css: [cleanCSS],
-      disabledTypes: ['img'], // Only inline css, js, svg files 
+      disabledTypes: ['img'], // Only inline css, js, svg files
     //  ignore: ['./css/do-not-inline-me.css']
     }))
     .pipe(gulp.dest('docs/'))
