@@ -6,10 +6,10 @@
 		<meta name="theme-color" content="#ffffff">
     <link rel='manifest' href='manifest.json'>
 		<link rel="preload" href="fonts/functionpro_book.ttf" as="font" crossorigin="anonymous">
-		<link rel="preload" href="fonts/functionpro_medium.ttf" as="font" crossorigin="anonymous">     
+		<link rel="preload" href="fonts/functionpro_medium.ttf" as="font" crossorigin="anonymous">
 		<link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.z.png">
 		<link rel='icon' href='favicon.ico' type="image/x-icon"/>
-		<link rel="mask-icon" href="images/icons/safari-pinned-tab.z.svg" color="#fcb117">		
+		<link rel="mask-icon" href="images/icons/safari-pinned-tab.z.svg" color="#fcb117">
 		<link rel="stylesheet" href="css/about.css">
 		<title>Zapleo - About</title>
 	</head>
@@ -62,7 +62,7 @@
 						<h1>About Us</h1>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 					</article>
-				</div> 
+				</div>
 				<div class="content">
 					<picture>
 						<source type="image/webp"
@@ -78,13 +78,13 @@
 										(min-width: 1100px) 736px,
 								 		100vw">
 						<img src="images/team/team-photo_1200.z.jpg" alt="team photo">
-					</picture>					
+					</picture>
 					<article>
-						We are a digital agency that combines strategy, 
+						We are a digital agency that combines strategy,
 						design and engineering in order to create world
-						class mobile and web apps. Zapleo team — real 
-						hard workers and professionals. We love 
-						studying and we are interested in different styles 
+						class mobile and web apps. Zapleo team — real
+						hard workers and professionals. We love
+						studying and we are interested in different styles
 						of sports, from football to fencing.
 					</article>
 				</div>
@@ -147,8 +147,53 @@
 					</ul>
 				</li>
 			</ul>
-		</footer>
+    </footer>
+
+    <!--Messenger-->
+    <section class="messenger">
+      <div class="rolled-up js-rolled-up">
+        <p>Напишите нам, мы онлайн!</p>
+      </div>
+
+      <div class="expanded js-expanded">
+        <h3 class="chat-caption js-chat-caption">Zapleo chat</h3>
+        <ul class="chat js-chat"></ul>
+
+        <form id="authorization-form">
+          <label>Enter your name</label>
+          <input type="text"
+              id="js-auth"
+              class="auth"
+              placeholder="Enter your name">
+          <button class='name-btn js-name-btn'>
+            <svg class='name-btn-svg js-name-btn-svg' viewBox='0 0 725 725'>
+              <path d="M 50 50 L 600 300 L 50 550 L 50 350 L 350 300 L 50 250 L 50 50 Z"/>
+            </svg>
+          </button>
+        </form>
+
+        <form id="message-form">
+          <textarea name="new-messege"
+              id="js-message-textarea"
+              class="message-textarea"
+              rows="2"
+              placeholder="Send: shift + enter"></textarea>
+          <button class='send-msg-btn js-send-msg-btn'>
+            <svg class='send-msg-btn-svg js-send-msg-btn-svg' viewBox='0 0 725 725'>
+              <path d="M 50 50 L 600 300 L 50 550 L 50 350 L 350 300 L 50 250 L 50 50 Z"/>
+            </svg>
+          </button>
+        </form>
+      </div>
+
+      <div class="open-close-btn js-open-close-btn">
+        <svg class="arrow js-arrow" viewBox="0 0 250 400">
+          <path d="M 225 25 L 25 200 L 225 375"/>
+        </svg>
+      </div>
+    </section>
 	</body>
 
-	<script src="js/main.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/chat.js"></script>
 </html>

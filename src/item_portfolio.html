@@ -6,7 +6,7 @@
 		<meta name="theme-color" content="#ffffff">
     <link rel='manifest' href='manifest.json'>
 		<link rel="preload" href="fonts/functionpro_book.ttf" as="font" crossorigin="anonymous">
-		<link rel="preload" href="fonts/functionpro_medium.ttf" as="font" crossorigin="anonymous"> 		
+		<link rel="preload" href="fonts/functionpro_medium.ttf" as="font" crossorigin="anonymous">
 		<link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.z.png">
 		<link rel='icon' href='favicon.ico' type="image/x-icon"/>
 		<link rel="mask-icon" href="images/icons/safari-pinned-tab.z.svg" color="#fcb117">
@@ -64,25 +64,25 @@
 						Lorem ipsum dolor sit amet, consecte adipiscing elit, sed do eiusmod tempo Lorem ipsum dolor sit amet, consecte adipiscing elit, sed do eiusmod.
 						<a href="https://trackgodsound.com/">Link...</a>
 					</p>
-					
+
 					<h2>Used skills</h2>
 					<ul class="skills">
 						<li>HTML5</li>
 						<li>CSS3</li>
 						<li>jQuery</li>
-						<li>JavaScript</li>	
+						<li>JavaScript</li>
 						<li>PHP</li>
 						<li>MySQL</li>
 						<li>WordPress</li>
-						<li>WordPress</li>	
-						<li>WordPress</li>	
-						<li>WordPress</li>													
+						<li>WordPress</li>
+						<li>WordPress</li>
+						<li>WordPress</li>
 					</ul>
 					<h2>Testimonial</h2>
 					<picture class="js-lazy-load">
-						<source class="js-lazy-src" type="image/webp" 
+						<source class="js-lazy-src" type="image/webp"
 								data-srcset="images/customers/arjae_knox.z.webp">
-						<img class="customer js-lazy-img" 
+						<img class="customer js-lazy-img"
 								data-src="images/customers/arjae_knox.z.jpg" alt="customer photo">
 					</picture>
 					<blockquote class="review">
@@ -94,49 +94,49 @@
 					<ul>
 						<li>
 							<picture class="js-lazy-load">
-								<source class="js-lazy-src" type="image/webp" 
+								<source class="js-lazy-src" type="image/webp"
 									data-srcset="images/portfolio/tracksoundsgood/main_500.z.webp">
-								<img class="js-lazy-img" 
+								<img class="js-lazy-img"
 									data-src="images/portfolio/tracksoundsgood/main_500.z.png" alt="">
 							</picture>
-						</li>						
+						</li>
 						<li>
 							<picture class="js-lazy-load">
-								<source class="js-lazy-src" type="image/webp" 
+								<source class="js-lazy-src" type="image/webp"
 									data-srcset="images/portfolio/tracksoundsgood/trackgodsound-2_500.z.webp">
-								<img class="js-lazy-img" 
+								<img class="js-lazy-img"
 									data-src="images/portfolio/tracksoundsgood/trackgodsound-2_500.z.png" alt="">
 							</picture>
 						</li>
 						<li>
 							<picture class="js-lazy-load">
-								<source class="js-lazy-src" type="image/webp" 
+								<source class="js-lazy-src" type="image/webp"
 									data-srcset="images/portfolio/tracksoundsgood/trackgodsound-3_500.z.webp">
-								<img class="js-lazy-img" 
+								<img class="js-lazy-img"
 									data-src="images/portfolio/tracksoundsgood/trackgodsound-3_500.z.png" alt="">
 							</picture>
 						</li>
 						<li>
 							<picture class="js-lazy-load">
-								<source class="js-lazy-src" type="image/webp" 
+								<source class="js-lazy-src" type="image/webp"
 									data-srcset="images/portfolio/tracksoundsgood/trackgodsound-4_500.z.webp">
-								<img class="js-lazy-img" 
+								<img class="js-lazy-img"
 									data-src="images/portfolio/tracksoundsgood/trackgodsound-4_500.z.png" alt="">
 							</picture>
 						</li>
 						<li>
 							<picture class="js-lazy-load">
-								<source class="js-lazy-src" type="image/webp" 
+								<source class="js-lazy-src" type="image/webp"
 									data-srcset="images/portfolio/tracksoundsgood/trackgodsound-5_500.z.webp">
-								<img class="js-lazy-img" 
+								<img class="js-lazy-img"
 									data-src="images/portfolio/tracksoundsgood/trackgodsound-5_500.z.png" alt="">
 							</picture>
 						</li>
 						<li>
 							<picture class="js-lazy-load">
-								<source class="js-lazy-src" type="image/webp" 
+								<source class="js-lazy-src" type="image/webp"
 									data-srcset="images/portfolio/tracksoundsgood/trackgodsound-6_500.z.webp">
-								<img class="js-lazy-img" 
+								<img class="js-lazy-img"
 									data-src="images/portfolio/tracksoundsgood/trackgodsound-6_500.z.png" alt="">
 							</picture>
 						</li>
@@ -202,6 +202,51 @@
 				</li>
 			</ul>
 		</footer>
-		<script src="js/main.js"></script>
-	</body>
+
+    <!--Messenger-->
+    <section class="messenger">
+      <div class="rolled-up js-rolled-up">
+        <p>Напишите нам, мы онлайн!</p>
+      </div>
+
+      <div class="expanded js-expanded">
+        <h3 class="chat-caption js-chat-caption">Zapleo chat</h3>
+        <ul class="chat js-chat"></ul>
+
+        <form id="authorization-form">
+          <label>Enter your name</label>
+          <input type="text"
+              id="js-auth"
+              class="auth"
+              placeholder="Enter your name">
+          <button class='name-btn js-name-btn'>
+            <svg class='name-btn-svg js-name-btn-svg' viewBox='0 0 725 725'>
+              <path d="M 50 50 L 600 300 L 50 550 L 50 350 L 350 300 L 50 250 L 50 50 Z"/>
+            </svg>
+          </button>
+        </form>
+
+        <form id="message-form">
+          <textarea name="new-messege"
+              id="js-message-textarea"
+              class="message-textarea"
+              rows="2"
+              placeholder="Send: shift + enter"></textarea>
+          <button class='send-msg-btn js-send-msg-btn'>
+            <svg class='send-msg-btn-svg js-send-msg-btn-svg' viewBox='0 0 725 725'>
+              <path d="M 50 50 L 600 300 L 50 550 L 50 350 L 350 300 L 50 250 L 50 50 Z"/>
+            </svg>
+          </button>
+        </form>
+      </div>
+
+      <div class="open-close-btn js-open-close-btn">
+        <svg class="arrow js-arrow" viewBox="0 0 250 400">
+          <path d="M 225 25 L 25 200 L 225 375"/>
+        </svg>
+      </div>
+    </section>
+  </body>
+    <script src="js/main.js"></script>
+    <script src="js/chat.js"></script>
 </html>

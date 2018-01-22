@@ -6,10 +6,10 @@
 		<meta name="theme-color" content="#ffffff">
     <link rel='manifest' href='manifest.json'>
 		<link rel="preload" href="fonts/functionpro_book.ttf" as="font" crossorigin="anonymous">
-		<link rel="preload" href="fonts/functionpro_medium.ttf" as="font" crossorigin="anonymous">    
+		<link rel="preload" href="fonts/functionpro_medium.ttf" as="font" crossorigin="anonymous">
 		<link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.z.png">
 		<link rel='icon' href='favicon.ico' type="image/x-icon"/>
-		<link rel="mask-icon" href="images/icons/safari-pinned-tab.z.svg" color="#fcb117">						
+		<link rel="mask-icon" href="images/icons/safari-pinned-tab.z.svg" color="#fcb117">
 		<link rel="stylesheet" href="css/services.css">
 		<title>Zapleo - Services</title>
 	</head>
@@ -70,7 +70,7 @@
 								<picture class="js-lazy-load">
 									<source class="js-lazy-src" type="image/webp" data-srcset="images/proto.z.webp">
 									<img class="tile js-tile js-lazy-img" data-src="images/proto.z.png" alt="proto image">
-								</picture>							
+								</picture>
 								<figcaption>
 									<img src="images/icons/proto_icon.z.svg" alt="">
 									<h1 class="proto">prototyping</h1>
@@ -82,7 +82,7 @@
 								<picture class="js-lazy-load">
 									<source class="js-lazy-src" type="image/webp" data-srcset="images/ui-ux.z.webp">
 									<img class="tile js-tile js-lazy-img" data-src="images/ui-ux.z.png" alt="">
-								</picture>	
+								</picture>
 								<figcaption>
 									<img src="images/icons/ui-ux-icon.z.svg" alt="">
 									<h1 class="proto">ui | ux design</h1>
@@ -108,7 +108,7 @@
 									<img class="tile js-tile js-lazy-img" data-src="images/rel.z.png" alt="development photo">
 								</picture>
 								<figcaption>
-									<img src="images/icons/rel_icon.z.svg" alt="release photo"> 
+									<img src="images/icons/rel_icon.z.svg" alt="release photo">
 									<h1 class="proto">release</h1>
 									<p>At the final stage a quality assurance manager carries out a complete project testing, including high speed response and anti hacker security. It provides system protection and integrity. That is the end of the final iteration. It is followed by demonstration of the whole project to the client. The project is published on the server. All accesses are given to the client.</p>
 								</figcaption>
@@ -174,9 +174,53 @@
 					</ul>
 				</li>
 			</ul>
-		</footer>
+    </footer>
+
+    <!--Messenger-->
+    <section class="messenger">
+      <div class="rolled-up js-rolled-up">
+        <p>Напишите нам, мы онлайн!</p>
+      </div>
+
+      <div class="expanded js-expanded">
+        <h3 class="chat-caption js-chat-caption">Zapleo chat</h3>
+        <ul class="chat js-chat"></ul>
+
+        <form id="authorization-form">
+          <label>Enter your name</label>
+          <input type="text"
+              id="js-auth"
+              class="auth"
+              placeholder="Enter your name">
+          <button class='name-btn js-name-btn'>
+            <svg class='name-btn-svg js-name-btn-svg' viewBox='0 0 725 725'>
+              <path d="M 50 50 L 600 300 L 50 550 L 50 350 L 350 300 L 50 250 L 50 50 Z"/>
+            </svg>
+          </button>
+        </form>
+
+        <form id="message-form">
+          <textarea name="new-messege"
+              id="js-message-textarea"
+              class="message-textarea"
+              rows="2"
+              placeholder="Send: shift + enter"></textarea>
+          <button class='send-msg-btn js-send-msg-btn'>
+            <svg class='send-msg-btn-svg js-send-msg-btn-svg' viewBox='0 0 725 725'>
+              <path d="M 50 50 L 600 300 L 50 550 L 50 350 L 350 300 L 50 250 L 50 50 Z"/>
+            </svg>
+          </button>
+        </form>
+      </div>
+
+      <div class="open-close-btn js-open-close-btn">
+        <svg class="arrow js-arrow" viewBox="0 0 250 400">
+          <path d="M 225 25 L 25 200 L 225 375"/>
+        </svg>
+      </div>
+    </section>
 	</body>
-	
 	<script src="js/main.js"></script>
-	<script src="js/services.js"></script>	
+  <script src="js/services.js"></script>
+  <script src="js/chat.js"></script>
 </html>

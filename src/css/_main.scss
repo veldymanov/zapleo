@@ -1,4 +1,4 @@
-@import "vars";
+@import "vars", "chat";
 
 @font-face {
 	font-family: 'CenturyGothicBold';
@@ -78,14 +78,14 @@
 // scroll bar
 ::-webkit-scrollbar {
   -webkit-appearance: none;
-  width: 6px;
+  width: 4px;
 }
 ::-webkit-scrollbar-track {
   background-color: rgba(206, 206, 206, .6);
   border-radius: 8px;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(150,150,150, 0.8);
+  background-color: rgba(130, 130, 130, 1);
   border-radius: 8px;
 }
 

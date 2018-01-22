@@ -1,5 +1,6 @@
 .messenger {
   bottom: 0;
+  color: rgb(97, 98, 103);
   font-size: 16px;
   position: fixed;
   right: 10px;
@@ -22,16 +23,15 @@
 * closed messenger
 *******************/
 .rolled-up {
-  background: #0d8bcd;
+  background: rgb(248, 169, 13);
   border-radius: 4px 4px 0 0;
-  color: #fff;
-  display: none;
+  color: inherit;
+  cursor: pointer;
+  display: block;
   padding: 10px 30px 10px 20px;
-
   &.opened {
-    display: block;
+    display: none;
   }
-
   p {
     margin: 0;
   }
@@ -43,16 +43,34 @@
 .expanded {
   background: #fff;
   border-radius: 4px 4px 0 0;
-  display: block;
+  color: inherit;
+  display: none;
   height: 400px;
   overflow: hidden;
   width: 350px;
+  &.opened {
+    display: block;
+  }
+  &.authorized {
+    .chat {
+      display: block;
+    }
+    #authorization-form {
+      display: none;
+    }
+    #message-form {
+      display: block;
+    }
+  }
   .chat-caption {
-    background-color: lightgreen;
+    background-color: rgb(248, 169, 13);
+    color: inherit;
+    cursor: pointer;
     margin: 0;
     padding: 10px;
   }
   .chat {
+    display: none;
     height: 290px;
     list-style: none;
     padding: 10px;
@@ -67,9 +85,6 @@
         flex-direction: row-reverse;
       }
     }
-  }
-  &.opened {
-    display: none;
   }
 }
 
@@ -131,12 +146,61 @@
     }
   }
 }
+/******************
+* authorization
+******************/
+#authorization-form {
+  padding: 0 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  label {
+    display: block;
+    font-size: 25px;
+    padding: 30px;
+    text-align: center;
+  }
+  .auth {
+    border: 1px solid rgb(200, 200, 200);
+    border-image: none;
+    border-radius: 3px;
+    display: block;
+    padding: 5px 23px 5px 5px;
+    width: 100%;
+  }
+  .name-btn {
+    background-color: transparent;
+    border: none;
+    bottom: 2px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 20px;
+    width: 20px;
+    &:focus {
+      outline: 0;
+    }
+    .name-btn-svg {
+      path {
+        fill: #aaa;
+      }
+      &.active { // .active
+        path {
+          fill: blue;
+        }
+      }
+    }
+  }
+}
 
 /******************
 * input messege
 ******************/
-.message-form {
+#message-form {
   bottom: 0;
+  display: none;
   padding: 10px;
   position: absolute;
   width: 100%;
@@ -150,7 +214,6 @@
     background-color: transparent;
     border: none;
     bottom: 15px;
-    cursor: pointer;
     height: 20px;
     margin: 0;
     padding: 0;
@@ -164,7 +227,7 @@
       path {
         fill: #aaa;
       }
-      &:hover { // .active
+      &.active { // .active
         path {
           fill: blue;
         }
@@ -192,14 +255,11 @@
     width: auto;
     path {
       fill: transparent;
-      stroke: white;
+      stroke: rgb(97, 98, 103);
       stroke-width: 35;
     }
     &.opened {
       transform: rotate(-90deg);
-      path {
-      //  stroke: white;
-      }
     }
   }
 }

@@ -858,133 +858,30 @@
       </div>
 
       <div class="expanded js-expanded">
-        <h3 class="chat-caption">Zapleo chat</h3>
-        <ul class="chat js-chat">
-          <li class="chat-item zapleo">
-            <picture class="chat-item-photo">
-              <img src="images/icons/logo-short1.z.svg" alt="photo">
-            </picture>
-            <div class="chat-box">
-              <h5 class="chat-user-name">Zapleo</h5>
-              <div class="chat-text-box">
-                <p class="text-msg">Hello dear.
-                  How are you?</p>
-                <svg viewBox='0 0 800 300'>
-                  <path d="M 0 300 L 800 300 L 500 0 Q 500 200 0 300 Z"/>
-                </svg>
-              </div>
-            </div>
-          </li>
-          <li class="chat-item">
-            <picture class="chat-item-photo">
-              <img src="images/blog/blog-post/comments/avatar-empty.z.png" alt="photo">
-            </picture>
-            <div class="chat-box">
-              <h5 class="chat-user-name">User</h5>
-              <div class="chat-text-box">
-                <p class="text-msg">Hi</p>
-                <svg viewBox='0 0 800 300'>
-                    <path d="M 0 300 L 800 300 L 500 0 Q 500 200 0 300 Z"/>
-                </svg>
-              </div>
-            </div>
-          </li>
-          <li class="chat-item zapleo">
-              <picture class="chat-item-photo">
-                <img src="images/icons/logo-short1.z.svg" alt="photo">
-              </picture>
-              <div class="chat-box">
-                <h5 class="chat-user-name">Zapleo</h5>
-                <div class="chat-text-box">
-                  <p class="text-msg">Hello dear.
-                    How are you?</p>
-                  <svg viewBox='0 0 800 300'>
-                    <path d="M 0 300 L 800 300 L 500 0 Q 500 200 0 300 Z"/>
-                  </svg>
-                </div>
-              </div>
-            </li>
-            <li class="chat-item">
-              <picture class="chat-item-photo">
-                <img src="images/blog/blog-post/comments/avatar-empty.z.png" alt="photo">
-              </picture>
-              <div class="chat-box">
-                <h5 class="chat-user-name">User</h5>
-                <div class="chat-text-box">
-                  <p class="text-msg">Hi</p>
-                  <svg viewBox='0 0 800 300'>
-                      <path d="M 0 300 L 800 300 L 500 0 Q 500 200 0 300 Z"/>
-                  </svg>
-                </div>
-              </div>
-            </li>
-          <li class="chat-item zapleo">
-            <picture class="chat-item-photo">
-              <img src="images/icons/logo-short1.z.svg" alt="photo">
-            </picture>
-            <div class="chat-box">
-              <h5 class="chat-user-name">Zapleo</h5>
-              <div class="chat-text-box">
-                <p class="text-msg">Hello dear.
-                  How are you?</p>
-                <svg viewBox='0 0 800 300'>
-                  <path d="M 0 300 L 800 300 L 500 0 Q 500 200 0 300 Z"/>
-                </svg>
-              </div>
-            </div>
-          </li>
-          <li class="chat-item">
-            <picture class="chat-item-photo">
-              <img src="images/blog/blog-post/comments/avatar-empty.z.png" alt="photo">
-            </picture>
-            <div class="chat-box">
-              <h5 class="chat-user-name">User</h5>
-              <div class="chat-text-box">
-                <p class="text-msg">Hi</p>
-                <svg viewBox='0 0 800 300'>
-                    <path d="M 0 300 L 800 300 L 500 0 Q 500 200 0 300 Z"/>
-                </svg>
-              </div>
-            </div>
-          </li>
-          <li class="chat-item zapleo">
-            <picture class="chat-item-photo">
-              <img src="images/icons/logo-short1.z.svg" alt="photo">
-            </picture>
-            <div class="chat-box">
-              <h5 class="chat-user-name">Zapleo</h5>
-              <div class="chat-text-box">
-                <p class="text-msg">Hello dear.
-                  How are you?</p>
-                <svg viewBox='0 0 800 300'>
-                  <path d="M 0 300 L 800 300 L 500 0 Q 500 200 0 300 Z"/>
-                </svg>
-              </div>
-            </div>
-          </li>
-          <li class="chat-item">
-            <picture class="chat-item-photo">
-              <img src="images/blog/blog-post/comments/avatar-empty.z.png" alt="photo">
-            </picture>
-            <div class="chat-box">
-              <h5 class="chat-user-name">User</h5>
-              <div class="chat-text-box">
-                <p class="text-msg">Hi</p>
-                <svg viewBox='0 0 800 300'>
-                    <path d="M 0 300 L 800 300 L 500 0 Q 500 200 0 300 Z"/>
-                </svg>
-              </div>
-            </div>
-          </li>
-        </ul>
+        <h3 class="chat-caption js-chat-caption">Zapleo chat</h3>
+        <ul class="chat js-chat"></ul>
 
-        <form action="" class="message-form">
-          <textarea name="" id=""
+        <form id="authorization-form">
+          <label>Enter your name</label>
+          <input type="text"
+              id="js-auth"
+              class="auth"
+              placeholder="Enter your name">
+          <button class='name-btn js-name-btn'>
+            <svg class='name-btn-svg js-name-btn-svg' viewBox='0 0 725 725'>
+              <path d="M 50 50 L 600 300 L 50 550 L 50 350 L 350 300 L 50 250 L 50 50 Z"/>
+            </svg>
+          </button>
+        </form>
+
+        <form id="message-form">
+          <textarea name="new-messege"
+              id="js-message-textarea"
               class="message-textarea"
               rows="2"
-              placeholder="Input message"></textarea>
+              placeholder="Send: shift + enter"></textarea>
           <button class='send-msg-btn js-send-msg-btn'>
-            <svg class='send-msg-btn-svg' viewBox='0 0 725 725'>
+            <svg class='send-msg-btn-svg js-send-msg-btn-svg' viewBox='0 0 725 725'>
               <path d="M 50 50 L 600 300 L 50 550 L 50 350 L 350 300 L 50 250 L 50 50 Z"/>
             </svg>
           </button>
