@@ -1,6 +1,6 @@
-///////////////////////////
-//Load image function
-///////////////////////////
+/**
+* Load image function
+*/
 function loadImage(target){
     let lazySrcs = target.querySelectorAll('.js-lazy-src');
     let lazyImgs = target.querySelectorAll('.js-lazy-img');
@@ -8,14 +8,14 @@ function loadImage(target){
     lazyImgs.forEach(lazyImg => lazyImg.src = lazyImg.getAttribute('data-src'));
 }
 
-//////////////////////////////////
-//Filter container height function
-//////////////////////////////////
+/**
+* Filter container height function
+*/
 function filterHeight(){
 	let totalHeight = 0,
 		averageHeight = 0,
 		totalWidth = 0;
-	
+
 	let elsWidth = [],
 		elsHeight = [];
 
@@ -46,7 +46,7 @@ function filterHeight(){
 	//Choose max between averageHeight and max element height
 	averageHeight = Math.max(Math.ceil(totalHeight / Math.floor( totalWidth / Math.max(...elsWidth) )), maxElHeight);
 
-	filterContainer.style.height = averageHeight + 'px'; 
+	filterContainer.style.height = averageHeight + 'px';
 
 	//increase height to fit all elements horizontally (flexbox)
 	let limit = 0;
@@ -61,9 +61,9 @@ function filterHeight(){
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
-	///////////////////////////////////////
-	//Calculating <main> margin for footer
-	///////////////////////////////////////
+  /**
+  * Calculating <main> margin for footer
+  */
 	calcMarginBottom();
 	window.addEventListener('resize', function(){
 		calcMarginBottom();
@@ -75,13 +75,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
     	let marginTop = parseInt(style.getPropertyValue('margin-top'), 10);
     	let marginBottom = parseInt(style.getPropertyValue('margin-bottom'), 10);
 		let fHeight = item.offsetHeight + marginTop + marginBottom;
-		
-		document.querySelector('main').style.marginBottom = fHeight + 'px'; 
-	}	
 
-	///////////////////////
-	//Mobile menu
-	////////////////////////
+		document.querySelector('main').style.marginBottom = fHeight + 'px';
+	}
+
+  /**
+  * Mobile menu
+  */
 	let fadeSpeed = 350;
 	let mobMenu = document.querySelector(".mob-menu");
 	let sandwichBtn = document.querySelector('.sandwich');
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			mobMenu.querySelector('nav').classList.remove('displayed');
 			body.classList.remove("noscroll");
 
-			setTimeout(function(){			
+			setTimeout(function(){
 				mobMenu.style.display = "none";
 				sandwichBtn.classList.remove('active');
 			}, 250);
@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		if ( this.classList.contains('active')) {
 			hideMobileMenu();
 		} else {
-			//show mobile menu		
+			//show mobile menu
 			this.classList.add("active");
 			//stop scroll
 			body.classList.add("noscroll");
@@ -111,9 +111,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 				setTimeout(function(){
 					mobMenu.querySelector('nav').classList.add('displayed');
-				}, 250);			
+				}, 250);
 			}, 500);
-		}			 		
+		}
 	});
 
 	mobMenu.addEventListener('click', function(e){
@@ -121,15 +121,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			hideMobileMenu();
 		}
 	});
-	
-	////////////////////////////////////////////////////////////
-	//Set filter (Only one one ".js-custom-items" per page!!!!)
-	////////////////////////////////////////////////////////////
+
+	/**
+	* Set filter (Only one one ".js-custom-items" per page!!!!)
+	*/
 	if (document.querySelector('.js-custom-items')) {
 		let figures = document.querySelectorAll(".js-custom-item figure");
 		let pictures = document.querySelectorAll(".js-custom-item picture");
 		let customItems = document.querySelectorAll(".js-custom-item");
-	  let dataTerms = document.querySelectorAll(".js-product-filter .js-data-term");		
+	  let dataTerms = document.querySelectorAll(".js-product-filter .js-data-term");
 
 		//calculate filter container height for 'flex-direction: column'
 		if( document.querySelector('.js-column') ){
@@ -145,13 +145,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 			//Stop 'hover' by touch
 	    document.querySelectorAll('.underline').forEach( item => {
-				item.addEventListener('mouseenter', () => item.style.color = 'rgb(138, 138, 138)');			
+				item.addEventListener('mouseenter', () => item.style.color = 'rgb(138, 138, 138)');
 			})
 			figures.forEach( figure => {
 				figure.addEventListener('mouseenter', () => figure.querySelector('figcaption').style.zIndex = "-1");
 			})
-				
-			//Run touch events listeners			
+
+			//Run touch events listeners
 			pictures.forEach( picture => {
 				picture.addEventListener('click', event => {
 					event.preventDefault();
@@ -178,10 +178,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			if ( !(term === "*") && emptyMenu ) {
 				item.closest('li').style.display = 'none';
 			}
-		})	    
+		})
 
 		//Set filtering and animation
-		let animationTime = "150ms";	    
+		let animationTime = "150ms";
 		//Set multiple event listener
 		dataTerms.forEach( item => {
 			let eventList = ["click", "touchend"];
@@ -201,11 +201,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			    	})
 
 			    	//show filtered items with animation
-			        let term = item.getAttribute("data-term");			    	
+			        let term = item.getAttribute("data-term");
 			    	customItems.forEach( i => {
 			    		if (  term === "*" ){
 			    			i.style.display =  "block";
-			    			i.style.transition = "top 0s"; 
+			    			i.style.transition = "top 0s";
 
 				    		setTimeout(function(){
 				    			i.style.top = "0px";
@@ -213,13 +213,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
 				    		}, 0);
 			    		} else if ( i.classList.contains(term) ) {
 			    			i.style.display =  "block";
-			    			i.style.transition = "top 0s"; 
+			    			i.style.transition = "top 0s";
 
 				    		setTimeout(function(){
 				    			i.style.top = "0px";
 				    			i.style.transitionDuration = animationTime;
-				    		}, 0); 		    			
-			    		}		    		   		
+				    		}, 0);
+			    		}
 			    	})
 
 			        //recalculate filter container height for 'flex-direction: column'
@@ -231,9 +231,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		})
 	}
 
-	/////////////////////////////////////
-	//Images lazy loading
-	/////////////////////////////////////
+	/**
+	* Images lazy loading
+	*/
 	// Get all of the images that are marked up to lazy load
 	let imgParents = document.querySelectorAll('.js-lazy-load');
 	const config = {
@@ -245,9 +245,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	// If we have support for intersection observer
 	if (!('IntersectionObserver' in window)) {
 	    console.log('IntersectionObserver is not supported');
-
 	    imgParents.forEach(imgParent => loadImage(imgParent));
-	}  else {
+	} else {
 	    console.log('IntersectionObserver started');
 
 	    // The observer for the images on the page
