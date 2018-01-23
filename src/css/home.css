@@ -593,7 +593,6 @@ h1, h2 {
   text-align: center; }
   .content figure {
     position: relative;
-    background: #ececec;
     padding: 1.67vmin 3.5vmin;
     margin: 0 auto; }
     .content figure:hover > figcaption {
@@ -637,7 +636,11 @@ h1, h2 {
     flex-direction: column;
     height: auto; }
     .content .custom-items .custom-item {
+      background: #ececec;
+      height: calc(88vw * 0.3 * (243.719/442.469));
       margin-bottom: 10px;
+      overflow: hidden;
+      position: relative;
       width: 30%; }
       .content .custom-items .custom-item figure picture {
         display: block;
@@ -651,16 +654,67 @@ h1, h2 {
         z-index: 1 !important; }
       @media (max-width: 1150px) {
         .content .custom-items .custom-item {
+          height: calc(88vw * 0.45 * (243.719/442.469));
           width: 45%; } }
       @media (max-width: 736px) {
         .content .custom-items .custom-item {
+          height: calc(88vw * 0.7 * (243.719/442.469));
           width: 70%; } }
       @media (max-width: 650px) {
         .content .custom-items .custom-item {
+          height: calc(88vw * 0.9 * (243.719/442.469));
           width: 90%; } }
       @media (max-width: 480px) {
         .content .custom-items .custom-item {
+          height: calc(88vw * 1 * (243.719/442.469));
           width: 100%; } }
+
+.pic-loading {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+.pic-loading .logo {
+  /* this way asset gets processed by webpack */
+  background-size: contain;
+  height: 100px;
+  width: 100px; }
+
+.pic-loading .spinner {
+  animation: rotate 2s linear infinite;
+  height: 150px;
+  margin: auto;
+  position: absolute;
+  transform-origin: center center;
+  width: 150px; }
+
+.pic-loading .spinner .path {
+  animation: dash 1.5s ease-in-out infinite;
+  stroke: #f8a90d;
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  stroke-linecap: round; }
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg); } }
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0; }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px; }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px; } }
 
 @media (max-width: 900px) {
   header nav ul {

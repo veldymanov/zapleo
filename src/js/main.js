@@ -1,65 +1,3 @@
-/**
-* Load image function
-*/
-function loadImage(target){
-    let lazySrcs = target.querySelectorAll('.js-lazy-src');
-    let lazyImgs = target.querySelectorAll('.js-lazy-img');
-    lazySrcs.forEach(lazySrc => lazySrc.srcset = lazySrc.getAttribute('data-srcset'));
-    lazyImgs.forEach(lazyImg => lazyImg.src = lazyImg.getAttribute('data-src'));
-}
-
-/**
-* Filter container height function
-*/
-function filterHeight(){
-	let totalHeight = 0,
-		averageHeight = 0,
-		totalWidth = 0;
-
-	let elsWidth = [],
-		elsHeight = [];
-
-	//all filter's elements heights and widths
-	//Can be only one ".js-custom-items" per page
-	let filterElements = document.querySelectorAll(".js-custom-items .js-custom-item");
-	for (let item of filterElements) {
-		let style = window.getComputedStyle(item);
-    	let marginTop = parseInt(style.getPropertyValue('margin-top'), 10);
-    	let marginBottom = parseInt(style.getPropertyValue('margin-bottom'), 10);
-    	let marginRight = parseInt(style.getPropertyValue('margin-right'), 10);
-    	let marginLeft = parseInt(style.getPropertyValue('margin-left'), 10);
-
-		elsWidth.push(item.offsetWidth  + marginRight + marginLeft);
-		elsHeight.push(item.offsetHeight + marginTop + marginBottom);
-	}
-
-	let filterContainer = document.querySelector(".js-custom-items");
-	//make full height
-	filterContainer.style.height = 'auto';
-
-	//get full height (and width)
-	totalHeight += filterContainer.offsetHeight;
-	totalWidth += filterContainer.offsetWidth;
-
-	//Max array element
-	let maxElHeight = Math.max(...elsHeight);
-	//Choose max between averageHeight and max element height
-	averageHeight = Math.max(Math.ceil(totalHeight / Math.floor( totalWidth / Math.max(...elsWidth) )), maxElHeight);
-
-	filterContainer.style.height = averageHeight + 'px';
-
-	//increase height to fit all elements horizontally (flexbox)
-	let limit = 0;
-	while(filterContainer.scrollWidth > filterContainer.offsetWidth){
-		averageHeight += 20;
-		filterContainer.style.height = averageHeight + 'px';
-
-		if ( limit > 300 ) {break}
-		limit++;
-	}
-	console.log(limit);
-}
-
 document.addEventListener("DOMContentLoaded", function(event) {
   /**
   * Calculating <main> margin for footer
@@ -234,48 +172,104 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	/**
 	* Images lazy loading
 	*/
-	// Get all of the images that are marked up to lazy load
-	let imgParents = document.querySelectorAll('.js-lazy-load');
+  const images = {};
+    images.parents = document.querySelectorAll('.js-lazy-load');
+    images.lazyImages = document.querySelectorAll('.js-lazy-img');
 	const config = {
 	    root: null,
 	    rootMargin: '0px 0px 0px 0px',
 	    threshold: [0.0]
-	};
+  };
 
-	// If we have support for intersection observer
-	if (!('IntersectionObserver' in window)) {
-	    console.log('IntersectionObserver is not supported');
-	    imgParents.forEach(imgParent => loadImage(imgParent));
-	} else {
-	    console.log('IntersectionObserver started');
+  // Switch off loading spinner
+  images.lazyImages.forEach( (lazyImg) =>
+    lazyImg.addEventListener('load', function(){
+     const spinner = this.closest('.js-custom-item').querySelector('.js-pic-loading');
+     if (spinner) { spinner.style.display = 'none'; }
+    })
+  )
 
-	    // The observer for the images on the page
-	    let observer = new IntersectionObserver(onIntersection, config);
-	    imgParents.forEach(imgParent => observer.observe(imgParent));
+  // If we don't have support for intersection observer (or we are on desktop)
+	if ( !('IntersectionObserver' in window) ) {
+    console.log('IntersectionObserver is not supported');
+    images.parents.forEach(imgParent => loadImage(imgParent));
+	} else { // if we are on mobile
+    console.log('IntersectionObserver started');
+
+    let observer = new IntersectionObserver(onIntersection, config);
+    images.parents.forEach(imgParent => observer.observe(imgParent));
 
 		function onIntersection(entries) {
-			// Loop through the entries
 			entries.forEach( entry => {
-				// Are we in viewport?
-				if(entry.intersectionRatio > 0.0) {
+				if(entry.intersectionRatio > 0.0) { // Are we in viewport?
 					// Stop watching and load image
 					observer.unobserve(entry.target);
 					loadImage(entry.target);
-
-			        //recalculate filter container height for 'flex-direction: column'
-					if( document.querySelector('.js-column') ){
-			        	filterHeight();
-						entry.target.querySelector('.js-lazy-img').addEventListener('load', function(){
-							filterHeight();
-						})
-					}
-					//Show picture
-					//entry.target.querySelectorAll('picture')[0].classList.remove('hidden');
 				} else {
-					//Hide picture
+					// Hide picture
 					//entry.target.querySelectorAll('picture')[0].classList.add('hidden');
 				}
 			});
 		}
 	}
 });
+
+
+/**
+* Module functions
+*/
+function loadImage(target){
+  let lazySrcs = target.querySelectorAll('.js-lazy-src');
+  let lazyImgs = target.querySelectorAll('.js-lazy-img');
+  lazySrcs.forEach(lazySrc => lazySrc.srcset = lazySrc.getAttribute('data-srcset'));
+  lazyImgs.forEach(lazyImg => lazyImg.src = lazyImg.getAttribute('data-src'));
+}
+
+function filterHeight(){
+  let totalHeight = 0,
+    averageHeight = 0,
+    totalWidth = 0;
+
+  let elsWidth = [],
+    elsHeight = [];
+
+  //all filter's elements heights and widths
+  //Can be only one ".js-custom-items" per page
+  let filterElements = document.querySelectorAll(".js-custom-items .js-custom-item");
+  for (let item of filterElements) {
+    let style = window.getComputedStyle(item);
+      let marginTop = parseInt(style.getPropertyValue('margin-top'), 10);
+      let marginBottom = parseInt(style.getPropertyValue('margin-bottom'), 10);
+      let marginRight = parseInt(style.getPropertyValue('margin-right'), 10);
+      let marginLeft = parseInt(style.getPropertyValue('margin-left'), 10);
+
+    elsWidth.push(item.offsetWidth  + marginRight + marginLeft);
+    elsHeight.push(item.offsetHeight + marginTop + marginBottom);
+  }
+
+  let filterContainer = document.querySelector(".js-custom-items");
+  //make full height
+  filterContainer.style.height = 'auto';
+
+  //get full height (and width)
+  totalHeight += filterContainer.offsetHeight;
+  totalWidth += filterContainer.offsetWidth;
+
+  //Max array element
+  let maxElHeight = Math.max(...elsHeight);
+  //Choose max between averageHeight and max element height
+  averageHeight = Math.max(Math.ceil(totalHeight / Math.floor( totalWidth / Math.max(...elsWidth) )), maxElHeight);
+
+  filterContainer.style.height = averageHeight + 'px';
+
+  //increase height to fit all elements horizontally (flexbox)
+  let limit = 0;
+  while(filterContainer.scrollWidth > filterContainer.offsetWidth){
+    averageHeight += 20;
+    filterContainer.style.height = averageHeight + 'px';
+
+    if ( limit > 300 ) {break}
+    limit++;
+  }
+  console.log(limit);
+}
