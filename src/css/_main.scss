@@ -106,6 +106,7 @@ html, body {
 	font-size: calcFluidSize(15, 20, 320, 1920); /* Fluid font-size */
 	height: auto;
   min-width: 320px;
+  position: relative;
 	@extend %padd-marg;
 }
 

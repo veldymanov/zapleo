@@ -16,22 +16,23 @@ display: inline-flex;
 // Footer
 .footer {
 	color: transparent;
-	padding: 7.6vmin 14% 5.8vmin;
+	padding: 7.6vmin 0 5.8vmin 0;
 	width: 100%;
 	background: #3c3a3a;
 	position: fixed;
 	bottom: 0;
 	z-index: -1;
-	@media (max-width:1100px) {padding: 7vmin 5% 5vmin;}
-	@media (max-width:480px) {padding-left: 0; padding-right: 0;}
+	@media (max-width:1100px) { padding: 7vmin 0 5vmin 0; }
+	@media (max-width:480px) { padding-left: 0; padding-right: 0; }
 	>ul {
 		display: flex;
 		justify-content: space-between;
-		flex-wrap: wrap;
-		overflow: hidden; //mobile, line bug removal
-		@media (max-width: 768px) {
-			justify-content: center;
-		}
+    flex-wrap: wrap;
+    margin: 0 auto;
+    overflow: hidden; //mobile, line bug removal
+    width: 72%;
+    @media (max-width:1100px) { width: 90%; }
+		@media (max-width: 768px) {	justify-content: center; }
 	}
 	p {
 		@extend %padd-marg;

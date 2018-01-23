@@ -173,8 +173,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	* Images lazy loading
 	*/
   const images = {};
-    images.parents = document.querySelectorAll('.js-lazy-load');
-    images.lazyImages = document.querySelectorAll('.js-lazy-img');
+  images.parents = document.querySelectorAll('.js-lazy-load');
+  images.lazyImages = document.querySelectorAll('.js-lazy-img');
 	const config = {
 	    root: null,
 	    rootMargin: '0px 0px 0px 0px',
@@ -189,13 +189,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
     })
   )
 
-  // If we don't have support for intersection observer (or we are on desktop)
+  // If we don't have support for intersection observer
 	if ( !('IntersectionObserver' in window) ) {
     console.log('IntersectionObserver is not supported');
     images.parents.forEach(imgParent => loadImage(imgParent));
-	} else { // if we are on mobile
+	} else {
     console.log('IntersectionObserver started');
-
     let observer = new IntersectionObserver(onIntersection, config);
     images.parents.forEach(imgParent => observer.observe(imgParent));
 

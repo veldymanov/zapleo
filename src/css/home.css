@@ -275,7 +275,8 @@ html, body {
   font-size: calc( 0.00313 * 100vw + 14px);
   /* Fluid font-size */
   height: auto;
-  min-width: 320px; }
+  min-width: 320px;
+  position: relative; }
 
 .clearfix::after {
   content: "";
@@ -371,7 +372,7 @@ h1, h2 {
 
 .footer {
   color: transparent;
-  padding: 7.6vmin 14% 5.8vmin;
+  padding: 7.6vmin 0 5.8vmin 0;
   width: 100%;
   background: #3c3a3a;
   position: fixed;
@@ -379,7 +380,7 @@ h1, h2 {
   z-index: -1; }
   @media (max-width: 1100px) {
     .footer {
-      padding: 7vmin 5% 5vmin; } }
+      padding: 7vmin 0 5vmin 0; } }
   @media (max-width: 480px) {
     .footer {
       padding-left: 0;
@@ -388,7 +389,12 @@ h1, h2 {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    overflow: hidden; }
+    margin: 0 auto;
+    overflow: hidden;
+    width: 72%; }
+    @media (max-width: 1100px) {
+      .footer > ul {
+        width: 90%; } }
     @media (max-width: 768px) {
       .footer > ul {
         justify-content: center; } }

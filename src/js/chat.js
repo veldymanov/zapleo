@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const user = {};
   elems.body = document.querySelector('body');
   elems.html = document.querySelector('html');
-  elems.messenger = document.querySelector('.messenger');
+  elems.footer = document.querySelector('.js-footer');
+  elems.messenger = document.querySelector('.js-messenger');
   elems.rolledUp = document.querySelector('.js-rolled-up');
   elems.expanded = document.querySelector('.js-expanded');
   elems.chatCaption = document.querySelector('.js-chat-caption');
@@ -80,11 +81,15 @@ document.addEventListener('DOMContentLoaded', function() {
   elems.expanded.addEventListener('mouseenter', function() {
     const bodyWidth = elems.body.offsetWidth;
     elems.body.style.cssText = `overflow-y: hidden; width: ${bodyWidth}px;`;
-    elems.messenger.style.right = elems.msgrOriginalRight + ( elems.html.offsetWidth - bodyWidth) + 'px';
+  //  elems.html.style.cssText = `width: ${bodyWidth}px;`;
+    elems.footer.style.width = `${bodyWidth}px`;
+    elems.messenger.style.right = elems.msgrOriginalRight + ( window.innerWidth - bodyWidth ) + 'px';
   })
 
   elems.expanded.addEventListener('mouseleave', function() {
     elems.body.style.cssText = `overflow-y: auto; width: auto;`;
+  //  elems.html.style.cssText = `width: auto;`;
+    elems.footer.style.width = `100%`;
     elems.messenger.style.right = elems.msgrOriginalRight + 'px';
   })
 
