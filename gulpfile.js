@@ -121,7 +121,7 @@ gulp.task('url:adjust', ['build:copy'], () =>
 
 //minify scripts
 gulp.task('scripts:minify', ['url:adjust'], () =>
-  gulp.src(['docs/**/*.js', '!docs/**/chat.js'])
+  gulp.src(['docs/**/*.js', '!docs/**/chat-socket.js'])
     .pipe(plumber())
     .pipe(babel({
         presets: ['env']
