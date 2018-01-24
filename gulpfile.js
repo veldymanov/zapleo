@@ -131,7 +131,7 @@ gulp.task('scripts:minify', ['url:adjust'], () =>
 );
 
 // inline css, js, svg
-gulp.task('inline', ['scripts:minify'], () =>
+gulp.task('inline', ['url:adjust'], () =>
   gulp.src('docs/*.html')
     .pipe(inline({
       base: 'docs',
