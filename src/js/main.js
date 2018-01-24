@@ -64,10 +64,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	* Set filter (Only one one ".js-custom-items" per page!!!!)
 	*/
 	if (document.querySelector('.js-custom-items')) {
-		let figures = document.querySelectorAll(".js-custom-item figure");
-		let pictures = document.querySelectorAll(".js-custom-item picture");
-		let customItems = document.querySelectorAll(".js-custom-item");
-	  let dataTerms = document.querySelectorAll(".js-product-filter .js-data-term");
+		const figures = document.querySelectorAll(".js-custom-item figure");
+		const pictures = document.querySelectorAll(".js-custom-item picture");
+		const customItems = document.querySelectorAll(".js-custom-item");
+	  const dataTerms = document.querySelectorAll(".js-product-filter .js-data-term");
 
 		//calculate filter container height for 'flex-direction: column'
 		if( document.querySelector('.js-column') ){
@@ -83,15 +83,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 			//Stop 'hover' by touch
 	    document.querySelectorAll('.underline').forEach( item => {
-				item.addEventListener('mouseenter', () => item.style.color = 'rgb(138, 138, 138)');
+				item.addEventListener('mouseenter', function(){ item.style.color = 'rgb(138, 138, 138)'});
 			})
 			figures.forEach( figure => {
-				figure.addEventListener('mouseenter', () => figure.querySelector('figcaption').style.zIndex = "-1");
+				figure.addEventListener('mouseenter', function(){ figure.querySelector('figcaption').style.zIndex = "-1" });
 			})
 
 			//Run touch events listeners
 			pictures.forEach( picture => {
-				picture.addEventListener('click', event => {
+				picture.addEventListener('click', function(event) {
 					event.preventDefault();
 					figures.forEach( figure => figure.classList.remove("hovered") );
 					picture.closest('figure').classList.add("hovered");

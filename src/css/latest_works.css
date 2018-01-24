@@ -60,6 +60,8 @@
       overflow: hidden;
       position: relative;
       width: 30%; }
+      .content .custom-items .custom-item img {
+        display: block; }
       .content .custom-items .custom-item figure picture {
         display: block;
         z-index: 1; }

@@ -65,7 +65,10 @@
       margin-bottom: 10px;
       overflow: hidden;
       position: relative;
-			width: 30%;
+      width: 30%;
+      img {
+        display: block;
+      }
 			figure {
 				picture {
 					display: block;
