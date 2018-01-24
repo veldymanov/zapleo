@@ -12,7 +12,10 @@
 
 header {
 	position: absolute;
-	top: 0;
+  top: 0;
+  .underline {
+    color: $orange;
+  }
 }
 
 /* Main content */
