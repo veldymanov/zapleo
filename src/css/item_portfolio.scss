@@ -1,4 +1,5 @@
-@import "main", "mob-menu";
+//@import "main", "mob-menu";
+@import "vars";
 
 .item {
 	width: 100%;
@@ -23,7 +24,7 @@
 			a {
 				color: rgb(56, 120, 148);
 				display: block;
-				
+
 			}
 			a:hover {
 				text-decoration: underline;
@@ -31,7 +32,7 @@
 		}
 		@media (min-width: 930px) {
 			margin-right: 5%;
-			width: 426px; 
+			width: 426px;
 		}
 	}
 }

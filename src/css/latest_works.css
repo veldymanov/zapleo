@@ -1,0 +1,135 @@
+.content figure, .content figcaption h3 {
+  padding: 0;
+  margin: 0; }
+
+.content figcaption .link, .content figcaption .descr {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden; }
+
+.content {
+  text-align: center; }
+  .content figure {
+    position: relative;
+    padding: 1.67vmin 3.5vmin;
+    margin: 0 auto; }
+    .content figure:hover > figcaption {
+      opacity: 1; }
+    .content figure img {
+      width: 100%;
+      height: auto; }
+  .content figcaption {
+    align-items: center;
+    background-color: rgba(243, 243, 243, 0.9);
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    transition: opacity 250ms ease-in-out; }
+    .content figcaption h3 {
+      font-size: calc( 0.01125 * 100vw + 12.4px); }
+    .content figcaption .link {
+      font-size: calc( 0.00375 * 100vw + 12.8px);
+      color: #fff;
+      display: inline-block;
+      max-width: 100%;
+      background: #fcb117;
+      padding: 1% 4.2%; }
+    .content figcaption .descr {
+      max-width: 100%;
+      font-size: calc( 0.0025 * 100vw + 13.2px); }
+    .content figcaption h5 {
+      text-transform: uppercase;
+      font-size: calc( 0.005 * 100vw + 12.4px); }
+  .content .custom-items {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: auto; }
+    .content .custom-items .custom-item {
+      background: #ececec;
+      height: calc(88vw * 0.3 * (243.719/442.469));
+      margin-bottom: 10px;
+      overflow: hidden;
+      position: relative;
+      width: 30%; }
+      .content .custom-items .custom-item figure picture {
+        display: block;
+        z-index: 1; }
+      .content .custom-items .custom-item figure figcaption {
+        z-index: -1; }
+      .content .custom-items .custom-item figure:hover > figcaption {
+        z-index: 1; }
+      .content .custom-items .custom-item figure.hovered > figcaption {
+        opacity: 1;
+        z-index: 1 !important; }
+      @media (max-width: 1150px) {
+        .content .custom-items .custom-item {
+          height: calc(88vw * 0.45 * (243.719/442.469));
+          width: 45%; } }
+      @media (max-width: 736px) {
+        .content .custom-items .custom-item {
+          height: calc(88vw * 0.7 * (243.719/442.469));
+          width: 70%; } }
+      @media (max-width: 650px) {
+        .content .custom-items .custom-item {
+          height: calc(88vw * 0.9 * (243.719/442.469));
+          width: 90%; } }
+      @media (max-width: 480px) {
+        .content .custom-items .custom-item {
+          height: calc(88vw * 1 * (243.719/442.469));
+          width: 100%; } }
+
+.pic-loading {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+.pic-loading .logo {
+  /* this way asset gets processed by webpack */
+  background-size: contain;
+  height: 100px;
+  width: 100px; }
+
+.pic-loading .spinner {
+  animation: rotate 2s linear infinite;
+  height: 150px;
+  margin: auto;
+  position: absolute;
+  transform-origin: center center;
+  width: 150px; }
+
+.pic-loading .spinner .path {
+  animation: dash 1.5s ease-in-out infinite;
+  stroke: #f8a90d;
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  stroke-linecap: round; }
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg); } }
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0; }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px; }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px; } }

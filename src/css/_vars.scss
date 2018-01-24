@@ -10,3 +10,50 @@ $facebook: #3b5998;
 $linkedIn: #0077b5;
 $instagram: #CE2A51;
 $upwork: #37a000;
+
+%v-align {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+%padd-marg {
+	padding: 0;
+	margin: 0;
+}
+
+%nowrap {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+%form_element {
+	font-family: inherit;
+	border: none;
+	outline: none;
+	background: none;
+	padding: 0;
+}
+
+%pointer {
+	cursor: pointer;
+}
+
+%dispnone {
+	display: none;
+}
+
+@function calcFluidSize($f-min, $f-max, $v-min, $v-max, $units: px) {
+  $k: ($f-max - $f-min)/($v-max - $v-min);
+  $b: $f-min - $k * $v-min;
+  $b: $b + $units;
+  @return calc( #{$k} * 100vw + #{$b} );
+}
+
+@mixin textarea($lh:48px) {
+	height: $lh*6;
+	line-height: $lh;
+	background: linear-gradient(to left, $white 0, transparent 0) repeat-y local 0 0/100% 100%,
+				linear-gradient(to right, $white 0, transparent 0) repeat-y local 0 0/ 100% 100%,
+				linear-gradient($white ($lh - 1), $portfolio_bg ($lh - 1), $portfolio_bg $lh, $white $lh) repeat-y local 0 0/ 100% $lh;
+}

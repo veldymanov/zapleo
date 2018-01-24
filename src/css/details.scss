@@ -1,3 +1,5 @@
+@import "vars";
+
 %linea {
 &::before {
 	content:"";
@@ -13,7 +15,7 @@
 	@extend %linea;
 	background: url(../images/linea/calendar.z.svg) no-repeat 0 0/cover;
 	}
-} 
+}
 
 .category {
 	&::before {

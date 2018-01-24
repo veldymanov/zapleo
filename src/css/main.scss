@@ -1,4 +1,4 @@
-@import 'vars', 'chat';
+@import 'vars';
 
 @font-face {
 	font-family: 'CenturyGothicBold';
@@ -26,53 +26,6 @@
 		url("../fonts/functionpro_medium.woff") format("woff"),
 		url("../fonts/functionpro_medium.woff2") format("woff2");
 	unicode-range: U+20-126, U+161-255, U+338-339, U+376, U+710, U+732, U+2019, U+201C-201E, U+8192-8202, U+8208-8212, U+8216-8218, U+8220-8222, U+8226, U+8230, U+8239, U+8249-8250, U+8287, U+8364, U+8482, U+9724, U+64257-64258, U+FFEB;
-}
-
-%v-align {
-	display: table-cell;
-	vertical-align: middle;
-}
-
-%padd-marg {
-	padding: 0;
-	margin: 0;
-}
-
-%nowrap {
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	overflow: hidden;
-}
-
-%form_element {
-	font-family: inherit;
-	border: none;
-	outline: none;
-	background: none;
-	padding: 0;
-}
-
-%pointer {
-	cursor: pointer;
-}
-
-%dispnone {
-	display: none;
-}
-
-@function calcFluidSize($f-min, $f-max, $v-min, $v-max, $units: px) {
-  $k: ($f-max - $f-min)/($v-max - $v-min);
-  $b: $f-min - $k * $v-min;
-  $b: $b + $units;
-  @return calc( #{$k} * 100vw + #{$b} );
-}
-
-@mixin textarea($lh:48px) {
-	height: $lh*6;
-	line-height: $lh;
-	background: linear-gradient(to left, $white 0, transparent 0) repeat-y local 0 0/100% 100%,
-				linear-gradient(to right, $white 0, transparent 0) repeat-y local 0 0/ 100% 100%,
-				linear-gradient($white ($lh - 1), $portfolio_bg ($lh - 1), $portfolio_bg $lh, $white $lh) repeat-y local 0 0/ 100% $lh;
 }
 
 // scroll bar

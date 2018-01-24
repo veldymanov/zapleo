@@ -1,4 +1,5 @@
-@import "main", "mob-menu";
+//@import "main", "mob-menu";
+@import "vars";
 
 .content {
 	li:nth-child(even) {
@@ -48,7 +49,7 @@
 		display: block;
 		filter: grayscale(100%);
 		transition: all .8s cubic-bezier(0.65, 0.05, 0.36, 1);
-		width: 100%;	
+		width: 100%;
 		z-index:1;
 		@media (max-width: 1180px) {
 			margin-bottom: 4vmin;

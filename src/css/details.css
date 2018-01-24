@@ -1,0 +1,17 @@
+.date::before, .category::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin: 0 10px -2px 0; }
+
+.date::before {
+  background: url(../images/linea/calendar.z.svg) no-repeat 0 0/cover; }
+
+.category::before {
+  background: url(../images/linea/folder_multiple.z.svg) no-repeat 0 0/cover; }
+
+.category .underline {
+  color: #fcb117; }
+  .category .underline::after {
+    background-color: #fcb117; }

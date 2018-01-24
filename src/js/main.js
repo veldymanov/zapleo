@@ -184,8 +184,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
   // Switch off loading spinner
   images.lazyImages.forEach( (lazyImg) =>
     lazyImg.addEventListener('load', function(){
-     const spinner = this.closest('.js-custom-item').querySelector('.js-pic-loading');
-     if (spinner) { spinner.style.display = 'none'; }
+      const customItem = this.closest('.js-custom-item');
+      if (customItem){
+        const spinner = customItem.querySelector('.js-pic-loading');
+        if (spinner) { spinner.style.display = 'none'; }
+      }
     })
   )
 
