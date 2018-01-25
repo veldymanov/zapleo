@@ -23,10 +23,16 @@
       display: block; }
     .item aside p a:hover {
       text-decoration: underline; }
+  .item aside div {
+    height: 88vw;
+    max-height: 420px;
+    position: relative; }
   @media (min-width: 930px) {
     .item aside {
       margin-right: 5%;
-      width: 426px; } }
+      width: 20%; }
+      .item aside div {
+        height: 17.6vw; } }
 
 .customer {
   display: block;
@@ -64,18 +70,27 @@
     text-align: center;
     width: 50px; }
 
-@media (min-width: 930px) {
-  .mocaps {
-    max-width: 75%; } }
-
-.mocaps ul {
-  display: flex;
-  flex-wrap: wrap; }
-
-.mocaps li {
-  flex-basis: 50%; }
-  @media (max-width: 750px) {
-    .mocaps li {
-      flex-basis: 100%; } }
-  .mocaps li img {
-    width: 100%; }
+.mocaps {
+  width: 100%; }
+  .mocaps ul {
+    display: flex;
+    flex-wrap: wrap; }
+  .mocaps li {
+    flex-basis: 50%;
+    height: calc( 88vw * 0.5 * (272 / 500));
+    overflow: hidden;
+    position: relative; }
+    @media (max-width: 750px) {
+      .mocaps li {
+        flex-basis: 100%;
+        height: calc( 88vw * (272 / 500)); } }
+    .mocaps li picture {
+      display: block; }
+      .mocaps li picture img {
+        display: block;
+        width: 100%; }
+  @media (min-width: 930px) {
+    .mocaps {
+      width: 75%; }
+      .mocaps li {
+        height: calc( 88vw * 0.75 * 0.5 * (272 / 500)); } }

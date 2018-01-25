@@ -114,7 +114,7 @@ gulp.task('build:copy', ['build:cleanfolder'], () =>
 gulp.task('url:adjust', ['build:copy'], () =>
   gulp.src('docs/css/*.css')
   .pipe(urlAdjuster({
-    replace:  ['../','/'], // for github pages: "replace:  ['../','']"
+    replace:  ['../',''], // for github pages: "replace:  ['../','']"
   }))
   .pipe(gulp.dest('docs/css/'))
 );
@@ -131,7 +131,7 @@ gulp.task('scripts:minify', ['url:adjust'], () =>
 );
 
 // inline css, js, svg
-gulp.task('inline', ['url:adjust'], () =>
+gulp.task('inline', ['scripts:minify'], () =>
   gulp.src('docs/*.html')
     .pipe(inline({
       base: 'docs',
