@@ -1,7 +1,7 @@
 // Show text on scroll
 window.addEventListener('scroll', function(){
 	let tiles = inWindow('.js-tile');
-	tiles.forEach( tile => tile.classList.add("showtext"));
+	tiles.forEach( tile => tile.classList.add('showtext'));
 });
 
 function inWindow(s){
@@ -12,9 +12,9 @@ function inWindow(s){
 	currentEls.forEach( el => {
 		let elTop = el.getBoundingClientRect();
 
-		if( ( windowHeight - elTop.top > 0.8 * elTop.height ) && !el.classList.contains("showtext") ) {
+		if( ( windowHeight - elTop.top > 0.8 * elTop.height ) && !el.classList.contains('showtext') ) {
 			result.push(el);
-		}	
+		}
 	});
 
   return result;
