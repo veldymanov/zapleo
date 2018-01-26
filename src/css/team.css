@@ -91,7 +91,7 @@
   background-color: #fff;
   bottom: 5%;
   display: none;
-  overflow: hidden;
+  overflow: auto;
   position: fixed;
   right: 20%;
   top: 5%;
@@ -112,7 +112,7 @@
       .popup-resume .pdf p a {
         color: blue;
         display: block;
-        padding-top: 30%;
+        padding-top: 30px;
         text-decoration: underline; }
   @media (max-width: 680px) {
     .popup-resume {

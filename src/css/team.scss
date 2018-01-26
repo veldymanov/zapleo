@@ -111,7 +111,7 @@
 //  filter: progid: none !important;
 //  -webkit-filter: none !important;
 //  filter: none !important;
-	overflow: hidden;
+	overflow: auto;
   position: fixed;
   right: 20%;
   top: 5%;
@@ -132,7 +132,7 @@
       a {
         color: blue;
         display: block;
-        padding-top: 30%;
+        padding-top: 30px;
         text-decoration: underline;
       }
     }
