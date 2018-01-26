@@ -91,15 +91,16 @@
   background-color: #fff;
   bottom: 5%;
   display: none;
-  filter: progid:none !important;
-  -webkit-filter: none !important;
-  filter: none !important;
-  width: 60%;
   overflow: hidden;
   position: fixed;
   right: 20%;
   top: 5%;
+  width: 60%;
   z-index: 100; }
+  .popup-resume .pdf {
+    left: 0;
+    position: absolute;
+    top: 0; }
   @media (max-width: 680px) {
     .popup-resume {
       right: 10%;

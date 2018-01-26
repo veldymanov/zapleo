@@ -221,8 +221,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 * Module functions
 */
 function loadImage(target){
-  let lazySrcs = target.querySelectorAll('.js-lazy-src');
-  let lazyImgs = target.querySelectorAll('.js-lazy-img');
+  const lazySrcs = target.querySelectorAll('.js-lazy-src');
+  const lazyImgs = target.querySelectorAll('.js-lazy-img');
   lazySrcs.forEach(lazySrc => lazySrc.srcset = lazySrc.getAttribute('data-srcset'));
   lazyImgs.forEach(lazyImg => lazyImg.src = lazyImg.getAttribute('data-src'));
 }

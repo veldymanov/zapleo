@@ -331,7 +331,7 @@ document.addEventListener('DOMContentLoaded', function() {
     scrolling();
   })
 
-  let socket = io(':{!! env('WS_PORT','') !!}');
+//  let socket = io(':{!! env('WS_PORT','') !!}');
 
   /**
    * Authentification form
@@ -343,7 +343,7 @@ document.addEventListener('DOMContentLoaded', function() {
     elems.expanded.classList.add('authorized');
   }
   let uid = getCookie('chat_uid');
-
+/*
   socket.on('connect',function () {
     if(uid == undefined) {
       uid = socket.id;
@@ -369,7 +369,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     gotoBottom('.js-chat');
   });
-
+*/
   // name button: active/passive
   elems.auth.addEventListener('keyup', function(e) {
       this.value ? elems.nameBtnSvg.classList.add('active') : elems.nameBtnSvg.classList.remove('active');
