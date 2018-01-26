@@ -101,6 +101,19 @@
     left: 0;
     position: absolute;
     top: 0; }
+    .popup-resume .pdf p {
+      background-color: #aaa;
+      bottom: 0;
+      left: 0;
+      padding-top: 30%;
+      position: absolute;
+      right: 0;
+      top: 0; }
+      .popup-resume .pdf p a {
+        color: blue;
+        display: block;
+        padding-top: 30%;
+        text-decoration: underline; }
   @media (max-width: 680px) {
     .popup-resume {
       right: 10%;
