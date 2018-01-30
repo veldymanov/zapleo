@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/top.css">
     <link rel="stylesheet" href="css/blog.css">
     <link rel="stylesheet" href="css/chat.css">
+    <link rel="stylesheet" href="css/spinner.css">
 		<title>Zapleo - Blog</title>
 	</head>
 	<body>
@@ -68,15 +69,23 @@
 					</article>
 				</div>
 				<div class="content">
-					<ul>
+					<ul class="custom-items js-custom-items">
 						<!-- First post -->
-						<li>
+						<li class="custom-item js-custom-item">
 							<figure>
 								<div class="leftbox">
-									<picture>
-										<source type="image/webp" srcset="images/blog/blog-post-1-335x235.z.webp">
-										<img src="images/blog/blog-post-1-335x235.z.jpg" alt="blog post 1 image">
-									</picture>
+									<picture class="js-lazy-load">
+                    <source class="js-lazy-src"  type="image/webp"
+                        data-srcset="images/blog/blog-post-1-335x235.z.webp">
+										<img class="js-lazy-img" data-src="images/blog/blog-post-1-335x235.z.jpg" />
+                  </picture>
+                  <!-- Photo loading spinner -->
+                  <div class="pic-loading js-pic-loading">
+                    <div class="logo"></div>
+                    <svg class="spinner" viewBox="25 25 50 50">
+                      <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+                    </svg>
+                  </div>
 								</div>
 								<figcaption class="post">
 									<h2>
@@ -89,16 +98,24 @@
 											<a class="underline" href="https://demo.kaliumtheme.com/main/category/everyday-life/">Everyday Life</a>
 									</div>
 								</figcaption>
-							</figure>
+              </figure>
 						</li>
 						<!-- Second post -->
-						<li>
+						<li class="custom-item js-custom-item">
 							<figure>
 								<div class="leftbox">
-									<picture>
-										<source type="image/webp" srcset="images/blog/blog-post-2-335x235.z.webp">
-										<img src="images/blog/blog-post-2-335x235.z.jpg" alt="blog post 2 image">
-									</picture>
+									<picture class="js-lazy-load">
+                    <source class="js-lazy-src" type="image/webp"
+                        data-srcset="images/blog/blog-post-2-335x235.z.webp">
+                    <img class="js-lazy-img" data-src="images/blog/blog-post-2-335x235.z.jpg" />
+                  </picture>
+                  <!-- Photo loading spinner -->
+                  <div class="pic-loading js-pic-loading">
+                    <div class="logo"></div>
+                    <svg class="spinner" viewBox="25 25 50 50">
+                      <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+                    </svg>
+                  </div>
 								</div>
 								<figcaption class="post">
 									<h2>
@@ -114,15 +131,21 @@
 							</figure>
 						</li>
 						<!-- Audio Post -->
-						<li>
+						<li class="custom-item js-custom-item">
 							<figure>
 								<div class="leftbox">
 									<picture class="js-lazy-load">
 										<source class="js-lazy-src" type="image/webp"
-											data-srcset="images/blog/blog-post-3-335x235.z.webp">
-										<img class="js-lazy-img"
-											data-src="images/blog/blog-post-3-335x235.z.jpg" alt="blog-post 3 image">
-									</picture>
+											  data-srcset="images/blog/blog-post-3-335x235.z.webp">
+										<img class="js-lazy-img" data-src="images/blog/blog-post-3-335x235.z.jpg" />
+                  </picture>
+                  <!-- Photo loading spinner -->
+                  <div class="pic-loading js-pic-loading">
+                    <div class="logo"></div>
+                    <svg class="spinner" viewBox="25 25 50 50">
+                      <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+                    </svg>
+                  </div>
 								</div>
 								<figcaption class="post">
 									<h2>
@@ -140,15 +163,21 @@
 							</figure>
 						</li>
 						<!-- Image Gallery Post -->
-						<li>
+						<li class="custom-item js-custom-item">
 							<figure>
 								<div class="leftbox">
 									<picture class="js-lazy-load">
 										<source class="js-lazy-src" type="image/webp"
-											data-srcset="images/blog/blog-post-4-335x235.z.webp">
-										<img class="js-lazy-img"
-											data-src="images/blog/blog-post-4-335x235.z.png" alt="blog post 4 image">
-									</picture>
+											  data-srcset="images/blog/blog-post-4-335x235.z.webp">
+										<img class="js-lazy-img"	data-src="images/blog/blog-post-4-335x235.z.png" />
+                  </picture>
+                  <!-- Photo loading spinner -->
+                  <div class="pic-loading js-pic-loading">
+                    <div class="logo"></div>
+                    <svg class="spinner" viewBox="25 25 50 50">
+                      <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+                    </svg>
+                  </div>
 								</div>
 								<figcaption class="post">
 									<h2>
@@ -164,15 +193,21 @@
 							</figure>
 						</li>
 						<!-- External Link Post -->
-						<li>
+						<li class="custom-item js-custom-item">
 							<figure>
 								<div class="leftbox">
 									<picture class="js-lazy-load">
 										<source class="js-lazy-src" type="image/webp"
-											data-srcset="images/blog/blog-post-2-335x235.z.webp">
-										<img class="js-lazy-img"
-											data-src="images/blog/blog-post-2-335x235.z.png" alt="blog post 2 image">
-									</picture>
+											  data-srcset="images/blog/blog-post-2-335x235.z.webp">
+										<img class="js-lazy-img" data-src="images/blog/blog-post-2-335x235.z.png" />
+                  </picture>
+                  <!-- Photo loading spinner -->
+                  <div class="pic-loading js-pic-loading">
+                    <div class="logo"></div>
+                    <svg class="spinner" viewBox="25 25 50 50">
+                      <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+                    </svg>
+                  </div>
 								</div>
 								<figcaption class="post">
 									<h2>
@@ -190,7 +225,7 @@
 					</ul>
 					<!-- Sidebar -->
 					<aside class="sidebar">
-					<!-- Search -->
+					  <!-- Search -->
 						<form method="get" class="search" action="#">
 							<label>
 								<input type="search" name="search" placeholder="Search site...">
@@ -198,66 +233,130 @@
 							<button type="submit" class="go">GO</button>
 						</form>
 						<h3>Instagram</h3>
-					<!-- Instagram thumbs -->
+				  	<!-- Instagram thumbs -->
 						<ul class="instathumbs">
-							<li>
+							<li class="js-custom-item">
 								<a href="http://instagram.com/p/BRWPLmhhKwZ/" target="_self">
-									<picture>
-										<source type="image/webp" srcset="images/blog/instagram-1-230x230.z.webp">
-										<img src="images/blog/instagram-1-230x230.z.jpg" alt="instagram 1 image">
+									<picture class="js-lazy-load">
+										<!--source type="image/webp" srcset="images/blog/instagram-1-230x230.z.webp"-->
+										<img class="js-lazy-img" data-src="https://instagram.fhen1-1.fna.fbcdn.net/vp/ff96d18bd02cae0f902e478354e47fc8/5B218823/t51.2885-15/e35/p240x240/21984571_870518726457916_1177664532026228736_n.jpg?ig_cache_key=MTYxMjU5NTA5OTYxMzU5MDcwOA%3D%3D.2" />
 									</picture>
-								</a>
-							<li>
+                </a>
+                <!-- Photo loading spinner -->
+                <div class="pic-loading js-pic-loading">
+                  <div class="logo"></div>
+                  <svg class="spinner" viewBox="25 25 50 50">
+                    <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+                  </svg>
+                </div>
+              </li>
+							<li class="js-custom-item">
 								<a href="http://instagram.com/p/BRWO9zaBxPr/" target="_self">
-									<picture>
-										<source srcset="images/blog/instagram-2-230x230.z.webp">
-										<img src="images/blog/instagram-2-230x230.z.jpg" alt="instagram 2 image">
+									<picture class="js-lazy-load">
+										<!--source srcset="images/blog/instagram-2-230x230.z.webp"-->
+										<img class="js-lazy-img" data-src="images/blog/instagram-2-230x230.z.jpg" />
 									</picture>
-								</a>
-							<li>
+                </a>
+                <!-- Photo loading spinner -->
+                <div class="pic-loading js-pic-loading">
+                  <div class="logo"></div>
+                  <svg class="spinner" viewBox="25 25 50 50">
+                    <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+                  </svg>
+                </div>
+              </li>
+							<li class="js-custom-item">
 								<a href="http://instagram.com/p/BRWO5Iphma2/" target="_self">
-									<picture>
-										<source srcset="images/blog/instagram-3-230x230.z.webp">
-										<img src="images/blog/instagram-3-230x230.z.jpg" alt="instagram 3 image">
+									<picture class="js-lazy-load">
+										<!--source srcset="images/blog/instagram-3-230x230.z.webp"-->
+										<img class="js-lazy-img" data-src="images/blog/instagram-3-230x230.z.jpg" />
 									</picture>
-								</a>
-							<li>
+                </a>
+                <!-- Photo loading spinner -->
+                <div class="pic-loading js-pic-loading">
+                  <div class="logo"></div>
+                  <svg class="spinner" viewBox="25 25 50 50">
+                    <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+                  </svg>
+                </div>
+              </li>
+							<li class="js-custom-item">
 								<a href="http://instagram.com/p/BROuozbB6dM/" target="_self">
-									<picture>
-										<source srcset="images/blog/instagram-4-230x230.z.webp">
-										<img src="images/blog/instagram-4-230x230.z.jpg" alt="instagram 4 image">
+									<picture class="js-lazy-load">
+										<!--source srcset="images/blog/instagram-4-230x230.z.webp"-->
+										<img class="js-lazy-img" data-src="images/blog/instagram-4-230x230.z.jpg" />
 									</picture>
-								</a>
-							<li>
+                </a>
+                <!-- Photo loading spinner -->
+                <div class="pic-loading js-pic-loading">
+                  <div class="logo"></div>
+                  <svg class="spinner" viewBox="25 25 50 50">
+                    <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+                  </svg>
+                </div>
+              </li>
+							<li class="js-custom-item">
 								<a href="http://instagram.com/p/BROuZ1vhoWh/" target="_self">
-									<picture>
-										<source srcset="images/blog/instagram-5-230x230.z.webp">
-										<img src="images/blog/instagram-5-230x230.z.jpg" alt="instagram 5 image">
+									<picture class="js-lazy-load">
+										<!--source srcset="images/blog/instagram-5-230x230.z.webp"-->
+										<img class="js-lazy-img" data-src="images/blog/instagram-5-230x230.z.jpg" />
 									</picture>
-								</a>
-							<li>
+                </a>
+                <!-- Photo loading spinner -->
+                <div class="pic-loading js-pic-loading">
+                  <div class="logo"></div>
+                  <svg class="spinner" viewBox="25 25 50 50">
+                    <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+                  </svg>
+                </div>
+              </li>
+							<li class="js-custom-item">
 								<a href="http://instagram.com/p/BROuDqUh5Ur/" target="_self">
-									<picture>
-										<source srcset="images/blog/instagram-6-230x230.z.webp">
-										<img src="images/blog/instagram-6-230x230.z.jpg" alt="instagram 6 image">
+									<picture class="js-lazy-load">
+										<!--source srcset="images/blog/instagram-6-230x230.z.webp"-->
+										<img class="js-lazy-img" data-src="images/blog/instagram-6-230x230.z.jpg" />
 									</picture>
-								</a>
-							<li>
+                </a>
+                <!-- Photo loading spinner -->
+                <div class="pic-loading js-pic-loading">
+                  <div class="logo"></div>
+                  <svg class="spinner" viewBox="25 25 50 50">
+                    <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+                  </svg>
+                </div>
+              </li>
+							<li class="js-custom-item">
 								<a href="http://instagram.com/p/BRJHHGuhnmh/" target="_self">
-									<picture>
-										<source srcset="images/blog/instagram-7-230x230.z.webp">
-										<img src="images/blog/instagram-7-230x230.z.jpg" alt="instagram 7 image">
+									<picture class="js-lazy-load">
+										<!--source srcset="images/blog/instagram-7-230x230.z.webp"-->
+										<img class="js-lazy-img" data-src="images/blog/instagram-7-230x230.z.jpg" />
 									</picture>
-								</a>
-							<li>
+                </a>
+                <!-- Photo loading spinner -->
+                <div class="pic-loading js-pic-loading">
+                  <div class="logo"></div>
+                  <svg class="spinner" viewBox="25 25 50 50">
+                    <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+                  </svg>
+                </div>
+              </li>
+							<li class="js-custom-item">
 								<a href="http://instagram.com/p/BRJHELyBwcN/" target="_self">
-									<picture>
-										<source srcset="images/blog/instagram-8-230x230.z.webp">
-										<img src="images/blog/instagram-8-230x230.z.jpg" alt="instagram 8 image">
+									<picture class="js-lazy-load">
+										<!--source srcset="images/blog/instagram-8-230x230.z.webp"-->
+										<img class="js-lazy-img" data-src="images/blog/instagram-8-230x230.z.jpg" />
 									</picture>
-								</a>
+                </a>
+                <!-- Photo loading spinner -->
+                <div class="pic-loading js-pic-loading">
+                  <div class="logo"></div>
+                  <svg class="spinner" viewBox="25 25 50 50">
+                    <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+                  </svg>
+                </div>
+              </li>
 						</ul>
-					<!-- Tags -->
+					  <!-- Tags -->
 						<h3>Tags</h3>
 						<ul class="tagcloud">
 							<li><a href="#">sidor</a>

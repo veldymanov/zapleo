@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	function calcMarginBottom () {
 		let item = document.querySelector('main+footer');
 		let style = window.getComputedStyle(item);
-    	let marginTop = parseInt(style.getPropertyValue('margin-top'), 10);
-    	let marginBottom = parseInt(style.getPropertyValue('margin-bottom'), 10);
+    let marginTop = parseInt(style.getPropertyValue('margin-top'), 10);
+    let marginBottom = parseInt(style.getPropertyValue('margin-bottom'), 10);
 		let fHeight = item.offsetHeight + marginTop + marginBottom;
 
 		document.querySelector('main').style.marginBottom = fHeight + 'px';

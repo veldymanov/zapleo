@@ -11,8 +11,6 @@ document.addEventListener("DOMContentLoaded", function() {
       team.windowScrollY = window.scrollY;
 
       if (window.innerWidth < 750) { customItem.querySelector('.js-pdf').type = 'not-valid'; }
-      console.log(customItem.querySelector('.js-pdf').type);
-
       customItem.querySelector('.js-wrap-popup').style.display = "block";
       customItem.querySelector('.js-popup-resume').style.display = "block";
       //stop scroll propagation
@@ -26,7 +24,6 @@ document.addEventListener("DOMContentLoaded", function() {
       const customItem = this.closest('.js-custom-item');
 
       customItem.querySelector('.js-pdf').type = 'application/pdf';
-      console.log(customItem.querySelector('.js-pdf').type);
       customItem.querySelector('.js-popup-resume').style.display = "none";
       customItem.querySelector('.js-wrap-popup').style.display = "none";
       team.body.style.cssText = `overflow-y: auto; position: inherit;`;

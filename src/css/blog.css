@@ -18,42 +18,51 @@
 .content {
   display: flex;
   flex-wrap: wrap; }
-  .content > ul {
-    flex: 1 1 70%; }
-    @media (max-width: 1100px) {
-      .content > ul {
-        flex-basis: auto; } }
-    .content > ul li {
+  .content .custom-items {
+    flex: 1 1 75%; }
+    .content .custom-items .custom-item {
       margin-bottom: 6.5%; }
+    @media (max-width: 1100px) {
+      .content .custom-items {
+        flex-basis: 100%; } }
   .content figure {
     display: inline-flex; }
     @media (max-width: 580px) {
       .content figure {
         flex-wrap: wrap; } }
-    .content figure img {
-      width: 100%; }
+    .content figure .leftbox {
+      flex: 1 0 40%;
+      height: calc( 88vw * 0.75 * 0.4 * ( 235 / 335 ));
+      overflow: hidden;
+      position: relative; }
+      .content figure .leftbox picture {
+        display: block; }
+        .content figure .leftbox picture img {
+          display: block;
+          width: 100%; }
+      @media (max-width: 1100px) {
+        .content figure .leftbox {
+          height: calc( 88vw * 1 * 0.4 * ( 235 / 335 )); } }
+      @media (max-width: 580px) {
+        .content figure .leftbox {
+          height: calc( 88vw * 1 * 1 * ( 235 / 335 )); } }
     @media (min-width: 580px) {
       .content figure h2 {
         margin: 0 0 3.3%; } }
-
-.leftbox {
-  max-width: 335px;
-  flex: 1 0 50%; }
 
 .post {
   padding: 0 3.3%; }
 
 /* Sidebar */
 .sidebar {
-  flex: 1 1 14.2%;
-  min-width: 262px; }
+  flex: 1 1 25%; }
   .sidebar form {
     position: relative; }
   .sidebar [type="search"] {
     background: #ececec;
     font-size: 15px;
-    padding: 6px 40px 6px 12px;
     height: 42px;
+    padding: 6px 40px 6px 12px;
     width: 100%;
     -webkit-appearance: none; }
     .sidebar [type="search"]::-webkit-search-cancel-button {
@@ -62,10 +71,10 @@
 .go {
   font-size: 14px;
   font-weight: 700;
+  height: 42px;
   position: absolute;
   right: 15px;
-  top: 0;
-  height: 42px; }
+  top: 0; }
 
 .instathumbs {
   display: flex;
@@ -73,12 +82,25 @@
   margin: 0 -5px; }
   .instathumbs li {
     flex-basis: 25%;
-    padding: 5px; }
-  .instathumbs img {
-    width: 100%;
-    transition: all 250ms ease-in-out; }
-    .instathumbs img:hover {
-      filter: opacity(0.7); }
+    height: calc( 88vw * 0.25 * 0.25 - 10px);
+    margin: 5px 0;
+    overflow: hidden;
+    padding: 0 5px;
+    position: relative; }
+    .instathumbs li picture img {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: all 250ms ease-in-out;
+      width: 100%; }
+      .instathumbs li picture img:hover {
+        filter: opacity(0.7); }
+    .instathumbs li .pic-loading .spinner {
+      height: 60px;
+      width: 60px; }
+    @media (max-width: 1100px) {
+      .instathumbs li {
+        height: calc( 88vw * 1 * 0.25 - 10px); } }
 
 .tagcloud {
   font-size: 13px;
