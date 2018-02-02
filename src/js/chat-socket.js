@@ -228,9 +228,10 @@ document.addEventListener('DOMContentLoaded', function() {
   function postMessage(msg, sender){
     //........
     if(to == undefined)
-        socket.send({'message':msg,'uid':uid,'name':user.name});
+      socket.send({'message':msg,'uid':uid,'name':user.name});
     else
-        socket.send({'message':msg,'uid':uid,'to':to,'name':user.name});
+      socket.send({'message':msg,'uid':uid,'to':to,'name':user.name});
+
     publishMessage(msg, sender)
   }
 

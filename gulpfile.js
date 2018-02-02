@@ -20,19 +20,18 @@ const gulp = require('gulp'),
       reload = browserSync.reload,
       del = require('del');
 
-
-////////////////////////////////////////////////////
-// HTML Task
-////////////////////////////////////////////////////
+/**
+* HTML Task
+*/
 //update browser-sync
 gulp.task('html', () =>
   gulp.src(['src/**/*.html'])
     .pipe(reload({stream: true}))
 );
 
-////////////////////////////////////////////////////
-// CSS Tasks
-////////////////////////////////////////////////////
+/**
+* CSS Tasks
+*/
 //run sass
 gulp.task('sass', () =>
   gulp.src('src/**/*.scss')
@@ -48,18 +47,18 @@ gulp.task('css', () =>
 );
 
 
-////////////////////////////////////////////////////
-// Script Tasks
-////////////////////////////////////////////////////
+/**
+* Script Tasks
+*/
 //update browser-sync
 gulp.task('scripts', () =>
   gulp.src(['src/**/*.js'])
     .pipe(reload({stream: true}))
 );
 
-////////////////////////////////////////////////////
-// Picture tasks
-////////////////////////////////////////////////////
+/**
+* Picture tasks
+*/
 //pctures minimize to '*.opt.{png,jpg,gif,svg}' and '*.z.{png,jpg,gif,svg}'
 gulp.task('pic:min', () =>
     gulp.src([
@@ -96,9 +95,9 @@ gulp.task('pic:remove', ['pic:webp'], () =>
 
 gulp.task('pic', ['pic:remove']);
 
-////////////////////////////////////////////////////
-// Build Task (production version)
-////////////////////////////////////////////////////
+/**
+* Build Task (production version)
+*/
 //clear out all files and folders from build folder
 gulp.task('build:cleanfolder', () =>
   del.sync('docs/**')
@@ -114,7 +113,7 @@ gulp.task('build:copy', ['build:cleanfolder'], () =>
 gulp.task('url:adjust', ['build:copy'], () =>
   gulp.src('docs/css/*.css')
   .pipe(urlAdjuster({
-    replace:  ['../','/'], // for github pages: "replace:  ['../','']"
+    replace:  ['../',''], // for github pages: "replace:  ['../','']"
   }))
   .pipe(gulp.dest('docs/css/'))
 );
@@ -124,7 +123,7 @@ gulp.task('scripts:minify', ['url:adjust'], () =>
   gulp.src(['docs/**/*.js', '!docs/**/chat-socket.js'])
     .pipe(plumber())
     .pipe(babel({
-        presets: ['env']
+      presets: ['env']
     }))
     .pipe(uglify())
     .pipe(gulp.dest('docs/'))
@@ -152,8 +151,8 @@ gulp.task('html:minify', ['inline'], () =>
       collapseWhitespace: true,
       decodeEntities: true,
       html5: true,
-      minifyCSS: true,
-      minifyJS: true,
+      minifyCSS: false,
+      minifyJS: false,
       processConditionalComments: true,
       minifyURLs: true,
       removeAttributeQuotes: true,
@@ -173,9 +172,9 @@ gulp.task('build:remove', ['inline'], () =>
 
 gulp.task('build', ['build:remove']);
 
-////////////////////////////////////////////////////
-// Browser-Sync Tasks
-////////////////////////////////////////////////////
+/**
+* Browser-Sync Tasks
+*/
 gulp.task('browser-sync', () =>
   browserSync({
     server: {
@@ -193,9 +192,7 @@ gulp.task('build:server', () =>
   })
 );
 
-////////////////////////////////////////////////////
-// Watch Tasks
-////////////////////////////////////////////////////
+
 gulp.task('watch', () => {
     gulp.watch('src/**/*.html', ['html']);
     gulp.watch('src/**/*.scss', ['sass']);
@@ -203,9 +200,6 @@ gulp.task('watch', () => {
     gulp.watch('src/**/*.js', ['scripts']);
 });
 
-////////////////////////////////////////////////////
-// Default Task
-////////////////////////////////////////////////////
 gulp.task('default', [
     'html',
     'sass', 'css',
