@@ -26,7 +26,7 @@ const gulp = require('gulp'),
 //update browser-sync
 gulp.task('html', () =>
   gulp.src(['src/**/*.html'])
-    .pipe(reload({stream: true}))
+  .pipe(reload({stream: true}))
 );
 
 /**
@@ -35,15 +35,15 @@ gulp.task('html', () =>
 //run sass
 gulp.task('sass', () =>
   gulp.src('src/**/*.scss')
-    .pipe(plumber())
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('src/'))
+  .pipe(plumber())
+  .pipe(sass().on('error', sass.logError))
+  .pipe(gulp.dest('src/'))
 );
 
 //update browser-sync
 gulp.task('css', () =>
   gulp.src(['src/**/*.css'])
-    .pipe(reload({stream: true}))
+  .pipe(reload({stream: true}))
 );
 
 
@@ -53,7 +53,7 @@ gulp.task('css', () =>
 //update browser-sync
 gulp.task('scripts', () =>
   gulp.src(['src/**/*.js'])
-    .pipe(reload({stream: true}))
+  .pipe(reload({stream: true}))
 );
 
 /**
@@ -66,23 +66,23 @@ gulp.task('pic:min', () =>
       '!src/**/images/**/*.opt.{png,jpg,gif,svg}',
       '!src/**/images/**/*.z.{png,jpg,gif,svg}'
     ])
-      .pipe(rename({suffix: '.opt'}))
-      .pipe(imagemin())
-      .pipe(gulp.dest('src/'))
-      .pipe(rename(function(opt) {
-          opt.basename = opt.basename.replace(/.opt/, '.z');
-      }))
-      .pipe(gulp.dest('src/'))
+    .pipe(rename({suffix: '.opt'}))
+    .pipe(imagemin())
+    .pipe(gulp.dest('src/'))
+    .pipe(rename(function(opt) {
+        opt.basename = opt.basename.replace(/.opt/, '.z');
+    }))
+    .pipe(gulp.dest('src/'))
 );
 
 //create '*.z.webp' from '*.opt.{png,jpg}'
 gulp.task('pic:webp', ['pic:min'], () =>
   gulp.src(['src/**/images/**/*.opt.{jpg,png}'])
-    .pipe(rename(function(opt) {
-        opt.basename = opt.basename.replace(/.opt/, '.z');
-    }))
-    .pipe(webp())
-    .pipe(gulp.dest('src/'))
+  .pipe(rename(function(opt) {
+      opt.basename = opt.basename.replace(/.opt/, '.z');
+  }))
+  .pipe(webp())
+  .pipe(gulp.dest('src/'))
 );
 
 //remove all pictures exept 'src/images/**/*.z.{png,jpg,gif,svg}'
@@ -106,7 +106,7 @@ gulp.task('build:cleanfolder', () =>
 //task to create build directory for all files
 gulp.task('build:copy', ['build:cleanfolder'], () =>
   gulp.src('src/**/*/')
-    .pipe(gulp.dest('docs/'))
+  .pipe(gulp.dest('docs/'))
 );
 
 // change urls in css files
@@ -121,47 +121,47 @@ gulp.task('url:adjust', ['build:copy'], () =>
 //minify scripts
 gulp.task('scripts:minify', ['url:adjust'], () =>
   gulp.src(['docs/**/*.js', '!docs/**/chat-socket.js'])
-    .pipe(plumber())
-    .pipe(babel({
-      presets: ['env']
-    }))
-    .pipe(uglify())
-    .pipe(gulp.dest('docs/'))
+  .pipe(plumber())
+  .pipe(babel({
+    presets: ['env']
+  }))
+  .pipe(uglify())
+  .pipe(gulp.dest('docs/'))
 );
 
 // inline css, js, svg
 gulp.task('inline', ['scripts:minify'], () =>
   gulp.src('docs/*.html')
-    .pipe(inline({
-      base: 'docs',
-    //  js: uglify,
-      css: [cleanCSS],
-      disabledTypes: ['img'], // Only inline css, js, svg files
-    //  ignore: ['./css/do-not-inline-me.css']
-    }))
-    .pipe(gulp.dest('docs/'))
+  .pipe(inline({
+    base: 'docs',
+    // js: uglify,
+    css: [cleanCSS],
+    disabledTypes: ['img'], // Only inline css, js, svg files
+    // ignore: ['./css/do-not-inline-me.css']
+  }))
+  .pipe(gulp.dest('docs/'))
 );
 
 //minify html (skipped)
 gulp.task('html:minify', ['inline'], () =>
   gulp.src(['docs/**/*.html'])
-    .pipe(plumber())
-    .pipe(htmlmin({
-      collapseBooleanAttributes: true,
-      collapseWhitespace: true,
-      decodeEntities: true,
-      html5: true,
-      minifyCSS: false,
-      minifyJS: false,
-      processConditionalComments: true,
-      minifyURLs: true,
-      removeAttributeQuotes: true,
-      removeComments: true,
-      removeEmptyAttributes: true,
-      removeRedundantAttributes: true,
-      removeScriptTypeAttributes: true
-    }))
-    .pipe(gulp.dest('docs/'))
+  .pipe(plumber())
+  .pipe(htmlmin({
+    collapseBooleanAttributes: true,
+    collapseWhitespace: true,
+    decodeEntities: true,
+    html5: true,
+    minifyCSS: false,
+    minifyJS: false,
+    processConditionalComments: true,
+    minifyURLs: true,
+    removeAttributeQuotes: true,
+    removeComments: true,
+    removeEmptyAttributes: true,
+    removeRedundantAttributes: true,
+    removeScriptTypeAttributes: true
+  }))
+  .pipe(gulp.dest('docs/'))
 );
 
 //task to remove unwanted build files
@@ -194,16 +194,16 @@ gulp.task('build:server', () =>
 
 
 gulp.task('watch', () => {
-    gulp.watch('src/**/*.html', ['html']);
-    gulp.watch('src/**/*.scss', ['sass']);
-    gulp.watch('src/**/*.css', ['css']);
-    gulp.watch('src/**/*.js', ['scripts']);
+  gulp.watch('src/**/*.html', ['html']);
+  gulp.watch('src/**/*.scss', ['sass']);
+  gulp.watch('src/**/*.css', ['css']);
+  gulp.watch('src/**/*.js', ['scripts']);
 });
 
 gulp.task('default', [
-    'html',
-    'sass', 'css',
-    'scripts',
-    'browser-sync',
-    'watch'
+  'html',
+  'sass', 'css',
+  'scripts',
+  'browser-sync',
+  'watch'
 ]);
