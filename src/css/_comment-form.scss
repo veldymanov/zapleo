@@ -52,24 +52,18 @@ justify-content: space-between;
 	@include textarea;
 		 @media (max-width:1400px) {@include textarea(38px);}
 	}
-/* Submit button */
-	.submit {
-	text-transform: capitalize;
-	font-size: 1em;
-	color: $orange;
-	margin-left: auto;
-	padding: 0.6em 1.8em;
-//	@include submitEffect;
-	@extend %pointer;
-	@extend %form_element;
-		@media (max-width: 680px) {
-		margin-right: auto;
-		width: 100%;
-		}
-	}
-	::-webkit-input-placeholder {color:$dark;}
-	:-moz-placeholder {color:$dark;}
-	::-moz-placeholder {color:$dark;}
-	:-ms-input-placeholder {color:$dark;}
-	::placeholder {color:$dark;}
+	//Submit button
+  .submit {
+    background: $darkgrey;
+    color: $white;
+    font-size: 0.88em;
+    margin-left: auto;
+    padding: 0.6em 1.8em;
+    text-transform: capitalize;
+    @extend %pointer;
+    @extend %form_element;
+  }
+  .submit:hover {
+    background: $orange;
+  }
 }

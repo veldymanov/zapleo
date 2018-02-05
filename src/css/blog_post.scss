@@ -5,9 +5,14 @@
 	border-radius: 50%;
 }
 
-.postImg {
-	width: 100%;
-	height: auto;
+.post-img-container {
+  display: block;
+  max-height: 100vh;
+  overflow: hidden;
+  .post-img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 header {

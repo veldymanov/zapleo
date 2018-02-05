@@ -24,9 +24,13 @@
 aside img, .comment img {
   border-radius: 50%; }
 
-.postImg {
-  width: 100%;
-  height: auto; }
+.post-img-container {
+  display: block;
+  max-height: 100vh;
+  overflow: hidden; }
+  .post-img-container .post-img {
+    width: 100%;
+    height: auto; }
 
 header {
   position: absolute;
@@ -283,8 +287,7 @@ aside {
   flex-wrap: wrap;
   justify-content: space-between;
   /* Text inputs */
-  /* Textarea */
-  /* Submit button */ }
+  /* Textarea */ }
   .comment-form input {
     width: 100%;
     font-size: 1.03em;
@@ -322,22 +325,11 @@ aside {
         line-height: 38px;
         background: linear-gradient(to left, #fff 0, transparent 0) repeat-y local 0 0/100% 100%, linear-gradient(to right, #fff 0, transparent 0) repeat-y local 0 0/100% 100%, linear-gradient(#fff 37px, #ececec 37px, #ececec 38px, #fff 38px) repeat-y local 0 0/100% 38px; } }
   .comment-form .submit {
-    text-transform: capitalize;
-    font-size: 1em;
-    color: #fcb117;
+    background: #69696b;
+    color: #fff;
+    font-size: 0.88em;
     margin-left: auto;
-    padding: 0.6em 1.8em; }
-    @media (max-width: 680px) {
-      .comment-form .submit {
-        margin-right: auto;
-        width: 100%; } }
-  .comment-form ::-webkit-input-placeholder {
-    color: #373737; }
-  .comment-form :-moz-placeholder {
-    color: #373737; }
-  .comment-form ::-moz-placeholder {
-    color: #373737; }
-  .comment-form :-ms-input-placeholder {
-    color: #373737; }
-  .comment-form ::placeholder {
-    color: #373737; }
+    padding: 0.6em 1.8em;
+    text-transform: capitalize; }
+  .comment-form .submit:hover {
+    background: #fcb117; }
