@@ -1,4 +1,516 @@
-<!Doctype html><html lang=en><head><meta http-equiv=Content-Type content="text/html; charset=UTF-8"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1"><meta name=theme-color content=#ffffff><link rel=manifest href=manifest.json><link rel=preload href=fonts/functionpro_book.ttf as=font crossorigin=anonymous><link rel=preload href=fonts/functionpro_medium.ttf as=font crossorigin=anonymous><link rel=apple-touch-icon sizes=180x180 href=images/icons/apple-touch-icon.z.png><link rel=icon href=favicon.ico type=image/x-icon><link rel=mask-icon href=images/icons/safari-pinned-tab.z.svg color=#fcb117><style>.footer p,body,html,ul{padding:0;margin:0}@font-face{font-family:CenturyGothicBold;src:url(fonts/CenturyGothicBold.ttf) format("truetype"),url(fonts/CenturyGothicBold.woff) format("woff");font-weight:700;font-style:normal}@font-face{font-family:functionpro_book;font-style:normal;font-weight:400;src:url(fonts/functionpro_book.ttf) format("truetype"),url(fonts/functionpro_book.woff) format("woff"),url(fonts/functionpro_book.woff2) format("woff2");unicode-range:U+20-126,U+161-255,U+338-339,U+376,U+710,U+732,U+2019,U+201C-201E,U+8192-8202,U+8208-8212,U+8216-8218,U+8220-8222,U+8226,U+8230,U+8239,U+8249-8250,U+8287,U+8364,U+8482,U+9724,U+64257-64258,U+FFEB}@font-face{font-family:functionpro_medium;font-style:normal;font-weight:400;src:url(fonts/functionpro_medium.ttf) format("truetype"),url(fonts/functionpro_medium.woff) format("woff"),url(fonts/functionpro_medium.woff2) format("woff2");unicode-range:U+20-126,U+161-255,U+338-339,U+376,U+710,U+732,U+2019,U+201C-201E,U+8192-8202,U+8208-8212,U+8216-8218,U+8220-8222,U+8226,U+8230,U+8239,U+8249-8250,U+8287,U+8364,U+8482,U+9724,U+64257-64258,U+FFEB}::-webkit-scrollbar{-webkit-appearance:none;width:4px}::-webkit-scrollbar-track{background-color:rgba(206,206,206,.6);border-radius:8px}::-webkit-scrollbar-thumb{background-color:#828282;border-radius:8px}*{box-sizing:border-box}::selection{background:#fcb117;color:#fff}* img::selection{background:0 0}body,html{color:#8a8a8a;font-family:functionpro_book,sans-serif;font-size:calc(.00313 * 100vw + 14px);height:auto;min-width:320px;position:relative}.clearfix::after{content:"";display:table;clear:both}a{text-decoration:none;color:inherit}ul{list-style:none}h1,h2,h3,h4,h5,h6{color:#373737}.logo{width:18vmin;max-width:150px;height:auto;max-height:91px}.start{display:block;color:#69696b;background:#fff}header{width:100%;padding:6.2vmin 6% 0;display:flex;justify-content:space-between;align-items:center}header nav li{display:inline-block}@media (min-width:901px){header nav li+li{margin-left:calc(.02353 * 100vw + -5.17647px)}}main{background:#fff}main section{padding:12.2vmin 6%}h1,h2{font-family:functionpro_medium,sans-serif;font-size:1.4em;font-weight:500}.showmore{font-family:inherit;font-size:calc(.00625 * 100vw + 10px);text-transform:uppercase;color:#fff;border:none;outline:0;display:block;margin:1.7vmin auto 0;padding:1.45% 2.98%;background:#69696b;cursor:pointer}.underline{display:inline-block}.underline::after{content:"";display:block;height:1px;margin:1px auto 0 0;transition:width .25s ease-in-out;width:0}.underline:hover{cursor:pointer}.underline:hover::after{width:100%}.active.underline::after{background:#fcb117;width:100%}.hidden{display:none}.noscroll{overflow:hidden;position:fixed;top:0;left:0;width:100%}.smgroup ul,.social ul{display:inline-flex}.footer{color:transparent;padding:7.6vmin 0 5.8vmin 0;width:100%;background:#3c3a3a;position:fixed;bottom:0;z-index:-1}@media (max-width:1100px){.footer{padding:7vmin 0 5vmin 0}}@media (max-width:480px){.footer{padding-left:0;padding-right:0}}.footer>ul{display:flex;justify-content:space-between;flex-wrap:wrap;margin:0 auto;overflow:hidden;width:72%}@media (max-width:1100px){.footer>ul{width:90%}}@media (max-width:768px){.footer>ul{justify-content:center}}.footer p{text-align:center;font-size:calc(.00625 * 100vw + 14px)}@media (max-width:768px){.footer p{margin-top:0}}.footer p span{display:block;transition:color .4s ease-in-out}@media (max-width:768px){.footer p span{display:none}}.footer p:hover span{color:#ececec}.footer p:hover .fb+span{color:#3b5998}.footer p:hover .l_in+span{color:#0077b5}.footer p:hover .inst+span{color:#ce2a51}.footer p:hover .up+span{color:#37a000}.conticon{display:inline-block;position:relative;height:40px;width:40px;background-image:url(images/icons/footer_icons.z.svg),url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGMAAABtCAYAAAC1Md/lAAADQ0lEQVR42u3dAUtaYRjFcUNRlCJZGEsWRRNHkSTFhrEoShpFURiNjY38/t/CvXfcQYxG3dNRH9hfeL7A+fHcV3sP3VLpP/tMJpNePuUSn7lCLKX5mWacZpSmTSrzwxjmEI/nLEMindlCtJ+A+DPZtvR5dM0Gopw/lsbPzF2adRKb/qE9LjBDHl3TgWik+VEQ4/eWkJ4f41iAyGaT9LwQb0WIL6TnhVhIcyNAPKRpkqAXY1vcio+k54WopfkuQHxLUyVBL8ahuBUd0vNCtESIS9LzY1yKGCuk54XoiBCHpOeFqOYHcFGI7KCvkaAX45O4FR9IzwvRzH+sFYXIfhQukKAX40LcilXS80JsihDHpOeFqKS5FyCyP6k3SNCLsS9uxS7peSEeNz2KzIi7bj/GUNwK6jlmiHcixBnpeSFe2vR4qo5DycCM0RO3ok96XoiGeGjfc2j7MWh6BIFYEyHOSc8L8ZqmxzIJejFoegSBqItNj680PfwYn8WteE96XgiaHoEO7Svx0KbpYcag6REEgqZHIIyBuBVd0vNC0PQIhEHTIwjElghxRHpeCJoegTBoegSBWBIP7RGHth+DpkcQiHUR4pT0vBCvaXoskqAXg6ZHEIhFselxR9PDj3EibsUG6XkhaHoEgcgujW5pesTA2BG34oD0vBA0PQJhHIlbsUV6XgiaHoEObZoeQTC64lYMSM8LQdMjEAZNjyAQb8RLo2sujfwYND2CQND0CAJRyX81K4d2nQS9GDQ9gkAsi4f2LYe2H+Nc3Io10vNC0PQIAlHO76dpegTA2BO3Yo/0vBA0PQJhnIpbwcumzBA0PYJA0PQIhLErbsU+6XkhaHoEwqDpEQRiVYS4ID3/oU3TIwgGTY8gEFVeuRYHg6ZHEIgV8dLoiksjP4b6yrUW6XkhaHoEOrRpegTBOBC3Yof0vBA0PQJh0PQIArEhQpyQnheCpkcgjL64FT3S80LQ9AiEQdMjCERbhBiSnheCpkcgDJoeQSDq+f+HVV65ViFBLwZNjyAQND0CYVyLh3aT9KazGTc0PWJ9rd1+YfODpseMUGrZO4ueweiQ1GxRWv9oDdL0mOOjq/vXo4umR4BH14BXrk3/8wvkvbYCyhXBlQAAAABJRU5ErkJggg==);background-repeat:no-repeat;background-color:#69696b;background-position:center 0,40px center;background-size:50px;transform:translateZ(0);transition:all .5s ease}.conticon:hover{background-position-x:center,-40px}.smgroup .conticon{top:-.5px}@media (max-width:768px){.smgroup{margin:0 45px 0 25px}}@media (max-width:480px){.smgroup{margin:0 26px 0 23px}}@media (max-width:768px){.smgroup ul{flex-direction:column}}@media (max-width:768px){.biggroup{order:-1}}.biggroup ul:hover+p{color:#ececec}@media (max-width:768px){.biggroup ul{columns:30px auto;width:100px}}@media (max-width:480px){.biggroup ul{width:90px}}.biggroup li{display:inline-block}@media (min-width:769px){.biggroup li+li{margin:0 0 0 8px}}@media (max-width:768px){.biggroup li+li:nth-child(even){margin:14px 0 0 0}}.mail{background-position-y:11%;background-size:100.4%,110%;width:51px}@media (max-width:768px){.mail{bottom:-1px;margin-top:14px}}.phone{background-position-y:22%}.whatsapp{background-position-y:33%;bottom:-1px}.viber{background-position-y:44.1%;background-size:129%}.telegram{background-position-y:55%;background-size:110%;bottom:-1px;width:46px}@media (max-width:768px){.social ul{display:block;columns:auto 2}.social ul li+li:nth-child(even){margin:14px 0 0 0}}.social a{display:inline-block;width:40px;height:40px;transition:background-position .4s cubic-bezier(.65,.05,.36,1)}.social a:hover{background-position-x:center,0}.social .fb{background:url(images/icons/footer_icons.z.svg) no-repeat center 66.5%/125%,-webkit-gradient(linear,left top,right top,color-stop(50%,#3b5998),color-stop(50%,#fcb117)) no-repeat 100% 0/200%;background:url(images/icons/footer_icons.z.svg) no-repeat center 66.5%/125%,-webkit-linear-gradient(left,#3b5998 50%,#fcb117 50%) no-repeat 100% 0/200%;background:url(images/icons/footer_icons.z.svg) no-repeat center 66.5%/125%,-moz-linear-gradient(left,#3b5998 50%,#fcb117 50%) no-repeat 100% 0/200%;background:url(images/icons/footer_icons.z.svg) no-repeat center 66.5%/125%,linear-gradient(to right,#3b5998 50%,#fcb117 50%) no-repeat 100% 0/200%;transform:translateZ(0)}.social .l_in{background:url(images/icons/footer_icons.z.svg) no-repeat center 77.5%/125%,-webkit-gradient(linear,left top,right top,color-stop(50%,#0077b5),color-stop(50%,#fcb117)) no-repeat 100% 0/200%;background:url(images/icons/footer_icons.z.svg) no-repeat center 77.5%/125%,-webkit-linear-gradient(left,#0077b5 50%,#fcb117 50%) no-repeat 100% 0/200%;background:url(images/icons/footer_icons.z.svg) no-repeat center 77.5%/125%,-moz-linear-gradient(left,#0077b5 50%,#fcb117 50%) no-repeat 100% 0/200%;background:url(images/icons/footer_icons.z.svg) no-repeat center 77.5%/125%,linear-gradient(to right,#0077b5 50%,#fcb117 50%) no-repeat 100% 0/200%;transform:translateZ(0)}.social .inst{background:url(images/icons/footer_icons.z.svg) no-repeat center 88.66%/125%,-webkit-gradient(linear,left top,right top,color-stop(50%,#ce2a51),color-stop(50%,#fcb117)) no-repeat 100% 0/200%;background:url(images/icons/footer_icons.z.svg) no-repeat center 88.66%/125%,-webkit-linear-gradient(left,#ce2a51 50%,#fcb117 50%) no-repeat 100% 0/200%;background:url(images/icons/footer_icons.z.svg) no-repeat center 88.66%/125%,-moz-linear-gradient(left,#ce2a51 50%,#fcb117 50%) no-repeat 100% 0/200%;background:url(images/icons/footer_icons.z.svg) no-repeat center 88.66%/125%,linear-gradient(to right,#ce2a51 50%,#fcb117 50%) no-repeat 100% 0/200%;transform:translateZ(0)}.social .up{background:url(images/icons/footer_icons.z.svg) no-repeat center 99.6%/125%,-webkit-gradient(linear,left top,right top,color-stop(50%,#37a000),color-stop(50%,#fcb117)) no-repeat 100% 0/200%;background:url(images/icons/footer_icons.z.svg) no-repeat center 99.6%/125%,-webkit-linear-gradient(left,#37a000 50%,#fcb117 50%) no-repeat 100% 0/200%;background:url(images/icons/footer_icons.z.svg) no-repeat center 99.6%/125%,-moz-linear-gradient(left,#37a000 50%,#fcb117 50%) no-repeat 100% 0/200%;background:url(images/icons/footer_icons.z.svg) no-repeat center 99.6%/125%,linear-gradient(to right,#37a000 50%,#fcb117 50%) no-repeat 100% 0/200%;transform:translateZ(0)}</style><style>.magn,.sandwich{font-family:inherit;border:none;outline:0;background:0 0;padding:0}.magn{cursor:pointer}.sandwich{display:none}@media (max-width:900px){header nav ul{display:none}header .sandwich{display:block}}.sandwich{cursor:pointer;filter:drop-shadow(0 0 1px #000);height:18px;position:relative;width:23px;z-index:6}.sandwich span{display:inline-block;position:absolute;left:0;background:#fff;width:100%;height:2px}.sandwich.active .line1{top:8px;transform:rotate(140deg)}.sandwich.active .line2{top:8px;transform:rotate(-140deg)}.sandwich.active .line3{opacity:0;top:0;transform:rotate(180deg)}.line1{top:0;transition:transform .5s,top .2s}.line2{top:8px;transition:transform .5s,top .2s;transition-delay:.2s,0s}.line3{top:16px;transition:all .5s;transition-delay:.1s}.mob-menu{display:none;position:fixed;left:0;top:0;bottom:0;right:0;z-index:5;color:#373737;background-color:rgba(0,0,0,.5)}.mob-menu nav{background:#fff;display:inline-block;padding:15px 0;height:100%;overflow:auto;text-transform:uppercase;font-size:calc(.00862 * 100vw + 11.24138px);transform:translateX(-100%);transition:transform .25s ease-in-out}.mob-menu .displayed{transform:translateX(0)}.mob-menu a{display:block;padding:10px 30px}.mob-menu a:hover{background-color:rgba(0,0,0,.2)}.magn{width:18px;height:18px;float:left;margin-right:10px;background:url(images/linea/magnifier.z.svg) no-repeat 0 0/cover}</style><style>.top article h1,.top article h2{padding:0;margin:0}.top{display:flex;justify-content:flex-end;flex-wrap:wrap;padding-bottom:7.5vmin}.top article{flex-basis:100%;margin-right:40%}@media (max-width:736px){.top article{margin-right:0}}.top nav ul{display:inline-flex;justify-content:center;flex-wrap:wrap;width:100%}.top nav ul li{margin-left:40px;margin-top:10px}@media (max-width:736px){.top nav ul li{margin-left:5px}}.top nav ul li:first-child{margin-left:0}@media (max-width:736px){.top nav ul{justify-content:space-around;margin-top:10px}}@media (max-width:736px){.top nav{flex-basis:100%}}.top .underline:hover{color:#fcb117}</style><style>.content figure{padding:0;margin:0}.go,.sidebar [type=search]{font-family:inherit;border:none;outline:0;background:0 0;padding:0}.go{cursor:pointer}.categories li,.comments li,.latest_posts li{padding:5px 0}.content{display:flex;flex-wrap:wrap}.content .custom-items{flex:1 1 75%}.content .custom-items .custom-item{margin-bottom:6.5%}@media (max-width:1100px){.content .custom-items{flex-basis:100%}}.content figure{display:inline-flex}@media (max-width:580px){.content figure{flex-wrap:wrap}}.content figure .leftbox{flex:1 0 40%;height:calc(88vw * .75 * .4 * (235 / 335));overflow:hidden;position:relative}.content figure .leftbox picture{display:block}.content figure .leftbox picture img{display:block;width:100%}@media (max-width:1100px){.content figure .leftbox{height:calc(88vw * 1 * .4 * (235 / 335))}}@media (max-width:580px){.content figure .leftbox{height:calc(88vw * 1 * 1 * (235 / 335))}}@media (min-width:580px){.content figure h2{margin:0 0 3.3%}}.post{padding:0 3.3%}.sidebar{flex:1 1 25%}.sidebar form{position:relative}.sidebar [type=search]{background:#ececec;font-size:15px;height:42px;padding:6px 40px 6px 12px;width:100%;-webkit-appearance:none}.sidebar [type=search]::-webkit-search-cancel-button{display:none}.go{font-size:14px;font-weight:700;height:42px;position:absolute;right:15px;top:0}.instathumbs{display:flex;flex-wrap:wrap;margin:0 -5px}.instathumbs li{flex-basis:25%;height:calc(88vw * .25 * .25 - 10px);margin:5px 0;overflow:hidden;padding:0 5px;position:relative}.instathumbs li picture img{position:relative;top:50%;transform:translateY(-50%);transition:all 250ms ease-in-out;width:100%}.instathumbs li picture img:hover{filter:opacity(.7)}.instathumbs li .pic-loading .spinner{height:60px;width:60px}@media (max-width:1100px){.instathumbs li{height:calc(88vw * 1 * .25 - 10px)}}.tagcloud{font-size:13px;color:#373737}.tagcloud li{display:inline-block;margin:5px 8px 3px 0}.tagcloud li a{display:inline-block;padding:4px 8px;background:#ececec;transition:all 250ms ease-in-out}.tagcloud li a:hover{background:#d4d4d4}.categories a{color:#69696b}.comments li+li{border-top:1px solid #ececec;margin-top:5px}.comments a{display:block;font-size:15px;color:#373737}.latest_posts li+li{margin-top:10px}</style><style>.messenger{bottom:0;color:#616267;font-size:16px;position:fixed;right:0;z-index:9999}.messenger ::-webkit-scrollbar{-webkit-appearance:none;width:3px}.messenger ::-webkit-scrollbar-track{background-color:rgba(206,206,206,.6);border-radius:8px}.messenger ::-webkit-scrollbar-thumb{background-color:rgba(150,150,150,.8);border-radius:8px}@media (max-width:750px){.messenger.opened{top:0;left:0}.messenger.opened .expanded{height:100%;width:100%}}.rolled-up{background:#f8a90d;border-radius:4px 4px 0 0;color:inherit;cursor:pointer;display:block;padding:10px 30px 10px 20px}.rolled-up.opened{display:none}.rolled-up p{margin:0}.expanded{background:#fff;border-radius:4px 4px 0 0;color:inherit;display:none;height:400px;overflow:hidden;width:350px}.expanded.opened{display:block}.expanded.authorized .chat{display:block}.expanded.authorized #authorization-form{display:none}.expanded.authorized #message-form{display:block}.expanded .chat-caption{background-color:#f8a90d;color:inherit;cursor:pointer;margin:0;padding:10px}.expanded .chat{display:none;height:290px;list-style:none;padding:10px;overflow-y:auto}.expanded .chat .chat-item{display:flex;flex-wrap:wrap}.expanded .chat .chat-item .chat-box{flex-grow:1}.expanded .chat .chat-item.zapleo{flex-direction:row-reverse}.chat-item{margin-bottom:10px}.chat-item .chat-item-photo{border-radius:50%;height:30px;overflow:hidden;width:30px}.chat-item .chat-item-photo img{height:100%;width:100%}.chat-item .chat-box{margin-left:10px;position:relative}.chat-item .chat-box .chat-user-name{margin:0 0 5px 0}.chat-item .chat-box .chat-text-box{background-color:#eee;border-radius:4px}.chat-item .chat-box .chat-text-box .text-msg{margin:0;overflow-wrap:break-word;padding:3px;white-space:pre-line}.chat-item .chat-box .chat-text-box svg{bottom:0;height:auto;left:-16px;position:absolute;width:25px}.chat-item .chat-box .chat-text-box svg path{fill:#eee}.chat-item.zapleo .chat-box{margin:0 10px 0 0}.chat-item.zapleo .chat-box .chat-user-name{text-align:right}.chat-item.zapleo .chat-box .chat-text-box svg{left:auto;right:-16px;transform:scale(1,-1) rotate(180deg)}#authorization-form{padding:0 20px;position:absolute;top:50%;transform:translateY(-50%);width:100%}#authorization-form label{display:block;font-size:25px;padding:30px;text-align:center}#authorization-form .auth{border:1px solid #c8c8c8;border-image:none;border-radius:3px;display:block;padding:5px 23px 5px 5px;width:100%}#authorization-form .name-btn{background-color:transparent;border:none;bottom:2px;cursor:pointer;height:20px;margin:0;padding:0;position:absolute;right:20px;width:20px}#authorization-form .name-btn:focus{outline:0}#authorization-form .name-btn .name-btn-svg path{fill:#aaa}#authorization-form .name-btn .name-btn-svg.active path{fill:#00f}#message-form{bottom:0;display:none;padding:10px;position:absolute;width:100%}#message-form .message-textarea{border-radius:3px;padding:5px 23px 5px 5px;resize:none;width:100%}#message-form .send-msg-btn{background-color:transparent;border:none;bottom:15px;cursor:pointer;height:20px;margin:0;padding:0;position:absolute;right:13px;width:20px}#message-form .send-msg-btn:focus{outline:0}#message-form .send-msg-btn .send-msg-btn-svg path{fill:#aaa}#message-form .send-msg-btn .send-msg-btn-svg.active path{fill:#00f}.open-close-btn{cursor:pointer;height:25px;position:absolute;right:0;top:3px;width:25px}.open-close-btn svg.arrow{height:15px;left:5px;transform:rotate(90deg);position:relative;top:8px;width:auto}.open-close-btn svg.arrow path{fill:transparent;stroke:#616267;stroke-width:35}.open-close-btn svg.arrow.opened{transform:rotate(-90deg)}</style><style>.pic-loading{align-items:center;display:flex;flex-direction:column;height:100%;justify-content:center;left:0;position:absolute;right:0;top:0}.pic-loading .logo{background-size:contain;height:100px;width:100px}.pic-loading .spinner{animation:rotate 2s linear infinite;height:150px;margin:auto;position:absolute;transform-origin:center center;width:150px}.pic-loading .spinner .path{animation:dash 1.5s ease-in-out infinite;stroke:#f8a90d;stroke-dasharray:1,200;stroke-dashoffset:0;stroke-linecap:round}@keyframes rotate{100%{transform:rotate(360deg)}}@keyframes dash{0%{stroke-dasharray:1,200;stroke-dashoffset:0}50%{stroke-dasharray:89,200;stroke-dashoffset:-35px}100%{stroke-dasharray:89,200;stroke-dashoffset:-124px}}</style><title>Zapleo - Blog</title></head><body><section class=start><header><a href=index.html><svg xmlns=http://www.w3.org/2000/svg width=495.99 height=300.88 viewbox="0 0 495.98666 300.88" alt=Zapleo class=logo><path fill=#f8a90d d="M4.8 0h276.36s1.2 9.58-8.97 18.55C262 27.52 4.8 260.2 4.8 260.2L186.66 44.88H57.55S36.4 46.54 29.63 50c-6 3.05-12.04 7.5-13.45 13.4-3 12.57-3 29.92-3 29.92H4.82V.02"/><path fill=#616267 d="M276.4 300.88H.04s-1.2-9.57 8.98-18.54C19.18 273.37 276.4 40.68 276.4 40.68L94.55 256.02h121.82s27.22 1.5 40.52-8.27c3.84-2.82 7.15-6.15 8.13-10.27 3-12.57 3-29.9 3-29.9h8.37v93.3"/><path fill=#8a8c8e d="M190.45 123.03L16.17 290.1H7.2s0-1.98 5.2-6.17c5.18-4.18 178.05-160.9 178.05-160.9M270.6 231.9s2.4 6.37-2.4 16.74c-1.98 4.32-6.25 7.73-10.43 10.4-8.8 5.65-25.85 5.55-25.85 5.55H88.76V259h135.08s13.26-.56 21.24-2.08c26.62-5.1 25.52-25.03 25.52-25.03"/><path fill=#616267 fill-rule=evenodd d="M302.82 280.9c6.27.2 11.8-.36 17.96-.26-2.92-6.94-5.92-13.82-9.1-20.5-2.88 7-6 13.75-8.86 20.75zm8.85-30.37h2.78c6.9 13.96 12.64 29.76 19.5 43.52.96 1.96 2.43 3.63 2.77 5.82-2.96-.16-6.56.32-9.1-.25.1-6.16-3.18-10.96-5.57-15.44-6.33-.6-13.75-.08-20.5-.25-1.93 5.1-5.5 9.8-5.56 15.94h-6.84c7.96-15.98 15.07-32.82 22.5-49.34m141.95 19.49c-1.08 11.62 3 21.82 9.87 25.55 8.08 4.4 17.35 1.27 21.25-4.05 4.8-6.56 5.32-19.7.76-28.34-2.74-5.2-8.84-9.6-16.95-8.85-9.07.84-14.08 6.62-14.93 15.7zm20.24 30.86h-3.8c-10.08-.84-16.94-5.65-20.74-12.4-4.06-7.22-4.3-18.74.26-26.3 10.84-18.05 44.3-13.7 46.3 10.62 1.4 17.08-8.38 25.76-22.02 28.08m-37.19-45.03c-4.48-1.2-11.07-1.26-16.44-.76v17.7c4.5.25 10.26-.37 14.94-.76-.22 1.8-.7 3.35-1.02 5.06-4.33-.64-9-.95-13.66-1.27-.6 6.33-.1 13.75-.25 20.5 6.23.48 12.9-.78 18.23-2.03-.13 2.15-.56 4-1.02 5.82-7.6-.58-16.25-.1-24.28-.25 1.2-13.6 1.2-34.72 0-48.32 8.2-.16 17.1.4 24.55-.5 1.14 1.1-1 3.17-1.02 4.8m-74.66 18.98c4.56-6.03 2.76-18.88-3.54-20.74-2.27-.67-5.98-.25-8.6.5v23.8c5.3.53 9.35.12 12.14-3.56zm-11.9 6.33c-.57 5.98-.17 13.16.77 18.47-2.22.57-5.48.1-8.1.25 1.18-13.6 1.18-34.72 0-48.32 5.47 1 10.2-.84 15.93-.26 8.88.9 13.26 7.77 12.65 15.68-.7 8.96-8.88 16.05-21.25 14.17m37.7-29.34c-1.93 13.25-.63 29.73-1 44.53 6.22.48 12.88-.78 18.2-2.03-.12 2.15-.54 4-1 5.82-7.6-.58-16.27-.1-24.3-.25 1.2-13.6 1.2-34.72 0-48.32 2.64.15 5.9-.32 8.1.25"/></svg></a><nav><ul><li><a href=index.html class=underline>Home</a></li><li><a href=about.html class=underline>About</a></li><li><a href=team.html class=underline>Team</a></li><li><a href=blog.html class="underline active">Blog</a></li><li><a href=portfolio.html class=underline>Portfolio</a></li><li><a href=services.html class=underline>Services</a></li><li><a href=testimonials.html class=underline>Testimonials</a></li><li><a href=contact.html class=underline>Contact</a></li></ul><button class=sandwich><span class=line1></span> <span class=line2></span> <span class=line3></span></button></nav></header><div class=mob-menu><nav><ul><li><a href=index.html>Home</a></li><li><a href=about.html>About</a></li><li><a href=team.html>Team</a></li><li><a href=blog.html>Blog</a></li><li><a href=portfolio.html>Portfolio</a></li><li><a href=services.html>Services</a></li><li><a href=testimonials.html>Testimonials</a></li><li><a href=contact.html>Contact</a></li></ul></nav></div></section><main><section class=blog><div class=top><article><h1>Blog</h1><p>Our everyday thoughts are presented here case studies, video presentations and photo-shootings below.</p></article></div><div class=content><ul class="custom-items js-custom-items"><li class="custom-item js-custom-item"><figure><div class=leftbox><picture class=js-lazy-load><source class=js-lazy-src type=image/webp data-srcset=images/blog/blog-post-1-335x235.z.webp><img class=js-lazy-img data-src=images/blog/blog-post-1-335x235.z.jpg></picture><div class="pic-loading js-pic-loading"><div class=logo></div><svg class=spinner viewBox="25 25 50 50"><circle class=path cx=50 cy=50 r=20 fill=none stroke-width=2 stroke-miterlimit=10 /></svg></div></div><figcaption class=post><h2><a href=blog_post.html>Fashions fade, style is eternal</a></h2><p>Fanny pack beard pop-up twee tote bag DIY. Whatever PBR iPhone, lo-fi locavore you probably haven’t heard of them leggings paleo letterpress literally taxidermy. Tote bag hashtag Williamsburg, cronut salvia Thundercats gentrify…</p><div class=details><p class=date>14 March 2015</p><p class=category><a class=underline href=https://demo.kaliumtheme.com/main/category/everyday-life/ >Everyday Life</a></p></div></figcaption></figure></li><li class="custom-item js-custom-item"><figure><div class=leftbox><picture class=js-lazy-load><source class=js-lazy-src type=image/webp data-srcset=images/blog/blog-post-2-335x235.z.webp><img class=js-lazy-img data-src=images/blog/blog-post-2-335x235.z.jpg></picture><div class="pic-loading js-pic-loading"><div class=logo></div><svg class=spinner viewBox="25 25 50 50"><circle class=path cx=50 cy=50 r=20 fill=none stroke-width=2 stroke-miterlimit=10 /></svg></div></div><figcaption class=post><h2><a href=https://demo.kaliumtheme.com/main/best-tips-for-a-successful-magazine/ >Best Tips for a Successful Magazine</a></h2><p>Good ideas don’t require proper planning or schedule; nor do they benefit from exhaustingly long meetings and conversations with management. They emerge from experiments, from playing around with things that you care…</p><div class=details><p class=date>13 March 2017</p><p class=category><a class=underline href=https://demo.kaliumtheme.com/main/category/magazine/ >Magazine</a></p></div></figcaption></figure></li><li class="custom-item js-custom-item"><figure><div class=leftbox><picture class=js-lazy-load><source class=js-lazy-src type=image/webp data-srcset=images/blog/blog-post-3-335x235.z.webp><img class=js-lazy-img data-src=images/blog/blog-post-3-335x235.z.jpg></picture><div class="pic-loading js-pic-loading"><div class=logo></div><svg class=spinner viewBox="25 25 50 50"><circle class=path cx=50 cy=50 r=20 fill=none stroke-width=2 stroke-miterlimit=10 /></svg></div></div><figcaption class=post><h2><a href=https://demo.kaliumtheme.com/main/best-tips-for-a-successful-magazine/ >Audio Post</a></h2><p>May indulgence difficulty ham can put especially. Bringing remember for supplied her why was confined. Middleton principle did she procuring extensive believing add. Weather adapted prepare oh is calling. These wrong of…</p><div class=details><p class=date>13 March 2017</p><p class=category><a class=underline href=https://demo.kaliumtheme.com/main/category/everyday-life/ >Everyday Life</a>, <a class=underline href=https://demo.kaliumtheme.com/main/category/music/ >Music</a>, <a class=underline href=https://demo.kaliumtheme.com/main/category/resources/ >Resources</a></p></div></figcaption></figure></li><li class="custom-item js-custom-item"><figure><div class=leftbox><picture class=js-lazy-load><source class=js-lazy-src type=image/webp data-srcset=images/blog/blog-post-4-335x235.z.webp><img class=js-lazy-img data-src=images/blog/blog-post-4-335x235.z.png></picture><div class="pic-loading js-pic-loading"><div class=logo></div><svg class=spinner viewBox="25 25 50 50"><circle class=path cx=50 cy=50 r=20 fill=none stroke-width=2 stroke-miterlimit=10 /></svg></div></div><figcaption class=post><h2><a href=https://demo.kaliumtheme.com/main/designing-with-your-clients/ >Image Gallery Post</a></h2><p>Moments its musical age explain. But extremity sex now education concluded earnestly her continual. Oh furniture acuteness suspected continual ye something frankness. Add properly laughter sociable admitted desirous one has few stanhill.…</p><div class=details><p class=date>23 March 2017</p><p class=category><a class=underline href=https://demo.kaliumtheme.com/main/category/general/ >General</a></p></div></figcaption></figure></li><li class="custom-item js-custom-item"><figure><div class=leftbox><picture class=js-lazy-load><source class=js-lazy-src type=image/webp data-srcset=images/blog/blog-post-2-335x235.z.webp><img class=js-lazy-img data-src=images/blog/blog-post-2-335x235.z.png></picture><div class="pic-loading js-pic-loading"><div class=logo></div><svg class=spinner viewBox="25 25 50 50"><circle class=path cx=50 cy=50 r=20 fill=none stroke-width=2 stroke-miterlimit=10 /></svg></div></div><figcaption class=post><h2><a href="https://themeforest.net/item/kalium-creative-theme-for-professionals/10860525?ref=Laborator">External Link Post</a></h2><p>Purchase Kalium Video Talent she for lively eat led sister. Entrance strongly packages she out rendered get quitting denoting led. Dwelling confined improved it he no doubtful raptures. Several carried through an…</p><div class=details><p class=date>24 March 2017</p><p class=category><a class=underline href=https://demo.kaliumtheme.com/main/category/resources/ >Resources</a></p></div></figcaption></figure></li></ul><aside class=sidebar><form class=search action=#><label><input type=search name=search placeholder="Search site..."></label><button type=submit class=go>GO</button></form><h3>Instagram</h3><ul class=instathumbs><li class=js-custom-item><a href=http://instagram.com/p/BRWPLmhhKwZ/ target=_self><picture class=js-lazy-load><img class=js-lazy-img data-src="https://instagram.fhen1-1.fna.fbcdn.net/vp/ff96d18bd02cae0f902e478354e47fc8/5B218823/t51.2885-15/e35/p240x240/21984571_870518726457916_1177664532026228736_n.jpg?ig_cache_key=MTYxMjU5NTA5OTYxMzU5MDcwOA%3D%3D.2"></picture></a><div class="pic-loading js-pic-loading"><div class=logo></div><svg class=spinner viewBox="25 25 50 50"><circle class=path cx=50 cy=50 r=20 fill=none stroke-width=2 stroke-miterlimit=10 /></svg></div></li><li class=js-custom-item><a href=http://instagram.com/p/BRWO9zaBxPr/ target=_self><picture class=js-lazy-load><img class=js-lazy-img data-src=images/blog/instagram-2-230x230.z.jpg></picture></a><div class="pic-loading js-pic-loading"><div class=logo></div><svg class=spinner viewBox="25 25 50 50"><circle class=path cx=50 cy=50 r=20 fill=none stroke-width=2 stroke-miterlimit=10 /></svg></div></li><li class=js-custom-item><a href=http://instagram.com/p/BRWO5Iphma2/ target=_self><picture class=js-lazy-load><img class=js-lazy-img data-src=images/blog/instagram-3-230x230.z.jpg></picture></a><div class="pic-loading js-pic-loading"><div class=logo></div><svg class=spinner viewBox="25 25 50 50"><circle class=path cx=50 cy=50 r=20 fill=none stroke-width=2 stroke-miterlimit=10 /></svg></div></li><li class=js-custom-item><a href=http://instagram.com/p/BROuozbB6dM/ target=_self><picture class=js-lazy-load><img class=js-lazy-img data-src=images/blog/instagram-4-230x230.z.jpg></picture></a><div class="pic-loading js-pic-loading"><div class=logo></div><svg class=spinner viewBox="25 25 50 50"><circle class=path cx=50 cy=50 r=20 fill=none stroke-width=2 stroke-miterlimit=10 /></svg></div></li><li class=js-custom-item><a href=http://instagram.com/p/BROuZ1vhoWh/ target=_self><picture class=js-lazy-load><img class=js-lazy-img data-src=images/blog/instagram-5-230x230.z.jpg></picture></a><div class="pic-loading js-pic-loading"><div class=logo></div><svg class=spinner viewBox="25 25 50 50"><circle class=path cx=50 cy=50 r=20 fill=none stroke-width=2 stroke-miterlimit=10 /></svg></div></li><li class=js-custom-item><a href=http://instagram.com/p/BROuDqUh5Ur/ target=_self><picture class=js-lazy-load><img class=js-lazy-img data-src=images/blog/instagram-6-230x230.z.jpg></picture></a><div class="pic-loading js-pic-loading"><div class=logo></div><svg class=spinner viewBox="25 25 50 50"><circle class=path cx=50 cy=50 r=20 fill=none stroke-width=2 stroke-miterlimit=10 /></svg></div></li><li class=js-custom-item><a href=http://instagram.com/p/BRJHHGuhnmh/ target=_self><picture class=js-lazy-load><img class=js-lazy-img data-src=images/blog/instagram-7-230x230.z.jpg></picture></a><div class="pic-loading js-pic-loading"><div class=logo></div><svg class=spinner viewBox="25 25 50 50"><circle class=path cx=50 cy=50 r=20 fill=none stroke-width=2 stroke-miterlimit=10 /></svg></div></li><li class=js-custom-item><a href=http://instagram.com/p/BRJHELyBwcN/ target=_self><picture class=js-lazy-load><img class=js-lazy-img data-src=images/blog/instagram-8-230x230.z.jpg></picture></a><div class="pic-loading js-pic-loading"><div class=logo></div><svg class=spinner viewBox="25 25 50 50"><circle class=path cx=50 cy=50 r=20 fill=none stroke-width=2 stroke-miterlimit=10 /></svg></div></li></ul><h3>Tags</h3><ul class=tagcloud><li><a href=#>sidor</a></li><li><a href=#>envato</a></li><li><a href=#>zapleo</a></li><li><a href=#>laborator</a></li><li><a href=#>music</a></li><li><a href=#>nightlife</a></li><li><a href=#>max-parallax</a></li></ul><h3>Categories</h3><ul class=categories><li><a href=# class=underline>Design & Dev</a> <span>(3)</span></li><li><a href=# class=underline>Everyday Life</a> <span>(2)</span></li><li><a href=# class=underline>General</a> <span>(1)</span></li><li><a href=# class=underline>GUI</a> <span>(1)</span></li><li><a href=# class=underline>Magazine</a> <span>(3)</span></li><li><a href=# class=underline>Music</a> <span>(2)</span></li><li><a href=# class=underline>Photography</a> <span>(1)</span></li><li><a href=# class=underline>Resources</a> <span>(1)</span></li></ul><h3>Comments</h3><ul class=comments><li><span>Sam Smith</span> on <a href=blog_post.html>Fashions fade, style is eternal</a></li><li><span>Max</span> on <a href=blog_post.html>Fashions fade, style is eternal</a></li><li><span>Dimon</span> on <a href=#>Best Tips for a Successful Magazine</a></li></ul><h3>Latest posts</h3><ul class=latest_posts><li><a href=blog_post.html class=underline>Fashions fade, style is eternal</a></li><li><a href=# class=underline>Best Tips for a Successful Magazine</a></li><li><a href=# class=underline>Audio Post</a></li><li><a href=# class=underline>Image Post</a></li><li><a href=# class=underline>Image Gallery Post</a></li></ul></aside></div></section></main><footer class="footer js-footer"><ul><li class=smgroup><ul><li><p><a class=conticon href=skype:zapleosoft?chat></a> <span>zapleosoft</span></p></li><li><p><a class="mail conticon" href="mailto:dima@zapleo.com?subject=Hi, Zapleo team!"></a> <span>dima@zapleo.com</span></p></li></ul></li><li class=biggroup><ul><li><a class="phone conticon" href=tel:+380994811889></a></li><li><a class="whatsapp conticon" href="whatsapp://send?text=Hi,%20Zapleo%20team!"></a></li><li><a class="viber conticon" href="viber://add?number=%2B380994811889"></a></li><li><a class="telegram conticon" href="tg://resolve?domain=zapleosoft"></a></li></ul><p><span>+38(099)4811889</span></p></li><li class=social><ul><li><p><a class=fb target=_blank href=https://www.facebook.com/Zapleo-Soft-1095321843875350></a> <span>Facebook</span></p></li><li><p><a class=l_in target=_blank href=https://www.linkedin.com/company/zapleo></a> <span>LinkedIn</span></p></li><li><p><a class=inst target=_blank href=https://www.instagram.com/zapleosoft/ ></a> <span>Instagram</span></p></li><li><p><a class=up target=_blank href=https://www.upwork.com/o/companies/~019f95d8c9c6685b97></a> <span>Upwork</span></p></li></ul></li></ul></footer><section class="messenger js-messenger"><div class="rolled-up js-rolled-up"><p>Напишите нам, мы онлайн!</p></div><div class="expanded js-expanded"><h3 class="chat-caption js-chat-caption">Zapleo chat</h3><ul class="chat js-chat"></ul><form id=authorization-form><label>Enter your name</label><input id=js-auth class=auth placeholder="Enter your name"> <button class="name-btn js-name-btn"><svg class="name-btn-svg js-name-btn-svg" viewBox="0 0 725 725"><path d="M 50 50 L 600 300 L 50 550 L 50 350 L 350 300 L 50 250 L 50 50 Z"/></svg></button></form><form id=message-form><textarea name=new-messege id=js-message-textarea class=message-textarea rows=2 placeholder="Send: shift + enter"></textarea><button class="send-msg-btn js-send-msg-btn"><svg class="send-msg-btn-svg js-send-msg-btn-svg" viewBox="0 0 725 725"><path d="M 50 50 L 600 300 L 50 550 L 50 350 L 350 300 L 50 250 L 50 50 Z"/></svg></button></form></div><div class="open-close-btn js-open-close-btn"><svg class="arrow js-arrow" viewBox="0 0 250 400"><path d="M 225 25 L 25 200 L 225 375"/></svg></div></section></body><script src=https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js></script><script>"use strict";function loadImage(t){var e=t.querySelectorAll(".js-lazy-src"),o=t.querySelectorAll(".js-lazy-img");e.forEach(function(t){return t.srcset=t.getAttribute("data-srcset")}),o.forEach(function(t){return t.src=t.getAttribute("data-src")})}function filterHeight(){var t=0,e=0,o=0,r=[],n=[],s=document.querySelectorAll(".js-custom-items .js-custom-item"),i=!0,a=!1,c=void 0;try{for(var l,u=s[Symbol.iterator]();!(i=(l=u.next()).done);i=!0){var d=l.value,f=window.getComputedStyle(d),m=parseInt(f.getPropertyValue("margin-top"),10),y=parseInt(f.getPropertyValue("margin-bottom"),10),p=parseInt(f.getPropertyValue("margin-right"),10),h=parseInt(f.getPropertyValue("margin-left"),10);r.push(d.offsetWidth+p+h),n.push(d.offsetHeight+m+y)}}catch(t){a=!0,c=t}finally{try{!i&&u.return&&u.return()}finally{if(a)throw c}}var v=document.querySelector(".js-custom-items");v.style.height="auto",t+=v.offsetHeight,o+=v.offsetWidth;var g=Math.max.apply(Math,n);e=Math.max(Math.ceil(t/Math.floor(o/Math.max.apply(Math,r))),g),v.style.height=e+"px";for(var E=0;v.scrollWidth>v.offsetWidth&&(e+=20,v.style.height=e+"px",!(E>300));)E++;console.log(E)}document.addEventListener("DOMContentLoaded",function(t){function e(){var t=document.querySelector("main+footer"),e=window.getComputedStyle(t),o=parseInt(e.getPropertyValue("margin-top"),10),r=parseInt(e.getPropertyValue("margin-bottom"),10),n=t.offsetHeight+o+r;document.querySelector("main").style.marginBottom=n+"px"}e(),window.addEventListener("resize",function(){e()});var o=document.querySelector(".mob-menu"),r=document.querySelector(".sandwich"),n=document.querySelector("body");function s(){o.querySelector("nav").classList.remove("displayed"),n.classList.remove("noscroll"),setTimeout(function(){o.style.display="none",r.classList.remove("active")},250)}if(r.addEventListener("click",function(){this.classList.contains("active")?s():(this.classList.add("active"),n.classList.add("noscroll"),setTimeout(function(){o.style.display="block",setTimeout(function(){o.querySelector("nav").classList.add("displayed")},250)},500))}),o.addEventListener("click",function(t){o.querySelector("nav").contains(t.target)||s()}),document.querySelector(".js-custom-items")){var i=document.querySelectorAll(".js-custom-item figure"),a=document.querySelectorAll(".js-custom-item picture"),c=document.querySelectorAll(".js-custom-item"),l=document.querySelectorAll(".js-product-filter .js-data-term");document.querySelector(".js-column")&&(filterHeight(),window.addEventListener("resize",function(){filterHeight()})),window.addEventListener("touchstart",function t(e){e.preventDefault(),document.querySelectorAll(".underline").forEach(function(t){t.addEventListener("mouseenter",function(){t.style.color="rgb(138, 138, 138)"})}),i.forEach(function(t){t.addEventListener("mouseenter",function(){t.querySelector("figcaption").style.zIndex="-1"})}),a.forEach(function(t){t.addEventListener("click",function(e){e.preventDefault(),i.forEach(function(t){return t.classList.remove("hovered")}),t.closest("figure").classList.add("hovered")})}),window.removeEventListener("touchstart",t)}),l.forEach(function(t){var e=t.getAttribute("data-term"),o=!0;c.forEach(function(t){t.classList.contains(e)&&(o=!1)}),"*"!==e&&o&&(t.closest("li").style.display="none")});var u="150ms";l.forEach(function(t){["click","touchend"].forEach(function(e){t.addEventListener(e,function(e){e.preventDefault(),l.forEach(function(t){return t.classList.remove("active")}),t.classList.add("active"),c.forEach(function(t){t.style.display="none",t.style.position="relative",t.style.top="20px"});var o=t.getAttribute("data-term");c.forEach(function(t){"*"===o?(t.style.display="block",t.style.transition="top 0s",setTimeout(function(){t.style.top="0px",t.style.transitionDuration=u},0)):t.classList.contains(o)&&(t.style.display="block",t.style.transition="top 0s",setTimeout(function(){t.style.top="0px",t.style.transitionDuration=u},0))}),document.querySelector(".js-column")&&filterHeight()},!1)})})}var d={};d.parents=document.querySelectorAll(".js-lazy-load"),d.lazyImages=document.querySelectorAll(".js-lazy-img");if(d.lazyImages.forEach(function(t){return t.addEventListener("load",function(){var t=this.closest(".js-custom-item");if(t){var e=t.querySelector(".js-pic-loading");e&&(e.style.display="none")}})}),"IntersectionObserver"in window){console.log("IntersectionObserver started");var f=new IntersectionObserver(function(t){t.forEach(function(t){t.intersectionRatio>0&&(f.unobserve(t.target),loadImage(t.target))})},{root:null,rootMargin:"0px 0px 0px 0px",threshold:[0]});d.parents.forEach(function(t){return f.observe(t)})}else console.log("IntersectionObserver is not supported"),d.parents.forEach(function(t){return loadImage(t)})});</script><script>/**
+<!Doctype html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+		<meta name="theme-color" content="#ffffff">
+    <link rel="manifest" href="manifest.json">
+		<link rel="preload" href="fonts/functionpro_book.ttf" as="font" crossorigin="anonymous">
+		<link rel="preload" href="fonts/functionpro_medium.ttf" as="font" crossorigin="anonymous">
+		<link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.z.png">
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="mask-icon" href="images/icons/safari-pinned-tab.z.svg" color="#fcb117">
+    <style>
+.footer p,body,html,ul{padding:0;margin:0}@font-face{font-family:CenturyGothicBold;src:url(/fonts/CenturyGothicBold.ttf) format("truetype"),url(/fonts/CenturyGothicBold.woff) format("woff");font-weight:700;font-style:normal}@font-face{font-family:functionpro_book;font-style:normal;font-weight:400;src:url(/fonts/functionpro_book.ttf) format("truetype"),url(/fonts/functionpro_book.woff) format("woff"),url(/fonts/functionpro_book.woff2) format("woff2");unicode-range:U+20-126,U+161-255,U+338-339,U+376,U+710,U+732,U+2019,U+201C-201E,U+8192-8202,U+8208-8212,U+8216-8218,U+8220-8222,U+8226,U+8230,U+8239,U+8249-8250,U+8287,U+8364,U+8482,U+9724,U+64257-64258,U+FFEB}@font-face{font-family:functionpro_medium;font-style:normal;font-weight:400;src:url(/fonts/functionpro_medium.ttf) format("truetype"),url(/fonts/functionpro_medium.woff) format("woff"),url(/fonts/functionpro_medium.woff2) format("woff2");unicode-range:U+20-126,U+161-255,U+338-339,U+376,U+710,U+732,U+2019,U+201C-201E,U+8192-8202,U+8208-8212,U+8216-8218,U+8220-8222,U+8226,U+8230,U+8239,U+8249-8250,U+8287,U+8364,U+8482,U+9724,U+64257-64258,U+FFEB}::-webkit-scrollbar{-webkit-appearance:none;width:4px}::-webkit-scrollbar-track{background-color:rgba(206,206,206,.6);border-radius:8px}::-webkit-scrollbar-thumb{background-color:#828282;border-radius:8px}*{box-sizing:border-box}::selection{background:#fcb117;color:#fff}* img::selection{background:0 0}body,html{color:#8a8a8a;font-family:functionpro_book,sans-serif;font-size:calc(.00313 * 100vw + 14px);height:auto;min-width:320px;position:relative}.clearfix::after{content:"";display:table;clear:both}a{text-decoration:none;color:inherit}ul{list-style:none}h1,h2,h3,h4,h5,h6{color:#373737}.logo{width:18vmin;max-width:150px;height:auto;max-height:91px}.start{display:block;color:#69696b;background:#fff}header{width:100%;padding:6.2vmin 6% 0;display:flex;justify-content:space-between;align-items:center}header nav li{display:inline-block}@media (min-width:901px){header nav li+li{margin-left:calc(.02353 * 100vw + -5.17647px)}}main{background:#fff}main section{padding:12.2vmin 6%}h1,h2{font-family:functionpro_medium,sans-serif;font-size:1.4em;font-weight:500}.showmore{font-family:inherit;font-size:calc(.00625 * 100vw + 10px);text-transform:uppercase;color:#fff;border:none;outline:0;display:block;margin:1.7vmin auto 0;padding:1.45% 2.98%;background:#69696b;cursor:pointer}.underline{display:inline-block}.underline::after{content:"";display:block;height:1px;margin:1px auto 0 0;transition:width .25s ease-in-out;width:0}.underline:hover{cursor:pointer}.underline:hover::after{width:100%}.active.underline::after{background:#fcb117;width:100%}.hidden{display:none}.noscroll{overflow:hidden;position:fixed;top:0;left:0;width:100%}.smgroup ul,.social ul{display:inline-flex}.footer{color:transparent;padding:7.6vmin 0 5.8vmin 0;width:100%;background:#3c3a3a;position:fixed;bottom:0;z-index:-1}@media (max-width:1100px){.footer{padding:7vmin 0 5vmin 0}}@media (max-width:480px){.footer{padding-left:0;padding-right:0}}.footer>ul{display:flex;justify-content:space-between;flex-wrap:wrap;margin:0 auto;overflow:hidden;width:72%}@media (max-width:1100px){.footer>ul{width:90%}}@media (max-width:768px){.footer>ul{justify-content:center}}.footer p{text-align:center;font-size:calc(.00625 * 100vw + 14px)}@media (max-width:768px){.footer p{margin-top:0}}.footer p span{display:block;transition:color .4s ease-in-out}@media (max-width:768px){.footer p span{display:none}}.footer p:hover span{color:#ececec}.footer p:hover .fb+span{color:#3b5998}.footer p:hover .l_in+span{color:#0077b5}.footer p:hover .inst+span{color:#ce2a51}.footer p:hover .up+span{color:#37a000}.conticon{display:inline-block;position:relative;height:40px;width:40px;background-image:url(/images/icons/footer_icons.z.svg),url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGMAAABtCAYAAAC1Md/lAAADQ0lEQVR42u3dAUtaYRjFcUNRlCJZGEsWRRNHkSTFhrEoShpFURiNjY38/t/CvXfcQYxG3dNRH9hfeL7A+fHcV3sP3VLpP/tMJpNePuUSn7lCLKX5mWacZpSmTSrzwxjmEI/nLEMindlCtJ+A+DPZtvR5dM0Gopw/lsbPzF2adRKb/qE9LjBDHl3TgWik+VEQ4/eWkJ4f41iAyGaT9LwQb0WIL6TnhVhIcyNAPKRpkqAXY1vcio+k54WopfkuQHxLUyVBL8ahuBUd0vNCtESIS9LzY1yKGCuk54XoiBCHpOeFqOYHcFGI7KCvkaAX45O4FR9IzwvRzH+sFYXIfhQukKAX40LcilXS80JsihDHpOeFqKS5FyCyP6k3SNCLsS9uxS7peSEeNz2KzIi7bj/GUNwK6jlmiHcixBnpeSFe2vR4qo5DycCM0RO3ok96XoiGeGjfc2j7MWh6BIFYEyHOSc8L8ZqmxzIJejFoegSBqItNj680PfwYn8WteE96XgiaHoEO7Svx0KbpYcag6REEgqZHIIyBuBVd0vNC0PQIhEHTIwjElghxRHpeCJoegTBoegSBWBIP7RGHth+DpkcQiHUR4pT0vBCvaXoskqAXg6ZHEIhFselxR9PDj3EibsUG6XkhaHoEgcgujW5pesTA2BG34oD0vBA0PQJhHIlbsUV6XgiaHoEObZoeQTC64lYMSM8LQdMjEAZNjyAQb8RLo2sujfwYND2CQND0CAJRyX81K4d2nQS9GDQ9gkAsi4f2LYe2H+Nc3Io10vNC0PQIAlHO76dpegTA2BO3Yo/0vBA0PQJhnIpbwcumzBA0PYJA0PQIhLErbsU+6XkhaHoEwqDpEQRiVYS4ID3/oU3TIwgGTY8gEFVeuRYHg6ZHEIgV8dLoiksjP4b6yrUW6XkhaHoEOrRpegTBOBC3Yof0vBA0PQJh0PQIArEhQpyQnheCpkcgjL64FT3S80LQ9AiEQdMjCERbhBiSnheCpkcgDJoeQSDq+f+HVV65ViFBLwZNjyAQND0CYVyLh3aT9KazGTc0PWJ9rd1+YfODpseMUGrZO4ueweiQ1GxRWv9oDdL0mOOjq/vXo4umR4BH14BXrk3/8wvkvbYCyhXBlQAAAABJRU5ErkJggg==);background-repeat:no-repeat;background-color:#69696b;background-position:center 0,40px center;background-size:50px;transform:translateZ(0);transition:all .5s ease}.conticon:hover{background-position-x:center,-40px}.smgroup .conticon{top:-.5px}@media (max-width:768px){.smgroup{margin:0 45px 0 25px}}@media (max-width:480px){.smgroup{margin:0 26px 0 23px}}@media (max-width:768px){.smgroup ul{flex-direction:column}}@media (max-width:768px){.biggroup{order:-1}}.biggroup ul:hover+p{color:#ececec}@media (max-width:768px){.biggroup ul{columns:30px auto;width:100px}}@media (max-width:480px){.biggroup ul{width:90px}}.biggroup li{display:inline-block}@media (min-width:769px){.biggroup li+li{margin:0 0 0 8px}}@media (max-width:768px){.biggroup li+li:nth-child(even){margin:14px 0 0 0}}.mail{background-position-y:11%;background-size:100.4%,110%;width:51px}@media (max-width:768px){.mail{bottom:-1px;margin-top:14px}}.phone{background-position-y:22%}.whatsapp{background-position-y:33%;bottom:-1px}.viber{background-position-y:44.1%;background-size:129%}.telegram{background-position-y:55%;background-size:110%;bottom:-1px;width:46px}@media (max-width:768px){.social ul{display:block;columns:auto 2}.social ul li+li:nth-child(even){margin:14px 0 0 0}}.social a{display:inline-block;width:40px;height:40px;transition:background-position .4s cubic-bezier(.65,.05,.36,1)}.social a:hover{background-position-x:center,0}.social .fb{background:url(/images/icons/footer_icons.z.svg) no-repeat center 66.5%/125%,-webkit-gradient(linear,left top,right top,color-stop(50%,#3b5998),color-stop(50%,#fcb117)) no-repeat 100% 0/200%;background:url(/images/icons/footer_icons.z.svg) no-repeat center 66.5%/125%,-webkit-linear-gradient(left,#3b5998 50%,#fcb117 50%) no-repeat 100% 0/200%;background:url(/images/icons/footer_icons.z.svg) no-repeat center 66.5%/125%,-moz-linear-gradient(left,#3b5998 50%,#fcb117 50%) no-repeat 100% 0/200%;background:url(/images/icons/footer_icons.z.svg) no-repeat center 66.5%/125%,linear-gradient(to right,#3b5998 50%,#fcb117 50%) no-repeat 100% 0/200%;transform:translateZ(0)}.social .l_in{background:url(/images/icons/footer_icons.z.svg) no-repeat center 77.5%/125%,-webkit-gradient(linear,left top,right top,color-stop(50%,#0077b5),color-stop(50%,#fcb117)) no-repeat 100% 0/200%;background:url(/images/icons/footer_icons.z.svg) no-repeat center 77.5%/125%,-webkit-linear-gradient(left,#0077b5 50%,#fcb117 50%) no-repeat 100% 0/200%;background:url(/images/icons/footer_icons.z.svg) no-repeat center 77.5%/125%,-moz-linear-gradient(left,#0077b5 50%,#fcb117 50%) no-repeat 100% 0/200%;background:url(/images/icons/footer_icons.z.svg) no-repeat center 77.5%/125%,linear-gradient(to right,#0077b5 50%,#fcb117 50%) no-repeat 100% 0/200%;transform:translateZ(0)}.social .inst{background:url(/images/icons/footer_icons.z.svg) no-repeat center 88.66%/125%,-webkit-gradient(linear,left top,right top,color-stop(50%,#ce2a51),color-stop(50%,#fcb117)) no-repeat 100% 0/200%;background:url(/images/icons/footer_icons.z.svg) no-repeat center 88.66%/125%,-webkit-linear-gradient(left,#ce2a51 50%,#fcb117 50%) no-repeat 100% 0/200%;background:url(/images/icons/footer_icons.z.svg) no-repeat center 88.66%/125%,-moz-linear-gradient(left,#ce2a51 50%,#fcb117 50%) no-repeat 100% 0/200%;background:url(/images/icons/footer_icons.z.svg) no-repeat center 88.66%/125%,linear-gradient(to right,#ce2a51 50%,#fcb117 50%) no-repeat 100% 0/200%;transform:translateZ(0)}.social .up{background:url(/images/icons/footer_icons.z.svg) no-repeat center 99.6%/125%,-webkit-gradient(linear,left top,right top,color-stop(50%,#37a000),color-stop(50%,#fcb117)) no-repeat 100% 0/200%;background:url(/images/icons/footer_icons.z.svg) no-repeat center 99.6%/125%,-webkit-linear-gradient(left,#37a000 50%,#fcb117 50%) no-repeat 100% 0/200%;background:url(/images/icons/footer_icons.z.svg) no-repeat center 99.6%/125%,-moz-linear-gradient(left,#37a000 50%,#fcb117 50%) no-repeat 100% 0/200%;background:url(/images/icons/footer_icons.z.svg) no-repeat center 99.6%/125%,linear-gradient(to right,#37a000 50%,#fcb117 50%) no-repeat 100% 0/200%;transform:translateZ(0)}
+</style>
+    <style>
+.magn,.sandwich{font-family:inherit;border:none;outline:0;background:0 0;padding:0}.magn{cursor:pointer}.sandwich{display:none}@media (max-width:900px){header nav ul{display:none}header .sandwich{display:block}}.sandwich{cursor:pointer;filter:drop-shadow(0 0 1px #000);height:18px;position:relative;width:23px;z-index:6}.sandwich span{display:inline-block;position:absolute;left:0;background:#fff;width:100%;height:2px}.sandwich.active .line1{top:8px;transform:rotate(140deg)}.sandwich.active .line2{top:8px;transform:rotate(-140deg)}.sandwich.active .line3{opacity:0;top:0;transform:rotate(180deg)}.line1{top:0;transition:transform .5s,top .2s}.line2{top:8px;transition:transform .5s,top .2s;transition-delay:.2s,0s}.line3{top:16px;transition:all .5s;transition-delay:.1s}.mob-menu{display:none;position:fixed;left:0;top:0;bottom:0;right:0;z-index:5;color:#373737;background-color:rgba(0,0,0,.5)}.mob-menu nav{background:#fff;display:inline-block;padding:15px 0;height:100%;overflow:auto;text-transform:uppercase;font-size:calc(.00862 * 100vw + 11.24138px);transform:translateX(-100%);transition:transform .25s ease-in-out}.mob-menu .displayed{transform:translateX(0)}.mob-menu a{display:block;padding:10px 30px}.mob-menu a:hover{background-color:rgba(0,0,0,.2)}.magn{width:18px;height:18px;float:left;margin-right:10px;background:url(/images/linea/magnifier.z.svg) no-repeat 0 0/cover}
+</style>
+    <style>
+.top article h1,.top article h2{padding:0;margin:0}.top{display:flex;justify-content:flex-end;flex-wrap:wrap;padding-bottom:7.5vmin}.top article{flex-basis:100%;margin-right:40%}@media (max-width:736px){.top article{margin-right:0}}.top nav ul{display:inline-flex;justify-content:center;flex-wrap:wrap;width:100%}.top nav ul li{margin-left:40px;margin-top:10px}@media (max-width:736px){.top nav ul li{margin-left:5px}}.top nav ul li:first-child{margin-left:0}@media (max-width:736px){.top nav ul{justify-content:space-around;margin-top:10px}}@media (max-width:736px){.top nav{flex-basis:100%}}.top .underline:hover{color:#fcb117}
+</style>
+    <style>
+.content figure{padding:0;margin:0}.go,.sidebar [type=search]{font-family:inherit;border:none;outline:0;background:0 0;padding:0}.go{cursor:pointer}.categories li,.comments li,.latest_posts li{padding:5px 0}.content{display:flex;flex-wrap:wrap}.content .custom-items{flex:1 1 75%}.content .custom-items .custom-item{margin-bottom:6.5%}@media (max-width:1100px){.content .custom-items{flex-basis:100%}}.content figure{display:inline-flex}@media (max-width:580px){.content figure{flex-wrap:wrap}}.content figure .leftbox{flex:1 0 40%;height:calc(88vw * .75 * .4 * (235 / 335));overflow:hidden;position:relative}.content figure .leftbox picture{display:block}.content figure .leftbox picture img{display:block;width:100%}@media (max-width:1100px){.content figure .leftbox{height:calc(88vw * 1 * .4 * (235 / 335))}}@media (max-width:580px){.content figure .leftbox{height:calc(88vw * 1 * 1 * (235 / 335))}}@media (min-width:580px){.content figure h2{margin:0 0 3.3%}}.post{padding:0 3.3%}.sidebar{flex:1 1 25%}.sidebar form{position:relative}.sidebar [type=search]{background:#ececec;font-size:15px;height:42px;padding:6px 40px 6px 12px;width:100%;-webkit-appearance:none}.sidebar [type=search]::-webkit-search-cancel-button{display:none}.go{font-size:14px;font-weight:700;height:42px;position:absolute;right:15px;top:0}.instathumbs{display:flex;flex-wrap:wrap;margin:0 -5px}.instathumbs li{flex-basis:23%;height:calc((88vw * .25 + 10px) * .23);margin:0 2% 2% 0;overflow:hidden;position:relative}.instathumbs li a{display:block;height:100%}.instathumbs li a picture{display:block;height:100%}.instathumbs li a picture img{display:block;height:auto;left:50%;position:relative;top:50%;transform:translate(-50%,-50%);transition:all 250ms ease-in-out;width:100%}.instathumbs li a picture img:hover{filter:opacity(.7)}.instathumbs li .pic-loading .spinner{height:60px;width:60px}@media (max-width:1100px){.instathumbs li{height:calc((88vw * 1 + 10px) * .23)}}.tagcloud{font-size:13px;color:#373737}.tagcloud li{display:inline-block;margin:5px 8px 3px 0}.tagcloud li a{display:inline-block;padding:4px 8px;background:#ececec;transition:all 250ms ease-in-out}.tagcloud li a:hover{background:#d4d4d4}.categories a{color:#69696b}.comments li+li{border-top:1px solid #ececec;margin-top:5px}.comments a{display:block;font-size:15px;color:#373737}.latest_posts li+li{margin-top:10px}
+</style>
+    <style>
+.messenger{bottom:0;color:#616267;font-size:16px;position:fixed;right:0;z-index:9999}.messenger ::-webkit-scrollbar{-webkit-appearance:none;width:3px}.messenger ::-webkit-scrollbar-track{background-color:rgba(206,206,206,.6);border-radius:8px}.messenger ::-webkit-scrollbar-thumb{background-color:rgba(150,150,150,.8);border-radius:8px}@media (max-width:750px){.messenger.opened{top:0;left:0}.messenger.opened .expanded{height:100%;width:100%}}.rolled-up{background:#f8a90d;border-radius:4px 4px 0 0;color:inherit;cursor:pointer;display:block;padding:10px 30px 10px 20px}.rolled-up.opened{display:none}.rolled-up p{margin:0}.expanded{background:#fff;border-radius:4px 4px 0 0;color:inherit;display:none;height:400px;overflow:hidden;width:350px}.expanded.opened{display:block}.expanded.authorized .chat{display:block}.expanded.authorized #authorization-form{display:none}.expanded.authorized #message-form{display:block}.expanded .chat-caption{background-color:#f8a90d;color:inherit;cursor:pointer;margin:0;padding:10px}.expanded .chat{display:none;height:290px;list-style:none;padding:10px;overflow-y:auto}.expanded .chat .chat-item{display:flex;flex-wrap:wrap}.expanded .chat .chat-item .chat-box{flex-grow:1}.expanded .chat .chat-item.zapleo{flex-direction:row-reverse}.chat-item{margin-bottom:10px}.chat-item .chat-item-photo{border-radius:50%;height:30px;overflow:hidden;width:30px}.chat-item .chat-item-photo img{height:100%;width:100%}.chat-item .chat-box{margin-left:10px;position:relative}.chat-item .chat-box .chat-user-name{margin:0 0 5px 0}.chat-item .chat-box .chat-text-box{background-color:#eee;border-radius:4px}.chat-item .chat-box .chat-text-box .text-msg{margin:0;overflow-wrap:break-word;padding:3px;white-space:pre-line}.chat-item .chat-box .chat-text-box svg{bottom:0;height:auto;left:-16px;position:absolute;width:25px}.chat-item .chat-box .chat-text-box svg path{fill:#eee}.chat-item.zapleo .chat-box{margin:0 10px 0 0}.chat-item.zapleo .chat-box .chat-user-name{text-align:right}.chat-item.zapleo .chat-box .chat-text-box svg{left:auto;right:-16px;transform:scale(1,-1) rotate(180deg)}#authorization-form{padding:0 20px;position:absolute;top:50%;transform:translateY(-50%);width:100%}#authorization-form label{display:block;font-size:25px;padding:30px;text-align:center}#authorization-form .auth{border:1px solid #c8c8c8;border-image:none;border-radius:3px;display:block;padding:5px 23px 5px 5px;width:100%}#authorization-form .name-btn{background-color:transparent;border:none;bottom:2px;cursor:pointer;height:20px;margin:0;padding:0;position:absolute;right:20px;width:20px}#authorization-form .name-btn:focus{outline:0}#authorization-form .name-btn .name-btn-svg path{fill:#aaa}#authorization-form .name-btn .name-btn-svg.active path{fill:#00f}#message-form{bottom:0;display:none;padding:10px;position:absolute;width:100%}#message-form .message-textarea{border-radius:3px;padding:5px 23px 5px 5px;resize:none;width:100%}#message-form .send-msg-btn{background-color:transparent;border:none;bottom:15px;cursor:pointer;height:20px;margin:0;padding:0;position:absolute;right:13px;width:20px}#message-form .send-msg-btn:focus{outline:0}#message-form .send-msg-btn .send-msg-btn-svg path{fill:#aaa}#message-form .send-msg-btn .send-msg-btn-svg.active path{fill:#00f}.open-close-btn{cursor:pointer;height:25px;position:absolute;right:0;top:3px;width:25px}.open-close-btn svg.arrow{height:15px;left:5px;transform:rotate(90deg);position:relative;top:8px;width:auto}.open-close-btn svg.arrow path{fill:transparent;stroke:#616267;stroke-width:35}.open-close-btn svg.arrow.opened{transform:rotate(-90deg)}
+</style>
+    <style>
+.pic-loading{align-items:center;display:flex;flex-direction:column;height:100%;justify-content:center;left:0;position:absolute;right:0;top:0}.pic-loading .logo{background-size:contain;height:100px;width:100px}.pic-loading .spinner{animation:rotate 2s linear infinite;height:150px;margin:auto;position:absolute;transform-origin:center center;width:150px}.pic-loading .spinner .path{animation:dash 1.5s ease-in-out infinite;stroke:#f8a90d;stroke-dasharray:1,200;stroke-dashoffset:0;stroke-linecap:round}@keyframes rotate{100%{transform:rotate(360deg)}}@keyframes dash{0%{stroke-dasharray:1,200;stroke-dashoffset:0}50%{stroke-dasharray:89,200;stroke-dashoffset:-35px}100%{stroke-dasharray:89,200;stroke-dashoffset:-124px}}
+</style>
+		<title>Zapleo - Blog</title>
+	</head>
+	<body>
+		<!-- Start section -->
+		<section class="start">
+			<header>
+				<a href="index.html">
+					<svg xmlns="http://www.w3.org/2000/svg" width="495.99" height="300.88" viewbox="0 0 495.98666 300.88" alt="Zapleo" class="logo"><path fill="#f8a90d" d="M4.8 0h276.36s1.2 9.58-8.97 18.55C262 27.52 4.8 260.2 4.8 260.2L186.66 44.88H57.55S36.4 46.54 29.63 50c-6 3.05-12.04 7.5-13.45 13.4-3 12.57-3 29.92-3 29.92H4.82V.02"/><path fill="#616267" d="M276.4 300.88H.04s-1.2-9.57 8.98-18.54C19.18 273.37 276.4 40.68 276.4 40.68L94.55 256.02h121.82s27.22 1.5 40.52-8.27c3.84-2.82 7.15-6.15 8.13-10.27 3-12.57 3-29.9 3-29.9h8.37v93.3"/><path fill="#8a8c8e" d="M190.45 123.03L16.17 290.1H7.2s0-1.98 5.2-6.17c5.18-4.18 178.05-160.9 178.05-160.9M270.6 231.9s2.4 6.37-2.4 16.74c-1.98 4.32-6.25 7.73-10.43 10.4-8.8 5.65-25.85 5.55-25.85 5.55H88.76V259h135.08s13.26-.56 21.24-2.08c26.62-5.1 25.52-25.03 25.52-25.03"/><path fill="#616267" fill-rule="evenodd" d="M302.82 280.9c6.27.2 11.8-.36 17.96-.26-2.92-6.94-5.92-13.82-9.1-20.5-2.88 7-6 13.75-8.86 20.75zm8.85-30.37h2.78c6.9 13.96 12.64 29.76 19.5 43.52.96 1.96 2.43 3.63 2.77 5.82-2.96-.16-6.56.32-9.1-.25.1-6.16-3.18-10.96-5.57-15.44-6.33-.6-13.75-.08-20.5-.25-1.93 5.1-5.5 9.8-5.56 15.94h-6.84c7.96-15.98 15.07-32.82 22.5-49.34m141.95 19.49c-1.08 11.62 3 21.82 9.87 25.55 8.08 4.4 17.35 1.27 21.25-4.05 4.8-6.56 5.32-19.7.76-28.34-2.74-5.2-8.84-9.6-16.95-8.85-9.07.84-14.08 6.62-14.93 15.7zm20.24 30.86h-3.8c-10.08-.84-16.94-5.65-20.74-12.4-4.06-7.22-4.3-18.74.26-26.3 10.84-18.05 44.3-13.7 46.3 10.62 1.4 17.08-8.38 25.76-22.02 28.08m-37.19-45.03c-4.48-1.2-11.07-1.26-16.44-.76v17.7c4.5.25 10.26-.37 14.94-.76-.22 1.8-.7 3.35-1.02 5.06-4.33-.64-9-.95-13.66-1.27-.6 6.33-.1 13.75-.25 20.5 6.23.48 12.9-.78 18.23-2.03-.13 2.15-.56 4-1.02 5.82-7.6-.58-16.25-.1-24.28-.25 1.2-13.6 1.2-34.72 0-48.32 8.2-.16 17.1.4 24.55-.5 1.14 1.1-1 3.17-1.02 4.8m-74.66 18.98c4.56-6.03 2.76-18.88-3.54-20.74-2.27-.67-5.98-.25-8.6.5v23.8c5.3.53 9.35.12 12.14-3.56zm-11.9 6.33c-.57 5.98-.17 13.16.77 18.47-2.22.57-5.48.1-8.1.25 1.18-13.6 1.18-34.72 0-48.32 5.47 1 10.2-.84 15.93-.26 8.88.9 13.26 7.77 12.65 15.68-.7 8.96-8.88 16.05-21.25 14.17m37.7-29.34c-1.93 13.25-.63 29.73-1 44.53 6.22.48 12.88-.78 18.2-2.03-.12 2.15-.54 4-1 5.82-7.6-.58-16.27-.1-24.3-.25 1.2-13.6 1.2-34.72 0-48.32 2.64.15 5.9-.32 8.1.25"/></svg>
+				</a>
+				<nav>
+					<ul>
+						<li><a href="index.html" class="underline">Home</a></li>
+						<li><a href="about.html" class="underline">About</a></li>
+						<li><a href="team.html" class="underline">Team</a></li>
+						<li><a href="blog.html" class="underline active">Blog</a></li>
+						<li><a href="portfolio.html" class="underline">Portfolio</a></li>
+						<li><a href="services.html" class="underline">Services</a></li>
+						<li><a href="testimonials.html" class="underline">Testimonials</a></li>
+						<li><a href="contact.html" class="underline">Contact</a></li>
+					</ul>
+					<button class="sandwich">
+						<span class="line1"></span>
+						<span class="line2"></span>
+						<span class="line3"></span>
+					</button>
+				</nav>
+			</header>
+			<!-- Mobile menu -->
+			<div class="mob-menu">
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="team.html">Team</a></li>
+						<li><a href="blog.html">Blog</a></li>
+						<li><a href="portfolio.html">Portfolio</a></li>
+						<li><a href="services.html">Services</a></li>
+						<li><a href="testimonials.html">Testimonials</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</section>
+		<main>
+			<!-- Blog section -->
+			<section class="blog">
+				<div class="top">
+					<article>
+						<h1>Blog</h1>
+						<p>Our everyday thoughts are presented here case studies, video presentations and photo-shootings below.</p>
+					</article>
+				</div>
+				<div class="content">
+					<ul class="custom-items js-custom-items">
+						<!-- First post -->
+						<li class="custom-item js-custom-item">
+							<figure>
+								<div class="leftbox">
+									<picture class="js-lazy-load">
+                    <source class="js-lazy-src" type="image/webp" data-srcset="images/blog/blog-post-1-335x235.z.webp">
+										<img class="js-lazy-img" data-src="images/blog/blog-post-1-335x235.z.jpg">
+                  </picture>
+                  <!-- Photo loading spinner -->
+                  <div class="pic-loading js-pic-loading">
+                    <div class="logo"></div>
+                    <svg class="spinner" viewBox="25 25 50 50">
+                      <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+                    </svg>
+                  </div>
+								</div>
+								<figcaption class="post">
+									<h2>
+										<a href="blog_post.html">Fashions fade, style is eternal</a>
+									</h2>
+									<p>Fanny pack beard pop-up twee tote bag DIY. Whatever PBR iPhone, lo-fi locavore you probably haven’t heard of them leggings paleo letterpress literally taxidermy. Tote bag hashtag Williamsburg, cronut salvia Thundercats gentrify…</p>
+									<div class="details">
+										<p class="date">14 March 2015
+										</p><p class="category">
+											<a class="underline" href="https://demo.kaliumtheme.com/main/category/everyday-life/">Everyday Life</a>
+									</p></div>
+								</figcaption>
+              </figure>
+						</li>
+						<!-- Second post -->
+						<li class="custom-item js-custom-item">
+							<figure>
+								<div class="leftbox">
+									<picture class="js-lazy-load">
+                    <source class="js-lazy-src" type="image/webp" data-srcset="images/blog/blog-post-2-335x235.z.webp">
+                    <img class="js-lazy-img" data-src="images/blog/blog-post-2-335x235.z.jpg">
+                  </picture>
+                  <!-- Photo loading spinner -->
+                  <div class="pic-loading js-pic-loading">
+                    <div class="logo"></div>
+                    <svg class="spinner" viewBox="25 25 50 50">
+                      <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+                    </svg>
+                  </div>
+								</div>
+								<figcaption class="post">
+									<h2>
+										<a href="https://demo.kaliumtheme.com/main/best-tips-for-a-successful-magazine/">Best Tips for a Successful Magazine</a>
+									</h2>
+									<p>Good ideas don’t require proper planning or schedule; nor do they benefit from exhaustingly long meetings and conversations with management. They emerge from experiments, from playing around with things that you care…</p>
+									<div class="details">
+										<p class="date">13 March 2017
+										</p><p class="category">
+											<a class="underline" href="https://demo.kaliumtheme.com/main/category/magazine/">Magazine</a>
+									</p></div>
+								</figcaption>
+							</figure>
+						</li>
+						<!-- Audio Post -->
+						<li class="custom-item js-custom-item">
+							<figure>
+								<div class="leftbox">
+									<picture class="js-lazy-load">
+										<source class="js-lazy-src" type="image/webp" data-srcset="images/blog/blog-post-3-335x235.z.webp">
+										<img class="js-lazy-img" data-src="images/blog/blog-post-3-335x235.z.jpg">
+                  </picture>
+                  <!-- Photo loading spinner -->
+                  <div class="pic-loading js-pic-loading">
+                    <div class="logo"></div>
+                    <svg class="spinner" viewBox="25 25 50 50">
+                      <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+                    </svg>
+                  </div>
+								</div>
+								<figcaption class="post">
+									<h2>
+										<a href="https://demo.kaliumtheme.com/main/best-tips-for-a-successful-magazine/">Audio Post</a>
+									</h2>
+									<p>May indulgence difficulty ham can put especially. Bringing remember for supplied her why was confined. Middleton principle did she procuring extensive believing add. Weather adapted prepare oh is calling. These wrong of…</p>
+									<div class="details">
+										<p class="date">13 March 2017
+										</p><p class="category">
+											<a class="underline" href="https://demo.kaliumtheme.com/main/category/everyday-life/">Everyday Life</a>,
+											<a class="underline" href="https://demo.kaliumtheme.com/main/category/music/">Music</a>,
+											<a class="underline" href="https://demo.kaliumtheme.com/main/category/resources/">Resources</a>
+									</p></div>
+								</figcaption>
+							</figure>
+						</li>
+						<!-- Image Gallery Post -->
+						<li class="custom-item js-custom-item">
+							<figure>
+								<div class="leftbox">
+									<picture class="js-lazy-load">
+										<source class="js-lazy-src" type="image/webp" data-srcset="images/blog/blog-post-4-335x235.z.webp">
+										<img class="js-lazy-img" data-src="images/blog/blog-post-4-335x235.z.png">
+                  </picture>
+                  <!-- Photo loading spinner -->
+                  <div class="pic-loading js-pic-loading">
+                    <div class="logo"></div>
+                    <svg class="spinner" viewBox="25 25 50 50">
+                      <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+                    </svg>
+                  </div>
+								</div>
+								<figcaption class="post">
+									<h2>
+										<a href="https://demo.kaliumtheme.com/main/designing-with-your-clients/">Image Gallery Post</a>
+									</h2>
+									<p>Moments its musical age explain. But extremity sex now education concluded earnestly her continual. Oh furniture acuteness suspected continual ye something frankness. Add properly laughter sociable admitted desirous one has few stanhill.…</p>
+									<div class="details">
+										<p class="date">23 March 2017
+										</p><p class="category">
+											<a class="underline" href="https://demo.kaliumtheme.com/main/category/general/">General</a>
+									</p></div>
+								</figcaption>
+							</figure>
+						</li>
+						<!-- External Link Post -->
+						<li class="custom-item js-custom-item">
+							<figure>
+								<div class="leftbox">
+									<picture class="js-lazy-load">
+										<source class="js-lazy-src" type="image/webp" data-srcset="images/blog/blog-post-2-335x235.z.webp">
+										<img class="js-lazy-img" data-src="images/blog/blog-post-2-335x235.z.png">
+                  </picture>
+                  <!-- Photo loading spinner -->
+                  <div class="pic-loading js-pic-loading">
+                    <div class="logo"></div>
+                    <svg class="spinner" viewBox="25 25 50 50">
+                      <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+                    </svg>
+                  </div>
+								</div>
+								<figcaption class="post">
+									<h2>
+										<a href="https://themeforest.net/item/kalium-creative-theme-for-professionals/10860525?ref=Laborator">External Link Post</a>
+									</h2>
+									<p>Purchase Kalium Video Talent she for lively eat led sister. Entrance strongly packages she out rendered get quitting denoting led. Dwelling confined improved it he no doubtful raptures. Several carried through an…</p>
+									<div class="details">
+										<p class="date">24 March 2017
+										</p><p class="category">
+											<a class="underline" href="https://demo.kaliumtheme.com/main/category/resources/">Resources</a>
+									</p></div>
+								</figcaption>
+							</figure>
+						</li>
+					</ul>
+					<!-- Sidebar -->
+					<aside class="sidebar">
+					  <!-- Search -->
+						<form method="get" class="search" action="#">
+							<label>
+								<input type="search" name="search" placeholder="Search site...">
+							</label>
+							<button type="submit" class="go">GO</button>
+						</form>
+						<h3>Instagram</h3>
+				  	<!-- Instagram thumbs -->
+						<ul class="instathumbs">
+							<li class="js-custom-item">
+								<a href="http://instagram.com/p/BRWPLmhhKwZ/" target="_self">
+									<picture class="js-lazy-load">
+										<!--source type="image/webp" srcset="images/blog/instagram-1-230x230.z.webp"-->
+                    <img class="js-lazy-img js-img-instagram" data-src="https://instagram.fhen1-1.fna.fbcdn.net/vp/6d8160efe1ab0ff80321cc61b72bc75a/5B0F038C/t51.2885-15/s240x240/e35/26867832_1535967853190056_4785345852740730880_n.jpg?ig_cache_key=MTcwMjEwNDI5NTA3MzQ4NzMwMQ%3D%3D.2">
+									</picture>
+                </a>
+                <!-- Photo loading spinner -->
+                <div class="pic-loading js-pic-loading">
+                  <div class="logo"></div>
+                  <svg class="spinner" viewBox="25 25 50 50">
+                    <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+                  </svg>
+                </div>
+              </li>
+							<li class="js-custom-item">
+								<a href="http://instagram.com/p/BRWO9zaBxPr/" target="_self">
+									<picture class="js-lazy-load">
+										<!--source srcset="images/blog/instagram-2-230x230.z.webp"-->
+										<img class="js-lazy-img js-img-instagram" data-src="https://instagram.fhen1-1.fna.fbcdn.net/vp/6d8160efe1ab0ff80321cc61b72bc75a/5B0F038C/t51.2885-15/s240x240/e35/26867832_1535967853190056_4785345852740730880_n.jpg?ig_cache_key=MTcwMjEwNDI5NTA3MzQ4NzMwMQ%3D%3D.2">
+									</picture>
+                </a>
+                <!-- Photo loading spinner -->
+                <div class="pic-loading js-pic-loading">
+                  <div class="logo"></div>
+                  <svg class="spinner" viewBox="25 25 50 50">
+                    <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+                  </svg>
+                </div>
+              </li>
+							<li class="js-custom-item">
+								<a href="http://instagram.com/p/BRWO5Iphma2/" target="_self">
+									<picture class="js-lazy-load">
+										<!--source srcset="images/blog/instagram-3-230x230.z.webp"-->
+										<img class="js-lazy-img js-img-instagram" data-src="images/blog/instagram-3-230x230.z.jpg">
+									</picture>
+                </a>
+                <!-- Photo loading spinner -->
+                <div class="pic-loading js-pic-loading">
+                  <div class="logo"></div>
+                  <svg class="spinner" viewBox="25 25 50 50">
+                    <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+                  </svg>
+                </div>
+              </li>
+							<li class="js-custom-item">
+								<a href="http://instagram.com/p/BROuozbB6dM/" target="_self">
+									<picture class="js-lazy-load">
+										<!--source srcset="images/blog/instagram-4-230x230.z.webp"-->
+										<img class="js-lazy-img js-img-instagram" data-src="images/blog/instagram-4-230x230.z.jpg">
+									</picture>
+                </a>
+                <!-- Photo loading spinner -->
+                <div class="pic-loading js-pic-loading">
+                  <div class="logo"></div>
+                  <svg class="spinner" viewBox="25 25 50 50">
+                    <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+                  </svg>
+                </div>
+              </li>
+							<li class="js-custom-item">
+								<a href="http://instagram.com/p/BROuZ1vhoWh/" target="_self">
+									<picture class="js-lazy-load">
+										<!--source srcset="images/blog/instagram-5-230x230.z.webp"-->
+										<img class="js-lazy-img js-img-instagram" data-src="images/blog/instagram-5-230x230.z.jpg">
+									</picture>
+                </a>
+                <!-- Photo loading spinner -->
+                <div class="pic-loading js-pic-loading">
+                  <div class="logo"></div>
+                  <svg class="spinner" viewBox="25 25 50 50">
+                    <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+                  </svg>
+                </div>
+              </li>
+							<li class="js-custom-item">
+								<a href="http://instagram.com/p/BROuDqUh5Ur/" target="_self">
+									<picture class="js-lazy-load">
+										<!--source srcset="images/blog/instagram-6-230x230.z.webp"-->
+										<img class="js-lazy-img js-img-instagram" data-src="images/blog/instagram-6-230x230.z.jpg">
+									</picture>
+                </a>
+                <!-- Photo loading spinner -->
+                <div class="pic-loading js-pic-loading">
+                  <div class="logo"></div>
+                  <svg class="spinner" viewBox="25 25 50 50">
+                    <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+                  </svg>
+                </div>
+              </li>
+							<li class="js-custom-item">
+								<a href="http://instagram.com/p/BRJHHGuhnmh/" target="_self">
+									<picture class="js-lazy-load">
+										<!--source srcset="images/blog/instagram-7-230x230.z.webp"-->
+										<img class="js-lazy-img js-img-instagram" data-src="images/blog/instagram-7-230x230.z.jpg">
+									</picture>
+                </a>
+                <!-- Photo loading spinner -->
+                <div class="pic-loading js-pic-loading">
+                  <div class="logo"></div>
+                  <svg class="spinner" viewBox="25 25 50 50">
+                    <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+                  </svg>
+                </div>
+              </li>
+							<li class="js-custom-item">
+								<a href="http://instagram.com/p/BRJHELyBwcN/" target="_self">
+									<picture class="js-lazy-load">
+										<!--source srcset="images/blog/instagram-8-230x230.z.webp"-->
+										<img class="js-lazy-img js-img-instagram" data-src="images/blog/instagram-8-230x230.z.jpg">
+									</picture>
+                </a>
+                <!-- Photo loading spinner -->
+                <div class="pic-loading js-pic-loading">
+                  <div class="logo"></div>
+                  <svg class="spinner" viewBox="25 25 50 50">
+                    <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+                  </svg>
+                </div>
+              </li>
+						</ul>
+					  <!-- Tags -->
+						<h3>Tags</h3>
+						<ul class="tagcloud">
+							<li><a href="#">sidor</a>
+							</li><li><a href="#">envato</a>
+							</li><li><a href="#">zapleo</a>
+							</li><li><a href="#">laborator</a>
+							</li><li><a href="#">music</a>
+							</li><li><a href="#">nightlife</a>
+							</li><li><a href="#">max-parallax</a>
+						</li></ul>
+					<!-- Categories -->
+						<h3>Categories</h3>
+						<ul class="categories">
+							<li><a href="#" class="underline">Design & Dev</a> <span>(3)</span>
+							</li><li><a href="#" class="underline">Everyday Life</a> <span>(2)</span>
+							</li><li><a href="#" class="underline">General</a> <span>(1)</span>
+							</li><li><a href="#" class="underline">GUI</a> <span>(1)</span>
+							</li><li><a href="#" class="underline">Magazine</a> <span>(3)</span>
+							</li><li><a href="#" class="underline">Music</a> <span>(2)</span>
+							</li><li><a href="#" class="underline">Photography</a> <span>(1)</span>
+							</li><li><a href="#" class="underline">Resources</a> <span>(1)</span>
+						</li></ul>
+					<!-- Comments -->
+						<h3>Comments</h3>
+						<ul class="comments">
+							<li><span>Sam Smith</span> on <a href="blog_post.html">Fashions fade, style is eternal</a>
+							</li><li><span>Max</span> on <a href="blog_post.html">Fashions fade, style is eternal</a>
+							</li><li><span>Dimon</span> on <a href="#">Best Tips for a Successful Magazine</a>
+						</li></ul>
+					<!-- Latest posts -->
+						<h3>Latest posts</h3>
+						<ul class="latest_posts">
+							<li><a href="blog_post.html" class="underline">Fashions fade, style is eternal</a>
+							</li><li><a href="#" class="underline">Best Tips for a Successful Magazine</a>
+							</li><li><a href="#" class="underline">Audio Post</a>
+							</li><li><a href="#" class="underline">Image Post</a>
+							</li><li><a href="#" class="underline">Image Gallery Post</a>
+						</li></ul>
+					</aside>
+				</div>
+				<!--button class="showmore" type="button">показать ещё</button-->
+			</section>
+		</main>
+		<!-- Footer -->
+		<footer class="footer js-footer">
+			<ul>
+				<li class="smgroup">
+					<ul>
+						<li>
+							<p>
+								<a class="conticon" href="skype:zapleosoft?chat"></a>
+								<span>zapleosoft</span>
+							</p>
+						</li>
+						<li>
+							<p>
+								<a class="mail conticon" href="mailto:dima@zapleo.com?subject=Hi, Zapleo team!"></a>
+								<span>dima@zapleo.com</span>
+							</p>
+						</li>
+					</ul>
+				</li>
+				<li class="biggroup">
+					<ul>
+						<li>
+							<a class="phone conticon" href="tel:+380994811889"></a>
+						</li><li>
+							<a class="whatsapp conticon" href="whatsapp://send?text=Hi,%20Zapleo%20team!"></a>
+						</li><li>
+							<a class="viber conticon" href="viber://add?number=%2B380994811889"></a>
+						</li><li>
+							<a class="telegram conticon" href="tg://resolve?domain=zapleosoft"></a>
+					</li></ul>
+					<p><span>+38(099)4811889</span></p>
+				</li>
+				<li class="social">
+					<ul>
+						<li>
+							<p>
+								<a class="fb" target="_blank" href="https://www.facebook.com/Zapleo-Soft-1095321843875350"></a>
+								<span>Facebook</span>
+							</p>
+						</li><li>
+							<p>
+								<a class="l_in" target="_blank" href="https://www.linkedin.com/company/zapleo"></a>
+								<span>LinkedIn</span>
+							</p>
+						</li><li>
+							<p>
+								<a class="inst" target="_blank" href="https://www.instagram.com/zapleosoft/"></a>
+								<span>Instagram</span>
+							</p>
+						</li><li>
+							<p>
+								<a class="up" target="_blank" href="https://www.upwork.com/o/companies/~019f95d8c9c6685b97"></a>
+								<span>Upwork</span>
+							</p>
+					</li></ul>
+				</li>
+			</ul>
+    </footer>
+    <!--Messenger-->
+    <section class="messenger js-messenger">
+      <div class="rolled-up js-rolled-up">
+        <p>Напишите нам, мы онлайн!</p>
+      </div>
+
+      <div class="expanded js-expanded">
+        <h3 class="chat-caption js-chat-caption">Zapleo chat</h3>
+        <ul class="chat js-chat"></ul>
+
+        <form id="authorization-form">
+          <label>Enter your name</label>
+          <input type="text" id="js-auth" class="auth" placeholder="Enter your name">
+          <button class="name-btn js-name-btn">
+            <svg class="name-btn-svg js-name-btn-svg" viewBox="0 0 725 725">
+              <path d="M 50 50 L 600 300 L 50 550 L 50 350 L 350 300 L 50 250 L 50 50 Z"/>
+            </svg>
+          </button>
+        </form>
+
+        <form id="message-form">
+          <textarea name="new-messege" id="js-message-textarea" class="message-textarea" rows="2" placeholder="Send: shift + enter"></textarea>
+          <button class="send-msg-btn js-send-msg-btn">
+            <svg class="send-msg-btn-svg js-send-msg-btn-svg" viewBox="0 0 725 725">
+              <path d="M 50 50 L 600 300 L 50 550 L 50 350 L 350 300 L 50 250 L 50 50 Z"/>
+            </svg>
+          </button>
+        </form>
+      </div>
+
+      <div class="open-close-btn js-open-close-btn">
+        <svg class="arrow js-arrow" viewBox="0 0 250 400">
+          <path d="M 225 25 L 25 200 L 225 375"/>
+        </svg>
+      </div>
+    </section>
+  </body>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>
+"use strict";function loadImage(t){var e=t.querySelectorAll(".js-lazy-src"),o=t.querySelectorAll(".js-lazy-img");e.forEach(function(t){return t.srcset=t.getAttribute("data-srcset")}),o.forEach(function(t){return t.src=t.getAttribute("data-src")})}function filterHeight(){var t=0,e=0,o=0,r=[],n=[],s=document.querySelectorAll(".js-custom-items .js-custom-item"),i=!0,a=!1,c=void 0;try{for(var l,u=s[Symbol.iterator]();!(i=(l=u.next()).done);i=!0){var d=l.value,f=window.getComputedStyle(d),m=parseInt(f.getPropertyValue("margin-top"),10),y=parseInt(f.getPropertyValue("margin-bottom"),10),p=parseInt(f.getPropertyValue("margin-right"),10),h=parseInt(f.getPropertyValue("margin-left"),10);r.push(d.offsetWidth+p+h),n.push(d.offsetHeight+m+y)}}catch(t){a=!0,c=t}finally{try{!i&&u.return&&u.return()}finally{if(a)throw c}}var v=document.querySelector(".js-custom-items");v.style.height="auto",t+=v.offsetHeight,o+=v.offsetWidth;var g=Math.max.apply(Math,n);e=Math.max(Math.ceil(t/Math.floor(o/Math.max.apply(Math,r))),g),v.style.height=e+"px";for(var E=0;v.scrollWidth>v.offsetWidth&&(e+=20,v.style.height=e+"px",!(E>300));)E++;console.log(E)}document.addEventListener("DOMContentLoaded",function(t){function e(){var t=document.querySelector("main+footer"),e=window.getComputedStyle(t),o=parseInt(e.getPropertyValue("margin-top"),10),r=parseInt(e.getPropertyValue("margin-bottom"),10),n=t.offsetHeight+o+r;document.querySelector("main").style.marginBottom=n+"px"}e(),window.addEventListener("resize",function(){e()});var o=document.querySelector(".mob-menu"),r=document.querySelector(".sandwich"),n=document.querySelector("body");function s(){o.querySelector("nav").classList.remove("displayed"),n.classList.remove("noscroll"),setTimeout(function(){o.style.display="none",r.classList.remove("active")},250)}if(r.addEventListener("click",function(){this.classList.contains("active")?s():(this.classList.add("active"),n.classList.add("noscroll"),setTimeout(function(){o.style.display="block",setTimeout(function(){o.querySelector("nav").classList.add("displayed")},250)},500))}),o.addEventListener("click",function(t){o.querySelector("nav").contains(t.target)||s()}),document.querySelector(".js-custom-items")){var i=document.querySelectorAll(".js-custom-item figure"),a=document.querySelectorAll(".js-custom-item picture"),c=document.querySelectorAll(".js-custom-item"),l=document.querySelectorAll(".js-product-filter .js-data-term");document.querySelector(".js-column")&&(filterHeight(),window.addEventListener("resize",function(){filterHeight()})),window.addEventListener("touchstart",function t(e){e.preventDefault(),document.querySelectorAll(".underline").forEach(function(t){t.addEventListener("mouseenter",function(){t.style.color="rgb(138, 138, 138)"})}),i.forEach(function(t){t.addEventListener("mouseenter",function(){t.querySelector("figcaption").style.zIndex="-1"})}),a.forEach(function(t){t.addEventListener("click",function(e){e.preventDefault(),i.forEach(function(t){return t.classList.remove("hovered")}),t.closest("figure").classList.add("hovered")})}),window.removeEventListener("touchstart",t)}),l.forEach(function(t){var e=t.getAttribute("data-term"),o=!0;c.forEach(function(t){t.classList.contains(e)&&(o=!1)}),"*"!==e&&o&&(t.closest("li").style.display="none")});var u="150ms";l.forEach(function(t){["click","touchend"].forEach(function(e){t.addEventListener(e,function(e){e.preventDefault(),l.forEach(function(t){return t.classList.remove("active")}),t.classList.add("active"),c.forEach(function(t){t.style.display="none",t.style.position="relative",t.style.top="20px"});var o=t.getAttribute("data-term");c.forEach(function(t){"*"===o?(t.style.display="block",t.style.transition="top 0s",setTimeout(function(){t.style.top="0px",t.style.transitionDuration=u},0)):t.classList.contains(o)&&(t.style.display="block",t.style.transition="top 0s",setTimeout(function(){t.style.top="0px",t.style.transitionDuration=u},0))}),document.querySelector(".js-column")&&filterHeight()},!1)})})}var d={};d.parents=document.querySelectorAll(".js-lazy-load"),d.lazyImages=document.querySelectorAll(".js-lazy-img");if(d.lazyImages.forEach(function(t){return t.addEventListener("load",function(){var t=this.closest(".js-custom-item");if(t){var e=t.querySelector(".js-pic-loading");e&&(e.style.display="none")}})}),"IntersectionObserver"in window){console.log("IntersectionObserver started");var f=new IntersectionObserver(function(t){t.forEach(function(t){t.intersectionRatio>0&&(f.unobserve(t.target),loadImage(t.target))})},{root:null,rootMargin:"0px 0px 0px 0px",threshold:[0]});d.parents.forEach(function(t){return f.observe(t)})}else console.log("IntersectionObserver is not supported"),d.parents.forEach(function(t){return loadImage(t)})});
+</script>
+    <script>
+"use strict";var blogImages={};blogImages.instagramImgs=document.querySelectorAll(".js-img-instagram"),blogImages.instagramImgs.forEach(function(t){return t.addEventListener("load",function(){t.clientHeight<t.clientWidth&&(t.style.cssText="height: 100%; width: auto;")})});
+</script>
+    <script>
+/**
  * socket adjustment
  */
 let to = undefined;
@@ -274,4 +786,7 @@ document.addEventListener('DOMContentLoaded', function() {
       gotoBottom('.js-chat');
     }
   }
-})</script></html>
+})
+
+</script>
+</html>
