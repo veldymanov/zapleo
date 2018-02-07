@@ -26,13 +26,14 @@
       .content .custom-items {
         flex-basis: 100%; } }
   .content figure {
-    display: inline-flex; }
+    display: flex; }
     @media (max-width: 580px) {
       .content figure {
         flex-wrap: wrap; } }
     .content figure .leftbox {
+      align-self: center;
       flex: 1 0 40%;
-      height: calc( 88vw * 0.75 * 0.4 * ( 235 / 335 ));
+      height: calc(88vw * 0.75 * 0.4 * ( 250 / 445));
       overflow: hidden;
       position: relative; }
       .content figure .leftbox picture {
@@ -42,16 +43,35 @@
           width: 100%; }
       @media (max-width: 1100px) {
         .content figure .leftbox {
-          height: calc( 88vw * 1 * 0.4 * ( 235 / 335 )); } }
+          height: calc(88vw * 1 * 0.4  * ( 250 / 445 )); } }
       @media (max-width: 580px) {
         .content figure .leftbox {
-          height: calc( 88vw * 1 * 1 * ( 235 / 335 )); } }
-    @media (min-width: 580px) {
-      .content figure h2 {
-        margin: 0 0 3.3%; } }
+          height: calc(88vw * 1 * 1  * ( 250 / 445 ));
+          margin-bottom: 10px; } }
+    .content figure .post {
+      padding: 0 3.3%; }
+      .content figure .post h2 {
+        max-width: calc( 88vw * 0.75 * 0.6 - 10vw);
+        margin: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; }
+        @media (max-width: 1100px) {
+          .content figure .post h2 {
+            max-width: calc( 88vw * 1 * 0.6 - 10vw); } }
+        @media (max-width: 580px) {
+          .content figure .post h2 {
+            max-width: calc( 88vw * 1 * 1 - 10vw); } }
+      .content figure .post .post-text {
+        line-height: 1.2em;
+        height: calc(1.2em * 4);
+        overflow: hidden; }
+      @media (max-width: 580px) {
+        .content figure .post {
+          padding: 0; } }
 
-.post {
-  padding: 0 3.3%; }
+.category {
+  margin-bottom: 0; }
 
 /* Sidebar */
 .sidebar {
@@ -79,11 +99,12 @@
 .instathumbs {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -5px; }
+  justify-content: space-between;
+  margin: 0; }
   .instathumbs li {
     flex-basis: 23%;
     height: calc( (88vw * 0.25 + 10px) *  0.23);
-    margin: 0 2% 2% 0;
+    margin: 0 0 2% 0;
     overflow: hidden;
     position: relative; }
     .instathumbs li a {

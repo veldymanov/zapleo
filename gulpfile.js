@@ -113,7 +113,7 @@ gulp.task('build:copy', ['build:cleanfolder'], () =>
 gulp.task('url:adjust', ['build:copy'], () =>
   gulp.src('docs/css/*.css')
   .pipe(urlAdjuster({
-    replace:  ['../','/'], // for github pages: "replace:  ['../','']"
+    replace:  ['../',''], // for github pages: "replace:  ['../','']"
   }))
   .pipe(gulp.dest('docs/css/'))
 );
@@ -165,7 +165,7 @@ gulp.task('html:minify', ['inline'], () =>
 );
 
 //task to remove unwanted build files
-gulp.task('build:remove', ['inline'], () =>
+gulp.task('build:remove', ['html:minify'], () =>
   del.sync([
     'docs/css/**', 'docs/js/**'])
 );
