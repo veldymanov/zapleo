@@ -22,7 +22,7 @@
       bottom: 0;
       left: 0;
       .expanded {
-        height: 100%;
+        height: 100vh;
         width: 100%;
         .chat {
           height: calc(100vh - 66px - 42px);
@@ -58,18 +58,16 @@
   bottom: 0;
   border-radius: 4px 4px 0 0;
   color: inherit;
-//  display: none;
   height: 0;
   opacity: 0;
   overflow: hidden;
   position: relative;
-  transition: height 0.3s ease-in, opacity .7s, width 0.39s ease-in-out;
+  transition: height 0.3s ease-in, opacity 0.5s, width 0.39s ease-in-out;
   width: 0;
   @media(max-width: 900px){
-    transition: height 0s, opacity .7s, width 0s;
+    transition: height 0.3s ease-in, opacity .5s, width 0s;
   }
   &.opened {
-  //  display: block;
     height: 400px;
     opacity: 1;
     width: 350px;
