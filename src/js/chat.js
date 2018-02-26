@@ -116,13 +116,19 @@ document.addEventListener('DOMContentLoaded', function() {
     e.preventDefault();
     let msg = elems.messageTextarea.value.trim();
     prepareForPost();
-    postMessage(msg);
+    postMessage(msg, 'user');
   })
 
 
   /**
   * module functions
   */
+  function scrolling() {
+    elems.body.style.cssText = `overflow-y: auto; width: auto;`;
+    elems.footer.style.width = `100%`;
+    elems.messenger.style.right = elems.msgrOriginalRight + 'px';
+  }
+
   function prepareForPost() {
     elems.messageTextarea.value = '';
     elems.sendMsgBtnSvg.classList.remove('active');

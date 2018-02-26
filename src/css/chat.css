@@ -16,11 +16,13 @@
     border-radius: 8px; }
   @media (max-width: 750px) {
     .messenger.opened {
-      top: 0;
+      bottom: 0;
       left: 0; }
       .messenger.opened .expanded {
         height: 100%;
-        width: 100%; } }
+        width: 100%; }
+        .messenger.opened .expanded .chat {
+          height: calc(100vh - 66px - 42px); } }
 
 /******************
 * closed messenger
@@ -42,14 +44,22 @@
 ******************/
 .expanded {
   background: white;
+  bottom: 0;
   border-radius: 4px 4px 0 0;
   color: inherit;
-  display: none;
-  height: 400px;
+  height: 0;
+  opacity: 0;
   overflow: hidden;
-  width: 350px; }
+  position: relative;
+  transition: height 0.3s ease-in, opacity .7s, width 0.39s ease-in-out;
+  width: 0; }
+  @media (max-width: 900px) {
+    .expanded {
+      transition: height 0s, opacity .7s, width 0s; } }
   .expanded.opened {
-    display: block; }
+    height: 400px;
+    opacity: 1;
+    width: 350px; }
   .expanded.authorized .chat {
     display: block; }
   .expanded.authorized #authorization-form {
@@ -122,7 +132,7 @@
 ******************/
 #authorization-form {
   padding: 0 20px;
-  position: absolute;
+  position: relative;
   top: 50%;
   transform: translateY(-50%);
   width: 100%; }
@@ -163,7 +173,7 @@
   bottom: 0;
   display: none;
   padding: 10px;
-  position: absolute;
+  position: relative;
   width: 100%; }
   #message-form .message-textarea {
     border-radius: 3px;

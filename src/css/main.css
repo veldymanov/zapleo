@@ -83,11 +83,33 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center; }
-  header nav li {
+  header nav ul li {
     display: inline-block; }
     @media (min-width: 901px) {
-      header nav li + li {
+      header nav ul li + li {
         margin-left: calc( 0.02353 * 100vw + -5.17647px); } }
+
+@media (min-width: 901px) {
+  .drop-down {
+    padding: 8px 10px;
+    position: relative; }
+    .drop-down:hover {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff; }
+      .drop-down:hover .drop-down-box {
+        background-color: rgba(0, 0, 0, 0.5);
+        display: block; }
+  .drop-down-box {
+    display: none;
+    left: 0;
+    position: absolute;
+    top: 37px; }
+    .drop-down-box li {
+      display: block;
+      margin: 0;
+      padding: 8px 10px; }
+      .drop-down-box li:hover {
+        background-color: rgba(0, 0, 0, 0.3); } }
 
 main {
   background: #fff; }

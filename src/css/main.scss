@@ -103,13 +103,46 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	nav {
-		li {
-		display: inline-block;
-			@media (min-width:901px) {
-			&+li {margin-left: calcFluidSize(16, 40, 900, 1920);}
-			}
-		}
+    ul {
+      li {
+        display: inline-block;
+        @media (min-width:901px) {
+        &+li {margin-left: calcFluidSize(16, 40, 900, 1920);}
+        }
+      }
+    }
+
 	}
+}
+
+// menu laguages
+@media (min-width: 901px) {
+  .drop-down {
+    padding: 8px 10px;
+    position: relative;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      .drop-down-box {
+        background-color: rgba(0, 0, 0, 0.5);
+        display: block;
+      }
+    }
+  }
+  .drop-down-box {
+    display: none;
+    left: 0;
+    position: absolute;
+    top: 37px;
+    li {
+      display: block;
+      margin: 0;
+      padding: 8px 10px;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
 }
 
 main {
