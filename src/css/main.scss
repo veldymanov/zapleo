@@ -1,4 +1,4 @@
-@import 'vars';
+@import 'vars', 'logo';
 
 @font-face {
 	font-family: 'CenturyGothicBold';
@@ -56,7 +56,7 @@
 html, body {
   color: $lightgrey;
 	font-family: "functionpro_book", sans-serif;
-	font-size: calcFluidSize(15, 20, 320, 1920); /* Fluid font-size */
+	font-size: 18px; //calcFluidSize(15, 20, 320, 1920); /* Fluid font-size */
 	height: auto;
   min-width: 320px;
   position: relative;
@@ -70,7 +70,7 @@ html, body {
 }
 
 a {
-	text-decoration:none;
+	text-decoration: none;
 	color: inherit;
 }
 
@@ -83,13 +83,6 @@ h1,h2,h3,h4,h5,h6 {
 	color:$dark;
 }
 
-.logo {
-	width: 18vmin;
-	max-width: 150px;
-	height: auto;
-	max-height: 91px;
-}
-
 .start {
 	display: block;
 	color: $darkgrey;
@@ -97,22 +90,31 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 2vmin 5%;
+  transition: background-color 0.4s, color 0.4s;
 	width: 100%;
-	padding: 6.2vmin 6% 0;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
 	nav {
     ul {
       li {
         display: inline-block;
-        @media (min-width:901px) {
+        @media (min-width: 901px) {
         &+li {margin-left: calcFluidSize(16, 40, 900, 1920);}
         }
       }
     }
-
-	}
+  }
+  &.fixed {
+    background-color: rgba(58, 58, 58, 0.5);
+    color: #fff;
+    padding: 1vmin 5%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
 }
 
 // menu laguages
@@ -186,7 +188,10 @@ h1, h2 {
 	&:hover {
 		cursor: pointer;
 	}
-	&:hover::after {width: 100%;}
+	&:hover::after {
+    background: $orange;
+    width: 100%;
+  }
 }
 
 .active.underline::after {

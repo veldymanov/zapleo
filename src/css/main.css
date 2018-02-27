@@ -2,6 +2,43 @@ html, body, ul, .footer p {
   padding: 0;
   margin: 0; }
 
+html, body, ul, .footer p {
+  padding: 0;
+  margin: 0; }
+
+.logo {
+  display: block;
+  height: 60px;
+  transition: height 0.4s;
+  width: auto; }
+  @media (min-width: 901px) {
+    .logo {
+      height: 75px; } }
+  .logo path {
+    fill: rgba(255, 255, 255, 0.5);
+    stroke-width: 27;
+    transition: fill .4s ease; }
+  .logo:hover path[id^="letter"], .logo:hover #bottom_grey {
+    fill: #616267; }
+  .logo:hover #top_orange {
+    fill: #fcb117; }
+  .logo.color path[id^="letter"], .logo.color #bottom_grey {
+    fill: #616267; }
+  .logo.color #top_orange {
+    fill: #fcb117; }
+  .logo.fixed {
+    height: 30px; }
+
+/*
+.logo {
+  display: block;
+	height: 50px;
+	width: auto;
+  @media (min-width: 901px) {
+    height: 75px;
+  }
+}
+*/
 @font-face {
   font-family: 'CenturyGothicBold';
   src: url("../fonts/CenturyGothicBold.ttf") format("truetype"), url("../fonts/CenturyGothicBold.woff") format("woff");
@@ -45,8 +82,7 @@ html, body, ul, .footer p {
 html, body {
   color: #8a8a8a;
   font-family: "functionpro_book", sans-serif;
-  font-size: calc( 0.00313 * 100vw + 14px);
-  /* Fluid font-size */
+  font-size: 18px;
   height: auto;
   min-width: 320px;
   position: relative; }
@@ -66,28 +102,31 @@ ul {
 h1, h2, h3, h4, h5, h6 {
   color: #373737; }
 
-.logo {
-  width: 18vmin;
-  max-width: 150px;
-  height: auto;
-  max-height: 91px; }
-
 .start {
   display: block;
   color: #69696b;
   background: #fff; }
 
 header {
-  width: 100%;
-  padding: 6.2vmin 6% 0;
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  padding: 2vmin 5%;
+  transition: background-color 0.4s, color 0.4s;
+  width: 100%; }
   header nav ul li {
     display: inline-block; }
     @media (min-width: 901px) {
       header nav ul li + li {
         margin-left: calc( 0.02353 * 100vw + -5.17647px); } }
+  header.fixed {
+    background-color: rgba(58, 58, 58, 0.5);
+    color: #fff;
+    padding: 1vmin 5%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100; }
 
 @media (min-width: 901px) {
   .drop-down {
@@ -146,6 +185,7 @@ h1, h2 {
   .underline:hover {
     cursor: pointer; }
   .underline:hover::after {
+    background: #fcb117;
     width: 100%; }
 
 .active.underline::after {

@@ -1,5 +1,27 @@
 document.addEventListener("DOMContentLoaded", function(event) {
   /**
+   * Fix header
+  */
+ const appHeader = document.querySelector('.js-header');
+ const appLogo = appHeader.querySelector('.js-logo');
+ window.addEventListener('scroll', function(){
+  stickHeader();
+ });
+
+function stickHeader() {
+  if (window.pageYOffset > 0) {
+    // header.classList.add("sticky");
+   appHeader.classList.add('fixed');
+   appLogo.classList.add('fixed');
+
+  } else {
+    // header.classList.remove("sticky");
+    appHeader.classList.remove('fixed');
+    appLogo.classList.remove('fixed');
+  }
+}
+
+  /**
   * Calculating <main> margin for footer
   */
 	calcMarginBottom();
@@ -8,11 +30,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	})
 
 	function calcMarginBottom () {
-		let item = document.querySelector('main+footer');
-		let style = window.getComputedStyle(item);
-    let marginTop = parseInt(style.getPropertyValue('margin-top'), 10);
-    let marginBottom = parseInt(style.getPropertyValue('margin-bottom'), 10);
-		let fHeight = item.offsetHeight + marginTop + marginBottom;
+		const item = document.querySelector('main+footer');
+		const style = window.getComputedStyle(item);
+    const marginTop = parseInt(style.getPropertyValue('margin-top'), 10);
+    const marginBottom = parseInt(style.getPropertyValue('margin-bottom'), 10);
+		const fHeight = item.offsetHeight + marginTop + marginBottom;
 
 		document.querySelector('main').style.marginBottom = fHeight + 'px';
 	}
@@ -20,10 +42,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
   /**
   * Mobile menu
   */
-	let fadeSpeed = 350;
-	let mobMenu = document.querySelector(".mob-menu");
-	let sandwichBtn = document.querySelector('.sandwich');
-	let body = document.querySelector('body');
+  const fadeSpeed = 350;
+	const mobMenu = document.querySelector(".mob-menu");
+	const sandwichBtn = document.querySelector('.sandwich');
+	const body = document.querySelector('body');
 
 	function hideMobileMenu(){
 			mobMenu.querySelector('nav').classList.remove('displayed');
@@ -104,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 	  // Hide empty menu items
 		dataTerms.forEach( item => {
-			let term = item.getAttribute("data-term");
+			const term = item.getAttribute("data-term");
 			let emptyMenu = true;
 
 			customItems.forEach( i => {
@@ -119,10 +141,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		})
 
 		//Set filtering and animation
-		let animationTime = "150ms";
+		const animationTime = "150ms";
 		//Set multiple event listener
 		dataTerms.forEach( item => {
-			let eventList = ["click", "touchend"];
+			const eventList = ["click", "touchend"];
 			eventList.forEach( event => {
 			    item.addEventListener(event, function(e){
 			    	e.preventDefault();
@@ -139,7 +161,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			    	})
 
 			    	//show filtered items with animation
-			        let term = item.getAttribute("data-term");
+			      const term = item.getAttribute("data-term");
 			    	customItems.forEach( i => {
 			    		if (  term === "*" ){
 			    			i.style.display =  "block";
@@ -229,27 +251,27 @@ function loadImage(target){
 
 function filterHeight(){
   let totalHeight = 0,
-    averageHeight = 0,
-    totalWidth = 0;
+  averageHeight = 0,
+  totalWidth = 0;
 
-  let elsWidth = [],
-    elsHeight = [];
+  const elsWidth = [],
+  elsHeight = [];
 
   //all filter's elements heights and widths
   //Can be only one ".js-custom-items" per page
-  let filterElements = document.querySelectorAll(".js-custom-items .js-custom-item");
+  const filterElements = document.querySelectorAll(".js-custom-items .js-custom-item");
   for (let item of filterElements) {
-    let style = window.getComputedStyle(item);
-      let marginTop = parseInt(style.getPropertyValue('margin-top'), 10);
-      let marginBottom = parseInt(style.getPropertyValue('margin-bottom'), 10);
-      let marginRight = parseInt(style.getPropertyValue('margin-right'), 10);
-      let marginLeft = parseInt(style.getPropertyValue('margin-left'), 10);
+    const style = window.getComputedStyle(item);
+    const marginTop = parseInt(style.getPropertyValue('margin-top'), 10);
+    const marginBottom = parseInt(style.getPropertyValue('margin-bottom'), 10);
+    const marginRight = parseInt(style.getPropertyValue('margin-right'), 10);
+    const marginLeft = parseInt(style.getPropertyValue('margin-left'), 10);
 
     elsWidth.push(item.offsetWidth  + marginRight + marginLeft);
     elsHeight.push(item.offsetHeight + marginTop + marginBottom);
   }
 
-  let filterContainer = document.querySelector(".js-custom-items");
+  const filterContainer = document.querySelector(".js-custom-items");
   //make full height
   filterContainer.style.height = 'auto';
 
@@ -258,7 +280,7 @@ function filterHeight(){
   totalWidth += filterContainer.offsetWidth;
 
   //Max array element
-  let maxElHeight = Math.max(...elsHeight);
+  const maxElHeight = Math.max(...elsHeight);
   //Choose max between averageHeight and max element height
   averageHeight = Math.max(Math.ceil(totalHeight / Math.floor( totalWidth / Math.max(...elsWidth) )), maxElHeight);
 

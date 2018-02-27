@@ -1,0 +1,46 @@
+@import "vars";
+
+.logo {
+  display: block;
+  height: 60px;
+  transition: height 0.4s;
+  width: auto;
+  @media (min-width: 901px) {
+    height: 75px;
+  }
+  path {
+    fill: rgba(255,255,255,0.5);
+    stroke-width: 27;
+    transition: fill .4s ease;
+  }
+	&:hover {
+		path[id^="letter"], #bottom_grey {
+			fill: #616267;
+		}
+		#top_orange {
+			fill: $orange;
+		}
+	}
+  &.color {
+		path[id^="letter"], #bottom_grey {
+			fill: #616267;
+		}
+		#top_orange {
+			fill: $orange;
+		}
+  }
+  &.fixed {
+    height: 30px;
+  }
+}
+
+/*
+.logo {
+  display: block;
+	height: 50px;
+	width: auto;
+  @media (min-width: 901px) {
+    height: 75px;
+  }
+}
+*/

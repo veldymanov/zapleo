@@ -73,7 +73,6 @@
     height: 100%;
     overflow: auto;
     text-transform: uppercase;
-    font-size: calc( 0.00862 * 100vw + 11.24138px);
     transform: translateX(-100%);
     transition: transform .25s ease-in-out; }
   .mob-menu .displayed {
